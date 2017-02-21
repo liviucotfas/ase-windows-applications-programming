@@ -460,15 +460,48 @@ Managers.
 2.  Add an abstract Person class (keep in mind that we only consider the three
     types of person categories mentioned above)
 
-| **internal** abstract class Person **{ public** string FirstName **{** get**;** set**; } public** string LastName **{** get**;** set**; } public** int Age **{** get**;** set**; } }** |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
+```C#
+internal abstract class Person
+{
+	public string FirstName { get; set; }
+	public string LastName { get; set; }
+	public int Age { get; set; }
+}
+```
 
 3.  Add an abstract Employee class
 
-| **internal abstract** class Employee **:** Person **{** // A static point of data. **private** static double bonusRate **=** 1.1**;** // A static property. **public** static double BonusRate **{** get **{ return** bonusRate**; }** set **{** bonusRate **=** value**; } } public** double Wage **{** get**;** set**; }** //Abstract method **public abstract** double CalculateBonusAbstract**(); public** double CalculateBonusNormal**() {** Console**.**WriteLine**(**"Employee - CalculateBonusNormal"**); return** bonusRate **\*** Wage**; } public virtual** double CalculateBonusVirtual**() {** Console**.**WriteLine**(**"Employee - CalculateBonusVirtual"**); return** bonusRate **\*** Wage**; } }** |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+internal abstract class Employee : Person
+{
+	// A static point of data.
+	private static double bonusRate = 1.1;
+	// A static property.
+	public static double BonusRate
+	{
+		get { return bonusRate; }
+		set { bonusRate = value; }
+	}
 
+	public double Wage { get; set; }
+
+
+	//Abstract method
+	public abstract double CalculateBonusAbstract();
+
+	public double CalculateBonusNormal()
+	{
+		Console.WriteLine("Employee - CalculateBonusNormal");
+		return bonusRate * Wage;
+	}
+
+	public virtual double CalculateBonusVirtual()
+	{
+		Console.WriteLine("Employee - CalculateBonusVirtual");
+		return bonusRate * Wage;
+	}
+}
+```
 
 4.  Add a SoftwareDeveloper class
 
