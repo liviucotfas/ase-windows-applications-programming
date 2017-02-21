@@ -444,7 +444,7 @@ static void Main()
 
 ### 6.1. Abstract classes
 
-![](docs/2/inheritance.png)
+![Figure 1 Class hierarchy](docs/2/inheritance.png)
 
 >   Figure 1 Class hierarchy
 
