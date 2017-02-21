@@ -300,3 +300,77 @@ private static void StringBuilderPerformance()
     http://referencesource.microsoft.com/\#System/services/monitoring/system/diagnosticts/Stopwatch.cs,ceb0ba9cc88de82e
 
 # 5. Arrays
+
+An array represents a fixed number of variables (called elements) of a
+particular type. The elements in an array are always stored in a contiguous
+block of memory, providing highly efficient access. All arrays inherit from the
+**System.Array** class, providing common services for all arrays.
+
+Some of the most important properties and methods:
+
+-   *Length*: the number of elements in an array;
+
+-   *GetLength(dim)*: gets a 32-bit integer that represents the number of
+    elements in the specified dimension of the Array;
+
+-   *Rank*: gets the rank (number of dimensions) of the Array. For example, a
+    one-dimensional array returns 1, a two-dimensional array returns 2, and so
+    on.;
+
+-   **Clone():** Creates a shallow copy of the Array (note that System.Array
+    implements ICloneable);
+
+-   *and many others…*
+
+Questions
+
+-   Which is the base class for System.Array?
+
+## 5.1. Default Element Initialization
+
+Creating an array always preinitializes the elements with default values:
+
+-   **null** for reference types;
+
+-   **0** for numeric types;
+
+-   Etc.
+
+Activity
+```C#
+private void Array()
+{
+	//1. Declaration and assignment
+	//declaration
+	int[] intArray;
+
+	// allocation
+	intArray = new int[3]; //all values will be 0
+
+	// declaration and assignment
+	//var doubleArray = new double[]{ 34.23, 23.2 };
+	var doubleArray = new[] { 34.23, 10.2, 23.2 }; //data type (double) is inferred
+
+	//2. Accessing elements
+	var arrayElement = doubleArray[0];
+	doubleArray[1] = 5.55;
+
+	// for
+	for (var i = 0; i < intArray.Length; i++)
+		Console.WriteLine(intArray[i]);
+
+	// foreach
+	foreach (var value in doubleArray)
+		Console.WriteLine(value);
+
+	//3. Other methods
+	Array.Sort(doubleArray); //Note: double implements IComparable<double>
+
+	// for
+	for (var i = 0; i < doubleArray.Length; i++)
+		Console.WriteLine("doubleArray[{0}]={1}", i, doubleArray[i]);
+}
+```
+
+
+
