@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardCollections", "Stan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarbageCollection", "GarbageCollection\GarbageCollection.csproj", "{FF7F4A29-D472-47EC-ADD1-6DDC90B90F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandeling\ExceptionHandling.csproj", "{E3C49D16-324F-4913-AEDB-953A5B11FFEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{E3C49D16-324F-4913-AEDB-953A5B11FFEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingUnboxing", "BoxingUnboxing\BoxingUnboxing.csproj", "{918F2EA2-98DB-4342-BD47-1EFBCB7EE56B}"
 EndProject
@@ -85,7 +85,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewSample", "TreeViewS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07. Windows Forms - Menus", "07. Windows Forms - Menus", "{0F901F73-692C-41A2-8496-548DE1430391}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationCustomExceptions", "ValidationExceptionHandeling\ValidationCustomExceptions.csproj", "{18A2F0BE-9379-49A6-9561-94AB2FC0D9AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationCustomExceptions", "ValidationExceptionHandling\ValidationCustomExceptions.csproj", "{18A2F0BE-9379-49A6-9561-94AB2FC0D9AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewSample", "ListViewSample\ListViewSample.csproj", "{73AFE8EC-1C36-41F2-B5FD-F03B1889E294}"
 EndProject
