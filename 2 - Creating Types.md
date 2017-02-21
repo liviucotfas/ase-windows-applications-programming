@@ -440,11 +440,11 @@ static void Main()
 }
 ```
 
-3.  Class Inheritance
+## 6.  Class Inheritance
 
-    1.  Abstract classes
+### 6.1. Abstract classes
 
-![](media/59da9a7a1f386c22d8218060d0d4cddf.png)
+![](docs/2/inheritance.png)
 
 >   Figure 1 Class hierarchy
 
