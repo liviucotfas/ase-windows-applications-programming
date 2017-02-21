@@ -52,7 +52,8 @@ internal struct PersonStruct
 	public override string ToString()
 	{
 		return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, Age, Occupation);
-
+        }
+}
 ```
 
 2.  Add the ValueTypeAssignment method in Program.cs and call it from the Main() method.
@@ -187,7 +188,7 @@ Question
 
 ## 4.  Standard Interfaces
 
-    1.  IComparable\<T\>
+### 4.1. IComparable\<T\>
 
 Assignment
 
@@ -195,45 +196,105 @@ Assignment
 
 2.  Add the following “Person” class
 
-| **internal** class Person **{** \#region Properties **public** string Name **{** get**;** set**; } public** int Age **{** get**;** set**; }** \#endregion **public** Person**(**string name**,** int age**) {** Name **=** name**;** Age **=** age**; } }** |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+internal class Person
+{
+	#region Properties
+	public string Name { get; set; }
+	public int Age { get; set; }
+	#endregion
 
+	public Person(string name, int age)
+	{
+		Name = name;
+		Age = age;
+	}
+}
+```
 
-3.  Add the following method in the “Program” class and call it from the
-    “Main()” method (Note: an exception will be thown when you run the project)
+3.  Add the following method in the “Program” class and call it from the “Main()” method (Note: an exception will be thown when you run the project)
 
-| **private** static void ReferenceTypeArray**() {** var p1 **= new** Person**(**"Name3"**,** 42**);** var p2 **= new** Person**(**"Name1"**,** 23**);** var p3 **= new** Person**(**"Name2"**,** 32**);** var pArray **= new** Person**[] {** p1**,** p2**,** p3 **};** Array**.**Sort**(**pArray**);** //IComparable implementation is called automatically by methods such as Array..::.Sort **foreach (**var person **in** pArray**) {** Console**.**WriteLine**(**person**); } }** |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+private static void ReferenceTypeArray()
+{
+	var p1 = new Person("Name3", 42);
+	var p2 = new Person("Name1", 23);
+	var p3 = new Person("Name2", 32);
 
+	var pArray = new Person[] { p1, p2, p3 };
+
+	Array.Sort(pArray);
+
+	//IComparable implementation is called automatically by methods such as Array..::.Sort
+
+	foreach (var person in pArray)
+	{
+		Console.WriteLine(person);
+	}
+}
+```
 
 4.  Implement the IComparable\<Person\> interface for the “Person” class.
 
-| **internal** class Person **:** IComparable**\<**Person**\> {** \#region Properties **public** string Name **{** get**;** set**; } public** int Age **{** get**;** set**; }** \#endregion **public** Person**(**string name**,** int age**) {** Name **=** name**;** Age **=** age**; } public** int CompareTo**(**Person other**) {** //Note: string.CompareTo is culture-specific **return** Name**.**CompareTo**(**other**.**Name**); } }** |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+internal class Person : IComparable<Person>
+{
+	#region Properties
+	public string Name { get; set; }
+	public int Age { get; set; }
+	#endregion
 
+	public Person(string name, int age)
+	{
+		Name = name;
+		Age = age;
+	}
 
-5.  Change the IComparable\<Person\> implementation in order to use the Age of
-    the persons
+	public int CompareTo(Person other)
+	{
+		//Note: string.CompareTo is culture-specific
+		return Name.CompareTo(other.Name);	
+	}
+}
+```
 
-    1.  IClonable
+5.  Change the IComparable\<Person\> implementation in order to use the Age of the persons
 
-6.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
+ ### 4.2. IClonable
 
-| **internal** class PersonLuckyNumbers **:** Person **{ public** int**[]** LuckyNumbers **{** get**;** set**; } public** PersonLuckyNumbers**(**string name**,** int age**,** int**[]** luckyNumbers**) : base(**name**,** age**) {** LuckyNumbers **=** luckyNumbers**; } }** |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+1.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
 
+```C#
+ internal class PersonLuckyNumbers : Person
+{
+	public int[] LuckyNumbers { get; set; }
 
-7.  Add the following method in the “Program” class and call it from the Main
-    method
+	public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+	{
+		LuckyNumbers = luckyNumbers;
+	}
+}
+```
 
-| **private** static void ReferenceTypeClone**() {** var p1 **= new** PersonLuckyNumbers**(**"Name 1"**,** 21**, new []{**13**,** 26**,** 39**});** var p2 **=** p1**;** p1**.**Age **=** 12**;** p1**.**LuckyNumbers**[**0**] =** 1**;** Console**.**WriteLine**(**p1**);** Console**.**WriteLine**(**p2**); }** |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+2.  Add the following method in the “Program” class and call it from the Main method
 
+```C#
+private static void ReferenceTypeClone()
+{
+	var p1 = new PersonLuckyNumbers("Name 1", 21, new []{13, 26, 39});
+	var p2 = p1;
 
-8.  Run the application and notice the values in the two objects
+	p1.Age = 12;
+	p1.LuckyNumbers[0] = 1;
 
-9.  Implement IClonable interface for the “PersonLuckyNumbers” class as follows
-    (shallow copy only)
+	Console.WriteLine(p1);
+	Console.WriteLine(p2);
+}
+```
+
+3.  Run the application and notice the values in the two objects
+
+4.  Implement IClonable interface for the “PersonLuckyNumbers” class as follows (shallow copy only)
 
 | **internal** class PersonLuckyNumbers **:** Person**,** ICloneable **{ public** int**[]** LuckyNumbers **{** get**;** set**; } public** PersonLuckyNumbers**(**string name**,** int age**,** int**[]** luckyNumbers**) : base(**name**,** age**) {** LuckyNumbers **=** luckyNumbers**; } public object** Clone**() {** // First get a shallow copy. var newPerson **= (**PersonLuckyNumbers**)**MemberwiseClone**(); } }** |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
