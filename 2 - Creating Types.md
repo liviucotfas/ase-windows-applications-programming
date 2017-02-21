@@ -1,6 +1,4 @@
----
-title: II. Creating Types
----
+% II. Creating Types
 
 # 1. Enums
 
@@ -13,9 +11,14 @@ Assignment
 
 -   Add the following enumeration
 
-| **internal** enum OccupationEnum **{** Child = 0**,** Student**,** Employee **}** |
-|-----------------------------------------------------------------------------------|
-
+```C#
+internal enum OccupationEnum
+{
+	Child = 0,
+	Student,
+	Employee
+}
+```
 
 -   In the Main method try to cast from
 
