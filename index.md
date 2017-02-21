@@ -112,7 +112,22 @@ Some of these types have shorthand defined in C#, as shown in the following tabl
 -	structure, enum, primitive types (derived from System.ValueType)
 -	allocated: on the stack;
 -	lifetime: can be created and destroyed very quickly, as its lifetime is determined by the defining scope;
+
 ##3.2.	Reference types
 -	class, delegate, interface
 -	allocated: in the heap;
 -	lifetime: has a lifetime that is determined by a large number of factors
+
+|                                                  | Value type                                                                                            | Reference Type                                                                                         |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| Where are objects allocated?                     | Allocated on the stack.                                                                               | Allocated on the managed heap.                                                                         |
+| How is a variable represented?                   | Value type variables are local copies.                                                                | Reference type variables are pointing to the memory occupied by the allocated instance.                |
+| What is the base type?                           | Implicitly extends System.ValueType.                                                                  | Can derive from any other type (except System.ValueType), as long as that type is not “sealed”.        |
+| Can this type function as a base to other types? | No. Value types are always sealed and cannot be inherited from.                                       | Yes. If the type is not sealed, it may function as a base to other types.                              |
+| Default parameter passing behavior               | Variables are passed by value (i.e., a copy of the variable is passed into the called function).      | For value types, the object is copied-by-value. For reference types, the reference is copied-by-value. |
+| Own constructor for this type                    | Yes, but the default constructor is reserved (i.e., the custom constructors must all have arguments). | Yes                                                                                                    |
+| When do variables of this type die?              | When they fall out of the defining scope.                                                             | When the object is garbage collected.                                                                  |
+
+
+Table: Table 1 Comparison between value types and reference types
+
