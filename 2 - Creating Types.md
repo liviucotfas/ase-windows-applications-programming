@@ -354,19 +354,44 @@ Activity
 
 ![](docs/icons/C#png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
 
+1.  For the standard Person class overload the \>, \< and explicit (int) operators
 
-1.  For the standard Person class overload the \>, \< and explicit (int)
-    operators
+```C#
+#region Operators
+// operator de conversie explicita la int
+public static explicit operator int(Person p)
+{
+	return p.Age;
+}
 
-| \#region Operators // operator de conversie explicita la int **public** static **explicit operator** int**(**Person p**) { return** p**.**Age**; } public** static bool **operator \<(**Person p1**,** Person p2**) { return** p1**.**Age **\<** p2**.**Age**; } public** static bool **operator \>(**Person p1**,** Person p2**) { return** p1**.**Age **\>** p2**.**Age**; }** \#endregion |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+public static bool operator <(Person p1, Person p2)
+{
+	return p1.Age < p2.Age;
+}
 
+public static bool operator >(Person p1, Person p2)
+{
+	return p1.Age > p2.Age;
+}
+#endregion
+```
 
 2.  Use the operators in the Main method
 
-| **private** static void Main**(**string**[]** args**) {** var p **= new** Person**(**"Name1"**,** 21**);** var p2 **= new** Person**(**"Name2"**,** 22**);** //int age = p; //error int age **= (**int**)**p**;** Console**.**WriteLine**(**"Age: {0}"**,** age**); if(**p**\<**p2**)** Console**.**WriteLine**(**"p.Age \< p2.Age"**); }** |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+private static void Main(string[] args)
+{
+	var p = new Person("Name1", 21);
+	var p2 = new Person("Name2", 22);
 
+	//int age = p; //error
+	int age = (int)p;
+	Console.WriteLine("Age: {0}", age);
+
+	if(p<p2)
+		Console.WriteLine("p.Age < p2.Age");
+}
+```
 
 3.  Implement the implicit (int) cast
 
