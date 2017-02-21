@@ -2,10 +2,8 @@
 
 # 1. Enums
 
-The **enum** keyword is used to declare an enumeration, a distinct type that
-consists of a set of named constants called the enumerator list. By default, the
-first enumerator has the value 0, and the value of each successive enumerator is
-increased by 1.
+The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
+first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
 
 Assignment
 
@@ -26,38 +24,64 @@ internal enum OccupationEnum
 
     -   System.Int32 to UserAccountTypeEnum
 
-Structures
+# 2. Structures
 ==========
 
-A Structure (struct in C\#) type is a value type that is typically used to
-encapsulate small groups of related variables.
+A Structure (struct in C\#) type is a value type that is typically used to encapsulate small groups of related variables.
 
 Assignment
 
 1.  Add the PersonStruct defined bellow
 
-| **internal** struct PersonStruct **{** \#region Attributes **public** int Age**; public** string Name**; public** OccupationEnum Occupation**;** \#endregion **public** PersonStruct**(**int age**,** string name**,** OccupationEnum occupation**) {** Age **=** age**;** Name **=** name**;** Occupation **=** occupation**; } public override** string ToString**() { return** string**.**Format**(**"Name: {0}, Age: {1}, Occupation: {2}"**,** Name**,** Age**,** Occupation**); } }** |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+internal struct PersonStruct
+{
+	#region Attributes
+	public int Age;
+	public string Name;
+	public OccupationEnum Occupation;
+	#endregion
 
+	public PersonStruct(int age, string name, OccupationEnum occupation)
+	{
+		Age = age;
+		Name = name;
+		Occupation = occupation;
+	}
 
-2.  Add the ValueTypeAssignment method in Program.cs and call it from the Main()
-    method.
+	public override string ToString()
+	{
+		return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, Age, Occupation);
 
-| **private** static void ValueTypeAssignment**() {** Console**.**WriteLine**(**"\#\#\#Assigning value types\\n"**);** var personStruct1 **= new** PersonStruct**(**1**,** "name1"**,** OccupationEnum**.**Student**);** var personStruct2 **=** personStruct1**;** Console**.**WriteLine**(**personStruct1**);** // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonStruct Console**.**WriteLine**(**personStruct2**);** // Change personStruct1.Name and print again. personStruct2.Name is not changed. personStruct1**.**Name **=** "NewName"**;** Console**.**WriteLine**(**personStruct1**);** Console**.**WriteLine**(**personStruct2**); }** |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```
 
+2.  Add the ValueTypeAssignment method in Program.cs and call it from the Main() method.
+
+```C#
+ private static void ValueTypeAssignment()
+{
+	Console.WriteLine("###Assigning value types\n");
+	var personStruct1 = new PersonStruct(1, "name1", OccupationEnum.Student);
+	var personStruct2 = personStruct1;
+	
+	Console.WriteLine(personStruct1); // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonStruct
+	Console.WriteLine(personStruct2);
+
+	// Change personStruct1.Name and print again. personStruct2.Name is not changed.
+	personStruct1.Name = "NewName";
+	Console.WriteLine(personStruct1);
+	Console.WriteLine(personStruct2);
+}
+```
 
 Questions
 
 -   Why is it possible to override the ToString method?
 
-Classes
-=======
+# 3. Classes
 
 Objectives
-
 -   Encapsulation using properties;
-
 -   Multiple constructors
 
 Assignment
