@@ -1,6 +1,6 @@
-% II. Creating Types
+# II. Creating Types
 
-# 1. Enums
+## 1. Enums
 
 The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
 first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
@@ -24,7 +24,7 @@ internal enum OccupationEnum
 
     -   System.Int32 to UserAccountTypeEnum
 
-# 2. Structures
+## 2. Structures
 ==========
 
 A Structure (struct in C\#) type is a value type that is typically used to encapsulate small groups of related variables.
@@ -78,7 +78,7 @@ Questions
 
 -   Why is it possible to override the ToString method?
 
-# 3. Classes
+## 3. Classes
 
 Objectives
 -   Encapsulation using properties;
