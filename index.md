@@ -372,5 +372,58 @@ private void Array()
 }
 ```
 
+Questions
 
+-   What kind of method is **Sort()** // what modifiers do you expect it to have
+
+## 5.2. Multidimensional Arrays
+
+### Rectangular arrays
+
+Rectangular arrays are declared using commas to separate each dimension (ex:
+[dim1, dim2, …, dimn]).
+
+Activity
+
+```C#
+private void RectangularArray()
+{
+	// declaration and allocation
+	var cub = new int[5, 2, 7];
+
+	// declaration and assignment
+	var matrix = new[,]{
+			{ 4, 23,  5,  2 },
+			{ 1,  6, 13, 29 }
+		};
+
+	// for
+	for (var i = 0; i < matrix.GetLength(0); i++)
+	{
+		for (var j = 0; j < matrix.GetLength(1); j++)
+			Console.Write(" {0}", matrix[i, j]);
+		Console.WriteLine();
+	}
+}
+```
+
+### Jagged arrays
+
+Jagged arrays are declared using successive square brackets to represent each
+dimension.
+
+```C#
+private void JaggedArray()
+{
+	int[][] jaggedArray =
+	{
+		new int[] {0, 1, 2},
+		new int[] {3, 4},
+		new int[] {6, 7, 8, 9}
+	};
+}
+```
+
+Activity
+1.  Write the code needed for displaying “jaggedArray” in the Console
 
