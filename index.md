@@ -103,5 +103,16 @@ public static void Main(string[] args)
 NameofYourApp.exe /arg1 -arg2
 ```
 
-## 3.	Data Types
+# 3.	Data Types
 ![Data Types](docs/1/datatypes.png)
+Some of these types have shorthand defined in C#, as shown in the following table.
+![Data Types](docs/1/datatypes2.png)
+
+## 3.1.	Value types
+-	structure, enum, primitive types (derived from System.ValueType)
+-	allocated: on the stack;
+-	lifetime: can be created and destroyed very quickly, as its lifetime is determined by the defining scope;
+##3.2.	Reference types
+-	class, delegate, interface
+-	allocated: in the heap;
+-	lifetime: has a lifetime that is determined by a large number of factors
