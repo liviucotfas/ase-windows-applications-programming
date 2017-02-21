@@ -25,7 +25,6 @@ internal enum OccupationEnum
     -   System.Int32 to UserAccountTypeEnum
 
 ## 2. Structures
-==========
 
 A Structure (struct in C\#) type is a value type that is typically used to encapsulate small groups of related variables.
 
@@ -296,20 +295,46 @@ private static void ReferenceTypeClone()
 
 4.  Implement IClonable interface for the “PersonLuckyNumbers” class as follows (shallow copy only)
 
-| **internal** class PersonLuckyNumbers **:** Person**,** ICloneable **{ public** int**[]** LuckyNumbers **{** get**;** set**; } public** PersonLuckyNumbers**(**string name**,** int age**,** int**[]** luckyNumbers**) : base(**name**,** age**) {** LuckyNumbers **=** luckyNumbers**; } public object** Clone**() {** // First get a shallow copy. var newPerson **= (**PersonLuckyNumbers**)**MemberwiseClone**(); } }** |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+internal class PersonLuckyNumbers : Person, ICloneable
+{
+	public int[] LuckyNumbers { get; set; }
 
+	public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+	{
+		LuckyNumbers = luckyNumbers;
+	}
 
-10. Run the application and notice the values in the two objects
+	public object Clone()
+	{
+		// First get a shallow copy.
+		var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+	}
+}
+```
 
-11. Change the implementation of the “Clone()” method in order to perform a
-    **deep copy**
+5. Run the application and notice the values in the two objects
 
-| **public object** Clone**() {** // First get a shallow copy. var newPerson **= (**PersonLuckyNumbers**)**MemberwiseClone**();** // Then fill in the gaps. newPerson**.**LuckyNumbers **= new** int**[**LuckyNumbers**.**Length**]; for (**var i**=**0**;** i**\<** LuckyNumbers**.**Length**;** i**++) {** newPerson**.**LuckyNumbers**[**i**] =** LuckyNumbers**[**i**]; } return** newPerson**; }** |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+6. Change the implementation of the “Clone()” method in order to perform a **deep copy**
 
+```C#
+public object Clone()
+{
+	// First get a shallow copy.
+	var newPerson = (PersonLuckyNumbers)MemberwiseClone();
 
-Operators
+	// Then fill in the gaps.
+	newPerson.LuckyNumbers = new int[LuckyNumbers.Length];
+	for (var i=0; i< LuckyNumbers.Length; i++)
+	{
+		newPerson.LuckyNumbers[i] = LuckyNumbers[i];
+	}
+
+	return newPerson;
+}
+```
+
+## 5. Operators
 =========
 
 -   can be overload by defining static member functions using the operator
