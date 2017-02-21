@@ -208,3 +208,95 @@ internal class Program
 		}
 }
 ```
+
+## 4.2. operator==
+- The **operator==** is overloaded.
+
+Activity:
+
+```C#
+using System;
+using System.Text;
+
+namespace ExempluString
+{
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			//2. Operator==
+			string a = "hello";
+			
+			string b = "h";
+			// Append to contents of 'b'
+			b += "ello";
+			
+			Console.WriteLine(a == b); //will return true because operator== is overloaded
+			Console.WriteLine((object)a == (object)b);	//will return false because the objects are different
+	
+		}
+	}
+}
+```
+
+## 4.3. StringBuilder
+
+For routines that perform extensive string manipulation (such as apps that
+modify a string numerous times in a loop), modifying a string repeatedly can
+exact a significant performance penalty. The alternative is to use
+StringBuilder, which is a mutable string class. Mutability means that once an
+instance of the class has been created, it can be modified by appending,
+removing, replacing, or inserting characters.
+
+Usage example: email containing phone logs or calendar entries, text based
+reports
+
+Documentation:
+<https://msdn.microsoft.com/en-us/library/system.text.stringbuilder%28v=vs.110%29.aspx>
+
+Activity
+
+-   Compare the time required to perform the same operation using System.String
+    and System.Text.StringBuilder
+
+```C#
+private static void StringBuilderPerformance()
+{
+	Console.WriteLine("###StringBuilderPerformance");
+
+	const int noOfRepetitions = 50000;
+
+	var regularString = string.Empty;
+
+	// For a more precise measurement, use a performance counter instead of a Stopwatch
+	var watch = Stopwatch.StartNew();
+	for (var i = 0; i < noOfRepetitions; i++)
+	{
+		regularString += "a";
+	}
+	watch.Stop();
+	var elapsedMs = watch.ElapsedMilliseconds;
+
+	Console.WriteLine("Using System.String: {0}ms", elapsedMs);
+
+	var stringBuilder = new StringBuilder();
+
+	watch = Stopwatch.StartNew();
+	for (var i = 0; i < noOfRepetitions; i++)
+	{
+		stringBuilder.Append("a");
+	}
+	regularString = stringBuilder.ToString();
+	watch.Stop();
+	elapsedMs = watch.ElapsedMilliseconds;
+
+	Console.WriteLine("Using System.Text.StringBuilder: {0}ms", elapsedMs);
+
+	Console.ReadLine();
+} 
+```
+
+1.  Check the “StartNew “ method in the source code for the “Stopwatch” class:
+    http://referencesource.microsoft.com/\#System/services/monitoring/system/diagnosticts/Stopwatch.cs,ceb0ba9cc88de82e
+
+# 5. Arrays
