@@ -85,7 +85,23 @@ goto end
 :end
 echo All Done.
 ```
+## 2.5.	Processing Command-Line Arguments
+the Main() method has an optional string array argument to represent command-line parameters.
+Activity:
+- replace the code from the previous activity with the following one.
 
+```C#
+public static void Main(string[] args)
+    {
+        foreach (string arg in args)
+        {
+            Console.WriteLine("Argument: {0}", arg);
+        }
+    }
+```
+```
+NameofYourApp.exe /arg1 -arg2
+```
 
-
-
+## 3.	Data Types
+!(docs/1/datatypes.png)
