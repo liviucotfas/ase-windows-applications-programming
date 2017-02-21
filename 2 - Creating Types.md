@@ -1,7 +1,5 @@
-# II. Creating Types
-
+# Creating Types
 ## 1. Enums
-
 The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
 first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
 
@@ -446,8 +444,6 @@ static void Main()
 
 ![Figure 1 Class hierarchy](docs/2/inheritance.png)
 
->   Figure 1 Class hierarchy
-
 Activity
 
 Let’s imagine that you are asked to develop an application that handles the wage
@@ -484,7 +480,6 @@ internal abstract class Employee : Person
 	}
 
 	public double Wage { get; set; }
-
 
 	//Abstract method
 	public abstract double CalculateBonusAbstract();
@@ -578,9 +573,9 @@ programming languages a Software Developers or Contractor knows.
 
 ```C#
 internal class Contractor : Person
-	{
-		
-	}
+{		
+
+}
 ```
 
 2.  Add the “IKnownProgrammingLanguages” interface
