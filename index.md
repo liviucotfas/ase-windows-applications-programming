@@ -112,6 +112,7 @@ Some of these types have shorthand defined in C#, as shown in the following tabl
 -	structure, enum, primitive types (derived from System.ValueType)
 -	allocated: on the stack;
 -	lifetime: can be created and destroyed very quickly, as its lifetime is determined by the defining scope;
+
 ##3.2.	Reference types
 -	class, delegate, interface
 -	allocated: in the heap;
