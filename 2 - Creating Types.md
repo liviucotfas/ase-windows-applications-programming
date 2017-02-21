@@ -505,23 +505,67 @@ internal abstract class Employee : Person
 
 4.  Add a SoftwareDeveloper class
 
-| **internal** class SoftwareDeveloper **:** Employee **{ private** static double bonusRate **=** 1.2**; public** SoftwareDeveloper**(**double wage**) {** Wage **=** wage**; } public override** double CalculateBonusAbstract**() {** Console**.**WriteLine**(**"SoftwareDeveloper - CalculateBonusAbstract"**); return** bonusRate **\*** Wage**; } public new** double CalculateBonusNormal**() {** Console**.**WriteLine**(**"SoftwareDeveloper - CalculateBonusNormal"**); return** bonusRate **\*** Wage**; } public override** double CalculateBonusVirtual**() {** Console**.**WriteLine**(**"Employee - CalculateBonusVirtual"**); return** bonusRate **\*** Wage**; } }** |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+ internal class SoftwareDeveloper : Employee
+{
+	private static double bonusRate = 1.2;
 
+	public SoftwareDeveloper(double wage)
+	{
+		Wage = wage;
+	}
+
+	public override double CalculateBonusAbstract()
+	{
+		Console.WriteLine("SoftwareDeveloper - CalculateBonusAbstract");
+		return bonusRate * Wage;
+	}
+
+	public new double CalculateBonusNormal()
+	{
+		Console.WriteLine("SoftwareDeveloper - CalculateBonusNormal");
+		return bonusRate * Wage;
+	}
+
+	public override double CalculateBonusVirtual()
+	{
+		Console.WriteLine("Employee - CalculateBonusVirtual");
+		return bonusRate * Wage;
+	}
+}
+```
 
 5.  Add the following method to the “Program” class and call it from the
     “Main()” method. Inside the method declare a SoftwareDeveloper object and
     call the CalculateBonusAbstract, CalculateBonusNormal and
     CalculateBonusVirtual
 
-| **private** static void AbstractNormalVirtualMethods**() {** var softwareDeveloper **= new** SoftwareDeveloper**(**2000**);** //Abstract method Console**.**WriteLine**(**"\\n\#\#\#Abstract"**);** Console**.**WriteLine**(**softwareDeveloper**.**CalculateBonusAbstract**());** Console**.**WriteLine**(((**Employee**)**softwareDeveloper**).**CalculateBonusAbstract**());** //Normal method Console**.**Write**(**"\\n\#\#\#Hide"**);** Console**.**WriteLine**(**softwareDeveloper**.**CalculateBonusNormal**());** Console**.**WriteLine**(((**Employee**)**softwareDeveloper**).**CalculateBonusNormal**());** //Virtual method Console**.**Write**(**"\\n\#\#\#Override"**);** Console**.**WriteLine**(**softwareDeveloper**.**CalculateBonusVirtual**());** Console**.**WriteLine**(((**Employee**)**softwareDeveloper**).**CalculateBonusVirtual**()); }** |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+private static void AbstractNormalVirtualMethods()
+{
+	var softwareDeveloper = new SoftwareDeveloper(2000);
 
+	//Abstract method
+	Console.WriteLine("\n###Abstract");
+	Console.WriteLine(softwareDeveloper.CalculateBonusAbstract());
+	Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusAbstract());
+
+	//Normal method
+	Console.Write("\n###Hide");
+	Console.WriteLine(softwareDeveloper.CalculateBonusNormal());
+	Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusNormal());
+
+	//Virtual method
+	Console.Write("\n###Override");
+	Console.WriteLine(softwareDeveloper.CalculateBonusVirtual());
+	Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusVirtual());
+}
+```
 
 6.  In the previous method declare an array of Employee[] and call the
     previously mentioned methods
 
-    1.  Custom Interfaces
+### 6.2. Custom Interfaces
 
 Activity
 
@@ -532,15 +576,22 @@ programming languages a Software Developers or Contractor knows.
 
 1.  Add the “Contractor” class
 
-| internal class Contractor : Person { } |
-|----------------------------------------|
-
+```C#
+internal class Contractor : Person
+	{
+		
+	}
+```
 
 2.  Add the “IKnownProgrammingLanguages” interface
 
-| **internal interface** IKnownProgrammingLanguages **{** string**[]** KnownProgrammingLanguages **{** get**;** set**; }** bool Knows**(**string language**); }** |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
+```C#
+internal interface IKnownProgrammingLanguages
+{
+	string[] KnownProgrammingLanguages { get; set; }
+	bool Knows(string language);
+}
+```
 
 3.  Derive the “SoftwareDevloper” and “Contractor” classes from the
     “IKnownProgrammingLanguages” interface
