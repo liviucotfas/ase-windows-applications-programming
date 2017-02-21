@@ -131,4 +131,80 @@ Table Comparison between value types and reference types
 | Own constructor for this type                    | Yes, but the default constructor is reserved (i.e., the custom constructors must all have arguments). | Yes                                                                                                    |
 | When do variables of this type die?              | When they fall out of the defining scope.                                                             | When the object is garbage collected.                                                                  |
 
-Table: Comparison between value types and reference types
+Activity:
+-   Add the following method to the program in the previous activity;
+-   Call it from the Main method.
+
+```C#
+private static void SystemDataTypes()
+{
+	Console.Write("First Name: ");
+
+	//declare the variable
+	//string firstName;
+	//store the input from the keyboard
+	//firstName = Console.ReadLine();
+
+	//written more concisely
+	string firstName = Console.ReadLine();
+
+	Console.WriteLine("");
+
+	DateTime currentTime = DateTime.Now;
+
+	//{0} and {1} are replaced with the arguments
+	//Console.WriteLine(string.Format("Hello {0}! Today is {1}.", firstName, DateTime.Now));
+	//written more concisely
+	Console.WriteLine("Hello {0}! Today is {1}.", firstName, currentTime);
+
+	Console.ReadLine();
+}
+```
+
+## 3.3. Implicitly Typed Local Variables
+--------------------------------
+
+Local variables can be given an inferred "type" of **var** instead of an
+explicit type. The var keyword instructs the compiler to infer the type of the
+variable from the expression on the right side of the initialization statement.
+
+Documentation: <https://msdn.microsoft.com/en-us/library/bb384061.aspx>
+
+Activity:
+
+-   Use **var** for variable declarations instead of **string** or **DateTime**
+    in the previous activity.
+
+# 4. Working with Strings
+
+## 4.1. Immutable
+
+-   Strings are **immutable:** after the initial value is assigned to a string
+    object, the character data cannot be changed. A brand new string is created
+    each time we modify the initial string.
+
+Activity:
+
+```C#
+internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			//Ex1
+			string s1 = "abc";
+			string s2 = s1;
+			s1=s1.Replace("abc", "ba");
+			Console.WriteLine(s1);
+			Console.WriteLine(s2);
+
+			//Ex2
+			String s3 = "abc";
+			String s4 = s3;
+			s3 += "d";
+			Console.WriteLine(s3);
+			Console.WriteLine(s4);
+
+		/*Strings are immutable--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this. */
+		}
+}
+```
