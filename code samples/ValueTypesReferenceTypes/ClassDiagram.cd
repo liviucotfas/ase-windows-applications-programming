@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EnumStructClass.PersonClass">
+    <Position X="8.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAABQAAAEAAAAAAQAAAAAAAgAAQAABAAAAAA=</HashCode>
+      <FileName>PersonClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="EnumStructClass.PersonStruct">
+    <Position X="5.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>PersonStruct.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
