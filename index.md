@@ -104,4 +104,4 @@ NameofYourApp.exe /arg1 -arg2
 ```
 
 ## 3.	Data Types
-!(docs/1/datatypes.png)
+![Data Types](docs/1/datatypes.png)
