@@ -88,23 +88,104 @@ Assignment
 
 1.  Add the PersonClass class defined bellow.
 
-| **internal** class PersonClass **{** \#region Properties \#region Age - Without using Properties **private** int \_age**; public** int GetAge**() { return** \_age**;** // "this.\_age" is implicit **} public** void SetAge**(**int value**) {** \_age **=** value**;** // "this.\_age" is implicit **}** \#endregion \#region Name - Using properties **private** string \_name**;** //Read/Write property **public** string Name **{** get **{ return** \_name**; }** set **{** \_name **=** value**; } }** //Readonly property **public** string Name2 **{** get **{ return** \_name**; } }** \#endregion \#region Occupation - Using auto-property **public** OccupationEnum Occupation **{** get**;** set**; }** \#endregion \#endregion **public** PersonClass**(**int age**) {** Console**.**WriteLine**(**"Constructor(default)"**);** \_age **=** age**;** //equivalent with this.\_age = age; **} public** PersonClass**(**int age**,** string name**,** OccupationEnum occupation**):this(**age**) {** Console**.**WriteLine**(**"Constructor(parameters)"**);** Name **=** name**;** Occupation **=** occupation**; }** //Copy constructor - *https://msdn.microsoft.com/en-us/library/ms173116.aspx* **public** PersonClass**(**PersonClass previousPerson**) : this(**previousPerson**.**GetAge**(),** previousPerson**.**Name**,** previousPerson**.**Occupation**) {** Console**.**WriteLine**(**"Copy Constructor"**); }** //Destructor **\~**PersonClass**() {** Console**.**WriteLine**(**"Destructor"**); } public override** string ToString**() { return** string**.**Format**(**"Name: {0}, Age: {1}, Occupation: {2}"**,** Name**,** \_age**,** Occupation**); } }** |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+internal class PersonClass
+{
+	#region Properties
 
+	#region Age - Without using Properties
+	private int _age;
+	public int GetAge()
+	{
+		return _age; // "this._age" is implicit
+	}
+	public void SetAge(int value)
+	{
+		_age = value; // "this._age" is implicit
+	}
+	#endregion
+
+	#region Name - Using properties
+	private string _name;
+	//Read/Write property
+	public string Name
+	{
+		get { return _name; }
+		set { _name = value; }
+	}
+
+	//Readonly property
+	public string Name2
+	{
+		get { return _name; }
+	}
+	#endregion
+
+	#region Occupation - Using auto-property
+	public OccupationEnum Occupation { get; set; }
+	#endregion
+	#endregion
+
+	public PersonClass(int age)
+	{
+		Console.WriteLine("Constructor(default)");
+		_age = age; //equivalent with this._age = age;
+	}
+
+	public PersonClass(int age, string name, OccupationEnum occupation):this(age)
+	{
+		Console.WriteLine("Constructor(parameters)");
+		Name = name;
+		Occupation = occupation;
+	}
+
+	//Copy constructor - https://msdn.microsoft.com/en-us/library/ms173116.aspx
+	public PersonClass(PersonClass previousPerson) : this(previousPerson.GetAge(), previousPerson.Name, previousPerson.Occupation)
+	{
+		Console.WriteLine("Copy Constructor");
+	}
+	
+	//Destructor
+	~PersonClass()
+	{
+		Console.WriteLine("Destructor");
+	}
+
+	public override string ToString()
+	{
+		return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, _age, Occupation);
+	}
+}
+```
 
 2.  Add the ReferenceTypeAssignment method in Program.cs and call it from the
     Main() method.
 
-| **private** static void ReferenceTypeAssignment**() {** Console**.**WriteLine**(**"Assigning reference types\\n"**);** var personClass1 **= new** PersonClass**(**1**,** "name1"**,** OccupationEnum**.**Student**);** var personClass2 **=** personClass1**;** Console**.**WriteLine**(**personClass1**);** // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonClass Console**.**WriteLine**(**personClass2**);** // Change personClass1.Name and \_age and print again. personClass2.Name and \_age have changed. personClass1**.**Name **=** "NewUserName"**;** personClass1**.**SetAge**(**22**);** Console**.**WriteLine**(**"\\n=\> Changed personClass1.Name and personClass1.\_age\\n"**);** Console**.**WriteLine**(**personClass1**);** Console**.**WriteLine**(**personClass2**); }** |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+private static void ReferenceTypeAssignment()
+{
+	Console.WriteLine("Assigning reference types\n");
+	var personClass1 = new PersonClass(1, "name1", OccupationEnum.Student);
+	var personClass2 = personClass1;
 
+	Console.WriteLine(personClass1); // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonClass
+	Console.WriteLine(personClass2);
+
+	// Change personClass1.Name and _age and print again. personClass2.Name and _age have changed.
+	personClass1.Name = "NewUserName";
+	personClass1.SetAge(22);
+	Console.WriteLine("\n=> Changed personClass1.Name and personClass1._age\n");
+	Console.WriteLine(personClass1);
+	Console.WriteLine(personClass2);
+}
+```
 
 Question
 
 -   Can the PersonClass **()** constructor be made private? (can we have private
     constructors?)
 
-1.  Standard Interfaces
+## 4.  Standard Interfaces
 
     1.  IComparable\<T\>
 
