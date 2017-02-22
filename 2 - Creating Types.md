@@ -49,14 +49,14 @@ A Structure (struct in C\#) type is a value type that is typically used to encap
 		public override string ToString()
 		{
 			return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, Age, Occupation);
-			}
+		}
 	}
 	```
 
-2.  Add the ValueType#### Assignment method in Program.cs and call it from the Main() method.
+2.  Add the ValueTypeAssignment method in Program.cs and call it from the Main() method.
 
 	```C#
-	private static void ValueType#### Assignment()
+	private static void ValueTypeAssignment()
 	{
 		Console.WriteLine("###Assigning value types\n");
 		var personStruct1 = new PersonStruct(1, "name1", OccupationEnum.Student);
