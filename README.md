@@ -8,4 +8,4 @@
 
 **Is it possible to convert the .md file to .pdf ?**
 
->A: You can use https://gitprint.com/ .
+>A: you can use https://gitprint.com/ .
