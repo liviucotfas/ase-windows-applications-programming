@@ -1,7 +1,7 @@
 Collections
 ===========
 
-| [docs/icons/C#.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
+| ![docs/icons/C#.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
 
@@ -30,79 +30,79 @@ Assignment
 
 3.  Add the following method in the “Program” class and call it from the Main method
 
-```C#
-private static void ListExample()
-{
-	// New string-typed list
-	var words = new List<string>();
-	words.Add("melon");
-	words.Add("avocado");
-	words.AddRange(new[] { "banana", "plum" });
-	
-	// Insert at start
-	words.Insert(0, "lemon"); 
-	
-	// Insert at start
-	words.InsertRange(0, new[] { "peach", "nashi" }); 
-	words.Remove("melon");
-	
-	// Remove the 4th element
-	words.RemoveAt(3); 
-	
-	// Remove first 2 elements
-	words.RemoveRange(0, 2);
-	
-	// Remove all strings starting in 'n':
-	words.RemoveAll(x => x.StartsWith("n"));
-	
-	for (var i=0; i<words.Count; i++)
+	```C#
+	private static void ListExample()
 	{
-		Console.WriteLine(words[i]);
-	}
+		// New string-typed list
+		var words = new List<string>();
+		words.Add("melon");
+		words.Add("avocado");
+		words.AddRange(new[] { "banana", "plum" });
+		
+		// Insert at start
+		words.Insert(0, "lemon"); 
+		
+		// Insert at start
+		words.InsertRange(0, new[] { "peach", "nashi" }); 
+		words.Remove("melon");
+		
+		// Remove the 4th element
+		words.RemoveAt(3); 
+		
+		// Remove first 2 elements
+		words.RemoveRange(0, 2);
+		
+		// Remove all strings starting in 'n':
+		words.RemoveAll(x => x.StartsWith("n"));
+		
+		for (var i=0; i<words.Count; i++)
+		{
+			Console.WriteLine(words[i]);
+		}
 
-	foreach (var word in words)
-	{
-		Console.WriteLine(word);
+		foreach (var word in words)
+		{
+			Console.WriteLine(word);
+		}
 	}
-}
-```
+	```
 
 4.  Add the following “Person” class
 
-```C#
-internal class Person
-{
-	#region Properties
-	public string Name { get; set; }
-	public int Age { get; set; }
-	#endregion
-
-	public Person(string name, int age)
+	```C#
+	internal class Person
 	{
-		Name = name;
-		Age = age;
+		#region Properties
+		public string Name { get; set; }
+		public int Age { get; set; }
+		#endregion
+
+		public Person(string name, int age)
+		{
+			Name = name;
+			Age = age;
+		}
 	}
-}
-```
+	```
 5.  Add the following method in the “Program” class and call it from the Main     method
 
-```C#
-private static void ListPersonExample()
-{
-	var personList = new List<Person>();
-
-	var rnd = new Random();
-	for (var i = 0; i < 10; i++)
+	```C#
+	private static void ListPersonExample()
 	{
-		personList.Add(new Person("Persoana " + i, rnd.Next(100)));
+		var personList = new List<Person>();
+
+		var rnd = new Random();
+		for (var i = 0; i < 10; i++)
+		{
+			personList.Add(new Person("Persoana " + i, rnd.Next(100)));
+		}
+
+		//Which interface is needed for Array.Sort(personList)
+
+		foreach (var p in personList) //equivalent to foreach (var p in personList)
+			Console.WriteLine(p);
 	}
-
-	//Which interface is needed for Array.Sort(personList)
-
-	foreach (var p in personList) //equivalent to foreach (var p in personList)
-		Console.WriteLine(p);
-}
-```
+	```
 
 # Queues, Stacks, and Sets
 

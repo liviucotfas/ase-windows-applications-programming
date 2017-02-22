@@ -30,47 +30,47 @@ Assignment
 
 1.  Add the PersonStruct defined bellow
 
-```C#
-internal struct PersonStruct
-{
-	#region Attributes
-	public int Age;
-	public string Name;
-	public OccupationEnum Occupation;
-	#endregion
-
-	public PersonStruct(int age, string name, OccupationEnum occupation)
+	```C#
+	internal struct PersonStruct
 	{
-		Age = age;
-		Name = name;
-		Occupation = occupation;
+		#region Attributes
+		public int Age;
+		public string Name;
+		public OccupationEnum Occupation;
+		#endregion
+
+		public PersonStruct(int age, string name, OccupationEnum occupation)
+		{
+			Age = age;
+			Name = name;
+			Occupation = occupation;
+		}
+
+		public override string ToString()
+		{
+			return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, Age, Occupation);
+			}
 	}
-
-	public override string ToString()
-	{
-		return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, Age, Occupation);
-        }
-}
 ```
 
 2.  Add the ValueTypeAssignment method in Program.cs and call it from the Main() method.
 
-```C#
- private static void ValueTypeAssignment()
-{
-	Console.WriteLine("###Assigning value types\n");
-	var personStruct1 = new PersonStruct(1, "name1", OccupationEnum.Student);
-	var personStruct2 = personStruct1;
-	
-	Console.WriteLine(personStruct1); // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonStruct
-	Console.WriteLine(personStruct2);
+	```C#
+	private static void ValueTypeAssignment()
+	{
+		Console.WriteLine("###Assigning value types\n");
+		var personStruct1 = new PersonStruct(1, "name1", OccupationEnum.Student);
+		var personStruct2 = personStruct1;
+		
+		Console.WriteLine(personStruct1); // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonStruct
+		Console.WriteLine(personStruct2);
 
-	// Change personStruct1.Name and print again. personStruct2.Name is not changed.
-	personStruct1.Name = "NewName";
-	Console.WriteLine(personStruct1);
-	Console.WriteLine(personStruct2);
-}
-```
+		// Change personStruct1.Name and print again. personStruct2.Name is not changed.
+		personStruct1.Name = "NewName";
+		Console.WriteLine(personStruct1);
+		Console.WriteLine(personStruct2);
+	}
+	```
 
 Questions
 
@@ -86,97 +86,97 @@ Assignment
 
 1.  Add the PersonClass class defined bellow.
 
-```C#
-internal class PersonClass
-{
-	#region Properties
+	```C#
+	internal class PersonClass
+	{
+		#region Properties
 
-	#region Age - Without using Properties
-	private int _age;
-	public int GetAge()
-	{
-		return _age; // "this._age" is implicit
-	}
-	public void SetAge(int value)
-	{
-		_age = value; // "this._age" is implicit
-	}
-	#endregion
+		#region Age - Without using Properties
+		private int _age;
+		public int GetAge()
+		{
+			return _age; // "this._age" is implicit
+		}
+		public void SetAge(int value)
+		{
+			_age = value; // "this._age" is implicit
+		}
+		#endregion
 
-	#region Name - Using properties
-	private string _name;
-	//Read/Write property
-	public string Name
-	{
-		get { return _name; }
-		set { _name = value; }
-	}
+		#region Name - Using properties
+		private string _name;
+		//Read/Write property
+		public string Name
+		{
+			get { return _name; }
+			set { _name = value; }
+		}
 
-	//Readonly property
-	public string Name2
-	{
-		get { return _name; }
-	}
-	#endregion
+		//Readonly property
+		public string Name2
+		{
+			get { return _name; }
+		}
+		#endregion
 
-	#region Occupation - Using auto-property
-	public OccupationEnum Occupation { get; set; }
-	#endregion
-	#endregion
+		#region Occupation - Using auto-property
+		public OccupationEnum Occupation { get; set; }
+		#endregion
+		#endregion
 
-	public PersonClass(int age)
-	{
-		Console.WriteLine("Constructor(default)");
-		_age = age; //equivalent with this._age = age;
-	}
+		public PersonClass(int age)
+		{
+			Console.WriteLine("Constructor(default)");
+			_age = age; //equivalent with this._age = age;
+		}
 
-	public PersonClass(int age, string name, OccupationEnum occupation):this(age)
-	{
-		Console.WriteLine("Constructor(parameters)");
-		Name = name;
-		Occupation = occupation;
-	}
+		public PersonClass(int age, string name, OccupationEnum occupation):this(age)
+		{
+			Console.WriteLine("Constructor(parameters)");
+			Name = name;
+			Occupation = occupation;
+		}
 
-	//Copy constructor - https://msdn.microsoft.com/en-us/library/ms173116.aspx
-	public PersonClass(PersonClass previousPerson) : this(previousPerson.GetAge(), previousPerson.Name, previousPerson.Occupation)
-	{
-		Console.WriteLine("Copy Constructor");
-	}
-	
-	//Destructor
-	~PersonClass()
-	{
-		Console.WriteLine("Destructor");
-	}
+		//Copy constructor - https://msdn.microsoft.com/en-us/library/ms173116.aspx
+		public PersonClass(PersonClass previousPerson) : this(previousPerson.GetAge(), previousPerson.Name, previousPerson.Occupation)
+		{
+			Console.WriteLine("Copy Constructor");
+		}
+		
+		//Destructor
+		~PersonClass()
+		{
+			Console.WriteLine("Destructor");
+		}
 
-	public override string ToString()
-	{
-		return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, _age, Occupation);
+		public override string ToString()
+		{
+			return string.Format("Name: {0}, Age: {1},  Occupation: {2}", Name, _age, Occupation);
+		}
 	}
-}
-```
+	```
 
 2.  Add the ReferenceTypeAssignment method in Program.cs and call it from the
     Main() method.
 
-```C#
-private static void ReferenceTypeAssignment()
-{
-	Console.WriteLine("Assigning reference types\n");
-	var personClass1 = new PersonClass(1, "name1", OccupationEnum.Student);
-	var personClass2 = personClass1;
+	```C#
+	private static void ReferenceTypeAssignment()
+	{
+		Console.WriteLine("Assigning reference types\n");
+		var personClass1 = new PersonClass(1, "name1", OccupationEnum.Student);
+		var personClass2 = personClass1;
 
-	Console.WriteLine(personClass1); // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonClass
-	Console.WriteLine(personClass2);
+		Console.WriteLine(personClass1); // automatically calls .ToString(). The method is defined in System.Object and overridden in PersonClass
+		Console.WriteLine(personClass2);
 
-	// Change personClass1.Name and _age and print again. personClass2.Name and _age have changed.
-	personClass1.Name = "NewUserName";
-	personClass1.SetAge(22);
-	Console.WriteLine("\n=> Changed personClass1.Name and personClass1._age\n");
-	Console.WriteLine(personClass1);
-	Console.WriteLine(personClass2);
-}
-```
+		// Change personClass1.Name and _age and print again. personClass2.Name and _age have changed.
+		personClass1.Name = "NewUserName";
+		personClass1.SetAge(22);
+		Console.WriteLine("\n=> Changed personClass1.Name and personClass1._age\n");
+		Console.WriteLine(personClass1);
+		Console.WriteLine(personClass2);
+	}
+	```
 
 Question
 
@@ -193,67 +193,67 @@ Assignment
 
 2.  Add the following “Person” class
 
-```C#
-internal class Person
-{
-	#region Properties
-	public string Name { get; set; }
-	public int Age { get; set; }
-	#endregion
-
-	public Person(string name, int age)
+	```C#
+	internal class Person
 	{
-		Name = name;
-		Age = age;
+		#region Properties
+		public string Name { get; set; }
+		public int Age { get; set; }
+		#endregion
+
+		public Person(string name, int age)
+		{
+			Name = name;
+			Age = age;
+		}
 	}
-}
-```
+	```
 
 3.  Add the following method in the “Program” class and call it from the “Main()” method (Note: an exception will be thown when you run the project)
 
-```C#
-private static void ReferenceTypeArray()
-{
-	var p1 = new Person("Name3", 42);
-	var p2 = new Person("Name1", 23);
-	var p3 = new Person("Name2", 32);
-
-	var pArray = new Person[] { p1, p2, p3 };
-
-	Array.Sort(pArray);
-
-	//IComparable implementation is called automatically by methods such as Array..::.Sort
-
-	foreach (var person in pArray)
+	```C#
+	private static void ReferenceTypeArray()
 	{
-		Console.WriteLine(person);
+		var p1 = new Person("Name3", 42);
+		var p2 = new Person("Name1", 23);
+		var p3 = new Person("Name2", 32);
+
+		var pArray = new Person[] { p1, p2, p3 };
+
+		Array.Sort(pArray);
+
+		//IComparable implementation is called automatically by methods such as Array..::.Sort
+
+		foreach (var person in pArray)
+		{
+			Console.WriteLine(person);
+		}
 	}
-}
-```
+	```
 
 4.  Implement the IComparable\<Person\> interface for the “Person” class.
 
-```C#
-internal class Person : IComparable<Person>
-{
-	#region Properties
-	public string Name { get; set; }
-	public int Age { get; set; }
-	#endregion
-
-	public Person(string name, int age)
+	```C#
+	internal class Person : IComparable<Person>
 	{
-		Name = name;
-		Age = age;
-	}
+		#region Properties
+		public string Name { get; set; }
+		public int Age { get; set; }
+		#endregion
 
-	public int CompareTo(Person other)
-	{
-		//Note: string.CompareTo is culture-specific
-		return Name.CompareTo(other.Name);	
+		public Person(string name, int age)
+		{
+			Name = name;
+			Age = age;
+		}
+
+		public int CompareTo(Person other)
+		{
+			//Note: string.CompareTo is culture-specific
+			return Name.CompareTo(other.Name);	
+		}
 	}
-}
-```
+	```
 
 5.  Change the IComparable\<Person\> implementation in order to use the Age of the persons
 
@@ -261,76 +261,76 @@ internal class Person : IComparable<Person>
 
 1.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
 
-```C#
- internal class PersonLuckyNumbers : Person
-{
-	public int[] LuckyNumbers { get; set; }
-
-	public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+	```C#
+	internal class PersonLuckyNumbers : Person
 	{
-		LuckyNumbers = luckyNumbers;
+		public int[] LuckyNumbers { get; set; }
+
+		public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+		{
+			LuckyNumbers = luckyNumbers;
+		}
 	}
-}
-```
+	```
 
 2.  Add the following method in the “Program” class and call it from the Main method
 
-```C#
-private static void ReferenceTypeClone()
-{
-	var p1 = new PersonLuckyNumbers("Name 1", 21, new []{13, 26, 39});
-	var p2 = p1;
+	```C#
+	private static void ReferenceTypeClone()
+	{
+		var p1 = new PersonLuckyNumbers("Name 1", 21, new []{13, 26, 39});
+		var p2 = p1;
 
-	p1.Age = 12;
-	p1.LuckyNumbers[0] = 1;
+		p1.Age = 12;
+		p1.LuckyNumbers[0] = 1;
 
-	Console.WriteLine(p1);
-	Console.WriteLine(p2);
-}
-```
+		Console.WriteLine(p1);
+		Console.WriteLine(p2);
+	}
+	```
 
 3.  Run the application and notice the values in the two objects
 
 4.  Implement IClonable interface for the “PersonLuckyNumbers” class as follows (shallow copy only)
 
-```C#
-internal class PersonLuckyNumbers : Person, ICloneable
-{
-	public int[] LuckyNumbers { get; set; }
-
-	public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+	```C#
+	internal class PersonLuckyNumbers : Person, ICloneable
 	{
-		LuckyNumbers = luckyNumbers;
-	}
+		public int[] LuckyNumbers { get; set; }
 
-	public object Clone()
-	{
-		// First get a shallow copy.
-		var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+		public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+		{
+			LuckyNumbers = luckyNumbers;
+		}
+
+		public object Clone()
+		{
+			// First get a shallow copy.
+			var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+		}
 	}
-}
-```
+	```
 
 5. Run the application and notice the values in the two objects
 
 6. Change the implementation of the “Clone()” method in order to perform a **deep copy**
 
-```C#
-public object Clone()
-{
-	// First get a shallow copy.
-	var newPerson = (PersonLuckyNumbers)MemberwiseClone();
-
-	// Then fill in the gaps.
-	newPerson.LuckyNumbers = new int[LuckyNumbers.Length];
-	for (var i=0; i< LuckyNumbers.Length; i++)
+	```C#
+	public object Clone()
 	{
-		newPerson.LuckyNumbers[i] = LuckyNumbers[i];
-	}
+		// First get a shallow copy.
+		var newPerson = (PersonLuckyNumbers)MemberwiseClone();
 
-	return newPerson;
-}
-```
+		// Then fill in the gaps.
+		newPerson.LuckyNumbers = new int[LuckyNumbers.Length];
+		for (var i=0; i< LuckyNumbers.Length; i++)
+		{
+			newPerson.LuckyNumbers[i] = LuckyNumbers[i];
+		}
+
+		return newPerson;
+	}
+	```
 
 ## 5. Operators
 -   can be overload by defining static member functions using the operator keyword.
@@ -354,89 +354,89 @@ Activity
 
 1.  For the standard Person class overload the \>, \< and explicit (int) operators
 
-```C#
-#region Operators
-// operator de conversie explicita la int
-public static explicit operator int(Person p)
-{
-	return p.Age;
-}
+	```C#
+	#region Operators
+	// operator de conversie explicita la int
+	public static explicit operator int(Person p)
+	{
+		return p.Age;
+	}
 
-public static bool operator <(Person p1, Person p2)
-{
-	return p1.Age < p2.Age;
-}
+	public static bool operator <(Person p1, Person p2)
+	{
+		return p1.Age < p2.Age;
+	}
 
-public static bool operator >(Person p1, Person p2)
-{
-	return p1.Age > p2.Age;
-}
-#endregion
-```
+	public static bool operator >(Person p1, Person p2)
+	{
+		return p1.Age > p2.Age;
+	}
+	#endregion
+	```
 
 2.  Use the operators in the Main method
 
-```C#
-private static void Main(string[] args)
-{
-	var p = new Person("Name1", 21);
-	var p2 = new Person("Name2", 22);
+	```C#
+	private static void Main(string[] args)
+	{
+		var p = new Person("Name1", 21);
+		var p2 = new Person("Name2", 22);
 
-	//int age = p; //error
-	int age = (int)p;
-	Console.WriteLine("Age: {0}", age);
+		//int age = p; //error
+		int age = (int)p;
+		Console.WriteLine("Age: {0}", age);
 
-	if(p<p2)
-		Console.WriteLine("p.Age < p2.Age");
-}
-```
+		if(p<p2)
+			Console.WriteLine("p.Age < p2.Age");
+	}
+	```
 
 3.  Implement the implicit (int) cast
 
 Activity
 
 1.  Add the following “Fraction” class
-```C#
-class Fraction
-{
-    int num, den;
-    public Fraction(int num, int den)
-    {
-        this.num = num;
-        this.den = den;
-    }
+	```C#
+	class Fraction
+	{
+		int num, den;
+		public Fraction(int num, int den)
+		{
+			this.num = num;
+			this.den = den;
+		}
 
-    // overload operator +
-    public static Fraction operator +(Fraction a, Fraction b)
-    {
-        return new Fraction(a.num * b.den + b.num * a.den,
-           a.den * b.den);
-    }
+		// overload operator +
+		public static Fraction operator +(Fraction a, Fraction b)
+		{
+			return new Fraction(a.num * b.den + b.num * a.den,
+			a.den * b.den);
+		}
 
-    // overload operator *
-    public static Fraction operator *(Fraction a, Fraction b)
-    {
-        return new Fraction(a.num * b.num, a.den * b.den);
-    }
+		// overload operator *
+		public static Fraction operator *(Fraction a, Fraction b)
+		{
+			return new Fraction(a.num * b.num, a.den * b.den);
+		}
 
-    // user-defined conversion from Fraction to double
-    public static implicit operator double(Fraction f)
-    {
-        return (double)f.num / f.den;
-    }
-}
-```
+		// user-defined conversion from Fraction to double
+		public static implicit operator double(Fraction f)
+		{
+			return (double)f.num / f.den;
+		}
+	}
+	```
 
 2.  Add the following method in the “Program” class and call it from the “Main()” method
-```C#
-static void Main()
-{
-	Fraction a = new Fraction(1, 2);
-	Fraction b = new Fraction(3, 7);
-	Fraction c = new Fraction(2, 3);
-	Console.WriteLine((double)(a * b + c));
-}
-```
+	```C#
+	static void Main()
+	{
+		Fraction a = new Fraction(1, 2);
+		Fraction b = new Fraction(3, 7);
+		Fraction c = new Fraction(2, 3);
+		Console.WriteLine((double)(a * b + c));
+	}
+	```
 
 ## 6.  Class Inheritance
 
@@ -453,112 +453,108 @@ Managers.
 
 1.  Create a new project that will include the classes shown in Figure 1.
 
-2.  Add an abstract Person class (keep in mind that we only consider the three
-    types of person categories mentioned above)
+2.  Add an abstract Person class (keep in mind that we only consider the three types of person categories mentioned above)
 
-```C#
-internal abstract class Person
-{
-	public string FirstName { get; set; }
-	public string LastName { get; set; }
-	public int Age { get; set; }
-}
-```
+	```C#
+	internal abstract class Person
+	{
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		public int Age { get; set; }
+	}
+	```
 
 3.  Add an abstract Employee class
 
-```C#
-internal abstract class Employee : Person
-{
-	// A static point of data.
-	private static double bonusRate = 1.1;
-	// A static property.
-	public static double BonusRate
+	```C#
+	internal abstract class Employee : Person
 	{
-		get { return bonusRate; }
-		set { bonusRate = value; }
+		// A static point of data.
+		private static double bonusRate = 1.1;
+		// A static property.
+		public static double BonusRate
+		{
+			get { return bonusRate; }
+			set { bonusRate = value; }
+		}
+
+		public double Wage { get; set; }
+
+		//Abstract method
+		public abstract double CalculateBonusAbstract();
+
+		public double CalculateBonusNormal()
+		{
+			Console.WriteLine("Employee - CalculateBonusNormal");
+			return bonusRate * Wage;
+		}
+
+		public virtual double CalculateBonusVirtual()
+		{
+			Console.WriteLine("Employee - CalculateBonusVirtual");
+			return bonusRate * Wage;
+		}
 	}
-
-	public double Wage { get; set; }
-
-	//Abstract method
-	public abstract double CalculateBonusAbstract();
-
-	public double CalculateBonusNormal()
-	{
-		Console.WriteLine("Employee - CalculateBonusNormal");
-		return bonusRate * Wage;
-	}
-
-	public virtual double CalculateBonusVirtual()
-	{
-		Console.WriteLine("Employee - CalculateBonusVirtual");
-		return bonusRate * Wage;
-	}
-}
-```
+	```
 
 4.  Add a SoftwareDeveloper class
 
-```C#
- internal class SoftwareDeveloper : Employee
-{
-	private static double bonusRate = 1.2;
-
-	public SoftwareDeveloper(double wage)
+	```C#
+	internal class SoftwareDeveloper : Employee
 	{
-		Wage = wage;
-	}
+		private static double bonusRate = 1.2;
 
-	public override double CalculateBonusAbstract()
+		public SoftwareDeveloper(double wage)
+		{
+			Wage = wage;
+		}
+
+		public override double CalculateBonusAbstract()
+		{
+			Console.WriteLine("SoftwareDeveloper - CalculateBonusAbstract");
+			return bonusRate * Wage;
+		}
+
+		public new double CalculateBonusNormal()
+		{
+			Console.WriteLine("SoftwareDeveloper - CalculateBonusNormal");
+			return bonusRate * Wage;
+		}
+
+		public override double CalculateBonusVirtual()
+		{
+			Console.WriteLine("Employee - CalculateBonusVirtual");
+			return bonusRate * Wage;
+		}
+	}
+	```
+
+5.  Add the following method to the “Program” class and call it from the “Main()” method. Inside the method declare a SoftwareDeveloper object and
+    call the CalculateBonusAbstract, CalculateBonusNormal and CalculateBonusVirtual
+
+	```C#
+	private static void AbstractNormalVirtualMethods()
 	{
-		Console.WriteLine("SoftwareDeveloper - CalculateBonusAbstract");
-		return bonusRate * Wage;
+		var softwareDeveloper = new SoftwareDeveloper(2000);
+
+		//Abstract method
+		Console.WriteLine("\n###Abstract");
+		Console.WriteLine(softwareDeveloper.CalculateBonusAbstract());
+		Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusAbstract());
+
+		//Normal method
+		Console.Write("\n###Hide");
+		Console.WriteLine(softwareDeveloper.CalculateBonusNormal());
+		Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusNormal());
+
+		//Virtual method
+		Console.Write("\n###Override");
+		Console.WriteLine(softwareDeveloper.CalculateBonusVirtual());
+		Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusVirtual());
 	}
+	```
 
-	public new double CalculateBonusNormal()
-	{
-		Console.WriteLine("SoftwareDeveloper - CalculateBonusNormal");
-		return bonusRate * Wage;
-	}
-
-	public override double CalculateBonusVirtual()
-	{
-		Console.WriteLine("Employee - CalculateBonusVirtual");
-		return bonusRate * Wage;
-	}
-}
-```
-
-5.  Add the following method to the “Program” class and call it from the
-    “Main()” method. Inside the method declare a SoftwareDeveloper object and
-    call the CalculateBonusAbstract, CalculateBonusNormal and
-    CalculateBonusVirtual
-
-```C#
-private static void AbstractNormalVirtualMethods()
-{
-	var softwareDeveloper = new SoftwareDeveloper(2000);
-
-	//Abstract method
-	Console.WriteLine("\n###Abstract");
-	Console.WriteLine(softwareDeveloper.CalculateBonusAbstract());
-	Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusAbstract());
-
-	//Normal method
-	Console.Write("\n###Hide");
-	Console.WriteLine(softwareDeveloper.CalculateBonusNormal());
-	Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusNormal());
-
-	//Virtual method
-	Console.Write("\n###Override");
-	Console.WriteLine(softwareDeveloper.CalculateBonusVirtual());
-	Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusVirtual());
-}
-```
-
-6.  In the previous method declare an array of Employee[] and call the
-    previously mentioned methods
+6.  In the previous method declare an array of Employee[] and call the previously mentioned methods
 
 ### 6.2. Custom Interfaces
 
@@ -571,32 +567,28 @@ programming languages a Software Developers or Contractor knows.
 
 1.  Add the “Contractor” class
 
-```C#
-internal class Contractor : Person
-{		
+	```C#
+	internal class Contractor : Person
+	{		
 
-}
-```
+	}
+	```
 
 2.  Add the “IKnownProgrammingLanguages” interface
 
-```C#
-internal interface IKnownProgrammingLanguages
-{
-	string[] KnownProgrammingLanguages { get; set; }
-	bool Knows(string language);
-}
-```
+	```C#
+	internal interface IKnownProgrammingLanguages
+	{
+		string[] KnownProgrammingLanguages { get; set; }
+		bool Knows(string language);
+	}
+	```
 
-3.  Derive the “SoftwareDevloper” and “Contractor” classes from the
-    “IKnownProgrammingLanguages” interface
+3.  Derive the “SoftwareDevloper” and “Contractor” classes from the “IKnownProgrammingLanguages” interface
 
-4.  Add a new method to the “Program” class and call it from the “Main()”
-    method. Inside the method define an array of persons and populate it with
-    the three categories of persons in the company (SofwareDeveloper, Manager,
-    Contractor).
+4.  Add a new method to the “Program” class and call it from the “Main()” method. Inside the method define an array of persons and populate it with
+    the three categories of persons in the company (SofwareDeveloper, Manager, Contractor).
 
-5.  In the previous method iterate the list of persons and display the known
-    programming languages for each person
+5.  In the previous method iterate the list of persons and display the known programming languages for each person
 
 6.  Search for all the persons that know “C\#”.
