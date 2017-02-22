@@ -1,7 +1,7 @@
 Collections
 ===========
 
-| [docs/icons/C#.png](docs/icons/C#.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
+| [docs/icons/C#.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
 
@@ -28,7 +28,7 @@ Assignment
 # List\<T\>
 ---------
 
-2.  Add the following method in the “Program” class and call it from the Main method
+3.  Add the following method in the “Program” class and call it from the Main method
 
 ```C#
 private static void ListExample()
@@ -67,7 +67,7 @@ private static void ListExample()
 }
 ```
 
-3.  Add the following “Person” class
+4.  Add the following “Person” class
 
 ```C#
 internal class Person
@@ -84,7 +84,7 @@ internal class Person
 	}
 }
 ```
-4.  Add the following method in the “Program” class and call it from the Main     method
+5.  Add the following method in the “Program” class and call it from the Main     method
 
 ```C#
 private static void ListPersonExample()
@@ -117,110 +117,105 @@ private static void ListPersonExample()
 
 #  Custom Collections
 
-| [./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “CustomCollections” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “CustomCollections” Sample |
 |------------------------------------------|------------------------------------------------------------------------------|
 
 
 #### Assignment
 
 1.  Add the following “PersonCollection” class
-
-```C#
-internal class PersonCollection :IEnumerable<Person>
-{
-	private Person[] _personArray;
-
-	//Indexer [int]
-	public Person this[int index]
+	```C#
+	internal class PersonCollection :IEnumerable<Person>
 	{
-		get { return _personArray[index]; }
-		set { _personArray[index] = value; }
-	}
+		private Person[] _personArray;
 
-	//Indexer [string]
-	public Person this[string name]
-	{
-		get { return _personArray.FirstOrDefault(x=>x.Name == name); }
-	}
-
-	public int Length
-	{
-		get { return _personArray.Length; }
-	}
-
-	public PersonCollection()
-	{
-		_personArray = new []
+		//Indexer [int]
+		public Person this[int index]
 		{
-			new Person("name1", 1),
-			new Person("name2", 2),
-			new Person("name3", 3)
-		};
-	}
-	
-	public IEnumerator<Person> GetEnumerator()
-	{
-		return new PersonEnumerator(this);
-	}
+			get { return _personArray[index]; }
+			set { _personArray[index] = value; }
+		}
 
-	IEnumerator IEnumerable.GetEnumerator()
-	{
-		return GetEnumerator();
-	}
-}
-```
+		//Indexer [string]
+		public Person this[string name]
+		{
+			get { return _personArray.FirstOrDefault(x=>x.Name == name); }
+		}
 
-2.  Add the following “PersonEnumerator” class
+		public int Length
+		{
+			get { return _personArray.Length; }
+		}
 
-```C#
-internal class PersonEnumerator : IEnumerator<Person>
-{
-	private int _nIndex;
-	private PersonCollection _personCollection;
-
-	public PersonEnumerator(PersonCollection personCollection)
-	{
-		_personCollection = personCollection;
-		_nIndex = -1;
-	}
-
-	public bool MoveNext()
-	{
-		_nIndex++;
-		return _nIndex < _personCollection.Length;
-	}
-
-	public void Reset()
-	{
-		_nIndex = -1;
-	}
-
-	public Person Current
-	{
-		get { return _personCollection[_nIndex]; }
-	}
-
-	object IEnumerator.Current
-	{
-		get { return Current; }
-	}
-
-	public void Dispose()
-	{
+		public PersonCollection()
+		{
+			_personArray = new []
+			{
+				new Person("name1", 1),
+				new Person("name2", 2),
+				new Person("name3", 3)
+			};
+		}
 		
+		public IEnumerator<Person> GetEnumerator()
+		{
+			return new PersonEnumerator(this);
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return GetEnumerator();
+		}
 	}
-}
 ```
+2.  Add the following “PersonEnumerator” class
+	```C#
+	internal class PersonEnumerator : IEnumerator<Person>
+	{
+		private int _nIndex;
+		private PersonCollection _personCollection;
 
-3.  Add the following method in the “Program” class and call it from the Main
-    method
+		public PersonEnumerator(PersonCollection personCollection)
+		{
+			_personCollection = personCollection;
+			_nIndex = -1;
+		}
 
-```C#
-private static void PersonCollectionExample()
-{
-	var personList = new PersonCollection();
+		public bool MoveNext()
+		{
+			_nIndex++;
+			return _nIndex < _personCollection.Length;
+		}
 
-	foreach (var p in personList)
-		Console.WriteLine(p);
-}
-```
+		public void Reset()
+		{
+			_nIndex = -1;
+		}
+
+		public Person Current
+		{
+			get { return _personCollection[_nIndex]; }
+		}
+
+		object IEnumerator.Current
+		{
+			get { return Current; }
+		}
+
+		public void Dispose()
+		{
+			
+		}
+	}
+	```
+3.  Add the following method in the “Program” class and call it from the Main method
+
+	```C#
+	private static void PersonCollectionExample()
+	{
+		var personList = new PersonCollection();
+
+		foreach (var p in personList)
+			Console.WriteLine(p);
+	}
+	```
