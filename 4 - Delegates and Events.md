@@ -195,8 +195,8 @@ method must explicitly use the out keyword.
 
 #### Assignment
 
-| ![./media/image1.png](./media/image1.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Sample code available at <http://online.ase.ro> – “MethodParameters” Sample |
-|                                                                          |
+| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “MethodParameters” Sample |
+|------------------------------------------|---------------------------------------------------------------------------------|
 
 ```C#
 private static void IncrementNormal(int i)
@@ -236,7 +236,7 @@ private static void Main()
 
 ## Static class
 
-| ![./media/image3.png](./media/image3.png =100x20) | Further reading: [link](https://msdn.microsoft.com/en-us/library/79b3xss3.aspx) |
+| ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/79b3xss3.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 ## Nullable types
@@ -247,6 +247,6 @@ private static void Main()
 
 ## Boxing / Unboxing
 
-| <img src="./media/image3.png" width="25"> | Further reading: [link](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx) |
+| ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
