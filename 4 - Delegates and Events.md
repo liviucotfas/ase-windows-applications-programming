@@ -168,6 +168,7 @@ internal class Program
 ```
 
 | ![./media/image2.png](./media/image2.png) | More event samples available at <http://online.ase.ro> |
+|------------------------------------------|---------------------------------------------------------------------------------|
 
 #  Other
 
