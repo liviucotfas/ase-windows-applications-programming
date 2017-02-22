@@ -11,7 +11,7 @@
 The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
 first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
 
-#### Assignment
+##### Assignment
 
 -   Add the following enumeration
 
@@ -34,7 +34,7 @@ first enumerator has the value 0, and the value of each successive enumerator is
 
 A Structure (struct in C\#) type is a value type that is typically used to encapsulate small groups of related variables.
 
-#### Assignment
+##### Assignment
 
 1.  Add the PersonStruct defined bellow
 
@@ -90,7 +90,7 @@ Objectives
 -   Encapsulation using properties;
 -   Multiple constructors
 
-#### Assignment
+##### Assignment
 
 1.  Add the PersonClass class defined bellow.
 
@@ -164,11 +164,10 @@ Objectives
 	}
 	```
 
-2.  Add the ReferenceType#### Assignment method in Program.cs and call it from the
-    Main() method.
+2.  Add the ReferenceTypeAssignment method in Program.cs and call it from the Main() method.
 
 	```C#
-	private static void ReferenceType#### Assignment()
+	private static void ReferenceTypeAssignment()
 	{
 		Console.WriteLine("Assigning reference types\n");
 		var personClass1 = new PersonClass(1, "name1", OccupationEnum.Student);
@@ -195,7 +194,7 @@ Question
 
 ### IComparable\<T\>
 
-#### Assignment
+##### Assignment
 
 1.  Create a new project with the name “StandardInterfaces”
 
@@ -353,10 +352,10 @@ Question
 | [&&](https://msdn.microsoft.com/en-us/library/2a723cdk.aspx), [\|\|](https://msdn.microsoft.com/en-us/library/6373h346.aspx)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | The conditional logical operators cannot be overloaded, but they are evaluated using & and \|, which can be overloaded.                                                                                                              |
 | [[]](https://msdn.microsoft.com/en-us/library/a3hd7ste.aspx)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | The array indexing operator cannot be overloaded, but you can define indexers.                                                                                                                                                       |
 | [(T)x](https://msdn.microsoft.com/en-us/library/0z4503sa.aspx)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | The cast operator cannot be overloaded, but you can define new conversion operators (see [explicit](https://msdn.microsoft.com/en-us/library/xhbhezf4.aspx) and [implicit](https://msdn.microsoft.com/en-us/library/z5z9kes2.aspx)). |
-| [+=](https://msdn.microsoft.com/en-us/library/sa7629ew.aspx), [-=](https://msdn.microsoft.com/en-us/library/2y9zhhx1.aspx), [\*=](https://msdn.microsoft.com/en-us/library/s2bkaksf.aspx), [/=](https://msdn.microsoft.com/en-us/library/d31sybc9.aspx), [%=](https://msdn.microsoft.com/en-us/library/ydwa9zh0.aspx), [&=](https://msdn.microsoft.com/en-us/library/e669ax02.aspx), [\|=](https://msdn.microsoft.com/en-us/library/h5f1zzaw.aspx), [\^=](https://msdn.microsoft.com/en-us/library/0zbsw2z6.aspx), [\<\<=](https://msdn.microsoft.com/en-us/library/ayt2kcfb.aspx), [\>\>=](https://msdn.microsoft.com/en-us/library/23as4533.aspx)                                                                                                                                                                                                                                                                                                                                                                                                              | #### Assignment operators cannot be overloaded, but +=, for example, is evaluated using +, which can be overloaded.                                                                                                                       |
+| [+=](https://msdn.microsoft.com/en-us/library/sa7629ew.aspx), [-=](https://msdn.microsoft.com/en-us/library/2y9zhhx1.aspx), [\*=](https://msdn.microsoft.com/en-us/library/s2bkaksf.aspx), [/=](https://msdn.microsoft.com/en-us/library/d31sybc9.aspx), [%=](https://msdn.microsoft.com/en-us/library/ydwa9zh0.aspx), [&=](https://msdn.microsoft.com/en-us/library/e669ax02.aspx), [\|=](https://msdn.microsoft.com/en-us/library/h5f1zzaw.aspx), [\^=](https://msdn.microsoft.com/en-us/library/0zbsw2z6.aspx), [\<\<=](https://msdn.microsoft.com/en-us/library/ayt2kcfb.aspx), [\>\>=](https://msdn.microsoft.com/en-us/library/23as4533.aspx)                                                                                                                                                                                                                                                                                                                                                                                                              | assignment operators cannot be overloaded, but +=, for example, is evaluated using +, which can be overloaded.                                                                                                                       |
 | [=](https://msdn.microsoft.com/en-us/library/sbkb459w.aspx), [.](https://msdn.microsoft.com/en-us/library/6zhxzbds.aspx), [?:](https://msdn.microsoft.com/en-us/library/ty67wk28.aspx), [??](https://msdn.microsoft.com/en-us/library/ms173224.aspx), [-\>](https://msdn.microsoft.com/en-us/library/s8bz4d5h.aspx), [=\>](https://msdn.microsoft.com/en-us/library/bb311046.aspx), [f(x)](https://msdn.microsoft.com/en-us/library/0z4503sa.aspx), [as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx), [checked](https://msdn.microsoft.com/en-us/library/74b4xzyw.aspx), [unchecked](https://msdn.microsoft.com/en-us/library/a569z7k8.aspx), [default](https://msdn.microsoft.com/en-us/library/xwth0h0d.aspx), [delegate](https://msdn.microsoft.com/en-us/library/0yw3tz5k.aspx), [is](https://msdn.microsoft.com/en-us/library/scekt9xw.aspx), [new](https://msdn.microsoft.com/en-us/library/51y09td4.aspx), [sizeof](https://msdn.microsoft.com/en-us/library/eahchzkf.aspx), [typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx) | These operators cannot be overloaded.                                                                                                                                                                                                |
 
-#### Activity
+##### Activity
 
 ![](docs/icons/C#png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
 
@@ -401,7 +400,7 @@ Question
 
 3.  Implement the implicit (int) cast
 
-#### Activity
+##### Activity
 
 1.  Add the following “Fraction” class
 	```C#
@@ -452,7 +451,7 @@ Question
 
 ![Figure 1 Class hierarchy](docs/2/inheritance.png)
 
-#### Activity
+##### Activity
 
 Let’s imagine that you are asked to develop an application that handles the wage
 and bonus calculations for the persons that work in a certain software
@@ -566,7 +565,7 @@ Managers.
 
 ### Custom Interfaces
 
-#### Activity
+##### Activity
 
 Let’s imagine that the company starts to work with external contractors. You are
 required to add this category of persons to the previously developed
