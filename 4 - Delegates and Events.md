@@ -40,41 +40,134 @@ internal class Program
 }
 ```
 
+#  Events
 
-| // This delegate can point to any method, taking two integers and returning an integer. **public delegate** int BinaryOp**(**int x**,** int y**);** // **public** class SimpleMath **{ public** static int Add**(**int x**,** int y**) { return** x **+** y**; } public** static int Subtract**(**int x**,** int y**) { return** x **-** y**; } } internal** class Program **{ private** static void Main**() {** Console**.**WriteLine**(**"\*\*\*\*\* Delegate Example \*\*\*\*\*\\n"**);** //Definire si instantiere delegat BinaryOp b **= new** BinaryOp**(**SimpleMath**.**Add**);** //BinaryOp b = new BinaryOp(SimpleMath.Subtract)); //b += new BinaryOp(SimpleMath.Subtract); //Apel prin delegat Console**.**WriteLine**(**"10 + 10 is {0}"**,** b**(**10**,** 10**));** Console**.**ReadLine**(); } }** |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-
-2.  Events
-
-    1.  Custom Events
+## Custom Events
 
 | ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “EventsPropertyTrigger” Sample |
 |------------------------------------------|----------------------------------------------------------------------------------|
 
-
-Assignment
+#### Assignment
 
 1.  Create a new project with the name “EventsPropertyTrigger”
 
-| **public delegate** void PriceChangedHandler**(**decimal oldPrice**,** decimal newPrice**); internal** class Stock **{ private** string \_symbol**; private** decimal \_price**; public** Stock**(**string symbol**) {** \_symbol **=** symbol**; } public event** PriceChangedHandler PriceChanged**; public** decimal Price **{** get **{ return** \_price**; }** set **{ if (**\_price **==** value**) return;** // Exit if nothing has changed decimal oldPrice **=** \_price**;** \_price **=** value**; if (**PriceChanged **!= null)** // If invocation list not PriceChanged**(**oldPrice**,** \_price**);** // empty, fire event. **} } } internal** class Program **{ private** static void Main**() {** var stock **= new** Stock**(**"MSFT"**);** stock**.**PriceChanged **+=** Stock\_PriceChanged**;** stock**.**Price **=** 30**;** stock**.**Price **=** 60**;** stock**.**Price **=** 90**; } private** static void Stock\_PriceChanged**(**decimal oldPrice**,** decimal newPrice**) {** Console**.**WriteLine**(**"MSFT: {0} {1}"**,** oldPrice**,** newPrice**); } }** |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+```C#
+public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
 
+internal class Stock
+{
+	private string _symbol;
+	private decimal _price;
 
-Standard Event Pattern
-----------------------
+	public Stock(string symbol)
+	{
+		_symbol = symbol;
+	}
+
+	public event PriceChangedHandler PriceChanged;
+
+	public decimal Price
+	{
+		get { return _price; }
+		set
+		{
+			if (_price == value) return; // Exit if nothing has changed
+			decimal oldPrice = _price;
+			_price = value;
+			if (PriceChanged != null) // If invocation list not
+				PriceChanged(oldPrice, _price); // empty, fire event.
+		}
+	}
+}
+
+internal class Program
+{
+	private static void Main()
+	{
+		var stock = new Stock("MSFT");
+		stock.PriceChanged += Stock_PriceChanged;
+		stock.Price = 30;
+		stock.Price = 60;
+		stock.Price = 90;
+	}
+
+	private static void Stock_PriceChanged(decimal oldPrice, decimal newPrice)
+	{
+		Console.WriteLine("MSFT: {0} {1}", oldPrice, newPrice);
+	}
+}
+```
+
+## Standard Event Pattern
 
 | ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “EventsPropertyTriggerEventArgs” Sample |
 |------------------------------------------|-------------------------------------------------------------------------------------------|
 
 
-Assignment
+#### Assignment
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
 
-| **public** class PriceChangedEventArgs **:** EventArgs **{ public readonly** decimal LastPrice**; public readonly** decimal NewPrice**; public** PriceChangedEventArgs**(**decimal lastPrice**,** decimal newPrice**) {** LastPrice **=** lastPrice**;** NewPrice **=** newPrice**; } } public** class Stock **{ private** string \_symbol**; private** decimal \_price**; public** Stock**(**string symbol**) {** \_symbol **=** symbol**; } public event** EventHandler**\<**PriceChangedEventArgs**\>** PriceChanged**; protected virtual** void OnPriceChanged**(**PriceChangedEventArgs e**) { if (**PriceChanged **!= null)** PriceChanged**(this,** e**); } public** decimal Price **{** get **{ return** \_price**; }** set **{ if (**\_price **==** value**) return;** decimal oldPrice **=** \_price**;** \_price **=** value**;** OnPriceChanged**(new** PriceChangedEventArgs**(**oldPrice**,** \_price**)); } } } internal** class Program **{ private** static void Main**() {** var stock **= new** Stock**(**"MSFT"**);** stock**.**PriceChanged **+=** Stock\_PriceChanged1**; ;** stock**.**Price **=** 30**;** stock**.**Price **=** 60**;** stock**.**Price **=** 90**; } private** static void Stock\_PriceChanged1**(object** sender**,** PriceChangedEventArgs e**) {** Console**.**WriteLine**(**"MSFT: {0} {1}"**,** e**.**LastPrice**,** e**.**NewPrice**); } }** |                                                        |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| [./media/image2.png](./media/image2.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | More event samples available at <http://online.ase.ro> |
+```C#
+public class PriceChangedEventArgs : EventArgs
+{
+	public readonly decimal LastPrice;
+	public readonly decimal NewPrice;
+	public PriceChangedEventArgs(decimal lastPrice, decimal newPrice)
+	{
+		LastPrice = lastPrice;
+		NewPrice = newPrice;
+	}
+}
+
+public class Stock
+{
+	private string _symbol;
+	private decimal _price;
+
+	public Stock(string symbol)
+	{
+		_symbol = symbol;
+	}
+
+	public event EventHandler<PriceChangedEventArgs> PriceChanged;
+	protected virtual void OnPriceChanged(PriceChangedEventArgs e)
+	{
+		if (PriceChanged != null) PriceChanged(this, e);
+	}
+	public decimal Price
+	{
+		get { return _price; }
+		set
+		{
+			if (_price == value) return;
+			decimal oldPrice = _price;
+			_price = value;
+
+			OnPriceChanged(new PriceChangedEventArgs(oldPrice, _price));
+		}
+	}
+}
+
+internal class Program
+{
+	private static void Main()
+	{
+		var stock = new Stock("MSFT");
+		stock.PriceChanged += Stock_PriceChanged1; ;
+		stock.Price = 30;
+		stock.Price = 60;
+		stock.Price = 90;
+	}
+
+	private static void Stock_PriceChanged1(object sender, PriceChangedEventArgs e)
+	{
+		Console.WriteLine("MSFT: {0} {1}", e.LastPrice, e.NewPrice);
+	}
+}
+```
+
+| [./media/image2.png](./media/image2.png) | More event samples available at <http://online.ase.ro> |
 
 #  Other
 
