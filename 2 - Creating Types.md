@@ -193,7 +193,7 @@ Question
 
 ## Standard Interfaces
 
-### 4.1. IComparable\<T\>
+### IComparable\<T\>
 
 #### Assignment
 
@@ -265,7 +265,7 @@ Question
 
 5.  Change the IComparable\<Person\> implementation in order to use the Age of the persons
 
- ### 4.2. IClonable
+ ### IClonable
 
 1.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
 
@@ -446,9 +446,9 @@ Question
 	}
 	```
 
-## 6.  Class Inheritance
+## Class Inheritance
 
-### 6.1. Abstract classes
+### Abstract classes
 
 ![Figure 1 Class hierarchy](docs/2/inheritance.png)
 
@@ -564,7 +564,7 @@ Managers.
 
 6.  In the previous method declare an array of Employee[] and call the previously mentioned methods
 
-### 6.2. Custom Interfaces
+### Custom Interfaces
 
 #### Activity
 
