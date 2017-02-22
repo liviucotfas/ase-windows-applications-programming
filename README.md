@@ -1,9 +1,5 @@
 # Windows Applications Programming
 
-##Course
-
-##Labs
-
 ##FAQ
 
 ###1. Can the examples contain any mistakes?
