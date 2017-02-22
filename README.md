@@ -2,9 +2,9 @@
 
 ##FAQ
 
-**Can the examples contain any mistakes?**
+**Are there any mistakes in the code samples / labs / course presentation?**
 
->A: of course... if you discover any, please create a [Pull Request](https://help.github.com/articles/about-pull-requests/).
+>A: possibly... if you discover any, please create a [Pull Request](https://help.github.com/articles/about-pull-requests/).
 
 **Is it possible to convert the .md files to .pdf ?**
 
