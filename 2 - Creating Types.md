@@ -1,5 +1,12 @@
 # Creating Types
-## 1. Enums
+##Table of Contents
+- [Enums](#enums)
+- [Structures](#structures)
+- [Classes](#classes)
+- [Standard Interfaces](#standard-interfaces)
+- [Operators](#operators)
+
+## Enums
 The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
 first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
 
@@ -22,7 +29,7 @@ first enumerator has the value 0, and the value of each successive enumerator is
 
     -   System.Int32 to UserAccountTypeEnum
 
-## 2. Structures
+## Structures
 
 A Structure (struct in C\#) type is a value type that is typically used to encapsulate small groups of related variables.
 
@@ -76,7 +83,7 @@ Questions
 
 -   Why is it possible to override the ToString method?
 
-## 3. Classes
+## Classes
 
 Objectives
 -   Encapsulation using properties;
@@ -183,7 +190,7 @@ Question
 -   Can the PersonClass **()** constructor be made private? (can we have private
     constructors?)
 
-## 4.  Standard Interfaces
+## Standard Interfaces
 
 ### 4.1. IComparable\<T\>
 
@@ -332,7 +339,7 @@ Question
 	}
 	```
 
-## 5. Operators
+## Operators
 -   can be overload by defining static member functions using the operator keyword.
 -   not all operators can be overloaded and others have restrictions
 -   further reading: [link](https://msdn.microsoft.com/en-us/library/8edha89s(v=vs.140).aspx)
