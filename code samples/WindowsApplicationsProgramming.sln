@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebBrowser", "SimpleW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsMethodTrigger", "EventsMethodTrigger\EventsMethodTrigger.csproj", "{43903ED6-420A-476C-B154-63E4A31CB9A4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Delegates and EVents", "04. Delegates and EVents", "{868F8BD1-089A-4E76-BDEC-365F89CDB984}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Delegates and Events", "04. Delegates and Events", "{868F8BD1-089A-4E76-BDEC-365F89CDB984}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsPropertyTrigger", "EventsPropertyTrigger\EventsPropertyTrigger.csproj", "{D5449275-9B77-4543-A398-BC1568C9999D}"
 EndProject
