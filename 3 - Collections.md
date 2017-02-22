@@ -1,7 +1,7 @@
 Collections
 ===========
 
-| ![docs/icons/C#.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
 
