@@ -1,7 +1,7 @@
 Delegates
 =========
 
-| [./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “Delegates” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “Delegates” Sample |
 |------------------------------------------|----------------------------------------------------------------------|
 
 
@@ -167,7 +167,7 @@ internal class Program
 }
 ```
 
-| [./media/image2.png](./media/image2.png) | More event samples available at <http://online.ase.ro> |
+| ![./media/image2.png](./media/image2.png) | More event samples available at <http://online.ase.ro> |
 
 #  Other
 
@@ -180,7 +180,7 @@ passes a local variable expression or an array element access expression, and
 the called method replaces the object to which the ref parameter refers, then
 the caller’s local variable or the array element now refer to the new object.
 
-| [./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx) |
+| ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
@@ -189,13 +189,13 @@ ref keyword, except that ref requires that the variable be initialized before it
 is passed. To use an out parameter, both the method definition and the calling
 method must explicitly use the out keyword.
 
-| [./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx) |
+| ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
 #### Assignment
 
-| [./media/image1.png](./media/image1.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Sample code available at <http://online.ase.ro> – “MethodParameters” Sample |
+| ![./media/image1.png](./media/image1.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Sample code available at <http://online.ase.ro> – “MethodParameters” Sample |
 |                                                                          |
 
 ```C#
