@@ -14,17 +14,17 @@ Collections
 2.  Add the following method in the “Program” class and call it from the Main
     method
 
-```C#
- private static void ArrayListExample()
-{
-	var words = new ArrayList();
-	words.Add("melon");
-	words.Add("avocado");
-	string first = (string)words[0];
+	```C#
+	 private static void ArrayListExample()
+	{
+		var words = new ArrayList();
+		words.Add("melon");
+		words.Add("avocado");
+		string first = (string)words[0];
 
-	//int first = (int)words[0];
-}
-```
+		//int first = (int)words[0];
+	}
+	```
 # List\<T\>
 ---------
 
