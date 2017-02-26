@@ -4,7 +4,7 @@ Collections
 | ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
-#  ArrayList
+##  ArrayList
 #### Assignment
 1.  Create a new project with the name “StandardCollections”
 2.  Add the following method in the “Program” class and call it from the Main
@@ -21,7 +21,7 @@ Collections
 		//int first = (int)words[0];
 	}
 	```
-# List\<T\>
+## List\<T\>
 
 3.  Add the following method in the “Program” class and call it from the Main method
 
@@ -99,7 +99,7 @@ Collections
 	}
 	```
 
-# Queues, Stacks, and Sets
+## Queues, Stacks, and Sets
 
 -   [Queue](https://msdn.microsoft.com/en-us/library/system.collections.queue(v=vs.110).aspx)
     ,
@@ -110,7 +110,7 @@ Collections
     and many others:
     [link](https://msdn.microsoft.com/en-us/library/mt481475(v=vs.110).aspx)
 
-#  Custom Collections
+##  Custom Collections
 
 | ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “CustomCollections” Sample |
 |------------------------------------------|------------------------------------------------------------------------------|
