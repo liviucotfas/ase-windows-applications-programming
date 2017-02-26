@@ -4,13 +4,9 @@ Collections
 | ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
-
-#### Assignment
-
-1.  Create a new project with the name “StandardCollections”
-
 #  ArrayList
-
+#### Assignment
+1.  Create a new project with the name “StandardCollections”
 2.  Add the following method in the “Program” class and call it from the Main
     method
 
