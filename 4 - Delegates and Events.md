@@ -9,36 +9,36 @@ Delegates
 
 1.  Create a new project with the name “Delegates”
 
-```C#
- // This delegate can point to any method, taking two integers and returning an integer.
-public delegate int BinaryOp(int x, int y);
+	```C#
+	 // This delegate can point to any method, taking two integers and returning an integer.
+	public delegate int BinaryOp(int x, int y);
 
-// 
-public class SimpleMath
-{
-	public static int Add(int x, int y)
-	{ return x + y; }
-	public static int Subtract(int x, int y)
-	{ return x - y; }
-}
-
-internal class Program
-{
-	private static void Main()
+	// 
+	public class SimpleMath
 	{
-		Console.WriteLine("***** Delegate Example *****\n");
-		
-		//Definire si instantiere delegat
-		BinaryOp b = new BinaryOp(SimpleMath.Add);
-		//BinaryOp b = new BinaryOp(SimpleMath.Subtract));
-		//b += new BinaryOp(SimpleMath.Subtract);
-		
-		//Apel prin delegat
-		Console.WriteLine("10 + 10 is {0}", b(10, 10));
-		Console.ReadLine();
+		public static int Add(int x, int y)
+		{ return x + y; }
+		public static int Subtract(int x, int y)
+		{ return x - y; }
 	}
-}
-```
+
+	internal class Program
+	{
+		private static void Main()
+		{
+			Console.WriteLine("***** Delegate Example *****\n");
+
+			//Definire si instantiere delegat
+			BinaryOp b = new BinaryOp(SimpleMath.Add);
+			//BinaryOp b = new BinaryOp(SimpleMath.Subtract));
+			//b += new BinaryOp(SimpleMath.Subtract);
+
+			//Apel prin delegat
+			Console.WriteLine("10 + 10 is {0}", b(10, 10));
+			Console.ReadLine();
+		}
+	}
+	```
 
 #  Events
 
@@ -52,51 +52,51 @@ internal class Program
 1.  Create a new project with the name “EventsPropertyTrigger”
 
 ```C#
-public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
+	public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
 
-internal class Stock
-{
-	private string _symbol;
-	private decimal _price;
-
-	public Stock(string symbol)
+	internal class Stock
 	{
-		_symbol = symbol;
-	}
+		private string _symbol;
+		private decimal _price;
 
-	public event PriceChangedHandler PriceChanged;
-
-	public decimal Price
-	{
-		get { return _price; }
-		set
+		public Stock(string symbol)
 		{
-			if (_price == value) return; // Exit if nothing has changed
-			decimal oldPrice = _price;
-			_price = value;
-			if (PriceChanged != null) // If invocation list not
-				PriceChanged(oldPrice, _price); // empty, fire event.
+			_symbol = symbol;
+		}
+
+		public event PriceChangedHandler PriceChanged;
+
+		public decimal Price
+		{
+			get { return _price; }
+			set
+			{
+				if (_price == value) return; // Exit if nothing has changed
+				decimal oldPrice = _price;
+				_price = value;
+				if (PriceChanged != null) // If invocation list not
+					PriceChanged(oldPrice, _price); // empty, fire event.
+			}
 		}
 	}
-}
 
-internal class Program
-{
-	private static void Main()
+	internal class Program
 	{
-		var stock = new Stock("MSFT");
-		stock.PriceChanged += Stock_PriceChanged;
-		stock.Price = 30;
-		stock.Price = 60;
-		stock.Price = 90;
-	}
+		private static void Main()
+		{
+			var stock = new Stock("MSFT");
+			stock.PriceChanged += Stock_PriceChanged;
+			stock.Price = 30;
+			stock.Price = 60;
+			stock.Price = 90;
+		}
 
-	private static void Stock_PriceChanged(decimal oldPrice, decimal newPrice)
-	{
-		Console.WriteLine("MSFT: {0} {1}", oldPrice, newPrice);
+		private static void Stock_PriceChanged(decimal oldPrice, decimal newPrice)
+		{
+			Console.WriteLine("MSFT: {0} {1}", oldPrice, newPrice);
+		}
 	}
-}
-```
+	```
 
 ## Standard Event Pattern
 
@@ -133,39 +133,39 @@ public class Stock
 	public event EventHandler<PriceChangedEventArgs> PriceChanged;
 	protected virtual void OnPriceChanged(PriceChangedEventArgs e)
 	{
-		if (PriceChanged != null) PriceChanged(this, e);
-	}
-	public decimal Price
-	{
-		get { return _price; }
-		set
+			if (PriceChanged != null) PriceChanged(this, e);
+		}
+		public decimal Price
 		{
-			if (_price == value) return;
-			decimal oldPrice = _price;
-			_price = value;
+			get { return _price; }
+			set
+			{
+				if (_price == value) return;
+				decimal oldPrice = _price;
+				_price = value;
 
-			OnPriceChanged(new PriceChangedEventArgs(oldPrice, _price));
+				OnPriceChanged(new PriceChangedEventArgs(oldPrice, _price));
+			}
 		}
 	}
-}
 
-internal class Program
-{
-	private static void Main()
+	internal class Program
 	{
-		var stock = new Stock("MSFT");
-		stock.PriceChanged += Stock_PriceChanged1; ;
-		stock.Price = 30;
-		stock.Price = 60;
-		stock.Price = 90;
-	}
+		private static void Main()
+		{
+			var stock = new Stock("MSFT");
+			stock.PriceChanged += Stock_PriceChanged1; ;
+			stock.Price = 30;
+			stock.Price = 60;
+			stock.Price = 90;
+		}
 
-	private static void Stock_PriceChanged1(object sender, PriceChangedEventArgs e)
-	{
-		Console.WriteLine("MSFT: {0} {1}", e.LastPrice, e.NewPrice);
+		private static void Stock_PriceChanged1(object sender, PriceChangedEventArgs e)
+		{
+			Console.WriteLine("MSFT: {0} {1}", e.LastPrice, e.NewPrice);
+		}
 	}
-}
-```
+	```
 
 | ![./media/image2.png](./media/image2.png) | More event samples available at <http://online.ase.ro> |
 |------------------------------------------|---------------------------------------------------------------------------------|
