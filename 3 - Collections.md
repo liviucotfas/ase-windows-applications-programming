@@ -26,7 +26,6 @@ Collections
 	}
 	```
 # List\<T\>
----------
 
 3.  Add the following method in the “Program” class and call it from the Main method
 
@@ -120,7 +119,6 @@ Collections
 | ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “CustomCollections” Sample |
 |------------------------------------------|------------------------------------------------------------------------------|
 
-
 #### Assignment
 
 1.  Add the following “PersonCollection” class
@@ -167,7 +165,7 @@ Collections
 			return GetEnumerator();
 		}
 	}
-```
+	```
 2.  Add the following “PersonEnumerator” class
 	```C#
 	internal class PersonEnumerator : IEnumerator<Person>
