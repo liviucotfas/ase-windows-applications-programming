@@ -51,7 +51,7 @@ Delegates
 
 1.  Create a new project with the name “EventsPropertyTrigger”
 
-```C#
+	```C#
 	public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
 
 	internal class Stock
@@ -108,31 +108,31 @@ Delegates
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
 
-```C#
-public class PriceChangedEventArgs : EventArgs
-{
-	public readonly decimal LastPrice;
-	public readonly decimal NewPrice;
-	public PriceChangedEventArgs(decimal lastPrice, decimal newPrice)
+	```C#
+	public class PriceChangedEventArgs : EventArgs
 	{
-		LastPrice = lastPrice;
-		NewPrice = newPrice;
-	}
-}
-
-public class Stock
-{
-	private string _symbol;
-	private decimal _price;
-
-	public Stock(string symbol)
-	{
-		_symbol = symbol;
+		public readonly decimal LastPrice;
+		public readonly decimal NewPrice;
+		public PriceChangedEventArgs(decimal lastPrice, decimal newPrice)
+		{
+			LastPrice = lastPrice;
+			NewPrice = newPrice;
+		}
 	}
 
-	public event EventHandler<PriceChangedEventArgs> PriceChanged;
-	protected virtual void OnPriceChanged(PriceChangedEventArgs e)
+	public class Stock
 	{
+		private string _symbol;
+		private decimal _price;
+
+		public Stock(string symbol)
+		{
+			_symbol = symbol;
+		}
+
+		public event EventHandler<PriceChangedEventArgs> PriceChanged;
+		protected virtual void OnPriceChanged(PriceChangedEventArgs e)
+		{
 			if (PriceChanged != null) PriceChanged(this, e);
 		}
 		public decimal Price
