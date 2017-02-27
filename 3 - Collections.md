@@ -1,9 +1,9 @@
 Collections
 ===========
 ##Table of Contents
-- [ArrayList](#ArrayList)
-- [List\<T\>](#List\<T\>)
-- [Queues, Stacks, and Sets](#Queues,-Stacks,-and-Sets)
+- [ArrayList](#arraylist)
+- [List\<T\>](#list\<t\>)
+- [Queues, Stacks, and Sets](#queues,-stacks,-and-sets)
 - [Custom Collections](#custom-collections)
 
 
