@@ -3,7 +3,7 @@ Collections
 ##Table of Contents
 - [ArrayList](#arraylist)
 - [List\<T\>](#listt)
-- [Queues, Stacks, and Sets](#queues,-stacks,-and-sets)
+- [Queues, Stacks, and Sets](#queues-stacks-and-sets)
 - [Custom Collections](#custom-collections)
 
 
