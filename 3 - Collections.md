@@ -4,7 +4,7 @@ Collections
 - [ArrayList](#ArrayList)
 - [List\<T\>](#List\<T\>)
 - [Queues, Stacks, and Sets](#Queues,-Stacks,-and-Sets)
-- [Custom Collections](#Custom-Collections)
+- [Custom Collections](#custom-collections)
 
 
 | ![./media/image1.png](./media/image1.png) | Sample code available – Check the “StandardCollections” Sample |
