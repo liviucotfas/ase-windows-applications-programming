@@ -1,7 +1,7 @@
 Collections
 ===========
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
 ##  ArrayList
@@ -112,7 +112,7 @@ Collections
 
 ##  Custom Collections
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “CustomCollections” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “CustomCollections” Sample |
 |------------------------------------------|------------------------------------------------------------------------------|
 
 #### Assignment
