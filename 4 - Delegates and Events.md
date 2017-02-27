@@ -1,7 +1,7 @@
 Delegates
 =========
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “Delegates” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – “Delegates” Sample |
 |------------------------------------------|----------------------------------------------------------------------|
 
 
@@ -44,7 +44,7 @@ Delegates
 
 ## Custom Events
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “EventsPropertyTrigger” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – “EventsPropertyTrigger” Sample |
 |------------------------------------------|----------------------------------------------------------------------------------|
 
 #### Assignment
@@ -100,7 +100,7 @@ Delegates
 
 ## Standard Event Pattern
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “EventsPropertyTriggerEventArgs” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – “EventsPropertyTriggerEventArgs” Sample |
 |------------------------------------------|-------------------------------------------------------------------------------------------|
 
 
@@ -167,7 +167,7 @@ Delegates
 	}
 	```
 
-| ![./media/image2.png](./media/image2.png) | More event samples available at <http://online.ase.ro> |
+| ![./media/image2.png](./media/image2.png) | More event samples available |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 #  Other
@@ -196,7 +196,7 @@ method must explicitly use the out keyword.
 
 #### Assignment
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “MethodParameters” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – “MethodParameters” Sample |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 ```C#
