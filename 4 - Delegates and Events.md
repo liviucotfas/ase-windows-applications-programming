@@ -1,7 +1,7 @@
 Delegates
 =========
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – “Delegates” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “Delegates” Sample |
 |------------------------------------------|----------------------------------------------------------------------|
 
 
@@ -44,7 +44,7 @@ Delegates
 
 ## Custom Events
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – “EventsPropertyTrigger” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “EventsPropertyTrigger” Sample |
 |------------------------------------------|----------------------------------------------------------------------------------|
 
 #### Assignment
@@ -100,7 +100,7 @@ Delegates
 
 ## Standard Event Pattern
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – “EventsPropertyTriggerEventArgs” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “EventsPropertyTriggerEventArgs” Sample |
 |------------------------------------------|-------------------------------------------------------------------------------------------|
 
 
@@ -196,7 +196,7 @@ method must explicitly use the out keyword.
 
 #### Assignment
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – “MethodParameters” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “MethodParameters” Sample |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 ```C#
