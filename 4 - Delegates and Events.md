@@ -1,9 +1,14 @@
-Delegates
+Delegates and Events
 =========
+##Table of Contents
+- [Delegates](#delegates)
+- [Events](#events)
+- [Other](#other)
 
 | ![./media/image1.png](./media/image1.png) | Sample code available – Check the “Delegates” Sample |
 |------------------------------------------|----------------------------------------------------------------------|
 
+# Delegates
 
 #### Assignment
 
