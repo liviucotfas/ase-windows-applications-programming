@@ -1,5 +1,11 @@
 Collections
 ===========
+##Table of Contents
+- [ArrayList](#ArrayList)
+- [List\<T\>](#List\<T\>)
+- [Queues, Stacks, and Sets](#Queues,-Stacks,-and-Sets)
+- [Custom Collections](#Custom-Collections)
+
 
 | ![./media/image1.png](./media/image1.png) | Sample code available – Check the “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
