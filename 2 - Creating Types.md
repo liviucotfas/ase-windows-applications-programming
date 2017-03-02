@@ -358,7 +358,7 @@ Question
 
 ##### Activity
 
-![](docs/icons/C#png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
+![](docs/icons/C#.png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
 
 1.  For the standard Person class overload the \>, \< and explicit (int) operators
 
