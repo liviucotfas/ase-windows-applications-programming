@@ -319,7 +319,7 @@ Question
 	}
 	```
 
-5. Run the application and notice the values in the two objects
+5. Run the application and check the values in the two objects using the Watch window (run the application in Debug mode)
 
 6. Change the implementation of the “Clone()” method in order to perform a **deep copy**
 
