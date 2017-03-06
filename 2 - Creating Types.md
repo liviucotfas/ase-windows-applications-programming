@@ -315,6 +315,8 @@ Question
 		{
 			// First get a shallow copy.
 			var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+			
+			return newPerson;
 		}
 	}
 	```
