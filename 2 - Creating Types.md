@@ -262,9 +262,10 @@ Question
 	}
 	```
 
-5.  Change the IComparable\<Person\> implementation in order to use the Age of the persons
+5.  Change the IComparable\<Person\> implementation in order to sort the persons in descending order, based on their age
+6. Change the IComparable\<Person\> implementation in order to sort the persons using 2 criteria at the same time (name and age)
 
- ### IClonable
+### ICloneable
 
 1.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
 
@@ -314,11 +315,13 @@ Question
 		{
 			// First get a shallow copy.
 			var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+			
+			return newPerson;
 		}
 	}
 	```
 
-5. Run the application and notice the values in the two objects
+5. Run the application and check the values in the two objects using the Watch window (run the application in Debug mode)
 
 6. Change the implementation of the “Clone()” method in order to perform a **deep copy**
 
@@ -357,7 +360,7 @@ Question
 
 ##### Activity
 
-![](docs/icons/C#png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
+![](media/image1.png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
 
 1.  For the standard Person class overload the \>, \< and explicit (int) operators
 
