@@ -1,5 +1,5 @@
 # Creating Types
-##Table of Contents
+## Table of Contents
 - [Enums](#enums)
 - [Structures](#structures)
 - [Classes](#classes)
