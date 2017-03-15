@@ -1,32 +1,33 @@
 Collections
 ===========
+##Table of Contents
+- [ArrayList](#arraylist)
+- [List\<T\>](#listt)
+- [Queues, Stacks, and Sets](#queues-stacks-and-sets)
+- [Custom Collections](#custom-collections)
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “StandardCollections” Sample |
+
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “StandardCollections” Sample |
 |------------------------------------------|--------------------------------------------------------------------------------|
 
-
+##  ArrayList
 #### Assignment
-
 1.  Create a new project with the name “StandardCollections”
-
-#  ArrayList
-
 2.  Add the following method in the “Program” class and call it from the Main
     method
 
-```C#
- private static void ArrayListExample()
-{
-	var words = new ArrayList();
-	words.Add("melon");
-	words.Add("avocado");
-	string first = (string)words[0];
+	```C#
+	 private static void ArrayListExample()
+	{
+		var words = new ArrayList();
+		words.Add("melon");
+		words.Add("avocado");
+		string first = (string)words[0];
 
-	//int first = (int)words[0];
-}
-```
-# List\<T\>
----------
+		//int first = (int)words[0];
+	}
+	```
+## List\<T\>
 
 3.  Add the following method in the “Program” class and call it from the Main method
 
@@ -104,7 +105,7 @@ Collections
 	}
 	```
 
-# Queues, Stacks, and Sets
+## Queues, Stacks, and Sets
 
 -   [Queue](https://msdn.microsoft.com/en-us/library/system.collections.queue(v=vs.110).aspx)
     ,
@@ -115,11 +116,10 @@ Collections
     and many others:
     [link](https://msdn.microsoft.com/en-us/library/mt481475(v=vs.110).aspx)
 
-#  Custom Collections
+##  Custom Collections
 
-| ![./media/image1.png](./media/image1.png) | Sample code available at <http://online.ase.ro> – “CustomCollections” Sample |
+| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “CustomCollections” Sample |
 |------------------------------------------|------------------------------------------------------------------------------|
-
 
 #### Assignment
 
@@ -167,7 +167,7 @@ Collections
 			return GetEnumerator();
 		}
 	}
-```
+	```
 2.  Add the following “PersonEnumerator” class
 	```C#
 	internal class PersonEnumerator : IEnumerator<Person>
