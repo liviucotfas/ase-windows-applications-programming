@@ -67,22 +67,23 @@ namespace SimpleWebBrowser
 
 		private void saveToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			//Other file methods http://msdn.microsoft.com/en-us/library/system.io.file.createtext.aspx
+			SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-			SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+			saveFileDialog.Filter = "html files (*.html)|*.html|All files (*.*)|*.*";
+			saveFileDialog.FilterIndex = 1;
+			saveFileDialog.RestoreDirectory = true;
 
-			saveFileDialog1.Filter = "html files (*.html)|*.html|All files (*.*)|*.*";
-			saveFileDialog1.FilterIndex = 1;
-			saveFileDialog1.RestoreDirectory = true;
-
-			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+			if (saveFileDialog.ShowDialog() == DialogResult.OK)
 			{
-				using (StreamWriter sr = File.CreateText(saveFileDialog1.FileName))
+				//Other file methods http://msdn.microsoft.com/en-us/library/system.io.file.createtext.aspx
+				using (StreamWriter sr = File.CreateText(saveFileDialog.FileName))
 				{
 					sr.Write(wb.DocumentText);
-					sr.Close();
+					//sr.Close(); //already called by Dispose
 				}
 			}
+
+			//A different approach: call wb.ShowSaveAsDialog();
 		}
 		#endregion
 
