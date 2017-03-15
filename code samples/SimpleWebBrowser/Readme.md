@@ -9,4 +9,5 @@ http://www.geekpedia.com/tutorial215_Tabbed-Web-Browser.html  \\tabbed
 Lucru cu ToolBar: pg 114 if(e.Button == b2){....}
 
 
-Icons: http://www.flaticon.com/search?word=back+arrow
+#Icons
+http://www.flaticon.com/search?word=back+arrow

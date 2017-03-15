@@ -265,7 +265,7 @@ Question
 5.  Change the IComparable\<Person\> implementation in order to sort the persons in descending order, based on their age
 6. Change the IComparable\<Person\> implementation in order to sort the persons using 2 criteria at the same time (name and age)
 
- ### ICloneable
+### ICloneable
 
 1.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
 
