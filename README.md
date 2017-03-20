@@ -1,6 +1,6 @@
 # Windows Applications Programming
 
-##FAQ
+## FAQ
 
 **Are there any mistakes in the code samples / labs / course presentation?**
 
