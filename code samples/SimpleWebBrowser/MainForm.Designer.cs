@@ -37,7 +37,7 @@
 			this.btnHome = new System.Windows.Forms.ToolStripButton();
 			this.tbAddress = new System.Windows.Forms.ToolStripTextBox();
 			this.btnGo = new System.Windows.Forms.ToolStripButton();
-			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.pbLoad = new System.Windows.Forms.ToolStripProgressBar();
 			this.wb = new System.Windows.Forms.WebBrowser();
 			this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -50,7 +50,7 @@
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsNavigation.SuspendLayout();
-			this.statusStrip1.SuspendLayout();
+			this.statusStrip.SuspendLayout();
 			this.contextMenuStrip.SuspendLayout();
 			this.msMain.SuspendLayout();
 			this.SuspendLayout();
@@ -124,15 +124,15 @@
 			this.btnGo.Text = "Go";
 			this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
 			// 
-			// statusStrip1
+			// statusStrip
 			// 
-			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pbLoad});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 272);
-			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(663, 22);
-			this.statusStrip1.TabIndex = 1;
-			this.statusStrip1.Text = "statusStrip1";
+			this.statusStrip.Location = new System.Drawing.Point(0, 272);
+			this.statusStrip.Name = "statusStrip";
+			this.statusStrip.Size = new System.Drawing.Size(663, 22);
+			this.statusStrip.TabIndex = 1;
+			this.statusStrip.Text = "statusStrip1";
 			// 
 			// pbLoad
 			// 
@@ -160,7 +160,6 @@
             this.ctxMenuBtnBack,
             this.ctxMenuBtnReload});
 			this.contextMenuStrip.Name = "contextMenuStrip1";
-			this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Inherit;
 			this.contextMenuStrip.Size = new System.Drawing.Size(111, 48);
 			// 
 			// ctxMenuBtnBack
@@ -232,7 +231,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(663, 294);
 			this.Controls.Add(this.wb);
-			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.statusStrip);
 			this.Controls.Add(this.tsNavigation);
 			this.Controls.Add(this.msMain);
 			this.MainMenuStrip = this.msMain;
@@ -241,8 +240,8 @@
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.tsNavigation.ResumeLayout(false);
 			this.tsNavigation.PerformLayout();
-			this.statusStrip1.ResumeLayout(false);
-			this.statusStrip1.PerformLayout();
+			this.statusStrip.ResumeLayout(false);
+			this.statusStrip.PerformLayout();
 			this.contextMenuStrip.ResumeLayout(false);
 			this.msMain.ResumeLayout(false);
 			this.msMain.PerformLayout();
@@ -254,7 +253,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip tsNavigation;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.WebBrowser wb;
         private System.Windows.Forms.ToolStripProgressBar pbLoad;
         private System.Windows.Forms.ToolStripButton btnBack;
