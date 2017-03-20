@@ -31,17 +31,6 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
 			this.wb = new System.Windows.Forms.WebBrowser();
-			this.tsStandard = new System.Windows.Forms.ToolStrip();
-			this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-			this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
 			this.msMain = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,15 +44,26 @@
 			this.btnHome = new System.Windows.Forms.ToolStripButton();
 			this.tbAddress = new System.Windows.Forms.ToolStripTextBox();
 			this.btnGo = new System.Windows.Forms.ToolStripButton();
-			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.tsStandard = new System.Windows.Forms.ToolStrip();
+			this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+			this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.pbLoad = new System.Windows.Forms.ToolStripProgressBar();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
-			this.tsStandard.SuspendLayout();
 			this.msMain.SuspendLayout();
 			this.tsNavigation.SuspendLayout();
-			this.statusStrip1.SuspendLayout();
+			this.tsStandard.SuspendLayout();
+			this.statusStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolStripContainer1
@@ -72,7 +72,7 @@
 			// toolStripContainer1.ContentPanel
 			// 
 			this.toolStripContainer1.ContentPanel.Controls.Add(this.wb);
-			this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1043, 499);
+			this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1043, 449);
 			this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
 			this.toolStripContainer1.Name = "toolStripContainer1";
@@ -93,14 +93,134 @@
 			this.wb.Location = new System.Drawing.Point(0, 0);
 			this.wb.MinimumSize = new System.Drawing.Size(20, 20);
 			this.wb.Name = "wb";
-			this.wb.Size = new System.Drawing.Size(1043, 499);
+			this.wb.Size = new System.Drawing.Size(1043, 449);
 			this.wb.TabIndex = 3;
 			this.wb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wb_DocumentCompleted);
 			this.wb.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.wb_Navigating);
 			// 
+			// msMain
+			// 
+			this.msMain.Dock = System.Windows.Forms.DockStyle.None;
+			this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+			this.msMain.Location = new System.Drawing.Point(0, 0);
+			this.msMain.Name = "msMain";
+			this.msMain.Size = new System.Drawing.Size(1043, 24);
+			this.msMain.TabIndex = 4;
+			this.msMain.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "File";
+			// 
+			// openToolStripMenuItem
+			// 
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.openToolStripMenuItem.Text = "Open";
+			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+			// 
+			// saveToolStripMenuItem
+			// 
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.saveToolStripMenuItem.Text = "Save";
+			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+			this.aboutToolStripMenuItem.Text = "About";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+			// 
+			// tsNavigation
+			// 
+			this.tsNavigation.BackColor = System.Drawing.Color.DarkGray;
+			this.tsNavigation.Dock = System.Windows.Forms.DockStyle.None;
+			this.tsNavigation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBack,
+            this.btnFwd,
+            this.btnReload,
+            this.btnHome,
+            this.tbAddress,
+            this.btnGo});
+			this.tsNavigation.Location = new System.Drawing.Point(3, 24);
+			this.tsNavigation.Name = "tsNavigation";
+			this.tsNavigation.Size = new System.Drawing.Size(477, 25);
+			this.tsNavigation.TabIndex = 1;
+			this.tsNavigation.Text = "toolStrip1";
+			// 
+			// btnBack
+			// 
+			this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+			this.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnBack.Name = "btnBack";
+			this.btnBack.Size = new System.Drawing.Size(52, 22);
+			this.btnBack.Text = "Back";
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+			// 
+			// btnFwd
+			// 
+			this.btnFwd.Image = ((System.Drawing.Image)(resources.GetObject("btnFwd.Image")));
+			this.btnFwd.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnFwd.Name = "btnFwd";
+			this.btnFwd.Size = new System.Drawing.Size(49, 22);
+			this.btnFwd.Text = "Fwd";
+			this.btnFwd.Click += new System.EventHandler(this.btnFwd_Click);
+			// 
+			// btnReload
+			// 
+			this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+			this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnReload.Name = "btnReload";
+			this.btnReload.Size = new System.Drawing.Size(63, 22);
+			this.btnReload.Text = "Reload";
+			this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+			// 
+			// btnHome
+			// 
+			this.btnHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+			this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnHome.Name = "btnHome";
+			this.btnHome.Size = new System.Drawing.Size(23, 22);
+			this.btnHome.Text = "Home";
+			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+			// 
+			// tbAddress
+			// 
+			this.tbAddress.Name = "tbAddress";
+			this.tbAddress.Size = new System.Drawing.Size(250, 25);
+			this.tbAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAddress_KeyDown);
+			// 
+			// btnGo
+			// 
+			this.btnGo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.btnGo.Image = ((System.Drawing.Image)(resources.GetObject("btnGo.Image")));
+			this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnGo.Name = "btnGo";
+			this.btnGo.Size = new System.Drawing.Size(26, 22);
+			this.btnGo.Text = "Go";
+			this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+			// 
 			// tsStandard
 			// 
-			this.tsStandard.Dock = System.Windows.Forms.DockStyle.Left;
+			this.tsStandard.Dock = System.Windows.Forms.DockStyle.None;
 			this.tsStandard.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
             this.openToolStripButton,
@@ -112,9 +232,9 @@
             this.pasteToolStripButton,
             this.toolStripSeparator1,
             this.helpToolStripButton});
-			this.tsStandard.Location = new System.Drawing.Point(480, 24);
+			this.tsStandard.Location = new System.Drawing.Point(3, 49);
 			this.tsStandard.Name = "tsStandard";
-			this.tsStandard.Size = new System.Drawing.Size(239, 25);
+			this.tsStandard.Size = new System.Drawing.Size(208, 25);
 			this.tsStandard.TabIndex = 5;
 			this.tsStandard.Text = "toolStrip1";
 			// 
@@ -200,129 +320,15 @@
 			this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
 			this.helpToolStripButton.Text = "He&lp";
 			// 
-			// msMain
+			// statusStrip
 			// 
-			this.msMain.Dock = System.Windows.Forms.DockStyle.None;
-			this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-			this.msMain.Location = new System.Drawing.Point(0, 0);
-			this.msMain.Name = "msMain";
-			this.msMain.Size = new System.Drawing.Size(1043, 24);
-			this.msMain.TabIndex = 4;
-			this.msMain.Text = "menuStrip1";
-			// 
-			// fileToolStripMenuItem
-			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.exitToolStripMenuItem});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-			this.fileToolStripMenuItem.Text = "File";
-			// 
-			// openToolStripMenuItem
-			// 
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-			this.openToolStripMenuItem.Text = "Open";
-			// 
-			// saveToolStripMenuItem
-			// 
-			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-			this.saveToolStripMenuItem.Text = "Save";
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-			this.exitToolStripMenuItem.Text = "Exit";
-			// 
-			// aboutToolStripMenuItem
-			// 
-			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-			this.aboutToolStripMenuItem.Text = "About";
-			// 
-			// tsNavigation
-			// 
-			this.tsNavigation.BackColor = System.Drawing.Color.DarkGray;
-			this.tsNavigation.Dock = System.Windows.Forms.DockStyle.Left;
-			this.tsNavigation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBack,
-            this.btnFwd,
-            this.btnReload,
-            this.btnHome,
-            this.tbAddress,
-            this.btnGo});
-			this.tsNavigation.Location = new System.Drawing.Point(3, 24);
-			this.tsNavigation.Name = "tsNavigation";
-			this.tsNavigation.Size = new System.Drawing.Size(477, 25);
-			this.tsNavigation.TabIndex = 1;
-			this.tsNavigation.Text = "toolStrip1";
-			// 
-			// btnBack
-			// 
-			this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-			this.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(52, 22);
-			this.btnBack.Text = "Back";
-			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-			// 
-			// btnFwd
-			// 
-			this.btnFwd.Image = ((System.Drawing.Image)(resources.GetObject("btnFwd.Image")));
-			this.btnFwd.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnFwd.Name = "btnFwd";
-			this.btnFwd.Size = new System.Drawing.Size(49, 22);
-			this.btnFwd.Text = "Fwd";
-			this.btnFwd.Click += new System.EventHandler(this.btnFwd_Click);
-			// 
-			// btnReload
-			// 
-			this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-			this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnReload.Name = "btnReload";
-			this.btnReload.Size = new System.Drawing.Size(63, 22);
-			this.btnReload.Text = "Reload";
-			this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-			// 
-			// btnHome
-			// 
-			this.btnHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-			this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnHome.Name = "btnHome";
-			this.btnHome.Size = new System.Drawing.Size(23, 22);
-			this.btnHome.Text = "Home";
-			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-			// 
-			// tbAddress
-			// 
-			this.tbAddress.Name = "tbAddress";
-			this.tbAddress.Size = new System.Drawing.Size(250, 25);
-			// 
-			// btnGo
-			// 
-			this.btnGo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.btnGo.Image = ((System.Drawing.Image)(resources.GetObject("btnGo.Image")));
-			this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnGo.Name = "btnGo";
-			this.btnGo.Size = new System.Drawing.Size(26, 22);
-			this.btnGo.Text = "Go";
-			// 
-			// statusStrip1
-			// 
-			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pbLoad});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 526);
-			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(1043, 22);
-			this.statusStrip1.TabIndex = 2;
-			this.statusStrip1.Text = "statusStrip1";
+			this.statusStrip.Location = new System.Drawing.Point(0, 526);
+			this.statusStrip.Name = "statusStrip";
+			this.statusStrip.Size = new System.Drawing.Size(1043, 22);
+			this.statusStrip.TabIndex = 2;
+			this.statusStrip.Text = "statusStrip1";
 			// 
 			// pbLoad
 			// 
@@ -334,24 +340,24 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1043, 548);
-			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.statusStrip);
 			this.Controls.Add(this.toolStripContainer1);
 			this.Name = "MainForm";
-			this.Text = "SimpleWebBrowser 2";
+			this.Text = "SimpleWebBrowser  - ToolStripContainer";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.toolStripContainer1.ContentPanel.ResumeLayout(false);
 			this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
 			this.toolStripContainer1.TopToolStripPanel.PerformLayout();
 			this.toolStripContainer1.ResumeLayout(false);
 			this.toolStripContainer1.PerformLayout();
-			this.tsStandard.ResumeLayout(false);
-			this.tsStandard.PerformLayout();
 			this.msMain.ResumeLayout(false);
 			this.msMain.PerformLayout();
 			this.tsNavigation.ResumeLayout(false);
 			this.tsNavigation.PerformLayout();
-			this.statusStrip1.ResumeLayout(false);
-			this.statusStrip1.PerformLayout();
+			this.tsStandard.ResumeLayout(false);
+			this.tsStandard.PerformLayout();
+			this.statusStrip.ResumeLayout(false);
+			this.statusStrip.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -385,7 +391,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton helpToolStripButton;
 		private System.Windows.Forms.WebBrowser wb;
-		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.StatusStrip statusStrip;
 		private System.Windows.Forms.ToolStripProgressBar pbLoad;
 	}
 }

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ToolStripContainerWebBrowser
@@ -22,7 +16,6 @@ namespace ToolStripContainerWebBrowser
 		{
 			Text = "MyWebBrowser";
 			Size = new Size(600, 400);
-			wb.GoHome();
 		}
 
 		#region WebBrowser Events
@@ -33,12 +26,6 @@ namespace ToolStripContainerWebBrowser
 		}
 
 		private void wb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-		{
-			pbLoad.MarqueeAnimationSpeed = 0;
-			pbLoad.Style = ProgressBarStyle.Blocks;
-		}
-
-		private void wb_Navigated(object sender, WebBrowserNavigatedEventArgs e)
 		{
 			pbLoad.MarqueeAnimationSpeed = 0;
 			pbLoad.Style = ProgressBarStyle.Blocks;
