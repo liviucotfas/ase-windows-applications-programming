@@ -132,5 +132,15 @@ namespace SimpleWebBrowser
 			if (e.KeyCode == Keys.Return) GoToUrl(tbAddress.Text);
 		}
 		#endregion
+
+		private void ctxMenuBtnBack_Click(object sender, EventArgs e)
+		{
+			wb.GoBack();
+		}
+
+		private void ctxMenuBtnReload_Click(object sender, EventArgs e)
+		{
+			wb.Refresh();
+		}
 	}
 }
