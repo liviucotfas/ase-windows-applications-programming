@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{C375BE4E-DFF2-4277-A93F-3E889F1C7146}"
 EndProject
@@ -128,6 +128,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16. Windows Forms - UserControls", "16. Windows Forms - UserControls", "{33FAA69E-261C-4BF9-A8C3-7FF70F6899D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericTextBoxUserControlSample", "NumericTextBoxUserControlSample\NumericTextBoxUserControlSample.csproj", "{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStripContainerWebBrowser", "ToolStripContainerWebBrowser\ToolStripContainerWebBrowser.csproj", "{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -479,6 +481,14 @@ Global
 		{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F}.Release|x86.ActiveCfg = Release|Any CPU
 		{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F}.Release|x86.Build.0 = Release|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Debug|x86.Build.0 = Debug|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Release|x86.ActiveCfg = Release|Any CPU
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -527,5 +537,6 @@ Global
 		{8E814F55-1422-471E-AAEE-04C20772631E} = {718D2BE5-3500-483F-BC23-FD1336336134}
 		{8537243F-1409-4C99-92D3-1E24235214C9} = {BCCF7BA0-13D4-41B6-B803-A5609AC0ACA4}
 		{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F} = {33FAA69E-261C-4BF9-A8C3-7FF70F6899D1}
+		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759} = {0F901F73-692C-41A2-8496-548DE1430391}
 	EndGlobalSection
 EndGlobal

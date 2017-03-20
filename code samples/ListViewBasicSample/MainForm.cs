@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ListViewSample.Entities;
+using ListViewBasicSample.Entities;
 
 namespace ListViewBasicSample
 {

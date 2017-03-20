@@ -3,11 +3,10 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SimpleWebBrowser
+namespace ToolStripContainerWebBrowser
 {
 	public partial class MainForm : Form
 	{
-		// Constructor
 		public MainForm()
 		{
 			InitializeComponent();
@@ -17,7 +16,6 @@ namespace SimpleWebBrowser
 		{
 			Text = "MyWebBrowser";
 			Size = new Size(600, 400);
-			wb.GoHome();
 		}
 
 		#region WebBrowser Events
@@ -28,12 +26,6 @@ namespace SimpleWebBrowser
 		}
 
 		private void wb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-		{
-			pbLoad.MarqueeAnimationSpeed = 0;
-			pbLoad.Style = ProgressBarStyle.Blocks;
-		}
-
-		private void wb_Navigated(object sender, WebBrowserNavigatedEventArgs e)
 		{
 			pbLoad.MarqueeAnimationSpeed = 0;
 			pbLoad.Style = ProgressBarStyle.Blocks;
@@ -132,15 +124,5 @@ namespace SimpleWebBrowser
 			if (e.KeyCode == Keys.Return) GoToUrl(tbAddress.Text);
 		}
 		#endregion
-
-		private void ctxMenuBtnBack_Click(object sender, EventArgs e)
-		{
-			wb.GoBack();
-		}
-
-		private void ctxMenuBtnReload_Click(object sender, EventArgs e)
-		{
-			wb.Refresh();
-		}
 	}
 }
