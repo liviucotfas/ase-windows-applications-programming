@@ -45,8 +45,10 @@ namespace TreeViewSample
 			// 
 			// tvw
 			// 
+			this.tvw.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tvw.BackColor = System.Drawing.SystemColors.Window;
-			this.tvw.Dock = System.Windows.Forms.DockStyle.Top;
 			this.tvw.ForeColor = System.Drawing.Color.DarkRed;
 			this.tvw.HideSelection = false;
 			this.tvw.HotTracking = true;
@@ -72,7 +74,7 @@ namespace TreeViewSample
 			// 
 			// cb
 			// 
-			this.cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.cb.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.cb.Location = new System.Drawing.Point(186, 444);
 			this.cb.Name = "cb";
 			this.cb.Size = new System.Drawing.Size(81, 20);
@@ -82,7 +84,7 @@ namespace TreeViewSample
 			// 
 			// btnCollapseAll
 			// 
-			this.btnCollapseAll.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnCollapseAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnCollapseAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.btnCollapseAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCollapseAll.ForeColor = System.Drawing.Color.White;
@@ -96,7 +98,7 @@ namespace TreeViewSample
 			// 
 			// btnCollapse
 			// 
-			this.btnCollapse.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnCollapse.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnCollapse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.btnCollapse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCollapse.ForeColor = System.Drawing.Color.White;
@@ -110,7 +112,7 @@ namespace TreeViewSample
 			// 
 			// btnExpandAll
 			// 
-			this.btnExpandAll.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnExpandAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnExpandAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.btnExpandAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnExpandAll.ForeColor = System.Drawing.Color.White;
@@ -124,7 +126,7 @@ namespace TreeViewSample
 			// 
 			// btnExpand
 			// 
-			this.btnExpand.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnExpand.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnExpand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.btnExpand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnExpand.ForeColor = System.Drawing.Color.White;
@@ -138,7 +140,7 @@ namespace TreeViewSample
 			// 
 			// btnToggle
 			// 
-			this.btnToggle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnToggle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.btnToggle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnToggle.ForeColor = System.Drawing.Color.White;
@@ -152,7 +154,7 @@ namespace TreeViewSample
 			// 
 			// btnSelected
 			// 
-			this.btnSelected.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.btnSelected.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnSelected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.btnSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSelected.ForeColor = System.Drawing.Color.White;
