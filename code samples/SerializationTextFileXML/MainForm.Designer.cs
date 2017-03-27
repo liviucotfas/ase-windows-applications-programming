@@ -126,6 +126,9 @@
 			// 
 			// lvParticipants
 			// 
+			this.lvParticipants.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.lvParticipants.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -134,7 +137,7 @@
 			this.lvParticipants.GridLines = true;
 			this.lvParticipants.Location = new System.Drawing.Point(12, 163);
 			this.lvParticipants.Name = "lvParticipants";
-			this.lvParticipants.Size = new System.Drawing.Size(687, 234);
+			this.lvParticipants.Size = new System.Drawing.Size(695, 231);
 			this.lvParticipants.TabIndex = 60;
 			this.lvParticipants.UseCompatibleStateImageBehavior = false;
 			this.lvParticipants.View = System.Windows.Forms.View.Details;
@@ -146,6 +149,8 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.btnAdd);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.tbLastName);
@@ -155,7 +160,7 @@
 			this.groupBox1.Controls.Add(this.dtpBirthDate);
 			this.groupBox1.Location = new System.Drawing.Point(12, 38);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(687, 119);
+			this.groupBox1.Size = new System.Drawing.Size(695, 119);
 			this.groupBox1.TabIndex = 59;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "New Participant";
@@ -168,7 +173,7 @@
             this.textFileToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(706, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(719, 24);
 			this.menuStrip1.TabIndex = 61;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -184,14 +189,14 @@
 			// btnSerializeBinary
 			// 
 			this.btnSerializeBinary.Name = "btnSerializeBinary";
-			this.btnSerializeBinary.Size = new System.Drawing.Size(152, 22);
+			this.btnSerializeBinary.Size = new System.Drawing.Size(129, 22);
 			this.btnSerializeBinary.Text = "Serialize";
 			this.btnSerializeBinary.Click += new System.EventHandler(this.btnSerializeBinary_Click);
 			// 
 			// btnDeserializeBinary
 			// 
 			this.btnDeserializeBinary.Name = "btnDeserializeBinary";
-			this.btnDeserializeBinary.Size = new System.Drawing.Size(152, 22);
+			this.btnDeserializeBinary.Size = new System.Drawing.Size(129, 22);
 			this.btnDeserializeBinary.Text = "Deserialize";
 			this.btnDeserializeBinary.Click += new System.EventHandler(this.btnDeserializeBinary_Click);
 			// 
@@ -207,14 +212,14 @@
 			// btnSerializeXML
 			// 
 			this.btnSerializeXML.Name = "btnSerializeXML";
-			this.btnSerializeXML.Size = new System.Drawing.Size(152, 22);
+			this.btnSerializeXML.Size = new System.Drawing.Size(129, 22);
 			this.btnSerializeXML.Text = "Serialize";
 			this.btnSerializeXML.Click += new System.EventHandler(this.btnSerializeXML_Click);
 			// 
 			// btnDeserializeXML
 			// 
 			this.btnDeserializeXML.Name = "btnDeserializeXML";
-			this.btnDeserializeXML.Size = new System.Drawing.Size(152, 22);
+			this.btnDeserializeXML.Size = new System.Drawing.Size(129, 22);
 			this.btnDeserializeXML.Text = "Deserialize";
 			this.btnDeserializeXML.Click += new System.EventHandler(this.btnDeserializeXML_Click);
 			// 
@@ -237,7 +242,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(706, 401);
+			this.ClientSize = new System.Drawing.Size(719, 406);
 			this.Controls.Add(this.lvParticipants);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.menuStrip1);
