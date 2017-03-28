@@ -188,8 +188,7 @@ namespace TreeViewSample
 
 		private void btnCollapseAll_Click(object sender, EventArgs e)
 		{
-			if (tvw.SelectedNode != null)
-				tvw.CollapseAll();
+			tvw.CollapseAll();
 		}
 
 		private void btnToggle_Click(object sender, EventArgs e)
