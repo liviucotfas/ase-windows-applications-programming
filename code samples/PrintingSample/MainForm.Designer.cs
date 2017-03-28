@@ -43,6 +43,9 @@
 			// 
 			this.txtDocument.AccessibleDescription = "TextBox to contain text for printing";
 			this.txtDocument.AccessibleName = "TextBox for printing";
+			this.txtDocument.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtDocument.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
 			this.txtDocument.Location = new System.Drawing.Point(12, 43);
 			this.txtDocument.Multiline = true;
