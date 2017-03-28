@@ -49,6 +49,9 @@
 			this.btnDeserializeXML = new System.Windows.Forms.ToolStripMenuItem();
 			this.textFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.btnTextFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.jSONSerializationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnSerializeJSON = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnDeserializeJSON = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupBox1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -170,6 +173,7 @@
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.xMLToolStripMenuItem,
+            this.jSONSerializationToolStripMenuItem,
             this.textFileToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
@@ -212,14 +216,14 @@
 			// btnSerializeXML
 			// 
 			this.btnSerializeXML.Name = "btnSerializeXML";
-			this.btnSerializeXML.Size = new System.Drawing.Size(129, 22);
+			this.btnSerializeXML.Size = new System.Drawing.Size(152, 22);
 			this.btnSerializeXML.Text = "Serialize";
 			this.btnSerializeXML.Click += new System.EventHandler(this.btnSerializeXML_Click);
 			// 
 			// btnDeserializeXML
 			// 
 			this.btnDeserializeXML.Name = "btnDeserializeXML";
-			this.btnDeserializeXML.Size = new System.Drawing.Size(129, 22);
+			this.btnDeserializeXML.Size = new System.Drawing.Size(152, 22);
 			this.btnDeserializeXML.Text = "Deserialize";
 			this.btnDeserializeXML.Click += new System.EventHandler(this.btnDeserializeXML_Click);
 			// 
@@ -237,6 +241,29 @@
 			this.btnTextFile.Size = new System.Drawing.Size(107, 22);
 			this.btnTextFile.Text = "Export";
 			this.btnTextFile.Click += new System.EventHandler(this.btnTextFile_Click);
+			// 
+			// jSONSerializationToolStripMenuItem
+			// 
+			this.jSONSerializationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSerializeJSON,
+            this.btnDeserializeJSON});
+			this.jSONSerializationToolStripMenuItem.Name = "jSONSerializationToolStripMenuItem";
+			this.jSONSerializationToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+			this.jSONSerializationToolStripMenuItem.Text = "JSON Serialization";
+			// 
+			// btnSerializeJSON
+			// 
+			this.btnSerializeJSON.Name = "btnSerializeJSON";
+			this.btnSerializeJSON.Size = new System.Drawing.Size(152, 22);
+			this.btnSerializeJSON.Text = "Serialize";
+			this.btnSerializeJSON.Click += new System.EventHandler(this.btnSerializeJSON_Click);
+			// 
+			// btnDeserializeJSON
+			// 
+			this.btnDeserializeJSON.Name = "btnDeserializeJSON";
+			this.btnDeserializeJSON.Size = new System.Drawing.Size(152, 22);
+			this.btnDeserializeJSON.Text = "Deserialize";
+			this.btnDeserializeJSON.Click += new System.EventHandler(this.btnDeserializeJSON_Click);
 			// 
 			// MainForm
 			// 
@@ -280,6 +307,9 @@
 		private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem btnSerializeXML;
 		private System.Windows.Forms.ToolStripMenuItem btnDeserializeXML;
+		private System.Windows.Forms.ToolStripMenuItem jSONSerializationToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem btnSerializeJSON;
+		private System.Windows.Forms.ToolStripMenuItem btnDeserializeJSON;
 	}
 }
 

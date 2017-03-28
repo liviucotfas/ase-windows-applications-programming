@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 using SerializationBinaryXMLTextFile.Entities;
 
 namespace SerializationBinaryXMLTextFile
@@ -92,6 +93,28 @@ namespace SerializationBinaryXMLTextFile
 		}
 		#endregion
 
+		#region JSON
+		private void btnSerializeJSON_Click(object sender, EventArgs e)
+		{
+			using (StreamWriter writer = File.CreateText("SerializedJSON.json"))
+			{
+				JsonSerializer serializer = new JsonSerializer();
+				serializer.Serialize(writer, _participants);
+			}
+		}
+
+		private void btnDeserializeJSON_Click(object sender, EventArgs e)
+		{
+			JsonSerializer serializer = new JsonSerializer();
+
+			using (StreamReader streamReader = new StreamReader("SerializedXML.xml"))
+			{
+				_participants = (List<Participant>)serializer.Deserialize(streamReader, typeof(List<Participant>));
+				DisplayParticipants();
+			}
+		}
+		#endregion
+
 		private void btnTextFile_Click(object sender, EventArgs e)
 		{
 			// Create an instance of the open file dialog box.
@@ -136,6 +159,6 @@ namespace SerializationBinaryXMLTextFile
 				}
 			}
 		}
-		#endregion
+		#endregion		
 	}
 }
