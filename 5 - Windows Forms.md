@@ -4,12 +4,12 @@
 
 1. [Application Class](#application-class)
 2. [Form Class and Control Class](#form-class-controll-class)
-  1. [Partial Classes](#partial-classes)
-  2. [Properties](#properties)
+	1. [Partial Classes](#partial-classes)
+	2. [Properties](#properties)
 3. [Menus](#menus)
 4. [Mouse and Keyboard Events](#mouse-and-keyboard-events)
-  1. [Mouse Events](#mouse-events)
-  2. [Keyboard Events](#keyboard-events)
+	1. [Mouse Events](#mouse-events)
+	2. [Keyboard Events](#keyboard-events)
 
 ## <a name="application-class"></a>Application Class
 
@@ -40,7 +40,7 @@ Frequently used properties:
 **Assignment**	![C#](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/media/image1.png) Sample Code available at <http://online.ase.ro> – “SimpleWebBrowser” Sample
 
 1. Create the following application  
-![Browser App Preview](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/5/media/browser-app-preview.png)
+![Browser App Preview](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/5/browser-app-preview.png)
 2. Create a setup file for the application, that can be redistributed to other users
 
 > You need to right click on the project in the “Solution Explorer” window and choose the publish option
@@ -71,7 +71,7 @@ Depressing a mouse button when the cursor is over a control typically raises the
 ![Info](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/media/image2.png) Sample code available at <http://online.ase.ro> – “MouseEvents” Sample
 
 1. Create the following UI  
-![Mouse Events UI](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/5/media/mouse-events.png)
+![Mouse Events UI](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/5/mouse-events.png)
 2. Add the following code
 
 ```c#
@@ -89,7 +89,7 @@ public partial class MainForm : Form{	public MainForm()	{		InitializeCompone
 **Assignment**
 
 We want to create a numeric only TextBox that can be used to build a simple calculator application, such as the one bellow.  
-![Text Box Example](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/5/media/text-box.png)
+![Text Box Example](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/5/text-box.png)
 
 ![Info](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/media/image2.png) Sample code available at <http://online.ase.ro> – “KeyEvents” Sample
 1. Create a new project with the name “KeyEventsNumericTextBox”

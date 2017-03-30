@@ -4,11 +4,11 @@
 
 1. [Data Validation](#data-validation)
 2. [Complex Visualization Controls](#complex-visualization)
-  1. [ListView](#listview)
-  2. [TreeView](#treeview)
+	1. [ListView](#listview)
+	2. [TreeView](#treeview)
 3. [Exception Handling](#exception-handling)
-  1. [Custom Exceptions](#custom-exceptions)
-  2. [Standard Exceptions](#standard-exceptions)
+	1. [Custom Exceptions](#custom-exceptions)
+	2. [Standard Exceptions](#standard-exceptions)
 
 ## <a name="data-validation"></a>Data Validation
 
@@ -17,7 +17,7 @@
 ![C#](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/media/image1.png) Sample Code available at <http://online.ase.ro> – “ValidationCustomExceptions” Sample
 
 1. Create a new project with the name “ValidationCustomExceptions”2. Create the following UI:  
-![UI Preview](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/5/class-diagram.png)
+![UI Preview](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/6/ui-preview.png)
 3. Add ErrorProviders for the LastName and FirstName fields: **epLastName**, **epFirstName**
 4. Handle the **Validating** event on **tbLastName** as follows:
 
@@ -47,7 +47,7 @@
 1. Create a new project with the name “ListViewSample”
 2. Rename “Form1” to “MainForm”
 3. Create the following UI:    
-![Browser App Preview](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/6/listview-ui.png)
+![Browser App Preview](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/6/listview-ui.png)
 4. Add a new folder to your project and name it “Entities”
 5. Inside the “Entities” folder add the following “Participant” class:
 
@@ -61,7 +61,7 @@
 	}
 	```
 7. Add buttons for changing the current “View” of the list, as shown:  
-![Grouped ListView](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/6/grouped-listview.png)
+![Grouped ListView](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/6/grouped-list.png)
 8. Display the participants in groups (“Children” and “Adults”) as in the previous image
 ### <a name="treeview"></a> TreeView
 
@@ -71,7 +71,7 @@
 
 1. Create a new project with the name “TreeViewSample”
 2. Create the following UI:  
-![TreeView UI](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/6/media/treeview-ui.png)
+![TreeView UI](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/6/treeview-ui.png)
 3. Add the following methods:
 
 	```c#
@@ -110,7 +110,7 @@
 
 1. Create a new project with the name “StandardExceptions”
 2. Create the following UI:  
-![Grouped ListView](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/docs/6/grouped-listview.png)
+![Standard Exceptions](https://raw.githubusercontent.com/cristianfrasineanu/ase-windows-applications-programming/master/docs/6/standard-exceptions-example.png)
 3. Handle the possible exceptions
 
 	```c#
