@@ -96,9 +96,9 @@ namespace SerializationBinaryXMLTextFile
 		#region JSON
 		private void btnSerializeJSON_Click(object sender, EventArgs e)
 		{
+			JsonSerializer serializer = new JsonSerializer();
 			using (StreamWriter writer = File.CreateText("SerializedJSON.json"))
 			{
-				JsonSerializer serializer = new JsonSerializer();
 				serializer.Serialize(writer, _participants);
 			}
 		}
@@ -106,8 +106,7 @@ namespace SerializationBinaryXMLTextFile
 		private void btnDeserializeJSON_Click(object sender, EventArgs e)
 		{
 			JsonSerializer serializer = new JsonSerializer();
-
-			using (StreamReader streamReader = new StreamReader("SerializedXML.xml"))
+			using (StreamReader streamReader = new StreamReader("SerializedJSON.json"))
 			{
 				_participants = (List<Participant>)serializer.Deserialize(streamReader, typeof(List<Participant>));
 				DisplayParticipants();
