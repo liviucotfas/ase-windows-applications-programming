@@ -208,8 +208,7 @@ Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29
 	}
 	
 	// This control will use any dropped data to add items to the listbox.
-	// Therefore, only data in a text format will be allowed.
-	Setting the
+	// Therefore, only data in a text format will be allowed. Setting the
 	// autoConvert parameter to true specifies that any data that can be
 	// converted to a text format is also acceptable.
 	if (e.Data.GetDataPresent(DataFormats.Text, true))
@@ -217,8 +216,7 @@ Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29
 		// Some controls in this sample allow both Copy and Move effects.
 		// If a Move effect is allowed, this implementation assumes a Move
 		// effect unless the CTRL key was pressed, in which case a Copy
-		// effect is assumed.
-		This follows standard DragDrop conventions.
+		// effect is assumed. This follows standard DragDrop conventions.
 		if ((e.AllowedEffect & DragDropEffects.Move) == DragDropEffects.Move && (e.KeyState & CtrlKey) != CtrlKey)
 		{
 			// Show the standard Move icon.
@@ -236,8 +234,7 @@ Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29
 	```c#
 	/// <summary>
 	/// The DragDrop event of the target control fires when a drop actually occurs over
-	/// the target control.
-	This is where the data being dragged is actually processed.
+	/// the target control. This is where the data being dragged is actually processed.
 	///
 	/// This event will fire only if the AllowDrop property of the target control has
 	/// been set to true.
