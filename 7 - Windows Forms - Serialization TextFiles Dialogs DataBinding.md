@@ -142,7 +142,7 @@ static void Main(string[] args)
 	DirectoryInfo[] cDirs = new DirectoryInfo(@"c:\").GetDirectories();
 
 	// Write each directory name to a file.
-  using (StreamWriter sw = new StreamWriter("CDriveDirs.txt"))
+  	using (StreamWriter sw = new StreamWriter("CDriveDirs.txt"))
 	{
 		foreach (DirectoryInfo dir in cDirs)
 		{
@@ -180,7 +180,7 @@ static void Main(string[] args)
 4. Modify the “DisplayParticipants” method in the “MainForm” class in order to set the “Tag” property for the ListViewItem instances, as shown bellow.
 
 ```c#
- public void DisplayParticipants()
+public void DisplayParticipants()
 {
 	lvParticipants.Items.Clear();
 
@@ -227,23 +227,22 @@ if (MessageBox.Show("Are you sure?", "Delete participant", MessageBoxButtons.Yes
 
 ```c#
 #region Attributes
-	private readonly Participant _participant;
-	#endregion
+private readonly Participant _participant;
+#endregion
 
 
-	public EditForm(Participant participant)
-	{
-		_participant = participant;
-
-		InitializeComponent();
-	}
-  private void EditForm_Load(object sender, System.EventArgs e)
-	{
-		tbLastName.Text = _participant.LastName;
-		tbFirstName.Text = _participant.FirstName;
-		dtpBirthDate.Value = _participant.BirthDate;
-	}
-  ```
+public EditForm(Participant participant)
+{
+	_participant = participant;
+	InitializeComponent();
+}
+private void EditForm_Load(object sender, System.EventArgs e)
+{
+	tbLastName.Text = _participant.LastName;
+	tbFirstName.Text = _participant.FirstName;
+	dtpBirthDate.Value = _participant.BirthDate;
+}
+```
 
 10. Set the DialogResult for the “Cancel” button as “Cancel”
 
@@ -420,7 +419,7 @@ internal class MainFormViewModel : INotifyPropertyChanged
 
 	private void MainForm_Load(object sender, EventArgs e)
 	{
-  dgvParticipants.DataSource = _viewModel.Participants;
+  		dgvParticipants.DataSource = _viewModel.Participants;
 		tbLastName.DataBindings.Add("Text",_viewModel,"LastName",false,DataSourceUpdateMode.OnPropertyChanged);
 		tbFirstName.DataBindings.Add("Text", _viewModel, "FirstName", false, DataSourceUpdateMode.OnPropertyChanged);
 		dtpBirthDate.DataBindings.Add("Value", _viewModel, "BirthDate", false, DataSourceUpdateMode.OnPropertyChanged);
