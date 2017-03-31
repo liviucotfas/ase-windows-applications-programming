@@ -23,12 +23,12 @@ Data Access technologies:
 3. Add a new table as follows (you can also use the designer)
 
 ```SQL
-	CREATE TABLE `Participant` (
-		`Id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-		`LastName` TEXT,
-		`FirstName` TEXT,
-		`BirthDate` TEXT
-	);
+CREATE TABLE `Participant` (
+	`Id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`LastName` TEXT,
+	`FirstName` TEXT,
+	`BirthDate` TEXT
+);
 ```
 ### <a name="connected-architecture"></a>Connected Data Access Architecture
 
@@ -74,21 +74,21 @@ Data Access technologies:
 5. Set the tag property for the ListViewItems as follows:
 
 	```c#
-		public void DisplayParticipants()
+	public void DisplayParticipants()
+	{
+		lvParticipants.Items.Clear();
+		
+		foreach (Participant participant in _participants)
 		{
-			lvParticipants.Items.Clear();
+			var listViewItem = new ListViewItem(participant.LastName);
+			listViewItem.SubItems.Add(participant.FirstName);
+			listViewItem.SubItems.Add(participant.BirthDate.ToShortDateString());
 			
-			foreach (Participant participant in _participants)
-			{
-				var listViewItem = new ListViewItem(participant.LastName);
-				listViewItem.SubItems.Add(participant.FirstName);
-				listViewItem.SubItems.Add(participant.BirthDate.ToShortDateString());
-				
-				listViewItem.Tag = participant;
-				
-				lvParticipants.Items.Add(listViewItem);
-			}
+			listViewItem.Tag = participant;
+			
+			lvParticipants.Items.Add(listViewItem);
 		}
+	}
 	```
 6. Add the method that will be used to insert new participants in the database
 	

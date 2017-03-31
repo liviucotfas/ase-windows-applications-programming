@@ -44,20 +44,20 @@
 4. Add the “Data “ property in the “PieChartControl” class
 
 	```c#
-		private PieChartCategory[] _data;
-		public PieChartCategory[] Data {
-			get { return _data; }
-			set
-			{
-				if(_data == value)
-					return;
+	private PieChartCategory[] _data;
+	public PieChartCategory[] Data {
+		get { return _data; }
+		set
+		{
+			if(_data == value)
+				return;
 	
-				_data = value;
-				
-				//trigger the Paint event
-				Invalidate();
-			}
+			_data = value;
+			
+			//trigger the Paint event
+			Invalidate();
 		}
+	}
 	```
 
 ## <a name="drawing"></a>Drawing
