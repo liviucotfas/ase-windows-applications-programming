@@ -85,9 +85,9 @@ namespace SerializationBinaryXMLTextFile
 		{
 			XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
 			
-			using (StreamReader streamReader = new StreamReader("SerializedXML.xml"))
+			using (StreamReader reader = new StreamReader("SerializedXML.xml"))
 			{
-				_participants = (List<Participant>)serializer.Deserialize(streamReader);
+				_participants = (List<Participant>)serializer.Deserialize(reader);
 				DisplayParticipants();
 			}
 		}
@@ -106,9 +106,9 @@ namespace SerializationBinaryXMLTextFile
 		private void btnDeserializeJSON_Click(object sender, EventArgs e)
 		{
 			JsonSerializer serializer = new JsonSerializer();
-			using (StreamReader streamReader = new StreamReader("SerializedJSON.json"))
+			using (StreamReader reader = new StreamReader("SerializedJSON.json"))
 			{
-				_participants = (List<Participant>)serializer.Deserialize(streamReader, typeof(List<Participant>));
+				_participants = (List<Participant>)serializer.Deserialize(reader, typeof(List<Participant>));
 				DisplayParticipants();
 			}
 		}
