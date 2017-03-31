@@ -319,10 +319,10 @@ Cases:
 4. Add the following “MainFormViewModel” class in the “ViewModel” folder
 
 ```c#
- internal class MainFormViewModel : INotifyPropertyChanged
+internal class MainFormViewModel : INotifyPropertyChanged
 {
 	#region Properties
-  #region LastName
+  	#region LastName
 	private string _lastName;
 	public string LastName {
 		get { return _lastName; }
@@ -353,7 +353,7 @@ Cases:
 			OnPropertyChanged();
 		}
 	}
-  #endregion
+  	#endregion
 
 	#region FirstName
 	private DateTime _birthDate;
