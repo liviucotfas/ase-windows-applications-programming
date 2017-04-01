@@ -1,6 +1,6 @@
 Delegates and Events
 =========
-##Table of Contents
+## Table of Contents
 - [Delegates](#delegates)
 - [Events](#events)
 - [Other](#other)
