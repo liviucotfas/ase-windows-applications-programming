@@ -8,8 +8,7 @@ namespace DialogSample
 		#region Attributes
 		private readonly Participant _participant;
 		#endregion
-
-
+		
 		public EditForm(Participant participant)
 		{
 			_participant = participant;
