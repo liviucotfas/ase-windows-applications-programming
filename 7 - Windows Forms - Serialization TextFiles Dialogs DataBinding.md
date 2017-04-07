@@ -279,6 +279,9 @@ if (editForm.ShowDialog() == DialogResult.OK)
 	DisplayParticipants();
 ```
 
+#### Homework
+1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the ListView
+2. Display a contextual menu when the user right clicks on a participant in the ListView. The contextual menu will include the options to edit or delete the participant.
 
 ## <a name="databinding"></a> 3. DataBinding
 
