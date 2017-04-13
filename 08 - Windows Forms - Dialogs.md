@@ -114,3 +114,4 @@ if (editForm.ShowDialog() == DialogResult.OK)
 #### Homework
 1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the ListView
 2. Display a contextual menu when the user right clicks on a participant in the ListView. The contextual menu will include the options to edit or delete the participant.
+3. Remove the GroupBox previously used for adding new participants from the MainForm. Replace it instead with a button that will use the EditForm in order to add new participants.
