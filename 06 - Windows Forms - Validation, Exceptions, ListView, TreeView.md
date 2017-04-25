@@ -159,6 +159,9 @@
 ![Grouped ListView](docs/6/grouped-list.png)
 8. Display the participants in groups (“Children” and “Adults”) as in the previous image
 
+**Homework**
+1. Also clear/reset the values in the textboxes and in the DateTimePicker when the user clicks the "Add Participant" button  
+
 ### <a name="treeview"></a> TreeView
 
 **Assignment**
