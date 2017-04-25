@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{C375BE4E-DFF2-4277-A93F-3E889F1C7146}"
 EndProject
@@ -130,6 +130,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStripContainerWebBrowser", "ToolStripContainerWebBrowser\ToolStripContainerWebBrowser.csproj", "{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationBinaryXMLTextFile", "SerializationBinaryXMLTextFile\SerializationBinaryXMLTextFile.csproj", "{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingSample.Tests", "DataBindingSample.Tests\DataBindingSample.Tests.csproj", "{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -489,6 +491,14 @@ Global
 		{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A}.Release|x86.ActiveCfg = Release|Any CPU
 		{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A}.Release|x86.Build.0 = Release|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Debug|x86.Build.0 = Debug|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -538,5 +548,6 @@ Global
 		{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F} = {33FAA69E-261C-4BF9-A8C3-7FF70F6899D1}
 		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759} = {0F901F73-692C-41A2-8496-548DE1430391}
 		{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A} = {21CE9FC6-1F31-4200-9DC1-BD38FB9AC299}
+		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C} = {BF3BF946-C947-4AFC-8ABB-9C2ED1A0E687}
 	EndGlobalSection
 EndGlobal
