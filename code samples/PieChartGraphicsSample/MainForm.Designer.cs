@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pieChartControl = new PieChartGraphicsSample.PieChartControl();
+			this.pieChartControl = new PieChartControl();
 			this.SuspendLayout();
 			// 
 			// pieChartControl1

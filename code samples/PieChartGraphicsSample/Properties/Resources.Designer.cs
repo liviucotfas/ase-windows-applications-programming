@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PieChartGraphicsSample.Properties
+namespace BarChartGraphicsSample.Properties
 {
 
 
