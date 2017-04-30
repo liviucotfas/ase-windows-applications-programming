@@ -1,4 +1,4 @@
-# Windows Forms – Databases, Clipboard
+# Windows Forms – Databases
 
 ##	 Contents
 
@@ -9,9 +9,9 @@
 
 Data Access technologies:
 
-* ADO.NET - Active Data Objects
+* **ADO.NET - Active Data Objects**
 * NHibernate
-* Entity Framework
+* **Entity Framework**
 
 **Activity**
 
@@ -364,3 +364,19 @@ CREATE TABLE `Participant` (
 		#endregion
 	}
 	```	
+## Entity Framework
+Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers usually need to write.
+
+Documentation: [link](https://docs.microsoft.com/en-us/ef/)
+
+### Approaches
+1. Code First
+2. Database First
+
+> Adapted from [link](https://msdn.microsoft.com/en-us/library/jj682076(v=vs.113).aspx)
+
+![More](media/image3.png) Further reading: 
+- [link](https://code.msdn.microsoft.com/windowsapps/Entity-Framework-in-dc34a410)
+- [link](https://www.codeproject.com/Articles/221931/Entity-Framework-in-WinForms)
+
+
