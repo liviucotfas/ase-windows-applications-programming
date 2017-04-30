@@ -156,3 +156,7 @@ internal class MainFormViewModel : INotifyPropertyChanged
 ![](media/image3.png) Further reading about the MVVM pattern: [link][8]
 
 [8]: https://msdn.microsoft.com/en-us/library/hh848246.aspx
+
+### <a name="unit-testing"></a>Unit Testing
+
+![More](media/image3.png) Further reading: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
