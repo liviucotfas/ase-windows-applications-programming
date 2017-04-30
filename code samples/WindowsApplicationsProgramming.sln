@@ -55,11 +55,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsPropertyTrigger", "Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsPropertyTriggerEventArgs", "EventsPropertyTriggerEventArgs\EventsPropertyTriggerEventArgs.csproj", "{359B7CBB-CDE6-403E-8EA4-F6EC7F51E2EF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15. DataBase", "15. DataBase", "{A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15. Database", "15. Database", "{A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseCommand", "DataBaseSQLCommand\DataBaseCommand.csproj", "{5175D0A8-9C62-43B9-B760-E9941F61A6F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCommand", "DatabaseCommand\DatabaseCommand.csproj", "{5175D0A8-9C62-43B9-B760-E9941F61A6F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseDataAdapter", "DataBaseDataSetSQLServer\DataBaseDataAdapter.csproj", "{F99E8976-7006-42C9-A803-4FCBD3476578}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDataAdapter", "DatabaseDataAdapter\DatabaseDataAdapter.csproj", "{F99E8976-7006-42C9-A803-4FCBD3476578}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializableCustomCollectionEvents", "SerializableCustomCollectionEvents\SerializableCustomCollectionEvents.csproj", "{1F1E6E78-06EF-453B-926B-8F1BFCB8C172}"
 EndProject
@@ -132,6 +132,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationBinaryXMLTextFile", "SerializationBinaryXMLTextFile\SerializationBinaryXMLTextFile.csproj", "{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingSample.Tests", "DataBindingSample.Tests\DataBindingSample.Tests.csproj", "{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseEntityFramework", "DatabaseEntityFramework\DatabaseEntityFramework.csproj", "{62E45660-380B-4C8E-92A9-7799715B7C49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChartGraphicsSample", "BarChartGraphicsSample\BarChartGraphicsSample.csproj", "{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -499,6 +503,22 @@ Global
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|x86.ActiveCfg = Release|Any CPU
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|x86.Build.0 = Release|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|x86.Build.0 = Debug|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|x86.ActiveCfg = Release|Any CPU
+		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|x86.Build.0 = Release|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|x86.Build.0 = Debug|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|x86.ActiveCfg = Release|Any CPU
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -549,5 +569,7 @@ Global
 		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759} = {0F901F73-692C-41A2-8496-548DE1430391}
 		{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A} = {21CE9FC6-1F31-4200-9DC1-BD38FB9AC299}
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C} = {BF3BF946-C947-4AFC-8ABB-9C2ED1A0E687}
+		{62E45660-380B-4C8E-92A9-7799715B7C49} = {A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}
+		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D} = {718D2BE5-3500-483F-BC23-FD1336336134}
 	EndGlobalSection
 EndGlobal

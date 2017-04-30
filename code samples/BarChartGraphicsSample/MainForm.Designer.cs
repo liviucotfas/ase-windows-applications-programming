@@ -1,4 +1,4 @@
-﻿namespace PieChartGraphicsSample
+﻿namespace BarChartGraphicsSample
 {
 	partial class MainForm
 	{
@@ -28,34 +28,32 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pieChartControl = new PieChartControl();
+			this.barChartControl = new BarChartGraphicsSample.BarChartControl();
 			this.SuspendLayout();
 			// 
-			// pieChartControl1
+			// barChartControl
 			// 
-			this.pieChartControl.BackColor = System.Drawing.Color.White;
-			this.pieChartControl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pieChartControl.Location = new System.Drawing.Point(0, 0);
-			this.pieChartControl.Name = "pieChartControl";
-			this.pieChartControl.Size = new System.Drawing.Size(456, 351);
-			this.pieChartControl.TabIndex = 0;
+			this.barChartControl.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.barChartControl.Location = new System.Drawing.Point(0, 0);
+			this.barChartControl.Name = "barChartControl";
+			this.barChartControl.Size = new System.Drawing.Size(739, 365);
+			this.barChartControl.TabIndex = 0;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(456, 351);
-			this.Controls.Add(this.pieChartControl);
+			this.ClientSize = new System.Drawing.Size(739, 365);
+			this.Controls.Add(this.barChartControl);
 			this.Name = "MainForm";
-			this.Text = "PieChart Sample";
-			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.Text = "BarChart Sample";
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private PieChartControl pieChartControl;
+		private BarChartControl barChartControl;
 	}
 }
 

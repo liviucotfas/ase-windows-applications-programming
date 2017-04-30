@@ -22,7 +22,7 @@ namespace PieChartGraphicsSample
 				new PieChartCategory("Cash", (float) 7.5, Color.Beige)
 			};
 
-			pieChartControl1.Data = pieCategories;
+			pieChartControl.Data = pieCategories;
 		}
 	}
 }
