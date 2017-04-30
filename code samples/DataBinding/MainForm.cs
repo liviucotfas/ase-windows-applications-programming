@@ -21,9 +21,12 @@ namespace DataBindingSample
 		{
 			dgvParticipants.DataSource = _viewModel.Participants;
 
-			tbLastName.DataBindings.Add("Text",_viewModel,"LastName",false,DataSourceUpdateMode.OnPropertyChanged);
-			tbFirstName.DataBindings.Add("Text", _viewModel, "FirstName", false, DataSourceUpdateMode.OnPropertyChanged);
-			dtpBirthDate.DataBindings.Add("Value", _viewModel, "BirthDate", false, DataSourceUpdateMode.OnPropertyChanged);
+			//tbLastName.DataBindings.Add("Text", _viewModel, "LastName");
+			//Recommended (without magic strings):
+			tbLastName.DataBindings.Add("Text", _viewModel, nameof(MainFormViewModel.LastName));
+
+			tbFirstName.DataBindings.Add("Text", _viewModel, "FirstName");
+			dtpBirthDate.DataBindings.Add("Value", _viewModel, "BirthDate");
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)

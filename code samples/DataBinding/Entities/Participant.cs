@@ -2,7 +2,7 @@
 
 namespace DataBindingSample.Entities
 {
-	internal class Participant
+	public class Participant
 	{
 		public string LastName { get; set; }
 		public string FirstName { get; set; }

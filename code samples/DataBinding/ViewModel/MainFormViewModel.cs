@@ -6,7 +6,7 @@ using DataBindingSample.Entities;
 
 namespace DataBindingSample.ViewModel
 {
-	internal class MainFormViewModel : INotifyPropertyChanged
+	public class MainFormViewModel : INotifyPropertyChanged
 	{
 		#region Properties
 
@@ -20,10 +20,12 @@ namespace DataBindingSample.ViewModel
 					return;
 				_lastName = value;
 
-				//If we use [CallerMemberName] in the OnPropertyChanged method
-				//OnPropertyChanged();
-				//If we don't use the [CallerMemberName] in the OnPropertyChanged method
-				OnPropertyChanged("LastName");
+				//If we use [CallerMemberName] in the OnPropertyChanged method, we can call:
+				OnPropertyChanged();
+				//If we don't use the [CallerMemberName] in the OnPropertyChanged method, we need to specify the property
+				//OnPropertyChanged("LastName");
+				//To avoid misspellings and bugs when renaming properties, we can use the nameof method
+				//OnPropertyChanged(nameof(LastName));
 			}
 		}
 		#endregion
@@ -72,6 +74,7 @@ namespace DataBindingSample.ViewModel
 		public void AddParticipant()
 		{
 			Participants.Add(new Participant(LastName, FirstName, BirthDate));
+
 			LastName = FirstName = string.Empty;
 			BirthDate = DateTime.Today;
 		}
@@ -89,8 +92,9 @@ namespace DataBindingSample.ViewModel
 		// [CallerMemberName] - Allows you to obtain the method or property name of the caller to the method. https://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.callermembernameattribute%28v=vs.110%29.aspx
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			if(PropertyChanged != null)
-				PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+			PropertyChangedEventHandler handler = PropertyChanged;
+			if (handler != null)
+				handler(this, new PropertyChangedEventArgs(propertyName));
 		}
 		#endregion
 	}
