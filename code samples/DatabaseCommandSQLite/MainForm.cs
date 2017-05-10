@@ -21,8 +21,8 @@ namespace DataBaseCommand
 			_participants = new List<Participant>();
 
 			//Best practice
-	        //Define the connection string in the settings of the application
-	        //var dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
+			//Define the connection string in the settings of the application
+			//_dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
 			_dbConnection = new SQLiteConnection("Data Source=database.db");
         }
 
