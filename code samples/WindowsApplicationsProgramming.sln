@@ -101,7 +101,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFileSample", "TextFileS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15. Windows Forms - Printing", "15. Windows Forms - Printing", "{5A35B567-661E-4E8A-B88D-E10AC899B03A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingSample", "PrintingSample\PrintingSample.csproj", "{E58B5A13-CD0E-48BD-B7D8-639C894826DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingLongTextSample", "PrintingLongTextSample\PrintingLongTextSample.csproj", "{E58B5A13-CD0E-48BD-B7D8-639C894826DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deprecated", "Deprecated", "{2D729CBB-3B30-430D-A8CD-95AD44137609}"
 EndProject
@@ -136,6 +136,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseEntityFramework", "DatabaseEntityFramework\DatabaseEntityFramework.csproj", "{62E45660-380B-4C8E-92A9-7799715B7C49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChartGraphicsSample", "BarChartGraphicsSample\BarChartGraphicsSample.csproj", "{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingRecordsSample", "PrintingRecordsSample\PrintingRecordsSample.csproj", "{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -519,6 +521,14 @@ Global
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|x86.ActiveCfg = Release|Any CPU
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Release|x86.Build.0 = Release|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -571,5 +581,6 @@ Global
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C} = {BF3BF946-C947-4AFC-8ABB-9C2ED1A0E687}
 		{62E45660-380B-4C8E-92A9-7799715B7C49} = {A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D} = {718D2BE5-3500-483F-BC23-FD1336336134}
+		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760} = {5A35B567-661E-4E8A-B88D-E10AC899B03A}
 	EndGlobalSection
 EndGlobal

@@ -1,1 +1,0 @@
-﻿Based on: https://code.msdn.microsoft.com/Using-Print-Preview-Print-eb188e3c
