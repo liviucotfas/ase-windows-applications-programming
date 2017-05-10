@@ -16,33 +16,44 @@ namespace DataBaseDataAdapter
 	        InitializeComponent();
 
 			//Best practice
-			//Define the connection string in the settings of the application and retrieve it using ConfigurationManager.AppSettings["ConnectionString"]
-			//var dbConnection = new SQLiteConnection(ConfigurationManager.AppSettings["ConnectionString"]);
+			//Define the connection string in the settings of the application
+			//var dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
 			_dbConnection = new SQLiteConnection("Data Source = database.db");
 
 			_dsParticipants = new DataSet();
 
-			var selectCommand = new SQLiteCommand("SELECT Id, LastName, FirstName, BirthDate FROM Participant", _dbConnection);
-			
-	        _dbDataAdapter = new SQLiteDataAdapter(selectCommand);
-			_dbDataAdapter.RowUpdated += _dbDataAdapter_RowUpdated;
+	        _dbDataAdapter = new SQLiteDataAdapter();
 
-			var deleteCommand = new SQLiteCommand("DELETE FROM Participant WHERE Id = @Id", _dbConnection);
-			deleteCommand.Parameters.Add(new SQLiteParameter("@Id"));
+			var selectCommand = new SQLiteCommand("SELECT Id, LastName, FirstName, BirthDate FROM Participant", _dbConnection);
+	        _dbDataAdapter.SelectCommand = selectCommand;
+
+			var deleteCommand = new SQLiteCommand(
+				"DELETE FROM Participant WHERE Id = @Id", _dbConnection);
+			deleteCommand.Parameters.Add(
+				new SQLiteParameter("@Id",DbType.Int64, "Id"));
 			_dbDataAdapter.DeleteCommand = deleteCommand;
 
 			var insertCommand = new SQLiteCommand("INSERT INTO Participant (LastName, FirstName, BirthDate) VALUES (@LastName, @FirstName, @BirthDate);", _dbConnection);
-			insertCommand.Parameters.Add(new SQLiteParameter("@LastName"));
-			insertCommand.Parameters.Add(new SQLiteParameter("@FirstName"));
-			insertCommand.Parameters.Add(new SQLiteParameter("@BirthDate"));
+			insertCommand.Parameters.Add(
+				new SQLiteParameter("@LastName", DbType.String, "LastName"));
+			insertCommand.Parameters.Add(
+				new SQLiteParameter("@FirstName", DbType.String, "FirstName"));
+			insertCommand.Parameters.Add(
+				new SQLiteParameter("@BirthDate", DbType.String, "BirthDate"));
 			_dbDataAdapter.InsertCommand = insertCommand;
 
 			var updateCommand = new SQLiteCommand("UPDATE Participant SET LastName = @LastName, FirstName=@FirstName, BirthDate = @BirthDate WHERE Id = @Id", _dbConnection);
-			updateCommand.Parameters.Add(new SQLiteParameter("@LastName", DbType.String, "LastName"));
-			updateCommand.Parameters.Add(new SQLiteParameter("@FirstName", DbType.String, "LastName"));
-			updateCommand.Parameters.Add(new SQLiteParameter("@BirthDate", DbType.String, "LastName"));
-			updateCommand.Parameters.Add(new SQLiteParameter("@Id", DbType.Int64, "Id"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@LastName", DbType.String, "LastName"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@FirstName", DbType.String, "FirstName"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@BirthDate", DbType.String, "BirthDate"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@Id", DbType.Int64, "Id"));
 			_dbDataAdapter.UpdateCommand = updateCommand;
+
+	        _dbDataAdapter.RowUpdated += _dbDataAdapter_RowUpdated;
 		}
 
 		#region Events
@@ -64,7 +75,8 @@ namespace DataBaseDataAdapter
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
-			DataRow newParticipantRow = _dsParticipants.Tables["Participant"].NewRow();
+			DataRow newParticipantRow = 
+				_dsParticipants.Tables["Participant"].NewRow();
 
 			newParticipantRow["LastName"] = tbLastName.Text;
 			newParticipantRow["FirstName"] = tbFirstName.Text;
