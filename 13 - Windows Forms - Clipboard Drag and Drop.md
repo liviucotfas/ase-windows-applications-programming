@@ -111,4 +111,8 @@ Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29
 			listBox1.Items.Add(e.Data.GetData(DataFormats.Text));
 		}
 	}
+<<<<<<< HEAD:13 - Windows Forms - Clipboard Drag and Drop.md
 	```
+=======
+	```
+>>>>>>> refs/remotes/origin/master:15 - Windows Forms - Clipboard Drag and Drop.md
