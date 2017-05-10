@@ -32,9 +32,9 @@ CREATE TABLE `Participant` (
 
 **Activity**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DataBaseCommand” Sample
+![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DatabaseCommandSQLite” Sample
 
-1. Create a copy of the “BasicListView” project and name it “DataBaseCommand”
+1. Create a copy of the “BasicListView” project and name it “DatabaseCommandSQLite”
 2. Add SQLite libraries using NuGet (recommended) or directly from the website <http://system.data.sqlite.org/index.html/doc/trunk/www/index.wiki>
 	1. Open the NuGet Package Manager by right clicking on the “References” node in the “Solution Explorer” window, and choosing the “Manage NuGet Packages” option, as shown below  
 	![Nuget Packages](docs/8/nuget-packages.jpg)
@@ -55,7 +55,7 @@ CREATE TABLE `Participant` (
 		. . .
 	}
 	```
-4. Instantiate the “dbConnection” attribute in the constructor of the “MainForm” class
+4. Instantiate the “_dbConnection” attribute in the constructor of the “MainForm” class
 
 	```c#
 	public MainForm()
@@ -64,8 +64,8 @@ CREATE TABLE `Participant` (
 		_participants = new List<Participant>();
 		
 		//Best practice
-		//Define the connection string in the settings of the application and retrieve it using ConfigurationManager.AppSettings["ConnectionString"]
-		//dbConnection = new SQLiteConnection(ConfigurationManager.AppSettings["ConnectionString"]);
+	    //Define the connection string in the settings of the application
+	    //_dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
 		_dbConnection = new SQLiteConnection("Data Source=database.db");
 	}
 	```
@@ -260,56 +260,64 @@ CREATE TABLE `Participant` (
 
 **Activity**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DataBaseDataAdapter” Sample
+![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DatabaseDataAdapterSQLite” Sample
 
-1. Create a copy of the “BasicListView” project and name it “DataBindingSample”
+1. Create a copy of the “BasicListView” project and name it “DatabaseDataAdapterSQLite”
 2. Replace the “ListView” control with a “DataGrid” control (Name: dgvParticipants)
 3. Modify the “MainForm” class as follows:
 
 	```c#
 	public partial class MainForm : Form
-	{
-		private readonly SQLiteConnection _dbConnection ;
+    {
+	    private readonly SQLiteConnection _dbConnection ;
 		private readonly SQLiteDataAdapter _dbDataAdapter;
-		private readonly DataSet _dsParticipants;
-		
-		public MainForm()
-		{
-			InitializeComponent();
-			
+	    private readonly DataSet _dsParticipants;
+
+        public MainForm()
+        {
+	        InitializeComponent();
+
 			//Best practice
-			//Define the connection string in the settings of the application and retrieve it using ConfigurationManager.AppSettings["ConnectionString"]
-			//var dbConnection = new SQLiteConnection(ConfigurationManager.AppSettings["ConnectionString"]);
+			//Define the connection string in the settings of the application
+			//var dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
 			_dbConnection = new SQLiteConnection("Data Source = database.db");
-			
+
 			_dsParticipants = new DataSet();
-			
+
+	        _dbDataAdapter = new SQLiteDataAdapter();
+
 			var selectCommand = new SQLiteCommand("SELECT Id, LastName, FirstName, BirthDate FROM Participant", _dbConnection);
-		
-			_dbDataAdapter = new SQLiteDataAdapter(selectCommand);
-			_dbDataAdapter.RowUpdated += _dbDataAdapter_RowUpdated;
-			
-			var deleteCommand = new SQLiteCommand("DELETE FROM Participant WHERE Id = @Id", _dbConnection);
-			deleteCommand.Parameters.Add(new SQLiteParameter("@Id"));
+	        _dbDataAdapter.SelectCommand = selectCommand;
+
+			var deleteCommand = new SQLiteCommand(
+				"DELETE FROM Participant WHERE Id = @Id", _dbConnection);
+			deleteCommand.Parameters.Add(
+				new SQLiteParameter("@Id",DbType.Int64, "Id"));
 			_dbDataAdapter.DeleteCommand = deleteCommand;
-			
+
 			var insertCommand = new SQLiteCommand("INSERT INTO Participant (LastName, FirstName, BirthDate) VALUES (@LastName, @FirstName, @BirthDate);", _dbConnection);
-			insertCommand.Parameters.Add(new SQLiteParameter("@LastName"));
-			insertCommand.Parameters.Add(new SQLiteParameter("@FirstName"));
-			insertCommand.Parameters.Add(new SQLiteParameter("@BirthDate"));
+			insertCommand.Parameters.Add(
+				new SQLiteParameter("@LastName", DbType.String, "LastName"));
+			insertCommand.Parameters.Add(
+				new SQLiteParameter("@FirstName", DbType.String, "FirstName"));
+			insertCommand.Parameters.Add(
+				new SQLiteParameter("@BirthDate", DbType.String, "BirthDate"));
 			_dbDataAdapter.InsertCommand = insertCommand;
-			
+
 			var updateCommand = new SQLiteCommand("UPDATE Participant SET LastName = @LastName, FirstName=@FirstName, BirthDate = @BirthDate WHERE Id = @Id", _dbConnection);
-			updateCommand.Parameters.Add(new SQLiteParameter("@LastName", DbType.String,
-			"LastName"));
-			updateCommand.Parameters.Add(new SQLiteParameter("@FirstName", DbType.String,
-			"LastName"));
-			updateCommand.Parameters.Add(new SQLiteParameter("@BirthDate", DbType.String,
-			"LastName"));
-			updateCommand.Parameters.Add(new SQLiteParameter("@Id", DbType.Int64, "Id"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@LastName", DbType.String, "LastName"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@FirstName", DbType.String, "FirstName"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@BirthDate", DbType.String, "BirthDate"));
+			updateCommand.Parameters.Add(
+				new SQLiteParameter("@Id", DbType.Int64, "Id"));
 			_dbDataAdapter.UpdateCommand = updateCommand;
+
+	        _dbDataAdapter.RowUpdated += _dbDataAdapter_RowUpdated;
 		}
-		
+
 		#region Events
 		private void MainForm_Load(object sender, EventArgs e)
 		{
@@ -321,23 +329,24 @@ CREATE TABLE `Participant` (
 			{
 				MessageBox.Show(ex.Message);
 			}
-			
+
 			//DataBinding Grid
 			dgvParticipants.DataSource = _dsParticipants.Tables["Participant"];
 			//dgvParticipants.Columns["Id"].Visible = false;
 		}
-		
+
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
-			DataRow newParticipantRow = _dsParticipants.Tables["Participant"].NewRow();
-			
+			DataRow newParticipantRow = 
+				_dsParticipants.Tables["Participant"].NewRow();
+
 			newParticipantRow["LastName"] = tbLastName.Text;
 			newParticipantRow["FirstName"] = tbFirstName.Text;
 			newParticipantRow["BirthDate"] = dtpBirthDate.Value;
-			
-			dsParticipants.Tables["Participant"].Rows.Add(newParticipantRow);
+
+			_dsParticipants.Tables["Participant"].Rows.Add(newParticipantRow);
 		}
-		
+
 		private void btnPersistChanges_Click(object sender, EventArgs e)
 		{
 			try
@@ -350,14 +359,13 @@ CREATE TABLE `Participant` (
 				MessageBox.Show(ex.Message);
 			}
 		}
-		
+
 		private void _dbDataAdapter_RowUpdated(object sender, System.Data.Common.RowUpdatedEventArgs e)
 		{
 			//https://msdn.microsoft.com/en-us/library/ks9f57t0%28v=vs.110%29.aspx
 			if (e.StatementType == StatementType.Insert)
 			{
-				var getIdCommand = new SQLiteCommand("SELECT last_insert_rowid()",
-				_dbConnection);
+				var getIdCommand = new SQLiteCommand("SELECT last_insert_rowid()", _dbConnection);
 				e.Row["Id"] = (long)getIdCommand.ExecuteScalar();
 			}
 		}

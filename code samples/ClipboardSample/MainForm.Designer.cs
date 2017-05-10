@@ -84,7 +84,7 @@
 			this.GroupBox4.Controls.Add(this.Label2);
 			this.GroupBox4.Controls.Add(this.WindowsExplorerLinkLabel);
 			this.GroupBox4.Controls.Add(this.Label1);
-			this.GroupBox4.Location = new System.Drawing.Point(13, 561);
+			this.GroupBox4.Location = new System.Drawing.Point(13, 570);
 			this.GroupBox4.Name = "GroupBox4";
 			this.GroupBox4.Size = new System.Drawing.Size(551, 134);
 			this.GroupBox4.TabIndex = 8;
@@ -269,7 +269,7 @@
 			this.GroupBox3.Controls.Add(this.CopyObjectButton);
 			this.GroupBox3.Controls.Add(this.tbPasteObject);
 			this.GroupBox3.Controls.Add(this.tbCopyObject);
-			this.GroupBox3.Location = new System.Drawing.Point(12, 443);
+			this.GroupBox3.Location = new System.Drawing.Point(12, 452);
 			this.GroupBox3.Name = "GroupBox3";
 			this.GroupBox3.Size = new System.Drawing.Size(554, 111);
 			this.GroupBox3.TabIndex = 7;
@@ -306,7 +306,7 @@
 			this.GroupBox2.Controls.Add(this.CopyHTMLButton);
 			this.GroupBox2.Controls.Add(this.wbPasteHtml);
 			this.GroupBox2.Controls.Add(this.wbCopyHtml);
-			this.GroupBox2.Location = new System.Drawing.Point(12, 140);
+			this.GroupBox2.Location = new System.Drawing.Point(12, 149);
 			this.GroupBox2.Name = "GroupBox2";
 			this.GroupBox2.Size = new System.Drawing.Size(555, 296);
 			this.GroupBox2.TabIndex = 6;
@@ -359,7 +359,7 @@
 			this.GroupBox1.Controls.Add(this.CopyImageButton);
 			this.GroupBox1.Controls.Add(this.pbPaste);
 			this.GroupBox1.Controls.Add(this.pbCopy);
-			this.GroupBox1.Location = new System.Drawing.Point(13, 25);
+			this.GroupBox1.Location = new System.Drawing.Point(13, 34);
 			this.GroupBox1.Name = "GroupBox1";
 			this.GroupBox1.Size = new System.Drawing.Size(554, 108);
 			this.GroupBox1.TabIndex = 5;
@@ -370,7 +370,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(580, 705);
+			this.ClientSize = new System.Drawing.Size(580, 715);
 			this.Controls.Add(this.GroupBox4);
 			this.Controls.Add(this.MenuStrip1);
 			this.Controls.Add(this.GroupBox3);

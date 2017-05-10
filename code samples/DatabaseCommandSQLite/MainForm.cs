@@ -20,10 +20,9 @@ namespace DataBaseCommand
 
 			_participants = new List<Participant>();
 
-
 			//Best practice
-			//Define the connection string in the settings of the application and retrieve it using ConfigurationManager.AppSettings["ConnectionString"]
-			//dbConnection = new SQLiteConnection(ConfigurationManager.AppSettings["ConnectionString"]);
+			//Define the connection string in the settings of the application
+			//_dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
 			_dbConnection = new SQLiteConnection("Data Source=database.db");
         }
 
@@ -76,7 +75,9 @@ namespace DataBaseCommand
 		{
 			var dbCommand = new SQLiteCommand();
 			dbCommand.Connection = _dbConnection;
-			dbCommand.CommandText = "insert into Participant(LastName, FirstName, BirthDate) values(@lastName,@firstName,@birthDate);  SELECT last_insert_rowid()";
+			dbCommand.CommandText = "insert into Participant(LastName, FirstName, BirthDate)" +
+			                        " values(@lastName,@firstName,@birthDate);  " +
+			                        "SELECT last_insert_rowid()";
 
 			try
 			{
@@ -109,7 +110,8 @@ namespace DataBaseCommand
 			}
 			finally
 			{
-				if (_dbConnection.State != ConnectionState.Closed) _dbConnection.Close();
+				if (_dbConnection.State != ConnectionState.Closed)
+					_dbConnection.Close();
 			}
 		}
 

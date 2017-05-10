@@ -2,6 +2,7 @@
 
 namespace ClipboardSample.Entities
 {
+	[Serializable]
 	internal class Participant
 	{
 		public string LastName { get; set; }
