@@ -2,13 +2,106 @@
 
 ##	 Contents
 
-1. [Chart Control](#chart-control)
-2. [UserControl](#usercontrol)
+1. [UserControl](#usercontrol)
+2. [UserControl + Drawing](#drawing)
 
-## <a name="chart-control"></a>Chart Control
+## <a name="chart-control"></a>UserControl
 
+![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – "NumericTextBoxUserControlSample"
 
-## <a name="usercontrol"></a> UserControl
+## <a name="usercontrol"></a> UserControl + Drawing
+
+The Graphics class provides methods for drawing objects to the display device.
+
+**Activity**
+1. Create a new project of the type ClassLibrary (not Windows Forms) with the name "ChartLibrary"
+2. Add a new class `BarChartValue`, defined as follows:
+
+	```c#
+	class BarChartValue
+	{
+		public object X { get; set; }
+		public float Y { get; set; }
+
+		public BarChartValue(object x, float y)
+		{
+			X = x;
+			Y = y;
+		}
+	}
+	```
+3. Add a new UserControl and name it `BarChartControl` 
+![Piechart Control](docs/9/piechart-control.jpg)
+
+4. Add the `Data` property in the `PieChartControl` class
+
+	```c#
+	private BarChartValue[] _data;
+	public BarChartValue[] Data
+	{
+		get { return _data; }
+		set { _data = value; }
+	}
+	```
+5. Modify the constructor of the `BarChartControl` class as follows:
+
+	```c#
+	public BarChartControl()
+	{
+		InitializeComponent();
+
+		//redraws the chart if the control is resized
+		ResizeRedraw = true;
+
+		//default data
+		Data = new[]
+		{
+			new BarChartValue("2015", 30), 
+			new BarChartValue("2016", 80),
+			new BarChartValue("2017", 40)
+		};
+	}
+	```
+
+6. Handle the `Paint` event for the `BarChartControl` as follows:
+
+	```c#
+	private void BarChartControl_Paint(object sender, PaintEventArgs e)
+	{
+		//get the drawing context
+		Graphics graphics = e.Graphics;
+		//get the drawing area
+		Rectangle clipRectangle = e.ClipRectangle;
+
+		//determine the width of the bars
+		var barWidth = clipRectangle.Width / Data.Length;
+		//compute the maximum bar height
+		var maxBarHeight = clipRectangle.Height * 0.9;
+		//compute the scaling factor based on the maximum value that we want to represent
+		var scalingFactor = maxBarHeight / Data.Max(x=>x.Y);
+
+		Brush redBrush = new SolidBrush(Color.Red);
+
+		for (int i = 0; i < Data.Length; i++)
+		{
+			var barHeight = (float) (Data[i].Y * scalingFactor);
+
+			graphics.FillRectangle(
+				redBrush, 
+				i * barWidth, 
+				clipRectangle.Height - barHeight, 
+				0.8f * barWidth, 
+				barHeight);
+		}
+	}	
+	```
+7. Add a new Windows Forms project called "BarChartGraphicsSample"
+8. Add a reference to the ClassLibrary project created earlier
+9. From the ToolBox drag a 'PieChartControl' to the default form in the project
+
+**Homework**
+
+1. Display on each bar the text in the `X` property of the corresponding `BarChartValue` object
 
 **Activity**
 
@@ -56,11 +149,7 @@
 	}
 	```
 
-## <a name="drawing"></a>Drawing
 
-The Graphics class provides methods for drawing objects to the display device.
-
-**Activity**
 
 1. Modify the constructor of the “PieChartControl” class as follows:
 	
@@ -168,4 +257,4 @@ The Graphics class provides methods for drawing objects to the display device.
 **Activity**
 
 ![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “ClockUserControlSample” Sample  
-![Clock Example](docs/9/clock-example.jpg)
+	![Clock Example](docs/9/clock-example.jpg)
