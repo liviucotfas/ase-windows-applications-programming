@@ -14,9 +14,6 @@ namespace BarChartGraphicsSample
 			get { return _data; }
 			set
 			{
-				if (_data == value)
-					return;
-
 				_data = value;
 
 				//trigger the Paint event
@@ -48,21 +45,25 @@ namespace BarChartGraphicsSample
 			//get the drawing area
 			Rectangle clipRectangle = e.ClipRectangle;
 
-			//determine the width and the height
-			float width = clipRectangle.Width;
-			float height = clipRectangle.Height;
-
-			var barWidth = width / Data.Length;
-			var maxBarHeight = height * 0.9;
+			//determine the width of the bars
+			var barWidth = clipRectangle.Width / Data.Length;
+			//compute the maximum bar height
+			var maxBarHeight = clipRectangle.Height * 0.9;
+			//compute the scaling factor based on the maximum value that we want to represent
 			var scalingFactor = maxBarHeight / Data.Max(x=>x.Y);
-			
+
+			Brush redBrush = new SolidBrush(Color.Red);
+
 			for (int i = 0; i < Data.Length; i++)
 			{
-				Brush b = new SolidBrush(Color.Red);
-
 				var barHeight = (float) (Data[i].Y * scalingFactor);
 
-				graphics.FillRectangle(b, i * barWidth, height - barHeight, 0.8f * barWidth, barHeight);
+				graphics.FillRectangle(
+					redBrush, 
+					i * barWidth, 
+					clipRectangle.Height - barHeight, 
+					0.8f * barWidth, 
+					barHeight);
 			}
 		}	
 	}
