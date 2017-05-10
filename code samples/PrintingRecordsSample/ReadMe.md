@@ -1,0 +1,1 @@
+﻿Further reading: https://msdn.microsoft.com/en-us/library/ms996472.aspx

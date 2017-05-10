@@ -49,6 +49,7 @@
 			this.printDocument = new System.Drawing.Printing.PrintDocument();
 			this.printDialog = new System.Windows.Forms.PrintDialog();
 			this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+			this.pageSetupDialog = new System.Windows.Forms.PageSetupDialog();
 			this.groupBox1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -188,26 +189,27 @@
 			// btnPrint
 			// 
 			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(152, 22);
+			this.btnPrint.Size = new System.Drawing.Size(143, 22);
 			this.btnPrint.Text = "Print";
 			this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
 			// 
 			// btnPrintPreview
 			// 
 			this.btnPrintPreview.Name = "btnPrintPreview";
-			this.btnPrintPreview.Size = new System.Drawing.Size(152, 22);
+			this.btnPrintPreview.Size = new System.Drawing.Size(143, 22);
 			this.btnPrintPreview.Text = "Print Preview";
 			this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
 			// 
 			// btnPageSetup
 			// 
 			this.btnPageSetup.Name = "btnPageSetup";
-			this.btnPageSetup.Size = new System.Drawing.Size(152, 22);
+			this.btnPageSetup.Size = new System.Drawing.Size(143, 22);
 			this.btnPageSetup.Text = "Page Setup";
 			this.btnPageSetup.Click += new System.EventHandler(this.btnPageSetup_Click);
 			// 
 			// printDocument
 			// 
+			this.printDocument.BeginPrint += new System.Drawing.Printing.PrintEventHandler(this.printDocument_BeginPrint);
 			this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
 			// 
 			// printDialog
@@ -265,6 +267,7 @@
 		private System.Drawing.Printing.PrintDocument printDocument;
 		private System.Windows.Forms.PrintDialog printDialog;
 		private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
+		private System.Windows.Forms.PageSetupDialog pageSetupDialog;
 	}
 }
 

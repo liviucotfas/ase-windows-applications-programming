@@ -17,14 +17,12 @@ namespace PrintingSample
 	But in a larger sense, we cannot dedicate, we cannot consecrate, we cannot hallow this ground.The brave men, living and dead who struggled here have consecrated it far above our poor power to add or detract. The world will little note nor long remember what we say here, but it can never forget what they did here.It is for us the living rather to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.It is rather for us to be here dedicated to the great task remaining before us--that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion--that we here highly resolve that these dead shall not have died in vain, that this nation under God shall have a new birth of freedom, and that government of the people, by the people, for the people shall not perish from the earth.";
 
 		// Declare a variable to hold the position of the last printed char.
-		private int _currentChar;
+		private int _currentCharIndex;
 		#endregion
 
 		public MainForm()
 		{
 			InitializeComponent();
-
-			_currentChar = 0;
 		}
 		private void MainForm_Load(object sender, EventArgs e)
 		{
@@ -75,6 +73,11 @@ namespace PrintingSample
 			{
 				printDocument.DefaultPageSettings = pageSetupDialog.PageSettings;
 			}
+		}
+
+		private void printDocument_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+		{
+			_currentCharIndex = 0;
 		}
 
 		/// <summary>
@@ -139,27 +142,20 @@ namespace PrintingSample
 			// static.
 			int intLinesFilled;
 			int intCharsFitted;
-			e.Graphics.MeasureString(txtDocument.Text.Substring(_currentChar), font, new SizeF(intPrintAreaWidth, intPrintAreaHeight), fmt, out intCharsFitted, out intLinesFilled);
+			e.Graphics.MeasureString(txtDocument.Text.Substring(_currentCharIndex), font, new SizeF(intPrintAreaWidth, intPrintAreaHeight), fmt, out intCharsFitted, out intLinesFilled);
 
 			// Print the text to the page.
-			e.Graphics.DrawString(txtDocument.Text.Substring(_currentChar), font, Brushes.Black, rectPrintingArea, fmt);
+			e.Graphics.DrawString(txtDocument.Text.Substring(_currentCharIndex), font, Brushes.Black, rectPrintingArea, fmt);
 
 			// Advance the current char to the last char printed on this page. As 
 			// intCurrentChar is a static variable, its value can be used for the next
 			// page to be printed. It is advanced by 1 and passed to Mid() to print the
 			// next page (see above in MeasureString()).
-			_currentChar += intCharsFitted;
+			_currentCharIndex += intCharsFitted;
 
 			// HasMorePages tells the printing module whether another PrintPage event should be fired.
-			if (_currentChar < txtDocument.Text.Length)
-			{
+			if (_currentCharIndex < txtDocument.Text.Length)
 				e.HasMorePages = true;
-			}
-			else
-			{
-				e.HasMorePages = false;
-				_currentChar = 0;
-			}
 		}
 	}
 }

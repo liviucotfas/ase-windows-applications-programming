@@ -62,7 +62,7 @@
 			this.btnPageSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnPageSetup.ForeColor = System.Drawing.Color.White;
 			this.btnPageSetup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.btnPageSetup.Location = new System.Drawing.Point(204, 11);
+			this.btnPageSetup.Location = new System.Drawing.Point(257, 11);
 			this.btnPageSetup.Name = "btnPageSetup";
 			this.btnPageSetup.Size = new System.Drawing.Size(88, 23);
 			this.btnPageSetup.TabIndex = 11;
@@ -78,7 +78,7 @@
 			this.btnPrintDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnPrintDialog.ForeColor = System.Drawing.Color.White;
 			this.btnPrintDialog.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.btnPrintDialog.Location = new System.Drawing.Point(108, 11);
+			this.btnPrintDialog.Location = new System.Drawing.Point(161, 11);
 			this.btnPrintDialog.Name = "btnPrintDialog";
 			this.btnPrintDialog.Size = new System.Drawing.Size(88, 23);
 			this.btnPrintDialog.TabIndex = 10;
@@ -96,7 +96,7 @@
 			this.btnPrintPreview.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.btnPrintPreview.Location = new System.Drawing.Point(12, 11);
 			this.btnPrintPreview.Name = "btnPrintPreview";
-			this.btnPrintPreview.Size = new System.Drawing.Size(88, 23);
+			this.btnPrintPreview.Size = new System.Drawing.Size(143, 23);
 			this.btnPrintPreview.TabIndex = 9;
 			this.btnPrintPreview.Text = "Print &Preview";
 			this.btnPrintPreview.UseVisualStyleBackColor = false;
@@ -108,6 +108,7 @@
 			// 
 			// printDocument
 			// 
+			this.printDocument.BeginPrint += new System.Drawing.Printing.PrintEventHandler(this.printDocument_BeginPrint);
 			this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
 			// 
 			// printPreviewDialog
