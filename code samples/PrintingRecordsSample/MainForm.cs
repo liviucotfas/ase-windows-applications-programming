@@ -52,9 +52,7 @@ namespace ListViewBasicSample
 		{
 			printDialog.Document = printDocument;
 			if (printDialog.ShowDialog() == DialogResult.OK)
-			{
 				printDocument.Print();
-			}
 		}
 
 		private void btnPrintPreview_Click(object sender, EventArgs e)
@@ -76,9 +74,7 @@ namespace ListViewBasicSample
 			pageSetupDialog.PageSettings = printDocument.DefaultPageSettings;
 
 			if (pageSetupDialog.ShowDialog() == DialogResult.OK)
-			{
 				printDocument.DefaultPageSettings = pageSetupDialog.PageSettings;
-			}
 		}
 		
 		private void printDocument_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
