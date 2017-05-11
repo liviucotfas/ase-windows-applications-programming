@@ -33,7 +33,7 @@ The Graphics class provides methods for drawing objects to the display device.
 3. Add a new UserControl and name it `BarChartControl` 
 ![Piechart Control](docs/9/piechart-control.jpg)
 
-4. Add the `Data` property in the `PieChartControl` class
+4. Add the `Data` property in the `BarChartControl` class
 
 	```c#
 	private BarChartValue[] _data;
