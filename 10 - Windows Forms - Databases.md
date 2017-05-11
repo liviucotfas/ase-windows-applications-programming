@@ -34,7 +34,7 @@ CREATE TABLE `Participant` (
 
 ![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DatabaseCommandSQLite” Sample
 
-1. Create a copy of the “BasicListView” project and name it “DatabaseCommandSQLite”
+1. Create a copy of the “ListViewBasicSample” project and name it “DatabaseCommandSQLite”
 2. Add SQLite libraries using NuGet (recommended) or directly from the website <http://system.data.sqlite.org/index.html/doc/trunk/www/index.wiki>
 	1. Open the NuGet Package Manager by right clicking on the “References” node in the “Solution Explorer” window, and choosing the “Manage NuGet Packages” option, as shown below  
 	![Nuget Packages](docs/8/nuget-packages.jpg)
