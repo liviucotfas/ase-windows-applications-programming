@@ -24,7 +24,7 @@ namespace DataBaseCommand
         }
 
 		#region Methods
-		public void DisplayParticipants()
+		private void DisplayParticipants()
 		{
 			lvParticipants.Items.Clear();
 
@@ -40,7 +40,7 @@ namespace DataBaseCommand
 			}
 		}
 
-		public void LoadParticipants()
+	    private void LoadParticipants()
 		{
 			const string queryString = "SELECT * FROM Participant";
 
@@ -70,7 +70,7 @@ namespace DataBaseCommand
 			}
 		}
 
-	    public void AddParticipant(Participant participant)
+	    private void AddParticipant(Participant participant)
 	    {
 		    var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
 		                      " values(@lastName,@firstName,@birthDate);";
@@ -101,7 +101,7 @@ namespace DataBaseCommand
 		    }
 	    }
 
-	    public void DeleteParticipant(Participant participant)
+	    private void DeleteParticipant(Participant participant)
 	    {
 			const string queryString = "DELETE FROM Participant WHERE Id=@id";
 
