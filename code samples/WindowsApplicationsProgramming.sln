@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{C375BE4E-DFF2-4277-A93F-3E889F1C7146}"
 EndProject
@@ -133,11 +133,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationBinaryXMLTextF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingSample.Tests", "DataBindingSample.Tests\DataBindingSample.Tests.csproj", "{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseEntityFramework", "DatabaseEntityFramework\DatabaseEntityFramework.csproj", "{62E45660-380B-4C8E-92A9-7799715B7C49}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChartGraphicsSample", "BarChartGraphicsSample\BarChartGraphicsSample.csproj", "{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingRecordsSample", "PrintingRecordsSample\PrintingRecordsSample.csproj", "{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDataAdapterMSAccess", "DatabaseDataAdapterMSAccess\DatabaseDataAdapterMSAccess.csproj", "{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -505,14 +505,6 @@ Global
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|x86.ActiveCfg = Release|Any CPU
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C}.Release|x86.Build.0 = Release|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Debug|x86.Build.0 = Debug|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|x86.ActiveCfg = Release|Any CPU
-		{62E45660-380B-4C8E-92A9-7799715B7C49}.Release|x86.Build.0 = Release|Any CPU
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -529,6 +521,14 @@ Global
 		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|x86.ActiveCfg = Release|Any CPU
 		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760}.Release|x86.Build.0 = Release|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Debug|x86.Build.0 = Debug|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -579,8 +579,8 @@ Global
 		{3821CEE4-5A47-4F0B-B011-8D75A7CA5759} = {0F901F73-692C-41A2-8496-548DE1430391}
 		{4BDFA78C-CAFF-4B6C-8AA7-15DC655DB34A} = {21CE9FC6-1F31-4200-9DC1-BD38FB9AC299}
 		{6E789186-0659-42EA-B4B9-EDFCBF5EAD9C} = {BF3BF946-C947-4AFC-8ABB-9C2ED1A0E687}
-		{62E45660-380B-4C8E-92A9-7799715B7C49} = {A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D} = {718D2BE5-3500-483F-BC23-FD1336336134}
 		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760} = {5A35B567-661E-4E8A-B88D-E10AC899B03A}
+		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8} = {A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}
 	EndGlobalSection
 EndGlobal
