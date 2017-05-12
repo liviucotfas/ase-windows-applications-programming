@@ -139,6 +139,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingRecordsSample", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDataAdapterMSAccess", "DatabaseDataAdapterMSAccess\DatabaseDataAdapterMSAccess.csproj", "{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCommandMSAccess", "DatabaseCommandMSAccess\DatabaseCommandMSAccess.csproj", "{931F528C-9AD1-444E-A071-58ECB99BC368}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -529,6 +531,14 @@ Global
 		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|x86.ActiveCfg = Release|Any CPU
 		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8}.Release|x86.Build.0 = Release|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Debug|x86.Build.0 = Debug|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Release|x86.ActiveCfg = Release|Any CPU
+		{931F528C-9AD1-444E-A071-58ECB99BC368}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -582,5 +592,6 @@ Global
 		{815C4C56-117F-4AE2-AD1A-4CFD57B79F2D} = {718D2BE5-3500-483F-BC23-FD1336336134}
 		{EA10B123-A63F-4D7A-BDE8-D85BB2B02760} = {5A35B567-661E-4E8A-B88D-E10AC899B03A}
 		{B2DB81FD-9B17-4CA6-A226-014D2B6192F8} = {A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}
+		{931F528C-9AD1-444E-A071-58ECB99BC368} = {A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}
 	EndGlobalSection
 EndGlobal

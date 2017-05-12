@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
 using DataBaseCommand.Entities;
@@ -10,8 +9,11 @@ namespace DataBaseCommand
     public partial class MainForm : Form
     {
 		#region Attributes
-		private readonly SQLiteConnection _dbConnection;
-	    private readonly List<Participant> _participants;
+		//Best practice
+		//Define the connection string in the settings of the application
+		//private string connectionString = Properties.Settings.Default.Database;
+	    private const string ConnectionString = "Data Source=database.db";
+		private readonly List<Participant> _participants;
 		#endregion
 
 		public MainForm()
@@ -19,11 +21,6 @@ namespace DataBaseCommand
             InitializeComponent();
 
 			_participants = new List<Participant>();
-
-			//Best practice
-			//Define the connection string in the settings of the application
-			//_dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
-			_dbConnection = new SQLiteConnection("Data Source=database.db");
         }
 
 		#region Methods
@@ -46,11 +43,14 @@ namespace DataBaseCommand
 		public void LoadParticipants()
 		{
 			const string stringSql = "SELECT * FROM Participant";
-			try
+
+			using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 			{
-				_dbConnection.Open();
-				SQLiteCommand sqlCommand = new SQLiteCommand(stringSql, _dbConnection);
-				SQLiteDataReader sqlReader = sqlCommand.ExecuteReader();
+				connection.Open();
+
+				var command = new SQLiteCommand(stringSql, connection);
+
+				SQLiteDataReader sqlReader = command.ExecuteReader();
 				try
 				{
 					while (sqlReader.Read())
@@ -65,26 +65,20 @@ namespace DataBaseCommand
 					sqlReader.Close();
 				}
 			}
-			finally
-			{
-				if (_dbConnection.State != ConnectionState.Closed) _dbConnection.Close();
-			}
 		}
 
 		public void AddParticipant(Participant participant)
 		{
-			var dbCommand = new SQLiteCommand();
-			dbCommand.Connection = _dbConnection;
-			dbCommand.CommandText = "insert into Participant(LastName, FirstName, BirthDate)" +
-			                        " values(@lastName,@firstName,@birthDate);  " +
-			                        "SELECT last_insert_rowid()";
+			var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
+			                  " values(@lastName,@firstName,@birthDate);  " +
+			                  "SELECT last_insert_rowid()";
 
-			try
+			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 			{
-				//1. Add the new participant to the database
-				_dbConnection.Open();
-				dbCommand.Transaction = _dbConnection.BeginTransaction();
+				connection.Open();
 
+				//1. Add the new participant to the database
+				var command = new SQLiteCommand(queryString, connection);
 				var lastNameParameter = new SQLiteParameter("@lastName");
 				lastNameParameter.Value = participant.LastName;
 				var firstNameParameter = new SQLiteParameter("@firstName");
@@ -92,49 +86,36 @@ namespace DataBaseCommand
 				var birthDateParameter = new SQLiteParameter("@birthDate");
 				birthDateParameter.Value = participant.BirthDate;
 
-				dbCommand.Parameters.Add(lastNameParameter);
-				dbCommand.Parameters.Add(firstNameParameter);
-				dbCommand.Parameters.Add(birthDateParameter);
+				command.Parameters.Add(lastNameParameter);
+				command.Parameters.Add(firstNameParameter);
+				command.Parameters.Add(birthDateParameter);
 
-				participant.Id = (long)dbCommand.ExecuteScalar();
-
-				dbCommand.Transaction.Commit();
+				participant.Id = (long)command.ExecuteScalar();
 
 				//2. Add the new participants to the local collection
 				_participants.Add(participant);
-			}
-			catch (Exception)
-			{
-				dbCommand.Transaction.Rollback();
-				throw;
-			}
-			finally
-			{
-				if (_dbConnection.State != ConnectionState.Closed)
-					_dbConnection.Close();
 			}
 		}
 
 		public void DeleteParticipant(Participant participant)
 	    {
 			const string stringSql = "DELETE FROM Participant WHERE Id=@id";
-			try
-			{
+
+			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+		    {
+			    connection.Open();
+
 				//Remove from the database
-				_dbConnection.Open();
-				SQLiteCommand sqlCommand = new SQLiteCommand(stringSql, _dbConnection);
+				SQLiteCommand command = new SQLiteCommand(stringSql, connection);
+
 				var idParameter = new SQLiteParameter("@id");
 				idParameter.Value = participant.Id;
-				sqlCommand.Parameters.Add(idParameter);
+				command.Parameters.Add(idParameter);
 
-				sqlCommand.ExecuteNonQuery();
+				command.ExecuteNonQuery();
 
 				//Remove from the local copy
 				_participants.Remove(participant);
-			}
-			finally
-			{
-				if (_dbConnection.State != ConnectionState.Closed) _dbConnection.Close();
 			}
 		}
 		#endregion
