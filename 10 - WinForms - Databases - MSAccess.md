@@ -33,13 +33,13 @@
 	```c#
 	public partial class MainForm : Form
     {
-	    private readonly OleDbConnection _dbConnection ;
+	    private readonly OleDbConnection _dbConnection;
 		private readonly OleDbDataAdapter _dbDataAdapter;
 	    private readonly DataSet _dsParticipants;
 
         public MainForm()
         {
-	        InitializeComponent();
+			InitializeComponent();
 
 			//Best practice
 			//Define the connection string in the settings of the application
@@ -48,10 +48,10 @@
 
 			_dsParticipants = new DataSet();
 
-	        _dbDataAdapter = new OleDbDataAdapter();
+			_dbDataAdapter = new OleDbDataAdapter();
 
-			var selectCommand = new OleDbCommand("SELECT Id, LastName, FirstName, BirthDate FROM Participant", _dbConnection);
-	        _dbDataAdapter.SelectCommand = selectCommand;
+			var selectCommand = new OleDbCommand("SELECT Id, LastName, FirstName, BirthDate FROM Participant",_dbConnection);
+			_dbDataAdapter.SelectCommand = selectCommand;
 
 			var deleteCommand = new OleDbCommand(
 				"DELETE FROM Participant WHERE Id = @Id", _dbConnection);
@@ -79,7 +79,7 @@
 				new OleDbParameter("@Id", OleDbType.BigInt, 0, "Id"));
 			_dbDataAdapter.UpdateCommand = updateCommand;
 
-	        _dbDataAdapter.RowUpdated += _dbDataAdapter_RowUpdated;
+			_dbDataAdapter.RowUpdated += _dbDataAdapter_RowUpdated;
 		}
 
 		#region Events
