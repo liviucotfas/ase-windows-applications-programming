@@ -2,7 +2,16 @@
 
 ##	 Contents
 
+1. [Clipboard](#clipboard)
 1. [Drag and Drop](#drag-and-drop)
+
+## <a name="clipboard"></a>Clipboard
+
+**Activity**
+
+![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – "ClipboardSample" Sample 
+
+
 
 ## <a name="drag-and-drop"></a>Drag and Drop
 

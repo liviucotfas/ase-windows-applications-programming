@@ -8,12 +8,7 @@ namespace ClipboardSample
 	public partial class MainForm : Form
 	{
 		#region Attributes
-
-		private string _stringHtml;
-		private string _stringRtf;
-		private string _stringPlainText;
 		private readonly Participant _participant;
-
 		#endregion
 		
 		public MainForm()
@@ -29,18 +24,15 @@ namespace ClipboardSample
 			pbCopy.Image = Resources.Sunset;
 
 			//Load some text into the web brower
-			_stringHtml = "<HTML><BODY>This is <B>HTML</B></BODY></HTML>";
-			wbCopyHtml.DocumentText = _stringHtml;
+			wbCopyHtml.DocumentText = "<HTML><BODY>This is <B>HTML</B></BODY></HTML>"; ;
 
 			//Load some text in the rich text box
-			_stringRtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{" +
-			             "\\f0\\fswiss\\fcharset0 Arial;}}\\viewkind4\\uc1\\pard\\f0\\fs20\\ul\\b\\fs24 " +
-			             "This\\ulnone\\b0  \\fs20 is \\fs36 RTF!\\par}";
-			rtbCopy.Rtf = _stringRtf;
+			rtbCopy.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{" +
+			              "\\f0\\fswiss\\fcharset0 Arial;}}\\viewkind4\\uc1\\pard\\f0\\fs20\\ul\\b\\fs24 " +
+			              "This\\ulnone\\b0  \\fs20 is \\fs36 RTF!\\par}";
 
 			//Load some text in the plain text box
-			_stringPlainText = "This is plain text";
-			tbCopy.Text = _stringPlainText;
+			tbCopy.Text = "This is plain text";
 
 			//Display the participant
 			tbCopyObject.Text = _participant.ToString();

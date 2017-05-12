@@ -77,7 +77,7 @@ namespace DragDropSample
 			"\r\nAvailable Formats:\r\n";
 
 			// Data may be available in more than one format, so loop through
-			// all available formats and display them in richTextBox1.
+			// all available formats and display them in richTextBox.
 			foreach (string availableFormat in e.Data.GetFormats(true))
 			{
 				richTextBox.Text += "\t" + availableFormat + "\r\n";
