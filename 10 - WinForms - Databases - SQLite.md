@@ -37,34 +37,23 @@ CREATE TABLE `Participant` (
 	![SQLite Package Installation](docs/8/sqlite-package-installation.jpg)
 	3. The package will be downloaded and Installed. A new reference to “System.Data.SQLite” will be automatically added to the “References” node, as shown below  
 	![References Node](docs/8/references-node.jpg)
-3. Add a new SQLiteConnection attribute (“_dbConnection” ) to the “MainForm” class as follows:
+3. Add the database connection string, as an attribute (“ConnectionString” ) of the “MainForm” class as follows:
 
 	```c#
 	public partial class MainForm : Form
 	{
 		#region Attributes
-		private readonly SQLiteConnection _dbConnection;
+		//Best practice
+		//Define the connection string in the settings of the application
+		//private string connectionString = Properties.Settings.Default.Database;
+		private const string ConnectionString = "Data Source=database.db";
 		private readonly List<Participant> _participants;
 		#endregion
 		
 		. . .
 	}
 	```
-4. Instantiate the “_dbConnection” attribute in the constructor of the “MainForm” class
-
-	```c#
-	public MainForm()
-	{
-		InitializeComponent();
-		_participants = new List<Participant>();
-		
-		//Best practice
-	    //Define the connection string in the settings of the application
-	    //_dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
-		_dbConnection = new SQLiteConnection("Data Source=database.db");
-	}
-	```
-5. Set the tag property for the ListViewItems as follows:
+4. Set the tag property for the ListViewItems as follows:
 
 	```c#
 	public void DisplayParticipants()
@@ -83,47 +72,36 @@ CREATE TABLE `Participant` (
 		}
 	}
 	```
-6. Add the method that will be used to insert new participants in the database
+5. Add the method that will be used to insert new participants in the database
 	
 	```c#
 	public void AddParticipant(Participant participant)
 	{
-		var dbCommand = new SQLiteCommand();
-		dbCommand.Connection = _dbConnection;
-		dbCommand.CommandText = "insert into Participant(LastName, FirstName, BirthDate) values(@lastName,@firstName,@birthDate); SELECT last_insert_rowid()";
-		
-		try
+		var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
+							" values(@lastName,@firstName,@birthDate);  " +
+							"SELECT last_insert_rowid()";
+
+		using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		{
+			connection.Open();
+
 			//1. Add the new participant to the database
-			_dbConnection.Open();
-			dbCommand.Transaction = _dbConnection.BeginTransaction();
-			
+			var command = new SQLiteCommand(queryString, connection);
 			var lastNameParameter = new SQLiteParameter("@lastName");
 			lastNameParameter.Value = participant.LastName;
 			var firstNameParameter = new SQLiteParameter("@firstName");
 			firstNameParameter.Value = participant.FirstName;
 			var birthDateParameter = new SQLiteParameter("@birthDate");
 			birthDateParameter.Value = participant.BirthDate;
-			
-			dbCommand.Parameters.Add(lastNameParameter);
-			dbCommand.Parameters.Add(firstNameParameter);
-			dbCommand.Parameters.Add(birthDateParameter);
-			
-			participant.Id = (long)dbCommand.ExecuteScalar();
-			
-			dbCommand.Transaction.Commit();
-			
+
+			command.Parameters.Add(lastNameParameter);
+			command.Parameters.Add(firstNameParameter);
+			command.Parameters.Add(birthDateParameter);
+
+			participant.Id = (long)command.ExecuteScalar();
+
 			//2. Add the new participants to the local collection
 			_participants.Add(participant);
-		}
-		catch (Exception)
-		{
-			dbCommand.Transaction.Rollback();
-			throw;
-		}
-		finally
-		{
-			if (_dbConnection.State != ConnectionState.Closed) _dbConnection.Close();
 		}
 	}
 	```
@@ -155,19 +133,20 @@ CREATE TABLE `Participant` (
 	public void LoadParticipants()
 	{
 		const string stringSql = "SELECT * FROM Participant";
-		try
+
+		using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		{
-			_dbConnection.Open();
-			SQLiteCommand sqlCommand = new SQLiteCommand(stringSql, _dbConnection);
-			SQLiteDataReader sqlReader = sqlCommand.ExecuteReader();
+			connection.Open();
+
+			var command = new SQLiteCommand(stringSql, connection);
+
+			SQLiteDataReader sqlReader = command.ExecuteReader();
 			try
 			{
 				while (sqlReader.Read())
 				{
-					_participants.Add(new Participant((long) sqlReader["Id"], (string)
-					sqlReader["LastName"],
-					(string) sqlReader["FirstName"], DateTime.Parse((string)
-					sqlReader["BirthDate"])));
+					_participants.Add(new Participant((long) sqlReader["Id"], (string) sqlReader["LastName"],
+						(string) sqlReader["FirstName"], DateTime.Parse((string) sqlReader["BirthDate"])));
 				}
 			}
 			finally
@@ -175,10 +154,6 @@ CREATE TABLE `Participant` (
 				// Always call Close when done reading.
 				sqlReader.Close();
 			}
-		}
-		finally
-		{
-			if (_dbConnection.State != ConnectionState.Closed) _dbConnection.Close();
 		}
 	}
 	```
@@ -204,23 +179,22 @@ CREATE TABLE `Participant` (
 	public void DeleteParticipant(Participant participant)
 	{
 		const string stringSql = "DELETE FROM Participant WHERE Id=@id";
-		try
+
+		using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		{
+			connection.Open();
+
 			//Remove from the database
-			_dbConnection.Open();
-			SQLiteCommand sqlCommand = new SQLiteCommand(stringSql, _dbConnection);
+			SQLiteCommand command = new SQLiteCommand(stringSql, connection);
+
 			var idParameter = new SQLiteParameter("@id");
 			idParameter.Value = participant.Id;
-			sqlCommand.Parameters.Add(idParameter);
-			
-			sqlCommand.ExecuteNonQuery();
-			
+			command.Parameters.Add(idParameter);
+
+			command.ExecuteNonQuery();
+
 			//Remove from the local copy
 			_participants.Remove(participant);
-		}
-		finally
-		{
-			if (_dbConnection.State != ConnectionState.Closed) _dbConnection.Close();
 		}
 	}
 	```

@@ -9,12 +9,11 @@ namespace DataBaseCommand
     public partial class MainForm : Form
     {
 		#region Attributes
-	    //Best practice
-	    //Define the connection string in the settings of the application
-	    //_dbConnection = new SQLiteConnection(Properties.Settings.Default.Database);
-	    private readonly string connectionString =
-		    "Provider = Microsoft.Jet.OLEDB.4.0; Data Source =\"Database.mdb\";Persist Security Info=True";
-	    private readonly List<Participant> _participants;
+		//Best practice
+		//Define the connection string in the settings of the application
+		//string ConnectionString = Properties.Settings.Default.Database;
+		private const string ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source =\"Database.mdb\";Persist Security Info=True";
+		private readonly List<Participant> _participants;
 		#endregion
 
 		public MainForm()
@@ -45,7 +44,7 @@ namespace DataBaseCommand
 		{
 			const string queryString = "SELECT * FROM Participant";
 
-			using (OleDbConnection connection = new OleDbConnection(connectionString))
+			using (OleDbConnection connection = new OleDbConnection(ConnectionString))
 			{
 				connection.Open();
 				
@@ -76,7 +75,7 @@ namespace DataBaseCommand
 		    var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
 		                      " values(@lastName,@firstName,@birthDate);";
 
-			using (OleDbConnection connection = new OleDbConnection(connectionString))
+			using (OleDbConnection connection = new OleDbConnection(ConnectionString))
 		    {
 				//1. Open the connection
 			    connection.Open();
@@ -106,7 +105,7 @@ namespace DataBaseCommand
 	    {
 			const string queryString = "DELETE FROM Participant WHERE Id=@id";
 
-		    using (OleDbConnection connection = new OleDbConnection(connectionString))
+		    using (OleDbConnection connection = new OleDbConnection(ConnectionString))
 		    {
 				//Remove from the database
 			    connection.Open();
