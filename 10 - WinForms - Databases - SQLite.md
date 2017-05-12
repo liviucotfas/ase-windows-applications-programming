@@ -23,7 +23,7 @@ CREATE TABLE `Participant` (
 	`BirthDate` TEXT
 );
 ```
-### <a name="connected-architecture"></a>Connected Data Access Architecture
+## <a name="connected-architecture"></a>Connected Data Access Architecture
 
 **Activity**
 
@@ -225,7 +225,7 @@ CREATE TABLE `Participant` (
 	```
 12. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
-### <a name="disconnected-architecture"></a> Disconnected Data Access Architecture
+## <a name="disconnected-architecture"></a> Disconnected Data Access Architecture
 
 **Activity**
 
