@@ -2,16 +2,11 @@
 
 ##	 Contents
 
-1. [Connected Data Access Architecture](#connected-architecture)
-2. [Disconnected Data Access Architecture](#disconnected-architecture)
+1. [Creating the database](#databases)
+2. [Connected Data Access Architecture](#connected-architecture)
+3. [Disconnected Data Access Architecture](#disconnected-architecture)
 
-## <a name="databases"></a>Databases
-
-Data Access technologies:
-
-* **ADO.NET - Active Data Objects**
-* NHibernate
-* **Entity Framework**
+## <a name="databases"></a>Creating the database
 
 **Activity**
 
