@@ -20,13 +20,13 @@ The Graphics class provides methods for drawing objects to the display device.
 	```c#
 	public class BarChartValue
 	{
-		public object X { get; set; }
-		public float Y { get; set; }
+		public string Label { get; set; }
+		public float Value { get; set; }
 
-		public BarChartValue(object x, float y)
+		public BarChartValue(string label, float value)
 		{
-			X = x;
-			Y = y;
+			Label = label;
+			Value = value;
 		}
 	}
 	```
@@ -78,20 +78,20 @@ The Graphics class provides methods for drawing objects to the display device.
 		//compute the maximum bar height
 		var maxBarHeight = clipRectangle.Height * 0.9;
 		//compute the scaling factor based on the maximum value that we want to represent
-		var scalingFactor = maxBarHeight / Data.Max(x=>x.Y);
+		var scalingFactor = maxBarHeight / Data.Max(x=>x.Value);
 
 		Brush redBrush = new SolidBrush(Color.Red);
 
 		for (int i = 0; i < Data.Length; i++)
 		{
-			var barHeight = (float) (Data[i].Y * scalingFactor);
+			var barHeight = Data[i].Value * scalingFactor;
 
 			graphics.FillRectangle(
 				redBrush, 
 				i * barWidth, 
-				clipRectangle.Height - barHeight, 
-				0.8f * barWidth, 
-				barHeight);
+				(float) (clipRectangle.Height - barHeight), 
+				(float) (0.8 * barWidth), 
+				(float) barHeight);
 		}
 	}	
 	```
