@@ -99,7 +99,7 @@ namespace PieChartGraphicsSample
 				Brush b2 = new SolidBrush(Color.Black);
 
 				graphics.DrawString(
-					Data[i].Description + ": " + Data[i].Percentage + "%", 
+					Data[i].Label + ": " + Data[i].Percentage + "%", 
 					Font, 
 					b2,
 					xpos + 35, 

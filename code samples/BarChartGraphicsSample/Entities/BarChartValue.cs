@@ -2,13 +2,13 @@
 {
 	public class BarChartValue
 	{
-		public object X { get; set; }
-		public float Y { get; set; }
+		public string Label { get; set; }
+		public float Value { get; set; }
 
-		public BarChartValue(object x, float y)
+		public BarChartValue(string label, float value)
 		{
-			X = x;
-			Y = y;
+			Label = label;
+			Value = value;
 		}
 	}
 }
