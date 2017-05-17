@@ -18,7 +18,7 @@ The Graphics class provides methods for drawing objects to the display device.
 2. Add a new class `BarChartValue`, defined as follows:
 
 	```c#
-	class BarChartValue
+	public class BarChartValue
 	{
 		public object X { get; set; }
 		public float Y { get; set; }
