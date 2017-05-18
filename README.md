@@ -6,6 +6,6 @@
 
 >A: possibly... if you find any, please create a [Pull Request](https://help.github.com/articles/about-pull-requests/). :)
 
-** Is it possible to convert the .md files to .pdf/.docx ?**
+**Is it possible to convert the .md files to .pdf/.docx ?**
 
 >A: you can use https://gitprint.com/ or https://pandoc.org/
