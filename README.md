@@ -11,4 +11,4 @@
 >A: you can use https://gitprint.com/ or https://pandoc.org/
 
 ## Further Reading
-[Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture)
+- Discover best practices, sample applications and advices for building .NET applications [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture)
