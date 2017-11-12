@@ -12,4 +12,4 @@
 
 ## Further Reading
 - Discover best practices, sample applications and professional advice for building .NET applications on [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture) websiteș
-- Read about (SOLID principles of Object Oriented Design)[http://deviq.com/solid/]
+- Read about [SOLID principles of Object Oriented Design](http://deviq.com/solid/)
