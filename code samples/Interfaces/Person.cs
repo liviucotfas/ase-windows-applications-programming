@@ -37,7 +37,7 @@ namespace StandardInterfaces
 			return string.Format("Name: {0}, Age: {1}", Name, Age);
 		}
 
-		public object Clone()
+		public virtual object Clone()
 		{
 			var newPerson = (Person)MemberwiseClone();
 			return newPerson;

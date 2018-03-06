@@ -31,7 +31,7 @@ namespace StandardInterfaces
 		}
 
 		#region ICloneable
-		public new object Clone()
+		public override object Clone()
 		{
 			// First get a shallow copy.
 			var newPerson = (PersonLuckyNumbers)MemberwiseClone();

@@ -8,7 +8,8 @@ namespace StandardInterfaces
 		{
 			//ReferenceTypeArray();
 
-			DeepCopyCopyConstructor();
+			//DeepCopyCopyConstructor();
+			DeepCopyICloneable();
 		}
 
 		private static void ReferenceTypeArray()
@@ -47,6 +48,21 @@ namespace StandardInterfaces
 			var p1 = new PersonLuckyNumbers("Name 1", 21, new[] { 13, 26, 39 });
 			Console.WriteLine();
 			var p2 = new PersonLuckyNumbers(p1);
+
+			p1.Age = 12;
+			p1.LuckyNumbers[0] = 1;
+
+			Console.WriteLine(p1);
+			Console.WriteLine(p2);
+		}
+
+		private static void DeepCopyICloneable()
+		{
+			var p1 = new PersonLuckyNumbers("Name 1", 21, new[] { 13, 26, 39 });
+			Console.WriteLine();
+
+			//Cast to base type
+			var p2 = p1.Clone();
 
 			p1.Age = 12;
 			p1.LuckyNumbers[0] = 1;

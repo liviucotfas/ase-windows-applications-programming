@@ -286,7 +286,7 @@ Question
 2.  Add the following method in the “Program” class and call it from the Main method
 
 	```C#
-	private static void ReferenceTypeClone()
+	private static void ShallowCopyEqualOperator()
 	{
 		var p1 = new PersonLuckyNumbers("Name 1", 21, new []{13, 26, 39});
 		var p2 = p1;
@@ -323,6 +323,23 @@ Question
 	}
 	```
 
+5.  Add the following method in the “Program” class and call it from the Main method
+
+	```C#
+	private static void DeepCopyICloneable()
+	{
+		var p1 = new PersonLuckyNumbers("Name 1", 21, new[] { 13, 26, 39 });
+		Console.WriteLine();
+		var p2 = p1.Clone();
+
+		p1.Age = 12;
+		p1.LuckyNumbers[0] = 1;
+
+		Console.WriteLine(p1);
+		Console.WriteLine(p2);
+	}
+	```
+
 5. Run the application and check the values in the two objects using the Watch window (run the application in Debug mode)
 
 6. Change the implementation of the “Clone()” method in order to perform a **deep copy**
@@ -343,6 +360,13 @@ Question
 		return newPerson;
 	}
 	```
+7. Change only the line in which you call the `Clone` method in the `DeepCopyICloneable` method as follows.
+
+	```C#
+	//Cast to base type
+	var p2 = ((Person)p1).Clone();
+	```
+8. Run the application and check the values in the two objects. What happened? How would you fix the code? (hint: `virtual`).
 
 ## Operators
 -   can be overload by defining static member functions using the operator keyword.
