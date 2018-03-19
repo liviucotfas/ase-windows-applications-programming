@@ -56,6 +56,8 @@ Delegates and Events
 
 1.  Create a new project with the name “EventsPropertyTrigger”
 
+2. Add the `Stock` class, declared as follows. 
+
 	```C#
 	public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
 
@@ -84,7 +86,12 @@ Delegates and Events
 			}
 		}
 	}
+	```
+3. In the `Main` method use the `PriceChanged` event in order to be notified when the price of the stock changes.
 
+	> You can imagine that the `Stock` class has been written by someone else and that you can't modify it. However, you wan't to be able to excute your own code when the stock price changes.
+
+	```C#
 	internal class Program
 	{
 		private static void Main()
@@ -112,6 +119,8 @@ Delegates and Events
 #### Assignment
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
+
+2. Add the `Stock` class, declared as follows. 
 
 	```C#
 	public class PriceChangedEventArgs : EventArgs
@@ -153,7 +162,10 @@ Delegates and Events
 			}
 		}
 	}
+	```
+3. In the `Main` method use the `PriceChanged` event in order to be notified when the price of the stock changes.
 
+	```C#
 	internal class Program
 	{
 		private static void Main()
@@ -172,7 +184,7 @@ Delegates and Events
 	}
 	```
 
-| ![./media/image2.png](./media/image2.png) | More event samples available |
+| ![./media/image2.png](./media/image2.png) | Additional event samples available |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 #  Other
