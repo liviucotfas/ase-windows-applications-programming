@@ -36,9 +36,8 @@ namespace KeyEventsNumericTextBox
 			}
 			else
 			{
-				// Consume this invalid key and beep
+				// Consume this invalid key
 				e.Handled = true;
-				//    MessageBeep();
 			}
 		}
 	}
