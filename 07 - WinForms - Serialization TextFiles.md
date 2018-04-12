@@ -83,6 +83,7 @@
 
 	```C#
 	XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
+	
 	using (StreamWriter writer = new StreamWriter("SerializedXML.xml"))
 	{
 		serializer.Serialize(writer, _participants);
