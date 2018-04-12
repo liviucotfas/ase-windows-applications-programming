@@ -57,7 +57,7 @@
 	private void btnSerialize_Click(object sender, EventArgs e){
 		BinaryFormatter formatter = new BinaryFormatter();
 		using (FileStream s = File.Create("serialized.bin"))
-				formatter.Serialize(s, _participants);
+			formatter.Serialize(s, _participants);
 	}
 	```
      	     	
@@ -69,8 +69,8 @@
 	private void btnDeserialize_Click(object sender, EventArgs e){
 		BinaryFormatter formatter = new BinaryFormatter();
 		using (FileStream s = File.OpenRead("serialized.bin"))	{
-				_participants = (List<Participant>)formatter.Deserialize(s);
-				DisplayParticipants();
+			_participants = (List<Participant>)formatter.Deserialize(s);
+			DisplayParticipants();
 		}
 	}
 	```
