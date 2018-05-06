@@ -1,16 +1,24 @@
 # Windows Forms – Databases - MSAccess
 <!-- vscode-markdown-toc -->
-* 1. [Creating the database](#Creatingthedatabase)
-* 2. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
-* 3. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
+* 1. [Objectives](#Objectives)
+* 2. [Creating the database](#Creatingthedatabase)
+* 3. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
+	* 3.1. [Assignments (for you to try)](#Assignmentsforyoutotry)
+		* 3.1.1. [Assignment 1](#Assignment1)
+		* 3.1.2. [Assignment 2](#Assignment2)
+* 4. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+##  1. <a name='Objectives'></a>Objectives
+- perform CRUD (Create, Read, Update and Delete) operations using the connected data access approach.
+- perform CRUD (Create, Read, Update and Delete) operations using the disconnected data access approach.
+- working with multiple related entities.
 
-##  1. <a name='Creatingthedatabase'></a>Creating the database
+##  2. <a name='Creatingthedatabase'></a>Creating the database
 
 **Activity**
 
@@ -18,7 +26,7 @@
 ![SQLite Preview](docs/8/msaccess.png)
 2. Save the database in the "*mdb"format
 
-##  2. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
+##  3. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
 
 **Activity**
 
@@ -210,16 +218,16 @@
 		}
 	}
 	```
-### Assignments (for you to try)
-#### Assignment 1
+###  3.1. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
+####  3.1.1. <a name='Assignment1'></a>Assignment 1
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
-#### Assignment 2
-1. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the "DatabaseCommandMSAccess2Entities" in the "code samples" folder. 
+####  3.1.2. <a name='Assignment2'></a>Assignment 2
+1. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. 
 
 	![SQLite Preview](docs/10/db-add-entity.png)
 
-##  3. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
+##  4. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
 
 **Activity**
 
