@@ -56,9 +56,9 @@ namespace DataBaseCommand
             this.columnHeader4});
 			this.lvParticipants.FullRowSelect = true;
 			this.lvParticipants.GridLines = true;
-			this.lvParticipants.Location = new System.Drawing.Point(12, 177);
+			this.lvParticipants.Location = new System.Drawing.Point(12, 160);
 			this.lvParticipants.Name = "lvParticipants";
-			this.lvParticipants.Size = new System.Drawing.Size(687, 234);
+			this.lvParticipants.Size = new System.Drawing.Size(687, 251);
 			this.lvParticipants.TabIndex = 55;
 			this.lvParticipants.UseCompatibleStateImageBehavior = false;
 			this.lvParticipants.View = System.Windows.Forms.View.Details;
@@ -159,7 +159,7 @@ namespace DataBaseCommand
 			// 
 			// btnDelete
 			// 
-			this.btnDelete.Location = new System.Drawing.Point(624, 423);
+			this.btnDelete.Location = new System.Drawing.Point(624, 422);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(75, 23);
 			this.btnDelete.TabIndex = 63;
@@ -193,7 +193,7 @@ namespace DataBaseCommand
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(711, 468);
+			this.ClientSize = new System.Drawing.Size(711, 454);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.lvParticipants);
 			this.Controls.Add(this.groupBox1);

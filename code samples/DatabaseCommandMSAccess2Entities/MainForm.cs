@@ -31,19 +31,16 @@ namespace DataBaseCommand
 	    private void LoadRaces()
 	    {
 		    _races.Add(new Race(1, "RELAY"));
-		    _races.Add(new Race(1, "10K"));
-		    _races.Add(new Race(1, "HALFMARATHON"));
-		    _races.Add(new Race(1, "MARATHON"));
+		    _races.Add(new Race(2, "10K"));
+		    _races.Add(new Race(3, "HALFMARATHON"));
+		    _races.Add(new Race(4, "MARATHON"));
 	    }
 
 	    private void DisplayRaces()
 	    {
 		    cbRace.DisplayMember = "Name";
 		    foreach (var race in _races)
-		    {
-			    cbRace.Items.Add(race);
-		    }
-			
+		    cbRace.Items.Add(race);
 	    }
 
 		private void DisplayParticipants()
@@ -99,8 +96,8 @@ namespace DataBaseCommand
 
 	    private void AddParticipant(Participant participant)
 	    {
-		    var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
-		                      " values(@lastName,@firstName,@birthDate);";
+		    var queryString = "insert into Participant(LastName, FirstName, BirthDate, RaceId)" +
+		                      " values(@lastName,@firstName,@birthDate, @raceId);";
 
 			using (OleDbConnection connection = new OleDbConnection(ConnectionString))
 		    {
@@ -113,11 +110,13 @@ namespace DataBaseCommand
 			    var lastNameParameter = new OleDbParameter("@lastName", participant.LastName);
 			    var firstNameParameter = new OleDbParameter("@firstName", participant.FirstName);
 			    var birthDateParameter = new OleDbParameter("@birthDate", participant.BirthDate.Date);
+				var raceIdParameter = new OleDbParameter("@raceId", participant.RaceId);
 				insertCommand.Parameters.Add(lastNameParameter);
 			    insertCommand.Parameters.Add(firstNameParameter);
 			    insertCommand.Parameters.Add(birthDateParameter);
+			    insertCommand.Parameters.Add(raceIdParameter);
 
-			    insertCommand.ExecuteNonQuery();
+				insertCommand.ExecuteNonQuery();
 
 				//3. Get the Id
 			    var getIdCommand = new OleDbCommand("SELECT @@Identity;", connection);
@@ -167,12 +166,26 @@ namespace DataBaseCommand
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
+			//1. Validate input
 			var lastName = tbLastName.Text;
 			var firstName = tbFirstName.Text;
 			var birthDate = dtpBirthDate.Value;
-			var raceId = ((Race)cbRace.SelectedItem).RaceId;
+			var race = cbRace.SelectedItem;
 
-			var participant = new Participant(lastName, firstName, birthDate, raceId);
+			//... other validations
+
+			if (race == null)
+			{
+				MessageBox.Show("Please choose a race!");
+				return;
+			}
+
+			//2. Add the participant
+			var participant = new Participant(
+				lastName, 
+				firstName, 
+				birthDate, 
+				((Race)race).RaceId);
 
 			try
 			{

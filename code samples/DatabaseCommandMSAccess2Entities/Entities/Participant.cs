@@ -8,9 +8,9 @@ namespace DataBaseCommand.Entities
 		public string LastName { get; set; }
 		public string FirstName { get; set; }
 		public DateTime BirthDate { get; set; }
-		public int? RaceId { get; set; }
+		public int RaceId { get; set; }
 
-		public Participant(string lastName, string firstName, DateTime birthDate, int? raceId)
+		public Participant(string lastName, string firstName, DateTime birthDate, int raceId)
 		{
 			LastName = lastName;
 			FirstName = firstName;
@@ -18,7 +18,7 @@ namespace DataBaseCommand.Entities
 			RaceId = raceId;
 		}
 
-		public Participant(long id, string lastName, string firstName, DateTime birthDate, int? raceId) 
+		public Participant(long id, string lastName, string firstName, DateTime birthDate, int raceId) 
 			:this(lastName, firstName, birthDate, raceId)
 		{
 			Id = id;
