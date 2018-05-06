@@ -1,12 +1,16 @@
 # Windows Forms – Databases - MSAccess
+<!-- vscode-markdown-toc -->
+* 1. [Creating the database](#Creatingthedatabase)
+* 2. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
+* 3. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
 
-##	 Contents
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-1. [Creating the database](#databases)
-1. [Connected Data Access Architecture](#connected-architecture)
-2. [Disconnected Data Access Architecture](#disconnected-architecture)
-
-## <a name="databases"></a>Creating the database
+##  1. <a name='Creatingthedatabase'></a>Creating the database
 
 **Activity**
 
@@ -14,13 +18,13 @@
 ![SQLite Preview](docs/8/msaccess.png)
 2. Save the database in the "*mdb"format
 
-## <a name="connected-architecture"></a>Connected Data Access Architecture
+##  2. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
 
 **Activity**
 
 1. Add the database connection string, as an attribute (“ConnectionString” ) of the “MainForm” class as follows:
 
-	```c#
+	```C#
 	public partial class MainForm : Form
 	{
 		#region Attributes
@@ -206,10 +210,16 @@
 		}
 	}
 	```
-12. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
+### Assignments (for you to try)
+#### Assignment 1
+1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
+#### Assignment 2
+1. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the "DatabaseCommandMSAccess2Entities" in the "code samples" folder. 
 
-## <a name="disconnected-architecture"></a> Disconnected Data Access Architecture
+	![SQLite Preview](docs/10/db-add-entity.png)
+
+##  3. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
 
 **Activity**
 
