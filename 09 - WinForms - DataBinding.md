@@ -1,5 +1,11 @@
 # Windows Forms – DataBinding
 
+## Objectives
+- understand the concept and the utility of data binding;
+- understand the differences between simple and complex data binding;
+- implement simple data binding;
+- implement complex data binding;
+
 #### Data binding type:
 
 | Type | Description |
