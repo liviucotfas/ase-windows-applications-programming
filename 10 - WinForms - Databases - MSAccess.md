@@ -29,6 +29,8 @@
 
 **Activity**
 
+> :octocat: Full source code available, check the `DatabaseCommandMSAccess` sample.
+
 1. Add the database connection string, as an attribute (“ConnectionString” ) of the “MainForm” class as follows:
 
 	```C#
@@ -225,7 +227,7 @@
 
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
-2. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. 
+2. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
 
 	![SQLite Preview](docs/10/db-add-entity.png)
 
@@ -234,8 +236,7 @@
 ##  4. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
 
 **Activity**
-
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DatabaseDataAdapterMSAccess” Sample
+> :octocat: Full source code available, check the `DatabaseDataAdapterMSAccess` sample.
 
 1. Create a copy of the “BasicListView” project and name it “DatabaseDataAdapterMSAccess”
 2. Replace the “ListView” control with a “DataGrid” control (Name: dgvParticipants)
