@@ -4,9 +4,6 @@
 * 2. [Creating the database](#Creatingthedatabase)
 * 3. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
 	* 3.1. [Assignments (for you to try)](#Assignmentsforyoutotry)
-		* 3.1.1. [Assignment 1](#Assignment1)
-		* 3.1.2. [Assignment 2](#Assignment2)
-		* 3.1.3. [Assignment 3](#Assignment3)
 * 4. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
 
 <!-- vscode-markdown-toc-config
@@ -226,16 +223,13 @@
 
 ###  3.1. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
 
-####  3.1.1. <a name='Assignment1'></a>Assignment 1
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
-####  3.1.2. <a name='Assignment2'></a>Assignment 2
-1. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. 
+2. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. 
 
 	![SQLite Preview](docs/10/db-add-entity.png)
 
-####  3.1.3. <a name='Assignment3'></a>Assignment 3
-Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
+3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
 
 ##  4. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
 

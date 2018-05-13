@@ -34,7 +34,7 @@ Cases:
 
 #### Activity
 
-![](media/image1.png) Sample code available at <http://online.ase.ro> – “DataBindingDialogs” Sample
+> :octocat: Full source code available, check the `DataBindingSample` sample.
 
 1. Create a copy of the “BasicListView” project and name it “DataBindingSample”
 
@@ -165,4 +165,34 @@ internal class MainFormViewModel : INotifyPropertyChanged
 
 ### <a name="unit-testing"></a>Unit Testing
 
-![More](media/image3.png) Further reading: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+> ![More](media/image3.png) Further reading: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+
+**Activity**
+> :octocat: Full source code available, check the `DataBindingSample.Tests` sample.
+
+1. Add a new `Unit Test` project.
+2. Add a reference to the project created above.
+2. Let's test that the `AddParticipant()` method implemented above is actually adding a participant.
+
+	```C#
+	[TestClass]
+	public class MainFormViewModelUnitTest
+	{
+		[TestMethod]
+		public void AddParticipantTestMethod()
+		{
+			//Unit testing basics: https://msdn.microsoft.com/en-us/library/hh694602.aspx
+
+			// arrange
+			var viewModel = new MainFormViewModel();
+
+			// act
+			viewModel.AddParticipant();
+
+			// assert  
+			Assert.AreEqual(viewModel.Participants.Count, 1);
+		}
+	}
+	```
+## Assignments (for you to try)
+1. Implement additional unit test methods (ex: check whether the `LastName` property of the added participant is correct).
