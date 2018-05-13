@@ -101,7 +101,7 @@ The Graphics class provides methods for drawing objects to the display device.
 
 **Homework**
 
-1. Display on each bar the text in the `X` property of the corresponding `BarChartValue` object
+1. Display on each bar the `Label` and `Value` properties of the corresponding `BarChartValue` object.
 
 **Activity**
 
