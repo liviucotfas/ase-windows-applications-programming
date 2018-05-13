@@ -5,6 +5,7 @@
 * 3. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
 	* 3.1. [Assignments (for you to try)](#Assignmentsforyoutotry)
 * 4. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
+* 5. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -228,8 +229,7 @@
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
 2. Allow the user to choose the race in which the user is going to participate as shown bellow. For the complete sample, check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
-
-	![SQLite Preview](docs/10/db-add-entity.png)
+	![race](docs/10/db-add-entity.png)
 
 3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
 
@@ -348,3 +348,4 @@
 		#endregion
 	}
 	```	
+##  5. <a name='Bibliography'></a>Bibliography

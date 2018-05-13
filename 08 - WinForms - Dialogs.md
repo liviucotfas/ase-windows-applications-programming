@@ -1,8 +1,25 @@
 # Windows Forms – Dialogs
+<!-- vscode-markdown-toc -->
+* 1. [Objectives](#Objectives)
+* 2. [Secondary dialogs](#Secondarydialogs)
+* 3. [Assignments (for you to try)](#Assignmentsforyoutotry)
+* 4. [Bibliography](#Bibliography)
 
-##### Activity
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-![](media/image1.png) Sample code available at <http://online.ase.ro> – “DialogSample” Sample
+##  1. <a name='Objectives'></a>Objectives
+- open a modal or modeless dialog;
+- share data between the main form and the secondary form.
+
+##  2. <a name='Secondarydialogs'></a>Secondary dialogs
+
+**Activity**
+
+> :octocat: Full source code available, check the `DialogSample` sample.
 
 1. Create a copy of the “BasicListView” project and name it “DialogSample”
 
@@ -111,7 +128,11 @@ if (editForm.ShowDialog() == DialogResult.OK)
 	DisplayParticipants();
 ```
 
-#### Homework
+##  3. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
 1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the ListView
 2. Display a contextual menu when the user right clicks on a participant in the ListView. The contextual menu will include the options to edit or delete the participant.
 3. Remove the GroupBox previously used for adding new participants from the MainForm. Replace it instead with a button that will use the EditForm in order to add new participants.
+4. Allow the user to choose the race in which the user is going to participate as shown bellow.
+	![race](docs/10/db-add-entity.png)
+
+##  4. <a name='Bibliography'></a>Bibliography
