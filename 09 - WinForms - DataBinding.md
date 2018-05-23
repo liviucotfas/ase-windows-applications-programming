@@ -38,7 +38,7 @@ Cases:
 
 1. Create a copy of the “BasicListView” project and name it “DataBindingSample”
 
-2. Replace the “ListView” control with a “DataGrid” control (Name: dgvParticipants)
+2. Replace the “ListView” control with a “DataGridView” control (Name: dgvParticipants)
 
 3. Add a “ViewModel” folder to your project
 
