@@ -1,14 +1,12 @@
-Collections
-===========
-##Table of Contents
+# Collections
+
+## Table of Contents
 - [ArrayList](#arraylist)
 - [List\<T\>](#listt)
 - [Queues, Stacks, and Sets](#queues-stacks-and-sets)
 - [Custom Collections](#custom-collections)
 
-
-| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “StandardCollections” Sample |
-|------------------------------------------|--------------------------------------------------------------------------------|
+> :octocat: Sample code available – Check the “StandardCollections” Sample
 
 ##  ArrayList
 #### Assignment
@@ -118,8 +116,7 @@ Collections
 
 ##  Custom Collections
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “CustomCollections” Sample |
-|------------------------------------------|------------------------------------------------------------------------------|
+> :octocat: Sample code available – Check the “CustomCollections” Sample
 
 #### Assignment
 
