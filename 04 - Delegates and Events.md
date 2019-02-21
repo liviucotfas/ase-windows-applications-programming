@@ -5,12 +5,9 @@ Delegates and Events
 - [Events](#events)
 - [Other](#other)
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “Delegates” Sample |
-|------------------------------------------|----------------------------------------------------------------------|
-
 # Delegates
-
 #### Assignment
+> :octocat: Sample code available – Check the “Delegates” Sample
 
 1.  Create a new project with the name “Delegates”
 
@@ -48,11 +45,8 @@ Delegates and Events
 #  Events
 
 ## Custom Events
-
-| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “EventsPropertyTrigger” Sample |
-|------------------------------------------|----------------------------------------------------------------------------------|
-
 #### Assignment
+> :octocat: Sample code available – Check the “EventsPropertyTrigger” Sample
 
 1.  Create a new project with the name “EventsPropertyTrigger”
 
@@ -111,12 +105,8 @@ Delegates and Events
 	```
 
 ## Standard Event Pattern
-
-| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “EventsPropertyTriggerEventArgs” Sample |
-|------------------------------------------|-------------------------------------------------------------------------------------------|
-
-
 #### Assignment
+> :octocat: Sample code available – Check the “EventsPropertyTriggerEventArgs” Sample
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
 
