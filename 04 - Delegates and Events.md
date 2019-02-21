@@ -1,12 +1,16 @@
-Delegates and Events
-=========
-## Table of Contents
+# Delegates and Events
+##  1. <a name='TableofContents'></a>Table of Contents
 - [Delegates](#delegates)
 - [Events](#events)
 - [Other](#other)
 
-# Delegates
-#### Assignment
+##  2. <a name='Objectives'></a>Objectives
+- understand the concept of delegate
+- understand the concept of event
+- understand the standard event pattern
+
+##  3. <a name='Delegates'></a>Delegates
+####  3.1. <a name='Assignment'></a>Assignment
 > :octocat: Sample code available – Check the “Delegates” Sample
 
 1.  Create a new project with the name “Delegates”
@@ -42,10 +46,10 @@ Delegates and Events
 	}
 	```
 
-#  Events
+##  4. <a name='Events'></a> Events
 
-## Custom Events
-#### Assignment
+##  5. <a name='CustomEvents'></a>Custom Events
+####  5.1. <a name='Assignment-1'></a>Assignment
 > :octocat: Sample code available – Check the “EventsPropertyTrigger” Sample
 
 1.  Create a new project with the name “EventsPropertyTrigger”
@@ -104,8 +108,8 @@ Delegates and Events
 	}
 	```
 
-## Standard Event Pattern
-#### Assignment
+##  6. <a name='StandardEventPattern'></a>Standard Event Pattern
+####  6.1. <a name='Assignment-1'></a>Assignment
 > :octocat: Sample code available – Check the “EventsPropertyTriggerEventArgs” Sample
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
@@ -174,12 +178,11 @@ Delegates and Events
 	}
 	```
 
-| ![./media/image2.png](./media/image2.png) | Additional event samples available |
-|------------------------------------------|---------------------------------------------------------------------------------|
+![./media/image2.png](./media/image2.png) Additional event samples available
 
 #  Other
 
-##  Method Parameters
+##  7. <a name='MethodParameters'></a> Method Parameters
 
 The **ref** keyword causes an argument to be passed by reference, not by value.
 The effect of passing by reference is that any change to the parameter in the
@@ -201,7 +204,7 @@ method must explicitly use the out keyword.
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
-#### Assignment
+####  7.1. <a name='Assignment-1'></a>Assignment
 
 | ![./media/image1.png](./media/image1.png) | Sample code available – Check the “MethodParameters” Sample |
 |------------------------------------------|---------------------------------------------------------------------------------|
@@ -242,18 +245,18 @@ private static void Main()
 }
 ```
 
-## Static class
+##  8. <a name='Staticclass'></a>Static class
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/79b3xss3.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
-## Nullable types
+##  9. <a name='Nullabletypes'></a>Nullable types
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/1t3y8s4s.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
-## Boxing / Unboxing
+##  10. <a name='BoxingUnboxing'></a>Boxing / Unboxing
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
