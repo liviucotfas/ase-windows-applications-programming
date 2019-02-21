@@ -1,16 +1,32 @@
 # Delegates and Events
-##  1. <a name='TableofContents'></a>Table of Contents
-- [Delegates](#delegates)
-- [Events](#events)
-- [Other](#other)
+<!-- vscode-markdown-toc -->
+* 1. [Objectives](#Objectives)
+* 2. [Delegates](#Delegates)
+		* 2.1. [Assignment](#Assignment)
+* 3. [ Events](#Events)
+* 4. [Custom Events](#CustomEvents)
+		* 4.1. [Assignment](#Assignment-1)
+* 5. [Standard Event Pattern](#StandardEventPattern)
+		* 5.1. [Assignment](#Assignment-1)
+* 6. [ Method Parameters](#MethodParameters)
+		* 6.1. [Assignment](#Assignment-1)
+* 7. [Static class](#Staticclass)
+* 8. [Nullable types](#Nullabletypes)
+* 9. [Boxing / Unboxing](#BoxingUnboxing)
 
-##  2. <a name='Objectives'></a>Objectives
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Objectives'></a>Objectives
 - understand the concept of delegate
 - understand the concept of event
 - understand the standard event pattern
 
-##  3. <a name='Delegates'></a>Delegates
-####  3.1. <a name='Assignment'></a>Assignment
+##  2. <a name='Delegates'></a>Delegates
+####  2.1. <a name='Assignment'></a>Assignment
 > :octocat: Sample code available – Check the “Delegates” Sample
 
 1.  Create a new project with the name “Delegates”
@@ -46,10 +62,10 @@
 	}
 	```
 
-##  4. <a name='Events'></a> Events
+##  3. <a name='Events'></a> Events
 
-##  5. <a name='CustomEvents'></a>Custom Events
-####  5.1. <a name='Assignment-1'></a>Assignment
+##  4. <a name='CustomEvents'></a>Custom Events
+####  4.1. <a name='Assignment-1'></a>Assignment
 > :octocat: Sample code available – Check the “EventsPropertyTrigger” Sample
 
 1.  Create a new project with the name “EventsPropertyTrigger”
@@ -108,8 +124,8 @@
 	}
 	```
 
-##  6. <a name='StandardEventPattern'></a>Standard Event Pattern
-####  6.1. <a name='Assignment-1'></a>Assignment
+##  5. <a name='StandardEventPattern'></a>Standard Event Pattern
+####  5.1. <a name='Assignment-1'></a>Assignment
 > :octocat: Sample code available – Check the “EventsPropertyTriggerEventArgs” Sample
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
@@ -182,7 +198,7 @@
 
 #  Other
 
-##  7. <a name='MethodParameters'></a> Method Parameters
+##  6. <a name='MethodParameters'></a> Method Parameters
 
 The **ref** keyword causes an argument to be passed by reference, not by value.
 The effect of passing by reference is that any change to the parameter in the
@@ -204,7 +220,7 @@ method must explicitly use the out keyword.
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
-####  7.1. <a name='Assignment-1'></a>Assignment
+####  6.1. <a name='Assignment-1'></a>Assignment
 
 | ![./media/image1.png](./media/image1.png) | Sample code available – Check the “MethodParameters” Sample |
 |------------------------------------------|---------------------------------------------------------------------------------|
@@ -245,18 +261,18 @@ private static void Main()
 }
 ```
 
-##  8. <a name='Staticclass'></a>Static class
+##  7. <a name='Staticclass'></a>Static class
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/79b3xss3.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
-##  9. <a name='Nullabletypes'></a>Nullable types
+##  8. <a name='Nullabletypes'></a>Nullable types
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/1t3y8s4s.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
-##  10. <a name='BoxingUnboxing'></a>Boxing / Unboxing
+##  9. <a name='BoxingUnboxing'></a>Boxing / Unboxing
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
