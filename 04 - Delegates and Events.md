@@ -4,15 +4,15 @@
 * 2. [Delegates](#Delegates)
 		* 2.1. [Assignment](#Assignment)
 * 3. [ Events](#Events)
-* 4. [Custom Events](#CustomEvents)
+	* 3.1. [Custom Events](#CustomEvents)
+		* 3.1.1. [Assignment](#Assignment-1)
+	* 3.2. [Standard Event Pattern](#StandardEventPattern)
+		* 3.2.1. [Assignment](#Assignment-1)
+* 4. [ Method Parameters](#MethodParameters)
 		* 4.1. [Assignment](#Assignment-1)
-* 5. [Standard Event Pattern](#StandardEventPattern)
-		* 5.1. [Assignment](#Assignment-1)
-* 6. [ Method Parameters](#MethodParameters)
-		* 6.1. [Assignment](#Assignment-1)
-* 7. [Static class](#Staticclass)
-* 8. [Nullable types](#Nullabletypes)
-* 9. [Boxing / Unboxing](#BoxingUnboxing)
+* 5. [Static class](#Staticclass)
+* 6. [Nullable types](#Nullabletypes)
+* 7. [Boxing / Unboxing](#BoxingUnboxing)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -64,8 +64,8 @@
 
 ##  3. <a name='Events'></a> Events
 
-##  4. <a name='CustomEvents'></a>Custom Events
-####  4.1. <a name='Assignment-1'></a>Assignment
+###  3.1. <a name='CustomEvents'></a>Custom Events
+####  3.1.1. <a name='Assignment-1'></a>Assignment
 > :octocat: Sample code available – Check the “EventsPropertyTrigger” Sample
 
 1.  Create a new project with the name “EventsPropertyTrigger”
@@ -124,8 +124,8 @@
 	}
 	```
 
-##  5. <a name='StandardEventPattern'></a>Standard Event Pattern
-####  5.1. <a name='Assignment-1'></a>Assignment
+###  3.2. <a name='StandardEventPattern'></a>Standard Event Pattern
+####  3.2.1. <a name='Assignment-1'></a>Assignment
 > :octocat: Sample code available – Check the “EventsPropertyTriggerEventArgs” Sample
 
 1.  Create a new project with the name “EventsPropertyTriggerEventArgs”
@@ -198,7 +198,7 @@
 
 #  Other
 
-##  6. <a name='MethodParameters'></a> Method Parameters
+##  4. <a name='MethodParameters'></a> Method Parameters
 
 The **ref** keyword causes an argument to be passed by reference, not by value.
 The effect of passing by reference is that any change to the parameter in the
@@ -220,10 +220,9 @@ method must explicitly use the out keyword.
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
-####  6.1. <a name='Assignment-1'></a>Assignment
+####  4.1. <a name='Assignment-1'></a>Assignment
 
-| ![./media/image1.png](./media/image1.png) | Sample code available – Check the “MethodParameters” Sample |
-|------------------------------------------|---------------------------------------------------------------------------------|
+> :octocat:  Sample code available – Check the “MethodParameters” Sample
 
 ```C#
 private static void IncrementNormal(int i)
@@ -261,18 +260,18 @@ private static void Main()
 }
 ```
 
-##  7. <a name='Staticclass'></a>Static class
+##  5. <a name='Staticclass'></a>Static class
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/79b3xss3.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
-##  8. <a name='Nullabletypes'></a>Nullable types
+##  6. <a name='Nullabletypes'></a>Nullable types
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/1t3y8s4s.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
 
 
-##  9. <a name='BoxingUnboxing'></a>Boxing / Unboxing
+##  7. <a name='BoxingUnboxing'></a>Boxing / Unboxing
 
 | ![./media/image3.png](./media/image3.png) | Further reading: [link](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx) |
 |------------------------------------------|---------------------------------------------------------------------------------|
