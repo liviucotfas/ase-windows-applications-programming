@@ -7,14 +7,21 @@
 - [Operators](#operators)
 - [Class Inheritance](#class-inheritance)
 
+## Objectives
+- Declaring enums
+- Declaring structures
+- Declaring classes
+- Encapsulation using properties;
+- Classes with multiple constructors
+
+
 ## Enums
 The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
 first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
 
 ##### Assignment
 
--   Add the following enumeration
-
+1. Add the following enumeration
 	```C#
 	internal enum OccupationEnum
 	{
@@ -24,9 +31,9 @@ first enumerator has the value 0, and the value of each successive enumerator is
 	}
 	```
 
--   In the Main method try to cast from
+2. In the Main method try to cast from
 
-    -   UserAccountTypeEnum. SoftwareDeveloper to System.Int32
+    -   UserAccountTypeEnum.SoftwareDeveloper to System.Int32
 
     -   System.Int32 to UserAccountTypeEnum
 
@@ -85,10 +92,6 @@ Questions
 -   Why is it possible to override the ToString method?
 
 ## Classes
-
-Objectives
--   Encapsulation using properties;
--   Multiple constructors
 
 ##### Assignment
 
