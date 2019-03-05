@@ -6,6 +6,7 @@
 * 3. [List\<T\>](#ListT)
 * 4. [Queues, Stacks, and Sets](#QueuesStacksandSets)
 * 5. [ Custom Collections](#CustomCollections)
+* 6. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -231,6 +232,6 @@
 	}
 	```
 
-## Bibliography
+##  6. <a name='Bibliography'></a>Bibliography
 - https://docs.microsoft.com/en-us/dotnet/api/system.collections
 - https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic
