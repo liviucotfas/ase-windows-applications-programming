@@ -1,28 +1,33 @@
 # Windows Forms – Introduction, Menus, Events
 
-##	 Contents
+<!-- vscode-markdown-toc -->
+* 1. [Application Class](#ApplicationClass)
+* 2. [Form Class and Control Class](#FormClassandControlClass)
+	* 2.1. [ Partial Classes](#PartialClasses)
+	* 2.2. [ Properties](#Properties)
+* 3. [ Menus](#Menus)
+* 4. [ Mouse and Keyboard Events](#MouseandKeyboardEvents)
+	* 4.1. [ Mouse Events](#MouseEvents)
+	* 4.2. [ Keyboard Events](#KeyboardEvents)
 
-1. [Application Class](#application-class)
-2. [Form Class and Control Class](#form-class-controll-class)
-	1. [Partial Classes](#partial-classes)
-	2. [Properties](#properties)
-3. [Menus](#menus)
-4. [Mouse and Keyboard Events](#mouse-and-keyboard-events)
-	1. [Mouse Events](#mouse-events)
-	2. [Keyboard Events](#keyboard-events)
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-## <a name="application-class"></a>Application Class
+##  1. <a name='ApplicationClass'></a>Application Class
 
 **Assignment**
 
 1. Create a new project with the name “MouseEvents”
 2. Change the name of the default form to “MainForm”
 
-## <a name="form-class-controll-class"></a>Form Class and Controll Class
+##  2. <a name='FormClassandControlClass'></a>Form Class and Control Class
 
 ![Class Diagram](docs/5/class-diagram.png)
 
-### <a name="partial-classes"></a> Partial Classes
+###  2.1. <a name='PartialClasses'></a> Partial Classes
 
 It is possible to split the definition of a [class](https://msdn.microsoft.com/en-us/library/0b0thckt.aspx) or a [struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx), an [interface](https://msdn.microsoft.com/en-us/library/87d83y5b.aspx) or a method over two or more source files. Each source file contains a section of the type or method definition, and all parts are combined when the application is compiled.
 
@@ -30,27 +35,27 @@ It is possible to split the definition of a [class](https://msdn.microsoft.com/e
 
 1. Open the “*.Designer.cs” file associated to the form
 
-### <a name="properties"></a> Properties
+###  2.2. <a name='Properties'></a> Properties
 
 Frequently used properties:
 
 * **Design**: Name, etc.
 * **Appearence**: Text, ForeColor, BackColor, Font, etc.
 
-## <a name="menus"></a> Menus
+##  3. <a name='Menus'></a> Menus
 
 **Assignment**	
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “SimpleWebBrowser” Sample
+> :octocat: Sample Code available at <http://online.ase.ro> – “SimpleWebBrowser” Sample
 
 1. Create the following application  
-![Browser App Preview](docs/5/browser-app-preview.png)
+	![Browser App Preview](docs/5/browser-app-preview.png)
 2. Create a setup file for the application, that can be redistributed to other users
 
-> You need to right click on the project in the “Solution Explorer” window and choose the publish option
+	> You need to right click on the project in the “Solution Explorer” window and choose the publish option
 
-## <a name="mouse-and-keyboard-events"></a> Mouse and Keyboard Events
-### <a name="mouse-events"></a> Mouse Events
+##  4. <a name='MouseandKeyboardEvents'></a> Mouse and Keyboard Events
+###  4.1. <a name='MouseEvents'></a> Mouse Events
 
 
 | Event         | Event argument | Description              |
@@ -76,61 +81,61 @@ Depressing a mouse button when the cursor is over a control typically raises the
 
 **Assignment**
 
-![Info](media/image2.png) Sample code available at <http://online.ase.ro> – “MouseEvents” Sample
+> :octocat: Sample code available at <http://online.ase.ro> – “MouseEvents” Sample
 
 1. Create the following UI  
-![Mouse Events UI](docs/5/mouse-events.png)
+	![Mouse Events UI](docs/5/mouse-events.png)
 2. Add the following code
 
-```c#
-public partial class MainForm : Form
-{
-	public MainForm()
+	```c#
+	public partial class MainForm : Form
 	{
-		InitializeComponent();
-	}
+		public MainForm()
+		{
+			InitializeComponent();
+		}
 
-	private void btnReset_Click(object sender, EventArgs e)
-	{
-		lbl.Text = "";
-		txt.Text = "";
-	}
+		private void btnReset_Click(object sender, EventArgs e)
+		{
+			lbl.Text = "";
+			txt.Text = "";
+		}
 
-	//similar: lbl_MouseHover, lbl_MouseLeave, lbl_Click, lbl_DoubleClick
-	private void lbl_MouseEnter(object sender, EventArgs e)
-	{
-		lbl.Text = "MouseEnter";
-		TextBoxDraw("###Label MouseEnter");
-	}
+		//similar: lbl_MouseHover, lbl_MouseLeave, lbl_Click, lbl_DoubleClick
+		private void lbl_MouseEnter(object sender, EventArgs e)
+		{
+			lbl.Text = "MouseEnter";
+			TextBoxDraw("###Label MouseEnter");
+		}
 
-	//similar: lbl_MouseMove, lbl_MouseUp, lbl_MouseWheel
-	private void lbl_MouseDown(object sender, MouseEventArgs e)
-	{
-		lbl.Text = "MouseDown";
-		var str = "###Label MouseDown";
-		str += Environment.NewLine + "Button:  " + e.Button;
-		str += Environment.NewLine + "Clicks:  " + e.Clicks;
-		str += Environment.NewLine + "Delta:  " + e.Delta;
-		str += Environment.NewLine + "X:  " + e.X;
-		str += Environment.NewLine + "Y:  " + e.Y;
-		TextBoxDraw(str);
-	}
+		//similar: lbl_MouseMove, lbl_MouseUp, lbl_MouseWheel
+		private void lbl_MouseDown(object sender, MouseEventArgs e)
+		{
+			lbl.Text = "MouseDown";
+			var str = "###Label MouseDown";
+			str += Environment.NewLine + "Button:  " + e.Button;
+			str += Environment.NewLine + "Clicks:  " + e.Clicks;
+			str += Environment.NewLine + "Delta:  " + e.Delta;
+			str += Environment.NewLine + "X:  " + e.X;
+			str += Environment.NewLine + "Y:  " + e.Y;
+			TextBoxDraw(str);
+		}
 
-	//similar: OnMouseHover, OnMouseLeave
-	protected override void OnMouseEnter(EventArgs e)
-	{
-		base.OnMouseEnter(e);
-		TextBoxDraw("###Form MouseEnter");
-	}
+		//similar: OnMouseHover, OnMouseLeave
+		protected override void OnMouseEnter(EventArgs e)
+		{
+			base.OnMouseEnter(e);
+			TextBoxDraw("###Form MouseEnter");
+		}
 
-	private void TextBoxDraw(string str)
-	{
-		txt.AppendText(Environment.NewLine + str);
+		private void TextBoxDraw(string str)
+		{
+			txt.AppendText(Environment.NewLine + str);
+		}
 	}
-}
-```
+	```
 
-### <a name="keyboard-events"></a> Keyboard Events
+###  4.2. <a name='KeyboardEvents'></a> Keyboard Events
 
 | Event         | Event argument | Description              |
 | :------------ |:-------------- | :----------------------  |
@@ -143,7 +148,7 @@ public partial class MainForm : Form
 We want to create a numeric only TextBox that can be used to build a simple calculator application, such as the one bellow.  
 ![Text Box Example](docs/5/text-box.png)
 
-![Info](media/image2.png) Sample code available at <http://online.ase.ro> – “KeyEvents” Sample
+> :octocat: Sample code available at <http://online.ase.ro> – “KeyEvents” Sample
 
 1. Create a new project with the name “KeyEventsNumericTextBox”
 2. Add a TextBox and name it “tbNumericTextBox”
@@ -151,17 +156,15 @@ We want to create a numeric only TextBox that can be used to build a simple calc
 4. Change the previous event handler in order to allow the use of the “BackSpace” key
 5. Change the previous event handler in order to allow the digit separator for the current culture
 
-```c#
-private void tbNumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
-{
-	OnKeyPress(e);
-
-	if (!char.IsDigit(e.KeyChar))
+	```c#
+	private void tbNumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
 	{
-		// Consume this invalid key
-		e.Handled = true;
+		OnKeyPress(e);
+
+		if (!char.IsDigit(e.KeyChar))
+		{
+			// Consume this invalid key
+			e.Handled = true;
+		}
 	}
-}
-```
-
-
+	```
