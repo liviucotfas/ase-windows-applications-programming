@@ -7,7 +7,6 @@
 	* 3.1. [Binary Serialization](#BinarySerialization)
 	* 3.2. [XML Serialization](#XMLSerialization)
 * 4. [ TextFiles](#TextFiles)
-* 5. [Assignments](#Assignments)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
