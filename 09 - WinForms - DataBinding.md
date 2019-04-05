@@ -22,7 +22,7 @@
 
 ##  2. <a name='DataBinding'></a>DataBinding
 
-###  2.1. <a name='Databindingtypes'></a>Data binding types
+**Data binding types**
 
 | Type | Description |
 | ---- | ----------- |
@@ -36,7 +36,7 @@
 [5]: https://msdn.microsoft.com/en-us/library/system.windows.forms.combobox(v=vs.110).aspx
 
 
-###  2.2. <a name='Changenotification'></a>Change notification
+**Change notification**
 
   - Ensures that your data source and bound controls always have the most recent data, we must add change notification for data binding. Specifically, we want to ensure that bound controls are notified of changes that were made to their data source, and the data source is notified of changes that were made to the bound properties of a control. 
   
@@ -48,7 +48,7 @@ Cases:
 [6]: https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx 
 [7]: https://msdn.microsoft.com/en-us/library/system.componentmodel.ibindinglist(v=vs.110).aspx
 
-###  2.3. <a name='Activity'></a>Activity
+**Activity**
 
 > :octocat: Full source code available, check the `DataBindingSample` sample.
 
