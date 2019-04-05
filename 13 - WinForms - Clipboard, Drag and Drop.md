@@ -10,15 +10,16 @@
 <!-- /vscode-markdown-toc -->
 
 ##  1. <a name='Clipboard'></a>Clipboard
-> Documentation: https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard
+**Documentation**
+> https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard
 
 **Activity**
 
 > :octocat: Sample Code available at <http://online.ase.ro> – "ClipboardSample" Sample 
 
 ##  2. <a name='DragandDrop'></a>Drag and Drop
-
-> Further reading: https://docs.microsoft.com/en-us/dotnet/framework/winforms/drag-and-drop-functionality-in-windows-forms
+**Documentation**
+> https://docs.microsoft.com/en-us/dotnet/framework/winforms/drag-and-drop-functionality-in-windows-forms
 
 **Activity**
 
