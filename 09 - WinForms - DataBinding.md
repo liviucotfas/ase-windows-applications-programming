@@ -1,12 +1,26 @@
 # Windows Forms – DataBinding
 
-## Objectives
+<!-- vscode-markdown-toc -->
+* 1. [Objectives](#Objectives)
+* 2. [Data binding types](#Databindingtypes)
+* 3. [Change notification](#Changenotification)
+* 4. [Activity](#Activity)
+* 5. [Unit Testing](#UnitTesting)
+* 6. [Assignments (for you to try)](#Assignmentsforyoutotry)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Objectives'></a>Objectives
 - understand the concept and the utility of data binding;
 - understand the differences between simple and complex data binding;
 - implement simple data binding;
 - implement complex data binding;
 
-#### Data binding type:
+##  2. <a name='Databindingtypes'></a>Data binding types
 
 | Type | Description |
 | ---- | ----------- |
@@ -20,7 +34,7 @@
 [5]: https://msdn.microsoft.com/en-us/library/system.windows.forms.combobox(v=vs.110).aspx
 
 
-#### Change notification
+##  3. <a name='Changenotification'></a>Change notification
 
   - Ensures that your data source and bound controls always have the most recent data, we must add change notification for data binding. Specifically, we want to ensure that bound controls are notified of changes that were made to their data source, and the data source is notified of changes that were made to the bound properties of a control. 
   
@@ -32,7 +46,7 @@ Cases:
 [6]: https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx 
 [7]: https://msdn.microsoft.com/en-us/library/system.componentmodel.ibindinglist(v=vs.110).aspx
 
-#### Activity
+##  4. <a name='Activity'></a>Activity
 
 > :octocat: Full source code available, check the `DataBindingSample` sample.
 
@@ -163,7 +177,7 @@ internal class MainFormViewModel : INotifyPropertyChanged
 
 [8]: https://msdn.microsoft.com/en-us/library/hh848246.aspx
 
-### <a name="unit-testing"></a>Unit Testing
+##  5. <a name='UnitTesting'></a>Unit Testing
 
 > ![More](media/image3.png) Further reading: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
 
@@ -194,5 +208,5 @@ internal class MainFormViewModel : INotifyPropertyChanged
 		}
 	}
 	```
-## Assignments (for you to try)
+**Assignments (for you to try)**
 1. Implement additional unit test methods (ex: check whether the `LastName` property of the added participant is correct).
