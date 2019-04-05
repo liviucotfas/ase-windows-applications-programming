@@ -1,25 +1,27 @@
 # Windows Forms – Clipboard, Drag and Drop
+<!-- vscode-markdown-toc -->
+* 1. [Clipboard](#Clipboard)
+* 2. [Drag and Drop](#DragandDrop)
 
-##	 Contents
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-1. [Clipboard](#clipboard)
-1. [Drag and Drop](#drag-and-drop)
-
-## <a name="clipboard"></a>Clipboard
-
-**Activity**
-
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – "ClipboardSample" Sample 
-
-
-
-## <a name="drag-and-drop"></a>Drag and Drop
-
-Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29.aspx>
+##  1. <a name='Clipboard'></a>Clipboard
 
 **Activity**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DragDropSample” Sample 
+> :octocat: Sample Code available at <http://online.ase.ro> – "ClipboardSample" Sample 
+
+##  2. <a name='DragandDrop'></a>Drag and Drop
+
+> Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29.aspx>
+
+**Activity**
+
+> :octocat: Sample Code available at <http://online.ase.ro> – “DragDropSample” Sample 
 
 1. Create a new project with the name “DragDropSample”
 2. Create the UI shown below  
@@ -89,3 +91,7 @@ Further reading: <https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29
 		}
 	}
 	```
+
+# Bibliography
+
+- Drag and Drop: https://msdn.microsoft.com/en-us/library/aa984430%28v=vs.71%29.aspx
