@@ -1,12 +1,19 @@
 # Windows Forms – Databases
 
-##	 Contents
+<!-- vscode-markdown-toc -->
+	* 1. [Contents](#Contents)
+* 1. [Creating the database](#Creatingthedatabase)
+* 2. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
+* 3. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
+* 4. [Bibliography](#Bibliography)
 
-1. [Creating the database](#databases)
-2. [Connected Data Access Architecture](#connected-architecture)
-3. [Disconnected Data Access Architecture](#disconnected-architecture)
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-## <a name="databases"></a>Creating the database
+##  1. <a name='Creatingthedatabase'></a>Creating the database
 
 **Activity**
 
@@ -23,11 +30,11 @@ CREATE TABLE `Participant` (
 	`BirthDate` TEXT
 );
 ```
-## <a name="connected-architecture"></a>Connected Data Access Architecture
+##  2. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
 
 **Activity**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DatabaseCommandSQLite” Sample
+> :octocat: Full source code available, check the `DatabaseCommandSQLite` sample
 
 1. Create a copy of the “ListViewBasicSample” project and name it “DatabaseCommandSQLite”
 2. Add SQLite libraries using NuGet (recommended) or directly from the website <http://system.data.sqlite.org/index.html/doc/trunk/www/index.wiki>
@@ -225,11 +232,10 @@ CREATE TABLE `Participant` (
 	```
 12. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
-## <a name="disconnected-architecture"></a> Disconnected Data Access Architecture
+##  3. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
 
 **Activity**
-
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “DatabaseDataAdapterSQLite” Sample
+> :octocat: Full source code available, check the `DatabaseDataAdapterSQLite` sample
 
 1. Create a copy of the “BasicListView” project and name it “DatabaseDataAdapterSQLite”
 2. Replace the “ListView” control with a “DataGrid” control (Name: dgvParticipants)
@@ -341,3 +347,4 @@ CREATE TABLE `Participant` (
 		#endregion
 	}
 	```	
+##  4. <a name='Bibliography'></a>Bibliography
