@@ -28,7 +28,7 @@
 
 ##  3. <a name='SerializationDeserialization'></a>Serialization/Deserialization
 
-##### Activity
+**Activity**
 
 > :octocat: The complete sample is available in the "code samples" folder:  “SerializationBinaryXMLTextFile”
 
@@ -150,7 +150,7 @@
 	}
 	```
 
-	##### Activity
+**Activity**
 
 > :octocat: The complete sample is available in the "code samples" folder: “TextFileSample”
 
