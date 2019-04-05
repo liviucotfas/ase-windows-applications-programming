@@ -2,11 +2,10 @@
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [Documentation](#Documentation)
-* 3. [Serialization/Deserialization](#SerializationDeserialization)
-	* 3.1. [Binary Serialization](#BinarySerialization)
-	* 3.2. [XML Serialization](#XMLSerialization)
-* 4. [ TextFiles](#TextFiles)
+* 2. [Serialization/Deserialization](#SerializationDeserialization)
+	* 2.1. [Binary Serialization](#BinarySerialization)
+	* 2.2. [XML Serialization](#XMLSerialization)
+* 3. [ TextFiles](#TextFiles)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -22,10 +21,10 @@
 - writing text files;
 - uising the `OpenFileDialog` and the `SaveFileDialog`.
 
-##  2. <a name='Documentation'></a>Documentation
-- Serialization in .NET: <https://docs.microsoft.com/en-us/dotnet/standard/serialization/>
+##  2. <a name='SerializationDeserialization'></a>Serialization/Deserialization
 
-##  3. <a name='SerializationDeserialization'></a>Serialization/Deserialization
+**Documentation**
+- Serialization in .NET: <https://docs.microsoft.com/en-us/dotnet/standard/serialization/>
 
 **Activity**
 
@@ -37,7 +36,7 @@
 
 	![UI Binary Serialization](docs/7/ui-binary.png)
 
-###  3.1. <a name='BinarySerialization'></a>Binary Serialization
+###  2.1. <a name='BinarySerialization'></a>Binary Serialization
 
 3. Add a menu for “Binary Serialization” (“Serialize” - btnSerializeBinary, “Deserialize” - btnDeserializeBinary), “XML Serialization” (“Serialize” - btnSerializeXML, “Deserialize” - btnDeserializeXML) and “TextFile” (“Export” – btnExport). 
 
@@ -74,7 +73,7 @@
 	}
 	```
 
-###  3.2. <a name='XMLSerialization'></a>XML Serialization
+###  2.2. <a name='XMLSerialization'></a>XML Serialization
 
 8. Add a parameterless constructor to the “Participant” class. Change the access modifier for the class from “internal” to “public”. Un exception will be thrown otherwise.
 
@@ -101,7 +100,7 @@
 	}
 	```
 
-##  4. <a name='TextFiles'></a> TextFiles
+##  3. <a name='TextFiles'></a> TextFiles
 
 11. Handle the “Click” event for the “btnExport” button as follows
 
