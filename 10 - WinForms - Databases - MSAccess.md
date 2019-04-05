@@ -224,7 +224,7 @@
 
  	> Read more about the SQL Injection attack at: https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-injection
 
-###  3.1. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
+**Assignments (for you to try)**
 
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 

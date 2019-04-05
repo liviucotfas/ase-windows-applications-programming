@@ -21,7 +21,7 @@
 - implement `JSON` serialization / deserialization;
 - understand the differences between the `binary`, `XML` and `JSON` serializations;
 - writing text files;
-- uising the `SaveFileDialog` dialog.
+- uising the `OpenFileDialog` and the `SaveFileDialog`.
 
 ##  2. <a name='Documentation'></a>Documentation
 - Serialization in .NET: <https://docs.microsoft.com/en-us/dotnet/standard/serialization/>
