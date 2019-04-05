@@ -4,6 +4,7 @@
 * 1. [Objectives](#Objectives)
 * 2. [DataBinding](#DataBinding)
 * 3. [Unit Testing](#UnitTesting)
+* 4. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -172,9 +173,7 @@ internal class MainFormViewModel : INotifyPropertyChanged
 }
 ```
 
-![](media/image3.png) Further reading about the MVVM pattern: [link][8]
-
-[8]: https://msdn.microsoft.com/en-us/library/hh848246.aspx
+> Further reading about the MVVM pattern: https://msdn.microsoft.com/en-us/library/hh848246.aspx
 
 ##  3. <a name='UnitTesting'></a>Unit Testing
 
@@ -209,3 +208,7 @@ internal class MainFormViewModel : INotifyPropertyChanged
 	```
 **Assignments (for you to try)**
 1. Implement additional unit test methods (ex: check whether the `LastName` property of the added participant is correct).
+
+##  4. <a name='Bibliography'></a>Bibliography
+- MVVM Pattern: https://msdn.microsoft.com/en-us/library/hh848246.aspx
+- Unit Testing: https://msdn.microsoft.com/en-us/library/hh694602.aspx
