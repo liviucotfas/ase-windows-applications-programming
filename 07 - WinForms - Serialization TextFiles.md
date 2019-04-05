@@ -30,7 +30,7 @@
 
 ##### Activity
 
-![](media/image1.png) The complete sample is available in the "code samples" folder:  “SerializationBinaryXMLTextFile”
+> :octocat: The complete sample is available in the "code samples" folder:  “SerializationBinaryXMLTextFile”
 
 1.  Create a copy of the “ListViewBasicSample” project and name it “SerializationBinaryXMLTextFile”
 
@@ -152,7 +152,7 @@
 
 	##### Activity
 
-	![](media/image1.png) The complete sample is available in the "code samples" folder: “TextFileSample”
+> :octocat: The complete sample is available in the "code samples" folder: “TextFileSample”
 
 	```C#
 	static void Main(string[] args)
