@@ -3,7 +3,6 @@
 * 1. [Objectives](#Objectives)
 * 2. [Creating the database](#Creatingthedatabase)
 * 3. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
-	* 3.1. [Assignments (for you to try)](#Assignmentsforyoutotry)
 * 4. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
 * 5. [Bibliography](#Bibliography)
 
