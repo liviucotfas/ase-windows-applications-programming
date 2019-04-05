@@ -2,6 +2,7 @@
 <!-- vscode-markdown-toc -->
 * 1. [Clipboard](#Clipboard)
 * 2. [Drag and Drop](#DragandDrop)
+* 3. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -94,6 +95,6 @@
 	}
 	```
 
-# Bibliography
+##  3. <a name='Bibliography'></a>Bibliography
 - Clipboard: https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard
 - Drag and Drop: https://docs.microsoft.com/en-us/dotnet/framework/winforms/drag-and-drop-functionality-in-windows-forms
