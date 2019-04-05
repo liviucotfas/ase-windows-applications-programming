@@ -6,6 +6,7 @@
 	* 2.1. [Binary Serialization](#BinarySerialization)
 	* 2.2. [XML Serialization](#XMLSerialization)
 * 3. [ TextFiles](#TextFiles)
+* 4. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -184,3 +185,4 @@
 		}
 	}
 	```
+##  4. <a name='Bibliography'></a>Bibliography
