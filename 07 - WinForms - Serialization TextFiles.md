@@ -149,10 +149,16 @@
 		}
 	}
 	```
+**Assignments (for you to try)**
+1. Modify the project in order to automatically serialize the current list of participants when the application is closed. The list should be automatically deserialized and displayed when the application starts. The application should not throw an exception if the serialization file has been deleted in the mean time.
+2. Add the option to import new participants from a *.csv or *.txt file selected using an OpenFileDialog. The participants imported from the text file should be added to the list of existing participants in the application. Note: The *csv file can be created using either any text editor or using Excel
+
 
 **Activity**
 
 > :octocat: The complete sample is available in the "code samples" folder: “TextFileSample”
+
+1. Check the following application that is writting the names of all the directories in the `C:` drive to a text file 
 
 	```C#
 	static void Main(string[] args)
@@ -180,6 +186,3 @@
 		}
 	}
 	```
-##  5. <a name='Assignments'></a>Assignments (for you to try)
-1. Modify the project in order to automatically serialize the current list of participants when the application is closed. The list should be automatically deserialized and displayed when the application starts. The application should not throw an exception if the serialization file has been deleted in the mean time.
-2. Add the option to import new participants from a *.csv or *.txt file selected using an OpenFileDialog. The participants imported from the text file should be added to the list of existing participants in the application. Note: The *csv file can be created using either any text editor or using Excel
