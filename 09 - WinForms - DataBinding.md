@@ -1,12 +1,12 @@
-# Windows Forms – DataBinding
+# Windows Forms – DataBinding and Unit Testing
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [Data binding types](#Databindingtypes)
-* 3. [Change notification](#Changenotification)
-* 4. [Activity](#Activity)
-* 5. [Unit Testing](#UnitTesting)
-* 6. [Assignments (for you to try)](#Assignmentsforyoutotry)
+* 2. [DataBinding](#DataBinding)
+	* 2.1. [Data binding types](#Databindingtypes)
+	* 2.2. [Change notification](#Changenotification)
+	* 2.3. [Activity](#Activity)
+* 3. [Unit Testing](#UnitTesting)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -20,7 +20,9 @@
 - implement simple data binding;
 - implement complex data binding;
 
-##  2. <a name='Databindingtypes'></a>Data binding types
+##  2. <a name='DataBinding'></a>DataBinding
+
+###  2.1. <a name='Databindingtypes'></a>Data binding types
 
 | Type | Description |
 | ---- | ----------- |
@@ -34,7 +36,7 @@
 [5]: https://msdn.microsoft.com/en-us/library/system.windows.forms.combobox(v=vs.110).aspx
 
 
-##  3. <a name='Changenotification'></a>Change notification
+###  2.2. <a name='Changenotification'></a>Change notification
 
   - Ensures that your data source and bound controls always have the most recent data, we must add change notification for data binding. Specifically, we want to ensure that bound controls are notified of changes that were made to their data source, and the data source is notified of changes that were made to the bound properties of a control. 
   
@@ -46,7 +48,7 @@ Cases:
 [6]: https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx 
 [7]: https://msdn.microsoft.com/en-us/library/system.componentmodel.ibindinglist(v=vs.110).aspx
 
-##  4. <a name='Activity'></a>Activity
+###  2.3. <a name='Activity'></a>Activity
 
 > :octocat: Full source code available, check the `DataBindingSample` sample.
 
@@ -177,9 +179,9 @@ internal class MainFormViewModel : INotifyPropertyChanged
 
 [8]: https://msdn.microsoft.com/en-us/library/hh848246.aspx
 
-##  5. <a name='UnitTesting'></a>Unit Testing
+##  3. <a name='UnitTesting'></a>Unit Testing
 
-> ![More](media/image3.png) Further reading: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+> Documentation: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
 
 **Activity**
 > :octocat: Full source code available, check the `DataBindingSample.Tests` sample.
