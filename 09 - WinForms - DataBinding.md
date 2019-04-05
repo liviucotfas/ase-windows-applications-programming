@@ -3,9 +3,6 @@
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
 * 2. [DataBinding](#DataBinding)
-	* 2.1. [Data binding types](#Databindingtypes)
-	* 2.2. [Change notification](#Changenotification)
-	* 2.3. [Activity](#Activity)
 * 3. [Unit Testing](#UnitTesting)
 
 <!-- vscode-markdown-toc-config
