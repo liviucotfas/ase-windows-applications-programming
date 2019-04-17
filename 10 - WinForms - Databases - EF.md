@@ -1,10 +1,10 @@
 # Windows Forms – Entity Framework
 
-# Objectives
+## Objectives
  1. perform CRUD (Create, Read, Update and Delete) operations using the code first approach;
  2. perform CRUD (Create, Read, Update and Delete) operations using the database first approach;
     
-# Documentation
+## Documentation
  Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers usually need to write.
 
  It reduces the need for managing database connections, manually mapping datatables or writing stored procedures.
@@ -12,8 +12,8 @@
   1. Code First (create the domain classes and EntityFramework would generate the database tables)                                       
   2. Database First (create the database tables and EntityFramework would generate the classes that match the tables)
 
-# Assigments (solved)
-# Code First
+## Assigments (solved)
+### Code First
 For this lecture we will use an SQLite database instance.
 
 Prerequisites
@@ -130,10 +130,10 @@ Steps:
         }
     }
     ```
-    
-# Assigments (for you to try)
+
+## Assigments (for you to try)
 Try to replicate this behavior using the Database First approach.
 
-# Bibliography
+## Bibliography
 - https://code.msdn.microsoft.com/windowsapps/Entity-Framework-in-dc34a410
 - https://www.codeproject.com/Articles/221931/Entity-Framework-in-WinForms
