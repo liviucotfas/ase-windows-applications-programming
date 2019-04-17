@@ -27,7 +27,7 @@ Steps:
 1. Create a new Windows Forms application.
 
 2. Provide the following layout.
-![MainLayout](docs/10/MainLayout.jpg)
+![MainLayout](docs/10/MainLayout.png)
 
 3. Create a class Student that has 3 attributes: Id (int), Name (string) and ProficientIn (string).
 
@@ -39,7 +39,7 @@ Steps:
 5. Rebuild the project.
 
 6. Create a new class called StudentContext.
-  ```C#
+    ```C#
     public class StudentContext : DbContext
     {
         public StudentContext()
@@ -62,19 +62,20 @@ Steps:
             optionsBuilder.UseSqlite("Data Source=students.db");
         }
     }
-  ```
+    ```
   
-  7. From Package Manager Console run the following command: **Add-Migration StudentMigration**
+7. From Package Manager Console run the following command: **Add-Migration StudentMigration**
   
-  8. Set the binding for the DataGridView.
-  ![AddDataSource](docs/10/AddDataSource.jpg)
+8. Set the binding for the DataGridView.
+    ![AddDataSource](docs/10/AddDataSource.png)
   
-  ![ObjectDataSource](docs/10/ObjectDataSource.jpg)
+    ![ObjectDataSource](docs/10/ObjectDataSource.png)
   
-  ![Student](docs/10/Student.jpg)
+    ![Student](docs/10/Student.png)
   
-  9. Assure you have the following methods implemented in your Main class.
-  ```C#
+9. Assure you have the following methods implemented in your Main class.
+    
+    ```C#
     public partial class Main : Form
     {
         StudentContext ctx;
@@ -128,7 +129,8 @@ Steps:
             }
         }
     }
-  ```
+    ```
+    
 # Assigments (for you to try)
 Try to replicate this behavior using the Database First approach.
 
