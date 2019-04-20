@@ -75,19 +75,16 @@ namespace SerializationBinaryXMLTextFile
 		private void btnSerializeXML_Click(object sender, EventArgs e)
 		{
 			XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
-			using (StreamWriter writer = new StreamWriter("SerializedXML.xml"))
-			{
-				serializer.Serialize(writer, _participants);
-			}
+			using (FileStream s = File.Create("SerializedXML.xml"))
+				serializer.Serialize(s, _participants);
 		}
 
 		private void btnDeserializeXML_Click(object sender, EventArgs e)
 		{
 			XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
-			
-			using (StreamReader reader = new StreamReader("SerializedXML.xml"))
+			using (FileStream s = File.OpenRead("SerializedXML.xml"))
 			{
-				_participants = (List<Participant>)serializer.Deserialize(reader);
+				_participants = (List<Participant>)serializer.Deserialize(s);
 				DisplayParticipants();
 			}
 		}

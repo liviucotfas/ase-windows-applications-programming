@@ -85,20 +85,18 @@
 	```C#
 	XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
 
-	using (StreamWriter writer = new StreamWriter("SerializedXML.xml"))
-	{
-		serializer.Serialize(writer, _participants);
-	}
+	using (FileStream s = File.Create("SerializedXML.xml"))
+		serializer.Serialize(s, _participants);
 	```
 
 10. Handle the “Click” event for the “btnDeserializeXML” button as follows.
 
 	```C#
 	XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
-
-	using (StreamReader streamReader = new StreamReader("SerializedXML.xml"))
+	
+	using (FileStream s = File.OpenRead("SerializedXML.xml"))
 	{
-		_participants = (List<Participant>)serializer.Deserialize(streamReader);
+		_participants = (List<Participant>)serializer.Deserialize(s);
 		DisplayParticipants();
 	}
 	```
