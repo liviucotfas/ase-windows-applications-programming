@@ -11,7 +11,7 @@
 >A: you can use https://gitprint.com/ or https://pandoc.org/
 
 ## Prerequisites
-Microsoft Visual Studio 2017 (can be downloaded from https://visualstudio.microsoft.com/vs/community, http://microsoft.ase.ro, http://www.dreamspark.com/ )
+Microsoft Visual Studio 2017 (can be downloaded from https://visualstudio.microsoft.com/vs/community, http://microsoft.ase.ro )
 
 ## Further Reading
 - Discover best practices, sample applications and professional advice for building .NET applications on [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture) website;
