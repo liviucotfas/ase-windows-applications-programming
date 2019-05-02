@@ -348,3 +348,5 @@
 	}
 	```	
 ##  5. <a name='Bibliography'></a>Bibliography
+- `odbc` namespace (for Microsoft Access): https://docs.microsoft.com/en-us/dotnet/api/system.data.odbc
+- `sqlclient` namespace (for Microsoft SQL Server): https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient
