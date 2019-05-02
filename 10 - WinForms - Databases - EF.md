@@ -1,10 +1,24 @@
 # Windows Forms – Entity Framework
 
-## Objectives
+<!-- vscode-markdown-toc -->
+* 1. [Objectives](#Objectives)
+* 2. [Documentation](#Documentation)
+* 3. [Assigments (solved)](#Assigmentssolved)
+	* 3.1. [Code First](#CodeFirst)
+* 4. [Assigments (for you to try)](#Assigmentsforyoutotry)
+* 5. [Bibliography](#Bibliography)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Objectives'></a>Objectives
  1. perform CRUD (Create, Read, Update and Delete) operations using the code first approach;
  2. perform CRUD (Create, Read, Update and Delete) operations using the database first approach;
     
-## Documentation
+##  2. <a name='Documentation'></a>Documentation
  Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers usually need to write.
 
  It reduces the need for managing database connections, manually mapping datatables or writing stored procedures.
@@ -12,8 +26,10 @@
   1. Code First (create the domain classes and EntityFramework would generate the database tables)                                       
   2. Database First (create the database tables and EntityFramework would generate the classes that match the tables)
 
-## Assigments (solved)
-### Code First
+> Further reading: https://docs.microsoft.com/en-us/ef/
+
+##  3. <a name='Assigmentssolved'></a>Assigments (solved)
+###  3.1. <a name='CodeFirst'></a>Code First
 For this lecture we will use an SQLite database instance.
 
 Prerequisites
@@ -131,9 +147,10 @@ Steps:
     }
     ```
 
-## Assigments (for you to try)
+##  4. <a name='Assigmentsforyoutotry'></a>Assigments (for you to try)
 Try to replicate this behavior using the Database First approach.
 
-## Bibliography
+##  5. <a name='Bibliography'></a>Bibliography
 - https://code.msdn.microsoft.com/windowsapps/Entity-Framework-in-dc34a410
 - https://www.codeproject.com/Articles/221931/Entity-Framework-in-WinForms
+- Entity Framework Documentation: https://docs.microsoft.com/en-us/ef/
