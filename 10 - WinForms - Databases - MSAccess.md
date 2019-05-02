@@ -1,10 +1,11 @@
 # Windows Forms – Databases - MSAccess
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [Creating the database](#Creatingthedatabase)
-* 3. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
-* 4. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
-* 5. [Bibliography](#Bibliography)
+* 2. [Documentation](#Documentation)
+* 3. [Creating the database](#Creatingthedatabase)
+* 4. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
+* 5. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
+* 6. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -17,7 +18,12 @@
 - working with multiple related entities;
 - basic understanding of SQL Injection attacks.
 
-##  2. <a name='Creatingthedatabase'></a>Creating the database
+##  2. <a name='Documentation'></a>Documentation
+ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC. Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.
+
+> Further reading: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview
+
+##  3. <a name='Creatingthedatabase'></a>Creating the database
 
 **Activity**
 
@@ -25,7 +31,7 @@
 ![SQLite Preview](docs/8/msaccess.png)
 2. Save the database in the "*mdb"format
 
-##  3. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
+##  4. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
 
 **Activity**
 
@@ -232,7 +238,7 @@
 
 3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
 
-##  4. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
+##  5. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
 
 **Activity**
 > :octocat: Full source code available, check the `DatabaseDataAdapterMSAccess` sample.
@@ -347,6 +353,7 @@
 		#endregion
 	}
 	```	
-##  5. <a name='Bibliography'></a>Bibliography
+##  6. <a name='Bibliography'></a>Bibliography
+- ADO.NET overview: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview
 - `odbc` namespace (for Microsoft Access): https://docs.microsoft.com/en-us/dotnet/api/system.data.odbc
 - `sqlclient` namespace (for Microsoft SQL Server): https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient
