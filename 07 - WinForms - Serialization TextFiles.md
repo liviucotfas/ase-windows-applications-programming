@@ -144,10 +144,10 @@
 
 			foreach (var participant in _participants)
 			{
-				sw.WriteLine("{0}, {1}, {2}"
-					, participant.LastName
-					, participant.FirstName
-					, participant.BirthDate.ToShortDateString());
+				sw.WriteLine("\"{0}\", \"{1}\", \"{2}\""
+                            , participant.LastName.Replace("\"", "\"\"")
+							, participant.FirstName.Replace("\"", "\"\"")
+                            , participant.BirthDate.ToShortDateString());
 			}
 		}
 	}
