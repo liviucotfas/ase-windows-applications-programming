@@ -75,7 +75,7 @@ namespace StringBuilderString
 			b += "ello";
 
 			Console.WriteLine(a == b); //will return true because operator== is overloaded
-			Console.WriteLine((object)a == (object)b);  //will return false because the objects are different
+			Console.WriteLine((object)a == b);  //will return false because the objects are different
 
 			Console.ReadLine();
 		}
