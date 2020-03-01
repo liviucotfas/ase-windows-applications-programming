@@ -40,6 +40,7 @@ namespace ValidationCustomExceptions
 		
 		private void tbFirstName_Validated(object sender, EventArgs e)
 		{
+		https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.errorprovider.clear
 			errorProvider.SetError((Control)sender, string.Empty);
 		}
 

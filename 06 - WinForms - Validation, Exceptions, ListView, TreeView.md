@@ -39,6 +39,7 @@
 5. Handle the **Validated** event on **tbLastName** as follows:
 
 	```c#
+	//https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.errorprovider.clear
 	errorProvider.SetError((Control)sender, string.Empty);
 	```
 6. (optional) Set `AutoValidate` form property to `EnableAllowFocusChange` in order to allow the user to change the focus to a different control or to close the form.
