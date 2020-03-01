@@ -19,53 +19,43 @@
 1. Create a new project with the name “ValidationCustomExceptions”
 2. Create the following UI:  
 ![UI Preview](docs/6/ui-preview.png)
-3. Add ErrorProviders for the LastName and FirstName fields: **epLastName**, **epFirstName**
+3. Add an `ErrorProvider` and name it `errorProvider`.
+4. Add a method for validating the "Last Name" as follows:
+	```C#
+	private bool IsLastNameValid()
+	{
+		return string.IsNullOrWhiteSpace(tbLastName.Text.Trim());
+	}
+	```
 4. Handle the **Validating** event on **tbLastName** as follows:
 
 	```c#
-	string lastName = ((TextBox) sender).Text.Trim();
-
-	if (string.IsNullOrWhiteSpace(lastName))
+	if (!IsLastNameValid())
 	{
 		e.Cancel = true; //prevents the user from changing the focus to another control
-
-		epLastName.SetError((Control)sender, "The Last Name should not be empty!");
+		errorProvider.SetError((Control)sender, "Last Name is empty!");
 	}
 	```
 5. Handle the **Validated** event on **tbLastName** as follows:
 
 	```c#
-	epLastName.Clear();
+	errorProvider.SetError((Control)sender, string.Empty);
 	```
-6.	Handle the **Validating** and **Validated** events for the **tbFirstName** in a similar manner
-7. 	Handle the **Click** event on the “Add Participant” button as follows
+6. (optional) Set `AutoValidate` form property to `EnableAllowFocusChange` in order to allow the user to change the focus to a different control or to close the form.
+6. Handle the **Validating** and **Validated** events for the **tbFirstName** in a similar manner
+7. Handle the **Click** event on the “Add Participant” button as follows
 
 	```c#
 	private void btnAdd_Click(object sender, EventArgs e)
 	{
-		string firstName = tbFirstName.Text.Trim();
-		string lastName = tbLastName.Text.Trim();
-		DateTime birthDate = dtpBirthDate.Value;
-
-		bool isValid = true;
-
-		if (string.IsNullOrWhiteSpace(lastName))
-		{
-			epLastName.SetError(tbFirstName, "The Last Name should not be empty!");
-			isValid = false;
-		}
-
-		if (string.IsNullOrWhiteSpace(firstName))
-		{
-			epFirstName.SetError(tbFirstName, "The First Name should not be empty!");
-			isValid = false;
-		}
-
-		if (!isValid)
+		//https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.containercontrol.validatechildren
+		if (!ValidateChildren())
 		{
 			//An ErrorProvider control should
-			MessageBox.Show("The form contains errors!", 
-				"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show("The form contains errors!",
+				"Error",
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Error);
 
 			return;
 		}
