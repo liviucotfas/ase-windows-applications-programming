@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumStructClass", "ValueTyp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Array\Arrays.csproj", "{C9FAD7E9-1A72-41D8-84DE-8771E30D8CBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "ConstructorDestructor\Inheritance.csproj", "{EF011870-ADD9-496C-B977-6DACE8F89447}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{EF011870-ADD9-496C-B977-6DACE8F89447}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Collections", "03. Collections", "{2EF76BD0-9579-4300-BFEB-C18E64CF9FF1}"
 EndProject

@@ -2,13 +2,13 @@
 
 namespace ConstructorDestructor.Entities
 {
-	internal class Contractor : Person, IKnownProgrammingLanguages
+	internal class Contractor : Person, IDeveloper
 	{
 		#region IKnownProgrammingLanguages
-		public string[] KnownProgrammingLanguages { get; set; }
+		public string[] Languages { get; set; }
 		public bool Knows(string language)
 		{
-			return KnownProgrammingLanguages.Contains(language);
+			return Languages.Contains(language);
 		}
 		#endregion
 

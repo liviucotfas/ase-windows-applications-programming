@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ConstructorDestructor.Entities
 {
-	internal class SoftwareDeveloper : Employee, IKnownProgrammingLanguages
+	internal class SoftwareDeveloper : Employee, IDeveloper
 	{
 		#region Normal/Virtual/Abstract Methods
 		public new void PrintWageNormal()
@@ -22,11 +22,11 @@ namespace ConstructorDestructor.Entities
 		}
 		#endregion
 
-		#region IKnownProgrammingLanguages
-		public string[] KnownProgrammingLanguages { get; set; }
+		#region IDeveloper
+		public string[] Languages { get; set; }
 		public bool Knows(string language)
 		{
-			return KnownProgrammingLanguages.Contains(language);
+			return Languages.Contains(language);
 		}
 		#endregion
 

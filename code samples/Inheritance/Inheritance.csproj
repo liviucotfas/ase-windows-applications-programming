@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Entities\Contractor.cs" />
     <Compile Include="Entities\Employee.cs" />
-    <Compile Include="IKnownProgrammingLanguages.cs" />
+    <Compile Include="IDeveloper.cs" />
     <Compile Include="Entities\Manager.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Program.cs" />

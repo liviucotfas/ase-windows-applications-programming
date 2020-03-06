@@ -10,7 +10,7 @@
   <Class Name="ConstructorDestructor.Entities.SoftwareDeveloper">
     <Position X="3.75" Y="5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAEAAAAAAAAIAAAAAAAAAACAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAAGAAAAAAAAIAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\SoftwareDeveloper.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -30,18 +30,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ConstructorDestructor.Entities.Contractor">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="8.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Contractor.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="ConstructorDestructor.IKnownProgrammingLanguages" Collapsed="true">
-    <Position X="11.75" Y="1.25" Width="1.5" />
+  <Interface Name="ConstructorDestructor.IDeveloper">
+    <Position X="10.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
-      <FileName>IKnownProgrammingLanguages.cs</FileName>
+      <HashCode>AAAAAAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDeveloper.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

@@ -389,7 +389,7 @@ Question
 
 ##### Activity
 
-![](media/image1.png) Sample code available at <http://online.ase.ro> – “Operators” Sample 
+> :octocat: Sample code available – Check the “Operators” Sample 
 
 1.  For the standard Person class overload the \>, \< and explicit (int) operators
 
@@ -490,6 +490,8 @@ and bonus calculations for the persons that work in a certain software
 development company. The categories of persons are: Software Developer,
 Managers.
 
+> :octocat: Sample code available – Check the "Inheritance" Sample 
+
 1.  Create a new project that will include the classes shown in Figure 1.
 
 2.  Add an abstract Person class (keep in mind that we only consider the three types of person categories mentioned above)
@@ -497,41 +499,36 @@ Managers.
 	```C#
 	internal abstract class Person
 	{
-		public string FirstName { get; set; }
-		public string LastName { get; set; }
-		public int Age { get; set; }
+		public string Name { get; set; }
+
+		public Person(string name)
+		{
+			Name = name;
+		}
 	}
 	```
 
-3.  Add an abstract Employee class
+3.  Add an abstract `Employee` class
 
 	```C#
 	internal abstract class Employee : Person
 	{
-		// A static point of data.
-		private static double bonusRate = 1.1;
-		// A static property.
-		public static double BonusRate
+		#region Normal/Virtual/Abstract Methods
+		public void PrintWageNormal()
 		{
-			get { return bonusRate; }
-			set { bonusRate = value; }
+			Console.WriteLine("Employee - PrintWageNormal");
 		}
 
-		public double Wage { get; set; }
-
-		//Abstract method
-		public abstract double CalculateBonusAbstract();
-
-		public double CalculateBonusNormal()
+		public virtual void PrintWageVirtual()
 		{
-			Console.WriteLine("Employee - CalculateBonusNormal");
-			return bonusRate * Wage;
+			Console.WriteLine("Employee - PrintWageVirtual");
 		}
 
-		public virtual double CalculateBonusVirtual()
+		public abstract void PrintWageAbstract();
+		#endregion
+
+		public Employee(string name) : base(name)
 		{
-			Console.WriteLine("Employee - CalculateBonusVirtual");
-			return bonusRate * Wage;
 		}
 	}
 	```
@@ -539,31 +536,35 @@ Managers.
 4.  Add a SoftwareDeveloper class
 
 	```C#
-	internal class SoftwareDeveloper : Employee
+	internal class SoftwareDeveloper : Employee, IDeveloper
 	{
-		private static double bonusRate = 1.2;
-
-		public SoftwareDeveloper(double wage)
+		#region Normal/Virtual/Abstract Methods
+		public new void PrintWageNormal()
 		{
-			Wage = wage;
+			Console.WriteLine("SoftwareDeveloper - PrintWageNormal");
 		}
 
-		public override double CalculateBonusAbstract()
+		public override void PrintWageVirtual()
 		{
-			Console.WriteLine("SoftwareDeveloper - CalculateBonusAbstract");
-			return bonusRate * Wage;
+			Console.WriteLine("SoftwareDeveloper - CalculateBonusVirtual");
 		}
 
-		public new double CalculateBonusNormal()
+		public override void PrintWageAbstract()
 		{
-			Console.WriteLine("SoftwareDeveloper - CalculateBonusNormal");
-			return bonusRate * Wage;
+			Console.WriteLine("SoftwareDeveloper - PrintWageAbstract");
 		}
+		#endregion
 
-		public override double CalculateBonusVirtual()
+		#region IDeveloper
+		public string[] Languages { get; set; }
+		public bool Knows(string language)
 		{
-			Console.WriteLine("Employee - CalculateBonusVirtual");
-			return bonusRate * Wage;
+			return Languages.Contains(language);
+		}
+		#endregion
+
+		public SoftwareDeveloper(string name) : base(name)
+		{
 		}
 	}
 	```
@@ -574,22 +575,23 @@ Managers.
 	```C#
 	private static void AbstractNormalVirtualMethods()
 	{
-		var softwareDeveloper = new SoftwareDeveloper(2000);
-
-		//Abstract method
-		Console.WriteLine("\n###Abstract");
-		Console.WriteLine(softwareDeveloper.CalculateBonusAbstract());
-		Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusAbstract());
+		SoftwareDeveloper sd = new SoftwareDeveloper("SoftwareDeveloper1");
+		Employee e = (Employee) sd; //same instance as above
 
 		//Normal method
 		Console.Write("\n###Hide");
-		Console.WriteLine(softwareDeveloper.CalculateBonusNormal());
-		Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusNormal());
+		sd.PrintWageNormal();
+		e.PrintWageNormal();
 
 		//Virtual method
 		Console.Write("\n###Override");
-		Console.WriteLine(softwareDeveloper.CalculateBonusVirtual());
-		Console.WriteLine(((Employee)softwareDeveloper).CalculateBonusVirtual());
+		sd.PrintWageVirtual();
+		e.PrintWageVirtual();
+
+		//Abstract method
+		Console.WriteLine("\n###Abstract");
+		sd.PrintWageAbstract();
+		e.PrintWageAbstract();
 	}
 	```
 
@@ -599,12 +601,9 @@ Managers.
 
 ##### Activity
 
-Let’s imagine that the company starts to work with external contractors. You are
-required to add this category of persons to the previously developed
-application. Moreover, the management is interested to quickly find what
-programming languages a Software Developers or Contractor knows.
+Let’s imagine that the company starts to work with external contractors. You are required to add this category of persons to the previously developed application. Moreover, the management is interested to quickly find what programming languages a Software Developers or Contractor knows.
 
-1.  Add the “Contractor” class
+1.  Add the `Contractor` class
 
 	```C#
 	internal class Contractor : Person
@@ -613,20 +612,19 @@ programming languages a Software Developers or Contractor knows.
 	}
 	```
 
-2.  Add the “IKnownProgrammingLanguages” interface
+2.  Add the `IDeveloper` interface
 
 	```C#
-	internal interface IKnownProgrammingLanguages
+	internal interface IDeveloper
 	{
-		string[] KnownProgrammingLanguages { get; set; }
+		string[] Languages { get; set; }
 		bool Knows(string language);
 	}
 	```
 
-3.  Derive the “SoftwareDevloper” and “Contractor” classes from the “IKnownProgrammingLanguages” interface
+3.  Derive the `SoftwareDevloper` and `Contractor` classes from the `IDeveloper` interface
 
-4.  Add a new method to the “Program” class and call it from the “Main()” method. Inside the method define an array of persons and populate it with
-    the three categories of persons in the company (SofwareDeveloper, Manager, Contractor).
+4.  Add a new method to the `Program` class and call it from the `Main()` method. Inside the method define an array of persons and populate it with the three categories of persons in the company (SofwareDeveloper, Manager, Contractor).
 
 5.  In the previous method iterate the list of persons and display the known programming languages for each person
 
