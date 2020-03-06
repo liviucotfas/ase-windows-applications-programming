@@ -16,7 +16,7 @@
 
 **Activity**
 
-> :octocat: Sample Code available at <http://online.ase.ro> – "ClipboardSample" Sample 
+> :octocat: Sample Code available – Check the "ClipboardSample" Sample 
 
 ##  2. <a name='DragandDrop'></a>Drag and Drop
 **Documentation**
@@ -24,7 +24,7 @@
 
 **Activity**
 
-> :octocat: Sample Code available at <http://online.ase.ro> – “DragDropSample” Sample 
+> :octocat: Sample Code available – Check the “DragDropSample” Sample 
 
 1. Create a new project with the name “DragDropSample”
 2. Create the UI shown below  

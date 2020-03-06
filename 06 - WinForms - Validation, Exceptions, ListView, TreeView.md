@@ -14,7 +14,7 @@
 
 **Assignment**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “ValidationCustomExceptions” Sample
+![C#](media/image1.png) Sample Code available – Check the “ValidationCustomExceptions” Sample
 
 1. Create a new project with the name “ValidationCustomExceptions”
 2. Create the following UI:  
@@ -70,7 +70,7 @@
 
 **Assignment**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “ListViewSample” Sample
+![C#](media/image1.png) Sample Code avilable – Check the “ListViewSample” Sample
 
 1. Create a new project with the name “ListViewSample”
 2. Rename “Form1” to “MainForm”
@@ -157,7 +157,7 @@
 
 **Assignment**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “TreeViewSample” Sample
+![C#](media/image1.png) Sample Code available – Check the “TreeViewSample” Sample
 
 1. Create a new project with the name “TreeViewSample”
 2. Create the following UI:  
@@ -296,7 +296,7 @@
 
 **Assignment**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “ValidationCustomExceptions” Sample
+![C#](media/image1.png) Sample Code available – Check the “ValidationCustomExceptions” Sample
 
 1. Add the following “InvalidBirthDateException” class:
 

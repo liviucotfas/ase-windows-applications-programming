@@ -7,7 +7,7 @@
 
 ## <a name="chart-control"></a>UserControl
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – "NumericTextBoxUserControlSample"
+![C#](media/image1.png) Sample Code available – Check the "NumericTextBoxUserControlSample"
 
 ## <a name="usercontrol"></a> UserControl + Drawing
 
@@ -105,7 +105,7 @@ The Graphics class provides methods for drawing objects to the display device.
 
 **Activity**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “PieChartGraphicsSample” Sample  
+![C#](media/image1.png) Sample Code available – Check the “PieChartGraphicsSample” Sample  
 ![Piechart](docs/9/piechart.jpg)
 
 1. Create a new project with the name “PieChartGraphicsSample”
@@ -256,5 +256,5 @@ The Graphics class provides methods for drawing objects to the display device.
 	
 **Activity**
 
-![C#](media/image1.png) Sample Code available at <http://online.ase.ro> – “ClockUserControlSample” Sample  
+![C#](media/image1.png) Sample Code available – Check the “ClockUserControlSample” Sample  
 	![Clock Example](docs/9/clock-example.jpg)

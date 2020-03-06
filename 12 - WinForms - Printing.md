@@ -2,7 +2,7 @@
 
 **Activity**
 
-> :octocat:  Sample Code available at <http://online.ase.ro> – “PrintingRecordsSample” Sample
+> :octocat:  Sample Code available – Check the “PrintingRecordsSample” Sample
 
 1. Create a copy of the “ListViewBasicSample” project and name it “PrintingRecordsSample”
 2. Add a `MenuStrip` control with the options shown in the following screenshot
@@ -176,6 +176,6 @@
  
 **Activity**
 
-> :octocat:  Sample Code available at <http://online.ase.ro> – “PrintingLongTextSample” Sample
+> :octocat:  Sample Code available – Check the “PrintingLongTextSample” Sample
 
 ![Printing Sample](docs/9/printing-sample.jpg)

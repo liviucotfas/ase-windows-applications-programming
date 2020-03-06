@@ -46,7 +46,7 @@ Frequently used properties:
 
 **Assignment**	
 
-> :octocat: Sample Code available at <http://online.ase.ro> – “SimpleWebBrowser” Sample
+> :octocat: Sample Code available – Check the “SimpleWebBrowser” Sample
 
 1. Create the following application  
 	![Browser App Preview](docs/5/browser-app-preview.png)
@@ -81,7 +81,7 @@ Depressing a mouse button when the cursor is over a control typically raises the
 
 **Assignment**
 
-> :octocat: Sample code available at <http://online.ase.ro> – “MouseEvents” Sample
+> :octocat: Sample code available – Check the “MouseEvents” Sample
 
 1. Create the following UI  
 	![Mouse Events UI](docs/5/mouse-events.png)
@@ -148,7 +148,7 @@ Depressing a mouse button when the cursor is over a control typically raises the
 We want to create a numeric only TextBox that can be used to build a simple calculator application, such as the one bellow.  
 ![Text Box Example](docs/5/text-box.png)
 
-> :octocat: Sample code available at <http://online.ase.ro> – “KeyEvents” Sample
+> :octocat: Sample code available – Check the “KeyEvents” Sample
 
 1. Create a new project with the name “KeyEventsNumericTextBox”
 2. Add a TextBox and name it “tbNumericTextBox”
