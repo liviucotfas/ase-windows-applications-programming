@@ -3,10 +3,10 @@
 namespace DelegatesEvents
 {
 	// This delegate can point to any method, taking two integers and returning an integer.
-	public delegate int BinaryOp(int x, int y);
+	internal delegate int BinaryOp(int x, int y);
 
 	// 
-	public class SimpleMath
+	internal class SimpleMath
 	{
 		public static int Add(int x, int y)
 		{ return x + y; }
@@ -19,7 +19,7 @@ namespace DelegatesEvents
 		private static void Main()
 		{
 			Console.WriteLine("***** Delegate Example *****\n");
-			
+
 			//Definire si instantiere delegat
 			BinaryOp b = new BinaryOp(SimpleMath.Add);
 			//BinaryOp b = new BinaryOp(SimpleMath.Subtract));

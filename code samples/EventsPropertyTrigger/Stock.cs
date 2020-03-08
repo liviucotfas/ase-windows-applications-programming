@@ -4,7 +4,7 @@
 
 	internal class Stock
 	{
-		private string _symbol;
+		private readonly string _symbol;
 		private decimal _price;
 
 		public Stock(string symbol)

@@ -3,10 +3,10 @@ using System.Threading;
 
 namespace EventsMethodTrigger
 {
-    public delegate void TemperatureReading(double temperature);
+    delegate void TemperatureReading(double temperature);
 
 	//Broadcaster
-    public class TemperatureSensor : IDisposable
+    class TemperatureSensor : IDisposable
     {
 		#region Attributes
 		private readonly Timer _timer;
@@ -35,7 +35,7 @@ namespace EventsMethodTrigger
     }
 
 	//Subscriber or Observer
-    public class MonitoringService
+    class MonitoringService
     {
 	    public void TempartureReadingChanged(double temperature)
 	    {
@@ -48,8 +48,8 @@ namespace EventsMethodTrigger
 		}
 	}
 
-	internal class ProgMain
-    {
+	class Program
+	{
 		private static void Main()
         {
 			var ts1 = new TemperatureSensor(TimeSpan.FromSeconds(2));
