@@ -2,10 +2,10 @@
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [ ArrayList](#ArrayList)
+* 2. [ArrayList](#ArrayList)
 * 3. [List\<T\>](#ListT)
 * 4. [Queues, Stacks, and Sets](#QueuesStacksandSets)
-* 5. [ Custom Collections](#CustomCollections)
+* 5. [Custom Collections](#CustomCollections)
 * 6. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
@@ -20,7 +20,7 @@
 - have an overview of the available collection types
 - know how to implement a custom collection with the help of `IEnumerator<T>` and `IEnumerable<T>`
 
-##  2. <a name='ArrayList'></a> ArrayList
+##  2. <a name='ArrayList'></a>ArrayList
 
 **Assignment**
 > :octocat: Sample code available – Check the “StandardCollections” Sample
@@ -129,7 +129,7 @@
     and many others:
     [link](https://msdn.microsoft.com/en-us/library/mt481475(v=vs.110).aspx)
 
-##  5. <a name='CustomCollections'></a> Custom Collections
+##  5. <a name='CustomCollections'></a>Custom Collections
 
 **Assignment**
 
