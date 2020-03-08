@@ -272,30 +272,30 @@ Question
 
 ### ICloneable
 
-1.  Based on the “Person” class, derive the “PersonLuckyNumbers” class.
+1.  Based on the `Person` class, derive the `Student` class.
 
 	```C#
-	internal class PersonLuckyNumbers : Person
+	internal class Student : Person
 	{
-		public int[] LuckyNumbers { get; set; }
+		public int[] Marks { get; set; }
 
-		public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+		public Student(string name, int age, int[] marks) : base(name, age)
 		{
-			LuckyNumbers = luckyNumbers;
+			Marks = marks;
 		}
 	}
 	```
 
-2.  Add the following method in the “Program” class and call it from the Main method
+2.  Add the following method in the `Program` class and call it from the `Main` method
 
 	```C#
 	private static void ShallowCopyEqualOperator()
 	{
-		var p1 = new PersonLuckyNumbers("Name 1", 21, new []{13, 26, 39});
+		var p1 = new Student("Name 1", 21, new []{10, 10, 10});
 		var p2 = p1;
 
 		p1.Age = 12;
-		p1.LuckyNumbers[0] = 1;
+		p1.Marks[0] = 2;
 
 		Console.WriteLine(p1);
 		Console.WriteLine(p2);
@@ -304,39 +304,39 @@ Question
 
 3.  Run the application and notice the values in the two objects
 
-4.  Implement IClonable interface for the “PersonLuckyNumbers” class as follows (shallow copy only)
+4.  Implement the `ICloneable` interface for the `Student` class as follows (shallow copy only)
 
 	```C#
-	internal class PersonLuckyNumbers : Person, ICloneable
+	internal class Student : Person, ICloneable
 	{
-		public int[] LuckyNumbers { get; set; }
+		public int[] Marks { get; set; }
 
-		public PersonLuckyNumbers(string name, int age, int[] luckyNumbers) : base(name, age)
+		public Student(string name, int age, int[] marks) : base(name, age)
 		{
-			LuckyNumbers = luckyNumbers;
+			Marks = marks;
 		}
 
 		public object Clone()
 		{
 			// First get a shallow copy.
-			var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+			var clone = (Student)MemberwiseClone();
 			
-			return newPerson;
+			return clone;
 		}
 	}
 	```
 
-5.  Add the following method in the “Program” class and call it from the Main method
+5.  Add the following method in the `Program` class and call it from the `Main` method
 
 	```C#
 	private static void DeepCopyICloneable()
 	{
-		var p1 = new PersonLuckyNumbers("Name 1", 21, new[] { 13, 26, 39 });
+		var p1 = new Student("Name 1", 21, new[] { 10, 10, 10 });
 		Console.WriteLine();
 		var p2 = p1.Clone();
 
 		p1.Age = 12;
-		p1.LuckyNumbers[0] = 1;
+		p1.Marks[0] = 1;
 
 		Console.WriteLine(p1);
 		Console.WriteLine(p2);
@@ -351,14 +351,15 @@ Question
 	public object Clone()
 	{
 		// First get a shallow copy.
-		var newPerson = (PersonLuckyNumbers)MemberwiseClone();
+		var newPerson = (Student)MemberwiseClone();
 
 		// Then fill in the gaps.
-		newPerson.LuckyNumbers = new int[LuckyNumbers.Length];
-		for (var i=0; i< LuckyNumbers.Length; i++)
+		newPerson.Marks = new int[Marks.Length];
+		for (var i=0; i< Marks.Length; i++)
 		{
-			newPerson.LuckyNumbers[i] = LuckyNumbers[i];
+			newPerson.Marks[i] = Marks[i];
 		}
+		//newPerson.Marks = (int[])Marks.Clone();
 
 		return newPerson;
 	}
