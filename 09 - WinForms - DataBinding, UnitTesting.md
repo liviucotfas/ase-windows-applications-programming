@@ -177,7 +177,9 @@ Cases:
 
 ##  3. <a name='UnitTesting'></a>Unit Testing
 
-> Documentation: [link](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+> Documentation: 
+> * [https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics) 
+> * [docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
 
 **Activity**
 > :octocat: Full source code available, check the `DataBindingSample.Tests` sample.
