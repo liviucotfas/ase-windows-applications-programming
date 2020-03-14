@@ -1,7 +1,6 @@
 # Windows Forms – Databases
 
 <!-- vscode-markdown-toc -->
-	* 1. [Contents](#Contents)
 * 1. [Creating the database](#Creatingthedatabase)
 * 2. [Connected Data Access Architecture](#ConnectedDataAccessArchitecture)
 * 3. [ Disconnected Data Access Architecture](#DisconnectedDataAccessArchitecture)
