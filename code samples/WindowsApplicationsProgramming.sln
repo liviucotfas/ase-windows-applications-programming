@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.4
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{C375BE4E-DFF2-4277-A93F-3E889F1C7146}"
 EndProject
@@ -55,7 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsPropertyTrigger", "Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsPropertyTriggerEventArgs", "EventsPropertyTriggerEventArgs\EventsPropertyTriggerEventArgs.csproj", "{359B7CBB-CDE6-403E-8EA4-F6EC7F51E2EF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14. Database", "14. Database", "{A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14. Windows Forms - Database", "14. Windows Forms - Database", "{A8F9A7BF-5AF8-4C23-A99D-6737FCAE4F2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCommandSQLite", "DatabaseCommandSQLite\DatabaseCommandSQLite.csproj", "{5175D0A8-9C62-43B9-B760-E9941F61A6F4}"
 EndProject
