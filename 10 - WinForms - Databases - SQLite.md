@@ -1,4 +1,4 @@
-# Windows Forms – Databases
+# Windows Forms – Databases - SQLite
 
 <!-- vscode-markdown-toc -->
 * 1. [Creating the database](#Creatingthedatabase)
