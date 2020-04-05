@@ -22,7 +22,7 @@
 
 > :octocat: Full source code available, check the `DialogSample` sample.
 
-1. Create a copy of the “BasicListView” project and name it “DialogSample”
+1. Create a copy of the “ListViewBasicSample” project and name it “DialogSample”
 
 2. Create the following UI
 
