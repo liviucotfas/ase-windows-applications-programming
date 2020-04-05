@@ -14,7 +14,7 @@
 The Graphics class provides methods for drawing objects to the display device.
 
 **Activity**
-1. Create a new project of the type ClassLibrary (not Windows Forms) with the name "ChartLibrary"
+1. Create a new project of the type `Class Library (.NET Framework)` (recommended) or `Windows Forms Control Library (.NET Framework)` with the name "ChartLibrary"
 2. Add a new class `BarChartValue`, defined as follows:
 
 	```c#
