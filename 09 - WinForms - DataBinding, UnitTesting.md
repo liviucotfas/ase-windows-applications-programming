@@ -143,7 +143,7 @@ Cases:
 	}
 	```
 
-5. Update the  “MainForm” so that it is defined as follow.
+5. Mofify the `MainForm` class as follows.
 
 	```c#
 	public partial class MainForm : Form
@@ -158,18 +158,26 @@ Cases:
 			_viewModel = new MainFormViewModel();
 		}
 
-		private void MainForm_Load(object sender, EventArgs e)
-		{
-			dgvParticipants.DataSource = _viewModel.Participants;
-			tbLastName.DataBindings.Add("Text",_viewModel,"LastName");
-			tbFirstName.DataBindings.Add("Text", _viewModel, "FirstName");
-			dtpBirthDate.DataBindings.Add("Value", _viewModel, "BirthDate");
-		}
-
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			_viewModel.AddParticipant();
 		}
+	}
+	```
+
+5. Handle the `Load` event of the `MainForm` as follows.
+
+	```c#
+	private void MainForm_Load(object sender, EventArgs e)
+	{
+		dgvParticipants.DataSource = _viewModel.Participants;
+					
+		//tbLastName.DataBindings.Add("Text", _viewModel, "LastName");
+		//Recommended (without magic strings):
+		tbLastName.DataBindings.Add("Text", _viewModel, nameof(MainFormViewModel.LastName));
+
+		tbFirstName.DataBindings.Add("Text", _viewModel, "FirstName");
+		dtpBirthDate.DataBindings.Add("Value", _viewModel, "BirthDate");
 	}
 	```
 
