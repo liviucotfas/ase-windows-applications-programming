@@ -243,7 +243,7 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 **Activity**
 > :octocat: Full source code available, check the `DatabaseDataAdapterMSAccess` sample.
 
-1. Create a copy of the “BasicListView” project and name it “DatabaseDataAdapterMSAccess”
+1. Create a copy of the “ListViewBasicSample” project and name it “DatabaseDataAdapterMSAccess”
 2. Replace the “ListView” control with a “DataGrid” control (Name: dgvParticipants)
 3. Modify the “MainForm” class as follows:
 
