@@ -91,7 +91,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewSample", "ListViewS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13. Windows Forms - DataBinding", "13. Windows Forms - DataBinding", "{BF3BF946-C947-4AFC-8ABB-9C2ED1A0E687}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. Serialization, TextFiles, XML", "11. Serialization, TextFiles, XML", "{21CE9FC6-1F31-4200-9DC1-BD38FB9AC299}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. Windows Forms - Serialization, TextFiles, XML", "11. Windows Forms - Serialization, TextFiles, XML", "{21CE9FC6-1F31-4200-9DC1-BD38FB9AC299}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardExceptions", "StandardExceptions\StandardExceptions.csproj", "{23D43178-0B76-40BD-92FB-EF94113562EF}"
 EndProject
