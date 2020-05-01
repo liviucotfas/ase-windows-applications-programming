@@ -136,5 +136,6 @@
 3. Remove the GroupBox previously used for adding new participants from the MainForm. Replace it instead with a button that will use the EditForm in order to add new participants.
 4. Allow the user to choose the race in which the user is going to participate as shown bellow.
 	![race](docs/10/db-add-entity.png)
+5. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
 
 ##  5. <a name='Bibliography'></a>Bibliography
