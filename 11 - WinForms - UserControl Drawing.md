@@ -13,6 +13,8 @@
 <!-- /vscode-markdown-toc -->
 
 ##  1. <a name='Objectives'></a>Objectives
+- understanding the concept of `usercontrol`;
+- creating a `usercontrol` and using it in a different project;
 
 ##  2. <a name='UserControl'></a>UserControl
 
