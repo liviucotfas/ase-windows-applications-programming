@@ -183,7 +183,7 @@ Cases:
 
 > Further reading about the MVVM pattern: https://msdn.microsoft.com/en-us/library/hh848246.aspx
 
-**:trophy: Assignments (for you to try)**
+**Assignments (for you to try)** :video_game:
 1. Add a button to the `MainForm` that will allow the user to delete the currently selected participant.
 2. Add a button to the `MainForm` that will allow the user to edit the currently selected participant using a secondary form (ex: `EditForm`).
 
