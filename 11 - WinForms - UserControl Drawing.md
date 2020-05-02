@@ -99,7 +99,7 @@ The Graphics class provides methods for drawing objects to the display device.
 8. Add a reference to the ClassLibrary project created earlier
 9. From the ToolBox drag a 'PieChartControl' to the default form in the project
 
-**Homework**
+**Assignments (for you to try)** :video_game:
 
 1. Display on each bar the `Label` and `Value` properties of the corresponding `BarChartValue` object.
 
