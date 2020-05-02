@@ -38,7 +38,7 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 		`FirstName` TEXT,
 		`BirthDate` TEXT
 	);
-```
+	```
 
 ##  2. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
 
