@@ -106,6 +106,7 @@ The Graphics class provides methods for drawing objects to the display device.
 **Activity**
 
 > :octocat: Full source code available, check the `PieChartGraphicsSample` sample
+
 ![Piechart](docs/9/piechart.jpg)
 
 1. Create a new project with the name “PieChartGraphicsSample”
@@ -257,4 +258,5 @@ The Graphics class provides methods for drawing objects to the display device.
 **Activity**
 
 > :octocat: Full source code available, check the `“ClockUserControlSample”` sample
-	![Clock Example](docs/9/clock-example.jpg)
+
+![Clock Example](docs/9/clock-example.jpg)
