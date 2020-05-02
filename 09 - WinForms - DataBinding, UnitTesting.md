@@ -220,7 +220,7 @@ Cases:
 		}
 	}
 	```
-**Assignments (for you to try)**
+**:video_game: Assignments (for you to try)**
 1. Implement additional unit test methods (ex: check whether the `LastName` property of the added participant is correct).
 
 ##  4. <a name='Bibliography'></a>Bibliography
