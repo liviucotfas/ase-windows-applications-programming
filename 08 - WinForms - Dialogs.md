@@ -131,10 +131,10 @@
 	```
 
 ##  4. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
-1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the ListView
-2. Display a contextual menu when the user right clicks on a participant in the ListView. The contextual menu will include the options to edit or delete the participant.
-3. Remove the GroupBox previously used for adding new participants from the MainForm. Replace it instead with a button that will use the EditForm in order to add new participants.
-4. Allow the user to choose the race in which the user is going to participate as shown bellow.
+1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the `ListView`.
+2. Display a contextual menu when the user right clicks on a participant in the `ListView`. The contextual menu will include the options to edit or delete the participant.
+3. Remove the `GroupBox` previously used for adding new participants from the `MainForm`. Replace it instead with a button that will use the `EditForm` in order to add new participants.
+4. Allow the user to choose the race in which the user is going to participate as shown below. Try a simple implementation in which the race is stored as a `string` in the `Participant` class. Afterwards, try a more complicated implementation by defining  a `Race` class. The `Participant` class will include in this case a property of the type `Race`.
 	![race](docs/10/db-add-entity.png)
 5. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
 
