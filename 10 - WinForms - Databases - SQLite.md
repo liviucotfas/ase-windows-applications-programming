@@ -247,9 +247,16 @@ CREATE TABLE `Participant` (
 
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 2. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
-3. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
-4. Allow the user to choose the competition in which the participant is going to run as shown below. Define a `Race` (RaceId: `int` or `long`, Name:`string`) class and add a property `RaceId` to the `Participant` class (the value of the property will be persisted in the database). For the complete sample (using MSAccess instead), check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
+3. Allow the user to choose the competition in which the participant is going to run as shown below. Define a `Race` (RaceId: `int` or `long`, Name:`string`) class and add a property `RaceId` to the `Participant` class (the value of the property will be persisted in the database).
+
 	![race](docs/10/db-add-entity.png)
+
+	>Note: For the complete sample (using MSAccess instead), check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. 
+4. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly. 
+	
+	>Hint: you can either use databinding (easier, better, recommended) or you can work directly with the `Rows` property of the `DataGridView`.
+
+	>Note: The "DatabaseCommandSQLiteDataGridView" project in the "code samples" folder uses the `DataGridView` control (databinding) and implements the delete functionality. 	
 
 ##  3. <a name='DisconnectedDataAccessArchitecture'></a> (Optional) Disconnected Data Access Architecture
 
