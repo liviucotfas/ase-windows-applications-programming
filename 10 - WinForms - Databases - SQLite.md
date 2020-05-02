@@ -31,13 +31,13 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 2. Choose the option “New Database”
 3. Add a new table as follows (you can also use the designer)
 
-```SQL
-CREATE TABLE `Participant` (
-	`Id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`LastName` TEXT,
-	`FirstName` TEXT,
-	`BirthDate` TEXT
-);
+	```SQL
+	CREATE TABLE `Participant` (
+		`Id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+		`LastName` TEXT,
+		`FirstName` TEXT,
+		`BirthDate` TEXT
+	);
 ```
 ##  2. <a name='ConnectedDataAccessArchitecture'></a>Connected Data Access Architecture
 
