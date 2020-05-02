@@ -28,6 +28,8 @@
 
 > Further reading: https://docs.microsoft.com/en-us/ef/
 
+> EF Core Database providers: https://docs.microsoft.com/en-us/ef/core/providers
+
 ##  3. <a name='Assigmentssolved'></a>Assigments (solved)
 ###  3.1. <a name='CodeFirst'></a>Code First
 For this lecture we will use an SQLite database instance.
