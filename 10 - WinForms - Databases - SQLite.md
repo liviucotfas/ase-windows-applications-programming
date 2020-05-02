@@ -11,8 +11,18 @@
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+##  1. <a name='Objectives'></a>Objectives
+- perform CRUD (Create, Read, Update and Delete) operations using the connected data access approach;
+- perform CRUD (Create, Read, Update and Delete) operations using the disconnected data access approach;
+- working with multiple related entities;
+- basic understanding of SQL Injection attacks.
 
-##  1. <a name='Creatingthedatabase'></a>Creating the database
+##  2. <a name='Documentation'></a>Documentation
+ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC. Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.
+
+> Further reading: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview
+
+##  3. <a name='Creatingthedatabase'></a>Creating the database
 
 **Activity**
 
@@ -229,9 +239,21 @@ CREATE TABLE `Participant` (
 		}
 	}
 	```
-12. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
+12. Why do we use command parameters instead of building the query using string concatenation instead?
 
-##  3. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
+ 	> Read more about the SQL Injection attack at: https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-injection
+
+**Assignments (for you to try)** :video_game:
+
+1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
+2. Allow the user to choose the competition in which the user is going to participate as shown below. For the complete sample (using MSAccess instead), check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
+	![race](docs/10/db-add-entity.png)
+3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
+4. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
+5. Allow the user to choose the race in which the user is going to participate as shown below. Define a `Race` (RaceId: `int` or `long`, Name:`string`) class and add a property of the type `Race` to the `Participant` class. The ifnormation regarding the race should also be persisted in the database.
+	![race](docs/10/db-add-entity.png)
+
+##  3. <a name='DisconnectedDataAccessArchitecture'></a> (Optional) Disconnected Data Access Architecture
 
 **Activity**
 > :octocat: Full source code available, check the `DatabaseDataAdapterSQLite` sample
@@ -347,3 +369,6 @@ CREATE TABLE `Participant` (
 	}
 	```	
 ##  4. <a name='Bibliography'></a>Bibliography
+- ADO.NET overview: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview
+- `odbc` namespace (for Microsoft Access): https://docs.microsoft.com/en-us/dotnet/api/system.data.odbc
+- `sqlclient` namespace (for Microsoft SQL Server): https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient
