@@ -12,6 +12,9 @@
 <!-- /vscode-markdown-toc -->
 
 ##  1. <a name='Objectives'></a>Objectives
+- using the `PrintPreviewDialog`, `PrintDialog` and `PageSetupDialog` dialogs;
+- printing text and shapes;
+- printing a document that exceeds a single page;
 
 ##  2. <a name='Printing'></a>Printing
 **Activity**
