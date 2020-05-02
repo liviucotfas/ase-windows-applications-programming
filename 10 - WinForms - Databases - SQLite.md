@@ -254,7 +254,7 @@ CREATE TABLE `Participant` (
 	>Note: For the complete sample (using MSAccess instead), check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. 
 4. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly. 
 	
-	>Hint: you can either use databinding (easier, better, recommended) or you can work directly with the `Rows` property of the `DataGridView`.
+	>Hint: you can either use databinding (easier, better - recommended) or you can work directly with the `Rows` property of the `DataGridView`.
 
 	>Note: The "DatabaseCommandSQLiteDataGridView" project in the "code samples" folder uses the `DataGridView` control (databinding) and implements the delete functionality. 	
 
