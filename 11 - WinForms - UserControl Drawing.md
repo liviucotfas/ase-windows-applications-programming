@@ -1,7 +1,6 @@
 # Windows Forms – UserControl, Drawing
 
 <!-- vscode-markdown-toc -->
-	* 1. [Contents](#Contents)
 * 1. [Objectives](#Objectives)
 * 2. [UserControl](#UserControl)
 * 3. [ UserControl + Drawing](#UserControlDrawing)
@@ -12,11 +11,6 @@
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
-
-###  1. <a name='Contents'></a>Contents
-
-1. [UserControl](#usercontrol)
-2. [UserControl + Drawing](#drawing)
 
 ##  1. <a name='Objectives'></a>Objectives
 
