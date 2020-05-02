@@ -1,15 +1,30 @@
 # Windows Forms – UserControl, Drawing
 
-##	 Contents
+<!-- vscode-markdown-toc -->
+	* 1. [Contents](#Contents)
+* 1. [Objectives](#Objectives)
+* 2. [UserControl](#UserControl)
+* 3. [ UserControl + Drawing](#UserControlDrawing)
+* 4. [Bibliography](#Bibliography)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+###  1. <a name='Contents'></a>Contents
 
 1. [UserControl](#usercontrol)
 2. [UserControl + Drawing](#drawing)
 
-## <a name="chart-control"></a>UserControl
+##  1. <a name='Objectives'></a>Objectives
+
+##  2. <a name='UserControl'></a>UserControl
 
 > :octocat: Full source code available, check the `NumericTextBoxUserControlSample` sample
 
-## <a name="usercontrol"></a> UserControl + Drawing
+##  3. <a name='UserControlDrawing'></a> UserControl + Drawing
 
 The Graphics class provides methods for drawing objects to the display device.
 
@@ -260,3 +275,5 @@ The Graphics class provides methods for drawing objects to the display device.
 > :octocat: Full source code available, check the `“ClockUserControlSample”` sample
 
 ![Clock Example](docs/9/clock-example.jpg)
+
+##  4. <a name='Bibliography'></a>Bibliography

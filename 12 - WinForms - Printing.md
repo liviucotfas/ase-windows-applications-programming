@@ -1,5 +1,17 @@
 # Windows Forms – Printing
 
+<!-- vscode-markdown-toc -->
+* 1. [Objectives](#Objectives)
+* 2. [Bibliography](#Bibliography)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Objectives'></a>Objectives
+
 **Activity**
 
 > :octocat:  Sample Code available – Check the “PrintingRecordsSample” Sample
@@ -179,3 +191,5 @@
 > :octocat:  Sample Code available – Check the “PrintingLongTextSample” Sample
 
 ![Printing Sample](docs/9/printing-sample.jpg)
+
+##  2. <a name='Bibliography'></a>Bibliography

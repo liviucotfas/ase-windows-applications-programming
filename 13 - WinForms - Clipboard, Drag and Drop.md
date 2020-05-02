@@ -1,8 +1,9 @@
 # Windows Forms – Clipboard, Drag and Drop
 <!-- vscode-markdown-toc -->
-* 1. [Clipboard](#Clipboard)
-* 2. [Drag and Drop](#DragandDrop)
-* 3. [Bibliography](#Bibliography)
+* 1. [Objectives](#Objectives)
+* 2. [Clipboard](#Clipboard)
+* 3. [Drag and Drop](#DragandDrop)
+* 4. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -10,7 +11,9 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-##  1. <a name='Clipboard'></a>Clipboard
+##  1. <a name='Objectives'></a>Objectives
+
+##  2. <a name='Clipboard'></a>Clipboard
 **Documentation**
 > https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard
 
@@ -18,7 +21,7 @@
 
 > :octocat: Sample Code available – Check the "ClipboardSample" Sample 
 
-##  2. <a name='DragandDrop'></a>Drag and Drop
+##  3. <a name='DragandDrop'></a>Drag and Drop
 **Documentation**
 > https://docs.microsoft.com/en-us/dotnet/framework/winforms/drag-and-drop-functionality-in-windows-forms
 
@@ -95,6 +98,6 @@
 	}
 	```
 
-##  3. <a name='Bibliography'></a>Bibliography
+##  4. <a name='Bibliography'></a>Bibliography
 - Clipboard: https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard
 - Drag and Drop: https://docs.microsoft.com/en-us/dotnet/framework/winforms/drag-and-drop-functionality-in-windows-forms
