@@ -7,7 +7,7 @@
 
 ## <a name="chart-control"></a>UserControl
 
-![C#](media/image1.png) Sample Code available – Check the "NumericTextBoxUserControlSample"
+> :octocat: Full source code available, check the `NumericTextBoxUserControlSample` sample
 
 ## <a name="usercontrol"></a> UserControl + Drawing
 
@@ -105,7 +105,7 @@ The Graphics class provides methods for drawing objects to the display device.
 
 **Activity**
 
-![C#](media/image1.png) Sample Code available – Check the “PieChartGraphicsSample” Sample  
+> :octocat: Full source code available, check the `PieChartGraphicsSample` sample
 ![Piechart](docs/9/piechart.jpg)
 
 1. Create a new project with the name “PieChartGraphicsSample”
@@ -256,5 +256,5 @@ The Graphics class provides methods for drawing objects to the display device.
 	
 **Activity**
 
-![C#](media/image1.png) Sample Code available – Check the “ClockUserControlSample” Sample  
+> :octocat: Full source code available, check the `“ClockUserControlSample”` sample
 	![Clock Example](docs/9/clock-example.jpg)
