@@ -185,7 +185,7 @@ Cases:
 
 **Assignments (for you to try)** :video_game:
 1. Add a button to the `MainForm` that will allow the user to delete the currently selected participant. 
-	> Hint: you can use the the `DataBoundItem` property in order to identify the participant corresponding  to the currently selected row. 
+	> Hint: you can use the `DataBoundItem` property in order to identify the participant corresponding  to the currently selected row. 
 	
 	For the complete sample, check the `DataBindingSample` project in the "code samples" folder. 
 2. Add a button to the `MainForm` that will allow the user to edit the currently selected participant using a secondary form (ex: `EditForm`).
