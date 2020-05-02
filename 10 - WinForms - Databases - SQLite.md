@@ -246,11 +246,9 @@ CREATE TABLE `Participant` (
 **Assignments (for you to try)** :video_game:
 
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
-2. Allow the user to choose the competition in which the user is going to participate as shown below. For the complete sample (using MSAccess instead), check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
-	![race](docs/10/db-add-entity.png)
-3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
-4. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
-5. Allow the user to choose the race in which the user is going to participate as shown below. Define a `Race` (RaceId: `int` or `long`, Name:`string`) class and add a property of the type `Race` to the `Participant` class. The ifnormation regarding the race should also be persisted in the database.
+2. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
+3. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
+4. Allow the user to choose the competition in which the participant is going to run as shown below. Define a `Race` (RaceId: `int` or `long`, Name:`string`) class and add a property `RaceId` to the `Participant` class (the value of the property will be persisted in the database). For the complete sample (using MSAccess instead), check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
 	![race](docs/10/db-add-entity.png)
 
 ##  3. <a name='DisconnectedDataAccessArchitecture'></a> (Optional) Disconnected Data Access Architecture
