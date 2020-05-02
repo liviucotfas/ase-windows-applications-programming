@@ -2,7 +2,8 @@
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [Bibliography](#Bibliography)
+* 2. [Printing](#Printing)
+* 3. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -12,6 +13,7 @@
 
 ##  1. <a name='Objectives'></a>Objectives
 
+##  2. <a name='Printing'></a>Printing
 **Activity**
 
 > :octocat:  Sample Code available – Check the “PrintingRecordsSample” Sample
@@ -192,4 +194,4 @@
 
 ![Printing Sample](docs/9/printing-sample.jpg)
 
-##  2. <a name='Bibliography'></a>Bibliography
+##  3. <a name='Bibliography'></a>Bibliography
