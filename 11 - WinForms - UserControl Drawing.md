@@ -19,13 +19,16 @@
 
 ##  2. <a name='ExtendedControlandCompositeControls'></a>Extended Control and Composite Controls
 
-> :octocat: Full source code available, check the `NumericTextBoxUserControlSample` sample
+> :octocat: Full source code available, check the `NumericTextBoxControlSample` sample
 
 ##  3. <a name='CustomControlDrawing'></a> Custom Control + Drawing
 
 The Graphics class provides methods for drawing objects to the display device.
 
 **Activity**
+
+> :octocat: Full source code available, check the `BarChartGraphicsSample` sample
+
 1. Create a new project of the type "Class Library (.NET Framework)" (recommended) or "Windows Forms Control Library (.NET Framework)" with the name "ChartLibrary"
 2. Add a new class `BarChartValue`, defined as follows:
 
@@ -267,7 +270,7 @@ The Graphics class provides methods for drawing objects to the display device.
 	
 **Activity**
 
-> :octocat: Full source code available, check the `“ClockUserControlSample”` sample
+> :octocat: Full source code available, check the `ClockControlSample` and `ClockControlAppSample` samples
 
 ![Clock Example](docs/9/clock-example.jpg)
 
