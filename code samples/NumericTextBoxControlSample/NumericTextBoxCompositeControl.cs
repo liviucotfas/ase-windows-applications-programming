@@ -2,7 +2,7 @@
 
 namespace NumericTextBoxUserControlSample
 {
-	public partial class NumericTextBoxUserControl : UserControl
+	public partial class NumericTextBoxCompositeControl : UserControl
 	{
 		#region Properties
 		/// <summary>
@@ -23,7 +23,7 @@ namespace NumericTextBoxUserControlSample
 		//TODO Add a Int32 property for accessing the numeric value in the TextBox
 
 		#endregion
-		public NumericTextBoxUserControl()
+		public NumericTextBoxCompositeControl()
 		{
 			InitializeComponent();
 		}
@@ -33,7 +33,7 @@ namespace NumericTextBoxUserControlSample
 		/// </summary>
 		/// <param name="sender">The source of the event.</param>
 		/// <param name="e">A KeyPressEventArgs that contains the event data.</param>
-		private void NumericTextBoxUserControl_KeyPress(object sender, KeyPressEventArgs e)
+		private void tbNumericValue_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			OnKeyPress(e);
 
@@ -50,6 +50,11 @@ namespace NumericTextBoxUserControlSample
 				// Consume this invalid key
 				e.Handled = true;
 			}
+		}
+
+		private void btnClear_Click(object sender, System.EventArgs e)
+		{
+			tbNumericValue.Text = string.Empty;	
 		}
 	}
 }

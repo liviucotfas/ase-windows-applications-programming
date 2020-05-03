@@ -1,9 +1,9 @@
-# Windows Forms – UserControl, Drawing
+# Windows Forms – Custom Controls, Drawing
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [UserControl](#UserControl)
-* 3. [ UserControl + Drawing](#UserControlDrawing)
+* 2. [Extended Control and Composite Controls](#ExtendedControlandCompositeControls)
+* 3. [ Custom Control + Drawing](#CustomControlDrawing)
 * 4. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
@@ -13,19 +13,20 @@
 <!-- /vscode-markdown-toc -->
 
 ##  1. <a name='Objectives'></a>Objectives
-- understanding the concept of `usercontrol`;
-- creating a `usercontrol` and using it in a different project;
+- understanding the concept of custom control;
+- understanding the differences between extended controls, composite controls and custom conrols;
+- creating a custom control and using it in a different project;
 
-##  2. <a name='UserControl'></a>UserControl
+##  2. <a name='ExtendedControlandCompositeControls'></a>Extended Control and Composite Controls
 
 > :octocat: Full source code available, check the `NumericTextBoxUserControlSample` sample
 
-##  3. <a name='UserControlDrawing'></a> UserControl + Drawing
+##  3. <a name='CustomControlDrawing'></a> Custom Control + Drawing
 
 The Graphics class provides methods for drawing objects to the display device.
 
 **Activity**
-1. Create a new project of the type `Class Library (.NET Framework)` (recommended) or `Windows Forms Control Library (.NET Framework)` with the name "ChartLibrary"
+1. Create a new project of the type "Class Library (.NET Framework)" (recommended) or "Windows Forms Control Library (.NET Framework)" with the name "ChartLibrary"
 2. Add a new class `BarChartValue`, defined as follows:
 
 	```c#
@@ -41,7 +42,7 @@ The Graphics class provides methods for drawing objects to the display device.
 		}
 	}
 	```
-3. Add a new UserControl and name it `BarChartControl` 
+3. Add a new "Custom Control (Windows Forms)" and name it `BarChartControl` 
 ![Piechart Control](docs/9/piechart-control.jpg)
 
 4. Add the `Data` property in the `BarChartControl` class
@@ -140,7 +141,7 @@ The Graphics class provides methods for drawing objects to the display device.
 		}
 	}
 	```
-3. Add a new UserControl and name it “PieChartControl”  
+3. Add a new "Custom Control (Windows Forms)" and name it “PieChartControl”  
 ![Piechart Control](docs/9/piechart-control.jpg)
 4. Add the “Data “ property in the “PieChartControl” class
 
@@ -160,8 +161,6 @@ The Graphics class provides methods for drawing objects to the display device.
 		}
 	}
 	```
-
-
 
 1. Modify the constructor of the “PieChartControl” class as follows:
 	
@@ -273,3 +272,4 @@ The Graphics class provides methods for drawing objects to the display device.
 ![Clock Example](docs/9/clock-example.jpg)
 
 ##  4. <a name='Bibliography'></a>Bibliography
+- Windows Forms Control Development Basics: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/windows-forms-control-development-basics

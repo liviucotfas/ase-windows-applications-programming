@@ -1,11 +1,17 @@
-﻿using System.Drawing;
+﻿using BarChartGraphicsSample.Entities;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using BarChartGraphicsSample.Entities;
 
 namespace BarChartGraphicsSample
 {
-	public partial class BarChartControl : UserControl
+	public partial class BarChartControl : Control
 	{
 		#region Properties
 		private BarChartValue[] _data;
@@ -32,7 +38,7 @@ namespace BarChartGraphicsSample
 			//default data
 			Data = new[]
 			{
-				new BarChartValue("2015", 30), 
+				new BarChartValue("2015", 30),
 				new BarChartValue("2016", 80),
 				new BarChartValue("2017", 40)
 			};
@@ -50,7 +56,7 @@ namespace BarChartGraphicsSample
 			//compute the maximum bar height
 			var maxBarHeight = clipRectangle.Height * 0.9;
 			//compute the scaling factor based on the maximum value that we want to represent
-			var scalingFactor = maxBarHeight / Data.Max(x=>x.Value);
+			var scalingFactor = maxBarHeight / Data.Max(x => x.Value);
 
 			Brush redBrush = new SolidBrush(Color.Red);
 
@@ -59,12 +65,12 @@ namespace BarChartGraphicsSample
 				var barHeight = Data[i].Value * scalingFactor;
 
 				graphics.FillRectangle(
-					redBrush, 
-					i * barWidth, 
-					(float) (clipRectangle.Height - barHeight), 
-					(float) (0.8 * barWidth), 
-					(float) barHeight);
+					redBrush,
+					i * barWidth,
+					(float)(clipRectangle.Height - barHeight),
+					(float)(0.8 * barWidth),
+					(float)barHeight);
 			}
-		}	
+		}
 	}
 }

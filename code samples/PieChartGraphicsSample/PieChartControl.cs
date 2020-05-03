@@ -1,19 +1,26 @@
-﻿using System;
+﻿using PieChartGraphicsSample.Entities;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using PieChartGraphicsSample.Entities;
 
 namespace PieChartGraphicsSample
 {
-	public partial class PieChartControl : UserControl
-	{
+    public partial class PieChartControl : Control
+    {
 		#region Properties
 		private PieChartCategory[] _data;
-		public PieChartCategory[] Data {
+		public PieChartCategory[] Data
+		{
 			get { return _data; }
 			set
 			{
-				if(_data == value)
+				if (_data == value)
 					return;
 
 				_data = value;
@@ -39,8 +46,10 @@ namespace PieChartGraphicsSample
 			};
 		}
 
-		private void PieChartControl_Paint(object sender, PaintEventArgs e)
-		{
+		protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
 			//width reserved for displaying the legend
 			int legendWidth = 150;
 
@@ -48,7 +57,7 @@ namespace PieChartGraphicsSample
 			Graphics graphics = e.Graphics;
 			//get the drawing area
 			Rectangle clipRectangle = e.ClipRectangle;
-			
+
 			//compute the maximum radius
 			float radius = Math.Min(clipRectangle.Height, clipRectangle.Width - legendWidth) / (float)2;
 
@@ -99,14 +108,14 @@ namespace PieChartGraphicsSample
 				Brush b2 = new SolidBrush(Color.Black);
 
 				graphics.DrawString(
-					Data[i].Label + ": " + Data[i].Percentage + "%", 
-					Font, 
+					Data[i].Label + ": " + Data[i].Percentage + "%",
+					Font,
 					b2,
-					xpos + 35, 
+					xpos + 35,
 					ypos + 12);
 
 				ypos += 35;
 			}
 		}
-	}
+    }
 }

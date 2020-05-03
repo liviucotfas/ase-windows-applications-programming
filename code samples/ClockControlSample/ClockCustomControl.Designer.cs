@@ -1,6 +1,6 @@
-﻿namespace BarChartGraphicsSample
+﻿namespace ClockUserControlSample
 {
-    partial class BarChartControl
+    partial class ClockCustomControl
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // BarChartControl
-            // 
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.BarChartControl_Paint);
-            this.ResumeLayout(false);
-
+            components = new System.ComponentModel.Container();
         }
 
         #endregion

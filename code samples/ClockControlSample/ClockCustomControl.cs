@@ -1,17 +1,20 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace ClockUserControlSample
 {
-    public partial class ClockUserControl : UserControl
+    public partial class ClockCustomControl : Control
     {
-	    private int _ora;
-	    private int _min;
-	    private int _sec;
-	    public event EventHandler Ring;
-        public ClockUserControl()
+        private int _ora;
+        private int _min;
+        private int _sec;
+        public event EventHandler Ring;
+        public ClockCustomControl()
         {
             InitializeComponent();
             ResizeRedraw = true;
@@ -53,12 +56,12 @@ namespace ClockUserControlSample
 
         public int OraAlarm { get; set; }
 
-	    public int MinAlarm { get; set; }
+        public int MinAlarm { get; set; }
 
-	    #endregion
+        #endregion
 
         //se atasaza aceste atribute pentru a seta daca proprietatile pot fi vizibile sau nu in designer
-        [Browsable(true),EditorBrowsable(EditorBrowsableState.Never),Category("Custom")]
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Never), Category("Custom")]
         private void tmTimp_Tick(object sender, EventArgs e)
         {
             _sec++;
@@ -85,23 +88,25 @@ namespace ClockUserControlSample
                 sec = Convert.ToInt32(timp.Substring(6, 2));
             }*/
             Invalidate();
-            if (_ora == OraAlarm && Ring != null) 
+            if (_ora == OraAlarm && Ring != null)
             {
-                if (_min == MinAlarm) 
+                if (_min == MinAlarm)
                 {
                     Ring(this, new EventArgs());
                 }
             }
         }
 
-        public void CLockUserControl_Paint(object sender, PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
+            base.OnPaint(e);
+
             int i;
             //definim tipul pensulei ca sa reprezentam minutarul, secundarul si orarul
             SolidBrush pnsRosie = new SolidBrush(Color.Red);
             SolidBrush pnsNeagra = new SolidBrush(Color.Black);
             SolidBrush pnsAlbasra = new SolidBrush(Color.Blue);
-           //culoarea pensulei si grosimea se trimit ca parametri
+            //culoarea pensulei si grosimea se trimit ca parametri
             Pen penSec = new Pen(pnsNeagra, 1);
             Pen penMin = new Pen(pnsAlbasra, 2);
             Pen penOra = new Pen(pnsNeagra, 5);
@@ -112,8 +117,8 @@ namespace ClockUserControlSample
             r.X += 5; r.Y += 5; r.Height -= 10; r.Width -= 10;
             //in cadrul acestui dreptunghi vom desena un cerc
             int raza = r.Height / 2 - 10;
-            
-			//preluam contextul grafic
+
+            //preluam contextul grafic
             Graphics g = e.Graphics;
             g.DrawEllipse(pen, r);
             //definim coordonatele de inceput pentru a putea trasa cadranul ceasului
@@ -132,20 +137,20 @@ namespace ClockUserControlSample
             }
             Point centru = new Point(x0, y0);
             //desenam capatul secundarului
-            Point secC=new Point(x0+(int)(raza*Math.Cos(Math.PI/2-_sec*Math.PI/30.0)),y0-(int)(raza*Math.Sin(Math.PI/2-_sec*Math.PI/30.0)));
-            g.DrawLine(penSec,centru,secC);
-            Point minC = new Point(x0 + (int)((raza - 15) * Math.Cos(Math.PI / 2 -(_min+_sec/60.0) * Math.PI / 30.0)), y0 - (int)((raza-15) * Math.Sin(Math.PI / 2 -(_min+ _sec/60.00) * Math.PI / 30.0)));
-            g.DrawLine(penMin,centru,minC);
+            Point secC = new Point(x0 + (int)(raza * Math.Cos(Math.PI / 2 - _sec * Math.PI / 30.0)), y0 - (int)(raza * Math.Sin(Math.PI / 2 - _sec * Math.PI / 30.0)));
+            g.DrawLine(penSec, centru, secC);
+            Point minC = new Point(x0 + (int)((raza - 15) * Math.Cos(Math.PI / 2 - (_min + _sec / 60.0) * Math.PI / 30.0)), y0 - (int)((raza - 15) * Math.Sin(Math.PI / 2 - (_min + _sec / 60.00) * Math.PI / 30.0)));
+            g.DrawLine(penMin, centru, minC);
             Point oraC = new Point(x0 + (int)((raza - 30) * Math.Cos(Math.PI / 2 - (_ora + _min / 60.0) * Math.PI / 6.0)), y0 - (int)((raza - 30) * Math.Sin(Math.PI / 2 - (_ora + _min / 60.00) * Math.PI / 6.0)));
-            g.DrawLine(penOra,centru,oraC);
+            g.DrawLine(penOra, centru, oraC);
         }
 
         private void DrawSquare(int x, int y, int raza, Graphics g)
         {
-           //se deseneaza un cerc cu centru si raza date
+            //se deseneaza un cerc cu centru si raza date
             Rectangle r = new Rectangle(new Point(x - raza, y - raza), new Size(2 * raza, 2 * raza));
             Brush b = new SolidBrush(Color.Red);
-            g.FillEllipse(b,r);
+            g.FillEllipse(b, r);
         }
 
         private void DrawCircle(int x0, int y0, int latura, Graphics g)

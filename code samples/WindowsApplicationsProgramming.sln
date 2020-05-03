@@ -41,9 +41,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extra", "Extra", "{74C5D6A4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Globalization", "Globalization\Globalization.csproj", "{389A84C9-024A-4F5C-B6D5-290FA6C3A05A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockUserControlSample", "UserControl\ClockUserControlSample.csproj", "{5FE4AB3E-0809-48CE-BE52-9A18B2DF9609}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockControlSample", "ClockControlSample\ClockControlSample.csproj", "{5FE4AB3E-0809-48CE-BE52-9A18B2DF9609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockUserControlAppSample", "UserControlApp\ClockUserControlAppSample.csproj", "{0881795D-C8B7-4606-8D46-B9FC940BB5E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockControlAppSample", "ClockControlAppSample\ClockControlAppSample.csproj", "{0881795D-C8B7-4606-8D46-B9FC940BB5E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebBrowser", "SimpleWebBrowser\SimpleWebBrowser.csproj", "{3C1648E5-3192-4CAE-B3A7-2B2CA7FEF8DD}"
 EndProject
@@ -65,7 +65,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializableCustomCollectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodParameters", "MethodParameters\MethodParameters.csproj", "{7F11E547-3A0E-4B67-BF3A-87658CD4D230}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "17. Windows Forms - UserControls + Drawing", "17. Windows Forms - UserControls + Drawing", "{718D2BE5-3500-483F-BC23-FD1336336134}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "17. Windows Forms - Custom Controls + Drawing", "17. Windows Forms - Custom Controls + Drawing", "{718D2BE5-3500-483F-BC23-FD1336336134}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{B7D5F54B-FF43-44B0-8775-5DD0DCC03E3C}"
 EndProject
@@ -123,9 +123,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PieChartGraphicsSample", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropSample", "DragDropSample\DragDropSample.csproj", "{8537243F-1409-4C99-92D3-1E24235214C9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16. Windows Forms - UserControls", "16. Windows Forms - UserControls", "{33FAA69E-261C-4BF9-A8C3-7FF70F6899D1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16. Windows Forms - Custom Controls", "16. Windows Forms - Custom Controls", "{33FAA69E-261C-4BF9-A8C3-7FF70F6899D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericTextBoxUserControlSample", "NumericTextBoxUserControlSample\NumericTextBoxUserControlSample.csproj", "{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericTextBoxControlSample", "NumericTextBoxControlSample\NumericTextBoxControlSample.csproj", "{768EE2BC-7441-4A4C-9A28-4FFBB7AB0A3F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStripContainerWebBrowser", "ToolStripContainerWebBrowser\ToolStripContainerWebBrowser.csproj", "{3821CEE4-5A47-4F0B-B011-8D75A7CA5759}"
 EndProject

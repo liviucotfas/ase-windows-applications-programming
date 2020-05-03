@@ -32,7 +32,7 @@ namespace ClockUserControlAppSample
         {
 			this.tbOra = new System.Windows.Forms.TextBox();
 			this.btnGetSystemTime = new System.Windows.Forms.Button();
-			this._clockUserControl = new ClockUserControlSample.ClockUserControl();
+			this.clockCustomControl = new ClockUserControlSample.ClockCustomControl();
 			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -56,20 +56,19 @@ namespace ClockUserControlAppSample
 			// 
 			// ceas
 			// 
-			this._clockUserControl.AllowDrop = true;
-			this._clockUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this._clockUserControl.Location = new System.Drawing.Point(9, 13);
-			this._clockUserControl.Min = 9;
-			this._clockUserControl.MinAlarm = 36;
-			this._clockUserControl.Name = "_clockUserControl";
-			this._clockUserControl.Ora = 0;
-			this._clockUserControl.OraAlarm = 4;
-			this._clockUserControl.Sec = 14;
-			this._clockUserControl.Size = new System.Drawing.Size(208, 189);
-			this._clockUserControl.TabIndex = 0;
-			this._clockUserControl.Ring += new System.EventHandler(this.ceas1_Suna);
-			this._clockUserControl.DragDrop += new System.Windows.Forms.DragEventHandler(this.ceas1_DragDrop);
-			this._clockUserControl.DragEnter += new System.Windows.Forms.DragEventHandler(this.ceas1_DragEnter);
+			this.clockCustomControl.AllowDrop = true;
+			this.clockCustomControl.Location = new System.Drawing.Point(9, 13);
+			this.clockCustomControl.Min = 9;
+			this.clockCustomControl.MinAlarm = 36;
+			this.clockCustomControl.Name = "_clockUserControl";
+			this.clockCustomControl.Ora = 0;
+			this.clockCustomControl.OraAlarm = 4;
+			this.clockCustomControl.Sec = 14;
+			this.clockCustomControl.Size = new System.Drawing.Size(208, 189);
+			this.clockCustomControl.TabIndex = 0;
+			this.clockCustomControl.Ring += new System.EventHandler(this.ceas1_Suna);
+			this.clockCustomControl.DragDrop += new System.Windows.Forms.DragEventHandler(this.ceas1_DragDrop);
+			this.clockCustomControl.DragEnter += new System.Windows.Forms.DragEventHandler(this.ceas1_DragEnter);
 			// 
 			// label1
 			// 
@@ -88,7 +87,7 @@ namespace ClockUserControlAppSample
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnGetSystemTime);
 			this.Controls.Add(this.tbOra);
-			this.Controls.Add(this._clockUserControl);
+			this.Controls.Add(this.clockCustomControl);
 			this.Name = "MainForm";
 			this.Text = "Clock";
 			this.ResumeLayout(false);
@@ -98,7 +97,7 @@ namespace ClockUserControlAppSample
 
         #endregion
 
-        private ClockUserControl _clockUserControl;
+        private ClockCustomControl clockCustomControl;
         public System.Windows.Forms.TextBox tbOra;
         private System.Windows.Forms.Button btnGetSystemTime;
         private System.Windows.Forms.Label label1;

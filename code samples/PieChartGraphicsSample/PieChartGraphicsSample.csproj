@@ -54,7 +54,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PieChartControl.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="PieChartControl.Designer.cs">
       <DependentUpon>PieChartControl.cs</DependentUpon>
