@@ -50,19 +50,18 @@ namespace DataBaseCommand
 
 				var command = new SQLiteCommand(stringSql, connection);
 
-				SQLiteDataReader sqlReader = command.ExecuteReader();
-				try
+				using (SQLiteDataReader sqlReader = command.ExecuteReader())
 				{
 					while (sqlReader.Read())
 					{
-						_participants.Add(new Participant((long) sqlReader["Id"], (string) sqlReader["LastName"],
-							(string) sqlReader["FirstName"], DateTime.Parse((string) sqlReader["BirthDate"])));
+						long id = (long)sqlReader["Id"];
+						string lastName = (string)sqlReader["LastName"];
+						string firstName = (string)sqlReader["FirstName"];
+						DateTime birthDate = DateTime.Parse((string)sqlReader["BirthDate"]);
+
+						Participant participant = new Participant(id, lastName, firstName, birthDate);
+						_participants.Add(participant);
 					}
-				}
-				finally
-				{
-					// Always call Close when done reading.
-					sqlReader.Close();
 				}
 			}
 		}
@@ -79,16 +78,9 @@ namespace DataBaseCommand
 
 				//1. Add the new participant to the database
 				var command = new SQLiteCommand(queryString, connection);
-				var lastNameParameter = new SQLiteParameter("@lastName");
-				lastNameParameter.Value = participant.LastName;
-				var firstNameParameter = new SQLiteParameter("@firstName");
-				firstNameParameter.Value = participant.FirstName;
-				var birthDateParameter = new SQLiteParameter("@birthDate");
-				birthDateParameter.Value = participant.BirthDate;
-
-				command.Parameters.Add(lastNameParameter);
-				command.Parameters.Add(firstNameParameter);
-				command.Parameters.Add(birthDateParameter);
+				command.Parameters.AddWithValue("@lastName", participant.LastName);
+				command.Parameters.AddWithValue("@firstName", participant.FirstName);
+				command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
 
 				participant.Id = (long)command.ExecuteScalar();
 
