@@ -99,10 +99,7 @@ namespace DataBaseCommand
 
 				//Remove from the database
 				SQLiteCommand command = new SQLiteCommand(stringSql, connection);
-
-				var idParameter = new SQLiteParameter("@id");
-				idParameter.Value = participant.Id;
-				command.Parameters.Add(idParameter);
+				command.Parameters.AddWithValue("@id", participant.Id);
 
 				command.ExecuteNonQuery();
 
@@ -158,7 +155,11 @@ namespace DataBaseCommand
 			{
 				try
 				{
-					DeleteParticipant((Participant) lvParticipants.SelectedItems[0].Tag);
+					ListViewItem selectedItem = lvParticipants.SelectedItems[0];
+					Participant participant = (Participant)selectedItem.Tag;
+
+					DeleteParticipant(participant);
+
 					DisplayParticipants();
 				}
 				catch (Exception ex)
