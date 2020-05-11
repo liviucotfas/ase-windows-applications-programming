@@ -22,6 +22,10 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 
 > Further reading: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview
 
+SQLite is probably the most used database engine in the world.
+
+> Want to learn more about SQLite? Check the official website: https://www.sqlite.org
+
 ##  3. <a name='Creatingthedatabase'></a>Creating the database
 
 **Activity**
