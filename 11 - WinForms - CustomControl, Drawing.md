@@ -14,7 +14,7 @@
 
 ##  1. <a name='Objectives'></a>Objectives
 - understanding the concept of custom control;
-- understanding the differences between extended controls, composite controls and custom conrols;
+- understanding the differences between extended controls, composite controls and custom controls;
 - creating a custom control and using it in a different project;
 
 ##  2. <a name='ExtendedControlandCompositeControls'></a>Extended Control and Composite Controls
