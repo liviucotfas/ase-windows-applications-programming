@@ -1,16 +1,25 @@
 # Windows Forms – Validation, Exceptions, ListView, TreeView
 
-##	 Contents
+<!-- vscode-markdown-toc -->
+* 1. [Objectives](#Objectives)
+* 2. [Data Validation](#DataValidation)
+* 3. [Complex Visualization Controls](#ComplexVisualizationControls)
+	* 3.1. [ ListView](#ListView)
+	* 3.2. [ TreeView](#TreeView)
+* 4. [ Exception Handling](#ExceptionHandling)
+	* 4.1. [ Custom Exceptions](#CustomExceptions)
+	* 4.2. [ Standard Exceptions](#StandardExceptions)
+* 5. [Bibliography](#Bibliography)
 
-1. [Data Validation](#data-validation)
-2. [Complex Visualization Controls](#complex-visualization)
-	1. [ListView](#listview)
-	2. [TreeView](#treeview)
-3. [Exception Handling](#exception-handling)
-	1. [Custom Exceptions](#custom-exceptions)
-	2. [Standard Exceptions](#standard-exceptions)
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-## <a name="data-validation"></a>Data Validation
+##  1. <a name='Objectives'></a>Objectives
+
+##  2. <a name='DataValidation'></a>Data Validation
 
 **Assignment**
 
@@ -64,9 +73,9 @@
 	```
 8.	Why is it recommended to have the validations both on the individual controls and in the handler for the “Add Participant” button?
 
-## <a name="complex-visualization"></a>Complex Visualization Controls
+##  3. <a name='ComplexVisualizationControls'></a>Complex Visualization Controls
 
-### <a name="listview"></a> ListView
+###  3.1. <a name='ListView'></a> ListView
 
 **Assignment**
 
@@ -153,7 +162,7 @@
 **Homework**
 1. Also clear/reset the values in the textboxes and in the DateTimePicker when the user clicks the "Add Participant" button  
 
-### <a name="treeview"></a> TreeView
+###  3.2. <a name='TreeView'></a> TreeView
 
 **Assignment**
 
@@ -290,9 +299,9 @@
 	#endregion
 	```
 
-## <a name="exception-handling"></a> Exception Handling
+##  4. <a name='ExceptionHandling'></a> Exception Handling
 
-### <a name="custom-exceptions"></a> Custom Exceptions
+###  4.1. <a name='CustomExceptions'></a> Custom Exceptions
 
 **Assignment**
 
@@ -363,7 +372,7 @@
 	}
 	```
 
-### <a name="standard-exceptions"></a> Standard Exceptions
+###  4.2. <a name='StandardExceptions'></a> Standard Exceptions
 
 * common exception types: System.NotImplementedException, [System.DivideByZeroException](https://msdn.microsoft.com/en-us/library/system.dividebyzeroexception%28v=vs.110%29.aspx), System. FormatException
 
@@ -428,6 +437,6 @@
 	}
 	```
 
-
-
-
+##  5. <a name='Bibliography'></a>Bibliography
+- ErrorProvider Class: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.errorprovider
+- How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider
