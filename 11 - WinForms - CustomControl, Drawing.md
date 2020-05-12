@@ -2,9 +2,9 @@
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [Composite Controls](#CompositeControls)
-* 3. [Extended Control](#ExtendedControl)
-* 4. [ Custom Control + Drawing](#CustomControlDrawing)
+* 2. [Extended Controls](#ExtendedControls)
+* 3. [Composite Controls](#CompositeControls)
+* 4. [ Custom Controls + Drawing](#CustomControlsDrawing)
 * 5. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
@@ -17,20 +17,21 @@
 - understanding the concept of custom control;
 - understanding the differences between extended controls, composite controls and custom controls;
 - creating a custom control and using it in a different project;
+- drawing shapes and text on a windows forms control / form;
 
-##  2. <a name='CompositeControls'></a>Composite Controls
-
-> :octocat: Full source code available, check the `NumericTextBoxControlSample` sample
-
-> How to: Inherit from the UserControl Class: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class
-
-##  3. <a name='ExtendedControl'></a>Extended Control
+##  2. <a name='ExtendedControls'></a>Extended Controls
 
 > :octocat: Full source code available, check the `NumericTextBoxControlSample` sample
 
 > How to: Inherit from Existing Windows Forms Controls: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls
 
-##  4. <a name='CustomControlDrawing'></a> Custom Control + Drawing
+##  3. <a name='CompositeControls'></a>Composite Controls
+
+> :octocat: Full source code available, check the `NumericTextBoxControlSample` sample
+
+> How to: Inherit from the UserControl Class: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class
+
+##  4. <a name='CustomControlsDrawing'></a> Custom Controls + Drawing
 
 The Graphics class provides methods for drawing objects to the display device.
 
