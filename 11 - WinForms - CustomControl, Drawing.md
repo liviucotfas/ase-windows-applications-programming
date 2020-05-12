@@ -2,9 +2,10 @@
 
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
-* 2. [Extended Control and Composite Controls](#ExtendedControlandCompositeControls)
-* 3. [ Custom Control + Drawing](#CustomControlDrawing)
-* 4. [Bibliography](#Bibliography)
+* 2. [Composite Controls](#CompositeControls)
+* 3. [Extended Control](#ExtendedControl)
+* 4. [ Custom Control + Drawing](#CustomControlDrawing)
+* 5. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -17,11 +18,19 @@
 - understanding the differences between extended controls, composite controls and custom controls;
 - creating a custom control and using it in a different project;
 
-##  2. <a name='ExtendedControlandCompositeControls'></a>Extended Control and Composite Controls
+##  2. <a name='CompositeControls'></a>Composite Controls
 
 > :octocat: Full source code available, check the `NumericTextBoxControlSample` sample
 
-##  3. <a name='CustomControlDrawing'></a> Custom Control + Drawing
+> How to: Inherit from the UserControl Class: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class
+
+##  3. <a name='ExtendedControl'></a>Extended Control
+
+> :octocat: Full source code available, check the `NumericTextBoxControlSample` sample
+
+> How to: Inherit from Existing Windows Forms Controls: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls
+
+##  4. <a name='CustomControlDrawing'></a> Custom Control + Drawing
 
 The Graphics class provides methods for drawing objects to the display device.
 
@@ -274,5 +283,7 @@ The Graphics class provides methods for drawing objects to the display device.
 
 ![Clock Example](docs/9/clock-example.jpg)
 
-##  4. <a name='Bibliography'></a>Bibliography
+##  5. <a name='Bibliography'></a>Bibliography
 - Windows Forms Control Development Basics: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/windows-forms-control-development-basics
+- How to: Inherit from Existing Windows Forms Controls: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls
+- How to: Inherit from the UserControl Class: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class
