@@ -40,7 +40,8 @@ namespace BarChartGraphicsSample
 			{
 				new BarChartValue("2015", 30),
 				new BarChartValue("2016", 80),
-				new BarChartValue("2017", 40)
+				new BarChartValue("2017", 90),
+				new BarChartValue("2018", 100)
 			};
 		}
 
