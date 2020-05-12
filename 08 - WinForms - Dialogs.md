@@ -33,7 +33,7 @@
 4. Modify the “DisplayParticipants” method in the “MainForm” class in order to set the “Tag” property for the ListViewItem instances, as shown bellow.
 
 	```c#
-	public void DisplayParticipants()
+	private void DisplayParticipants()
 	{
 		lvParticipants.Items.Clear();
 

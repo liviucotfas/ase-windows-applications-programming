@@ -77,7 +77,7 @@ SQLite is probably the most used database engine in the world.
 4. Set the tag property for the ListViewItems as follows:
 
 	```c#
-	public void DisplayParticipants()
+	private void DisplayParticipants()
 	{
 		lvParticipants.Items.Clear();
 		
@@ -96,7 +96,7 @@ SQLite is probably the most used database engine in the world.
 5. Add the method that will be used to insert new participants in the database
 	
 	```c#
-	public void AddParticipant(Participant participant)
+	private void AddParticipant(Participant participant)
 	{
 		var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
 							" values(@lastName,@firstName,@birthDate);  " +
@@ -144,7 +144,7 @@ SQLite is probably the most used database engine in the world.
 8. Add the method that will be used to get the existing participants from the database
 		
 	```c#
-	public void LoadParticipants()
+	private void LoadParticipants()
 	{
 		const string stringSql = "SELECT * FROM Participant";
 
@@ -190,7 +190,7 @@ SQLite is probably the most used database engine in the world.
 10. Add the method that will be used to delete existing participants from the database
 		
 	```c#
-	public void DeleteParticipant(Participant participant)
+	private void DeleteParticipant(Participant participant)
 	{
 		const string stringSql = "DELETE FROM Participant WHERE Id=@id";
 
