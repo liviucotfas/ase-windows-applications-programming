@@ -132,7 +132,7 @@ Cases:
 		#region INotifyPropertyChanged
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		[NotifyPropertyChangedInvocator]
+		[NotifyPropertyChangedInvocator] //Remove this line if you are not using Resharper
 		// [CallerMemberName] - Allows you to obtain the method or property name of the caller to the method. https://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.callermembernameattribute%28v=vs.110%29.aspx
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
