@@ -50,7 +50,7 @@ Cases:
 
 > :octocat: Full source code available, check the `DataBindingSample` sample.
 
-1. Create a copy of the “BasicListView” project and name it “DataBindingSample”
+1. Create a copy of the "ListViewBasicSample" project and name it "DataBindingSample"
 
 2. Replace the “ListView” control with a “DataGridView” control (Name: dgvParticipants)
 
