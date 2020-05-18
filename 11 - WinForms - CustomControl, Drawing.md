@@ -31,6 +31,8 @@
 
 > How to: Inherit from the UserControl Class: https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class
 
+![Custom Control](docs/9/usercontrol.jpg)
+
 ##  4. <a name='CustomControlsDrawing'></a> Custom Controls + Drawing
 
 The Graphics class provides methods for drawing objects to the display device.
@@ -56,7 +58,7 @@ The Graphics class provides methods for drawing objects to the display device.
 	}
 	```
 3. Add a new "Custom Control (Windows Forms)" and name it `BarChartControl` 
-![Piechart Control](docs/9/piechart-control.jpg)
+	![Custom Control](docs/9/customcontrol.png)
 
 4. Add the `Data` property in the `BarChartControl` class
 
