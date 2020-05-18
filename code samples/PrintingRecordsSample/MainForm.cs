@@ -86,11 +86,16 @@ namespace ListViewBasicSample
 			// Initialize the font to be used for printing.
 			Font font = new Font("Microsoft Sans Serif", 24);
 
-			var pageSettings = printDocument.DefaultPageSettings;
-			// Initialize local variables that contain the bounds of the printing 
-			// area rectangle.
-			var intPrintAreaHeight = pageSettings.PaperSize.Height - pageSettings.Margins.Top - pageSettings.Margins.Bottom;
-			var intPrintAreaWidth = pageSettings.PaperSize.Width - pageSettings.Margins.Left - pageSettings.Margins.Right;
+			var pageSettings = e.PageSettings;
+			
+			// Initialize local variables that contain the bounds of the printing area rectangle.
+			//var printAreaHeight = pageSettings.PaperSize.Height - pageSettings.Margins.Top - pageSettings.Margins.Bottom;
+			//or
+			var printAreaHeight = e.MarginBounds.Height;
+
+			//var printAreaWidth = pageSettings.PaperSize.Width - pageSettings.Margins.Left - pageSettings.Margins.Right;
+			//or
+			var printAreaWidth = e.MarginBounds.Width;
 
 			// Initialize local variables to hold margin values that will serve
 			// as the X and Y coordinates for the upper left corner of the printing 
@@ -102,15 +107,15 @@ namespace ListViewBasicSample
 
 			// If the user selected Landscape mode, swap the printing area height 
 			// and width.
-			if (printDocument.DefaultPageSettings.Landscape)
+			if (pageSettings.Landscape)
 			{
-				var intTemp = intPrintAreaHeight;
-				intPrintAreaHeight = intPrintAreaWidth;
-				intPrintAreaWidth = intTemp;
+				var intTemp = printAreaHeight;
+				printAreaHeight = printAreaWidth;
+				printAreaWidth = intTemp;
 			}
 
 			const int rowHeight = 40;
-			var columnWidth = intPrintAreaWidth / 3;
+			var columnWidth = printAreaWidth / 3;
 
 			// Instantiate the StringFormat class, which encapsulates text layout 
 			// information (such as alignment and line spacing), display manipulations 
@@ -189,7 +194,7 @@ namespace ListViewBasicSample
 				currentY += rowHeight;
 
 				// HasMorePages tells the printing module whether another PrintPage event should be fired.
-				if (currentY + rowHeight > intPrintAreaHeight)
+				if (currentY + rowHeight > printAreaHeight)
 				{
 					e.HasMorePages = true;
 					break;
