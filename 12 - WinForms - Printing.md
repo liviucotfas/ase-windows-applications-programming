@@ -24,20 +24,20 @@
 1. Create a copy of the “ListViewBasicSample” project and name it “PrintingRecordsSample”
 2. Add a `MenuStrip` control with the options shown in the following screenshot
     ![Printing Sample](docs/9/printing-records-sample.png)
-3. From the ToolBox add a `PrintDocument` and a `PageSetupDialog` control
-4. Handle the `Click` event on the "PageSetup" button as follows
+3. From the ToolBox add a `PrintDocument` control and name it `printDocument`.
+4. From the ToolBox add a `PageSetupDialog` control and name it `pageSetupDialog`. For the `Document` property of the `pageSetupDialog` choose the `printDocument`.
+5. Handle the `Click` event on the "PageSetup" button as follows
 
     ```c#
     private void btnPageSetup_Click(object sender, EventArgs e)
     {
-        pageSetupDialog.Document = printDocument;
         pageSetupDialog.PageSettings = printDocument.DefaultPageSettings;
 
         if (pageSetupDialog.ShowDialog() == DialogResult.OK)
             printDocument.DefaultPageSettings = pageSetupDialog.PageSettings;
     }
     ```
-5. Handle the `PrintPage` event of the `PrintDocument` control as follows
+6. Handle the `PrintPage` event of the `PrintDocument` control as follows
     ```c#
     private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
     {
@@ -160,20 +160,21 @@
         }
     }
     ```
-6. Handle the `BeginPrint` event of the `PrintDocument` control as follows
+7. Handle the `BeginPrint` event of the `PrintDocument` control as follows
     ```c#
     private void printDocument_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
     {
         _currentParticipantIndex = 0;
     }
     ```
-7. Handle the `Click` event on the "PrintPreview" button, as follows
+8. From the ToolBox add a `PrintPreviewDialog` and name it `printPreviewDialog`.
+9. For the `Document` property of the `printPreviewDialog` choose the `printDocument`.
+10. Handle the `Click` event on the "PrintPreview" button, as follows
     ```c#
     private void btnPrintPreview_Click(object sender, EventArgs e)
     {
         try
         {
-            printPreviewDialog.Document = printDocument;
             printPreviewDialog.ShowDialog();
         }
         catch (Exception)
@@ -182,11 +183,12 @@
         }
     }
     ```
-8. Handle the `Click` event on the "Print" button as follows
+11. From the ToolBox add a `PrintDialog` and name it `printDialog`.
+12. For the `Document` property of the `printDialog` choose the `printDocument`.
+13. Handle the `Click` event on the "Print" button as follows
     ```C#
     private void btnPrint_Click(object sender, EventArgs e)
     {
-        printDialog.Document = printDocument;
         if (printDialog.ShowDialog() == DialogResult.OK)
             printDocument.Print();
     }

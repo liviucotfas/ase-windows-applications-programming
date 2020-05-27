@@ -50,7 +50,6 @@ namespace ListViewBasicSample
 		
 		private void btnPrint_Click(object sender, EventArgs e)
 		{
-			printDialog.Document = printDocument;
 			if (printDialog.ShowDialog() == DialogResult.OK)
 				printDocument.Print();
 		}
@@ -59,7 +58,6 @@ namespace ListViewBasicSample
 		{
 			try
 			{
-				printPreviewDialog.Document = printDocument;
 				printPreviewDialog.ShowDialog();
 			}
 			catch (Exception)
@@ -70,7 +68,6 @@ namespace ListViewBasicSample
 
 		private void btnPageSetup_Click(object sender, EventArgs e)
 		{
-			pageSetupDialog.Document = printDocument;
 			pageSetupDialog.PageSettings = printDocument.DefaultPageSettings;
 
 			if (pageSetupDialog.ShowDialog() == DialogResult.OK)
