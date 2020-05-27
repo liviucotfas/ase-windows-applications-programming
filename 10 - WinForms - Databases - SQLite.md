@@ -154,7 +154,6 @@ SQLite is probably the most used database engine in the world.
 
 			var command = new SQLiteCommand(stringSql, connection);
 
-			SQLiteDataReader sqlReader = command.ExecuteReader();
 			using (SQLiteDataReader sqlReader = command.ExecuteReader())
 			{
 				while (sqlReader.Read())
