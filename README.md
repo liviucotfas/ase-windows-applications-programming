@@ -11,7 +11,7 @@
 >A: you can use https://gitprint.com/ or https://pandoc.org/
 
 ## Prerequisites
-Microsoft Visual Studio 2019 or 2017 (can be downloaded from https://visualstudio.microsoft.com/vs/community )
+Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community )
 
 ## Further Reading
 - Starting learning about .NET at https://dotnet.microsoft.com/learn
