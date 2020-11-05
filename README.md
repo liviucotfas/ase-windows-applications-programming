@@ -8,7 +8,7 @@
 
 **Is it possible to convert the .md files to .pdf/.docx ?**
 
->A: you can use https://gitprint.com/ or https://pandoc.org/
+>A: various websites and applications provide this functionality
 
 ## Prerequisites
 Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community )
