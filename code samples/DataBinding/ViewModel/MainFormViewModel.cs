@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using DataBindingDialogs.Annotations;
 using DataBindingSample.Entities;
 
 namespace DataBindingSample.ViewModel
