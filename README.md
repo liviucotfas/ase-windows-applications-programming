@@ -11,7 +11,7 @@
 >A: various websites and applications provide this functionality
 
 ## Prerequisites
-Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community )
+Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community ). Make sure that the .NET desktop development workload is installed.
 
 ## Further Reading
 - Starting learning about .NET at https://dotnet.microsoft.com/learn
