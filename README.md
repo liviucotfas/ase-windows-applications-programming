@@ -14,6 +14,6 @@
 Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community ). Make sure that the .NET desktop development workload is installed.
 
 ## Further Reading
-- Starting learning about .NET at https://dotnet.microsoft.com/learn
+- Start learning about .NET at https://dotnet.microsoft.com/learn
 - Discover best practices, sample applications and professional advice for building .NET applications on [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture) website;
 - Read about the [SOLID principles of Object Oriented Design](http://deviq.com/solid/)
