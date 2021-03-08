@@ -148,7 +148,7 @@ Questions
 			Occupation = occupation;
 		}
 
-		//Copy constructor - https://msdn.microsoft.com/en-us/library/ms173116.aspx
+		//Copy constructor - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor
 		public PersonClass(PersonClass previousPerson) : this(previousPerson.GetAge(), previousPerson.Name, previousPerson.Occupation)
 		{
 			Console.WriteLine("Copy Constructor");
