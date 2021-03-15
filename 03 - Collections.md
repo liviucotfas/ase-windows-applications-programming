@@ -127,7 +127,7 @@
 
 -   [SortedList\<TKey, TValue\>](https://msdn.microsoft.com/en-us/library/ms132319.aspx)
     and many others:
-    [link](https://msdn.microsoft.com/en-us/library/mt481475(v=vs.110).aspx)
+    [link](https://docs.microsoft.com/en-us/dotnet/standard/collections/commonly-used-collection-types)
 
 ##  5. <a name='CustomCollections'></a>Custom Collections
 
