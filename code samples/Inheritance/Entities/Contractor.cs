@@ -4,7 +4,7 @@ namespace ConstructorDestructor.Entities
 {
 	internal class Contractor : Person, IDeveloper
 	{
-		#region IKnownProgrammingLanguages
+		#region IDeveloper
 		public string[] Languages { get; set; }
 		public bool Knows(string language)
 		{
