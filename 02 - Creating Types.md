@@ -201,7 +201,9 @@ Question
 
 1.  Create a new project with the name “StandardInterfaces”
 
-2.  Add the following “Person” class
+2.  Add the following `Person` class
+
+Hint: You can generate the constructor by choosing the corresponding option in Visual Studio.
 
 	```C#
 	internal class Person
