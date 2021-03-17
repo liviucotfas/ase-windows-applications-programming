@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Windows.Forms;
 using DataBaseCommand.Entities;
+using Microsoft.Data.Sqlite;
 
 namespace DataBaseCommand
 {
@@ -44,13 +44,13 @@ namespace DataBaseCommand
 		{
 			const string stringSql = "SELECT * FROM Participant";
 
-			using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using(SqliteConnection connection = new SqliteConnection(ConnectionString))
 			{
 				connection.Open();
 
-				var command = new SQLiteCommand(stringSql, connection);
+				var command = new SqliteCommand(stringSql, connection);
 
-				using (SQLiteDataReader sqlReader = command.ExecuteReader())
+				using (SqliteDataReader sqlReader = command.ExecuteReader())
 				{
 					while (sqlReader.Read())
 					{
@@ -72,12 +72,12 @@ namespace DataBaseCommand
 			                  " values(@lastName,@firstName,@birthDate);  " +
 			                  "SELECT last_insert_rowid()";
 
-			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using (SqliteConnection connection = new SqliteConnection(ConnectionString))
 			{
 				connection.Open();
 
 				//1. Add the new participant to the database
-				var command = new SQLiteCommand(queryString, connection);
+				var command = new SqliteCommand(queryString, connection);
 				command.Parameters.AddWithValue("@lastName", participant.LastName);
 				command.Parameters.AddWithValue("@firstName", participant.FirstName);
 				command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
@@ -93,12 +93,12 @@ namespace DataBaseCommand
 	    {
 			const string stringSql = "DELETE FROM Participant WHERE Id=@id";
 
-			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using (SqliteConnection connection = new SqliteConnection(ConnectionString))
 		    {
 			    connection.Open();
 
 				//Remove from the database
-				SQLiteCommand command = new SQLiteCommand(stringSql, connection);
+				SqliteCommand command = new SqliteCommand(stringSql, connection);
 				command.Parameters.AddWithValue("@id", participant.Id);
 
 				command.ExecuteNonQuery();
