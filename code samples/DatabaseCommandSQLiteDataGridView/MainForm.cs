@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel;
-using System.Data.SQLite;
 using System.Windows.Forms;
 using DatabaseCommandSQLiteDataGridView.Entities;
+using Microsoft.Data.Sqlite;
 
 namespace DatabaseCommandSQLiteDataGridView
 {
@@ -28,13 +28,13 @@ namespace DatabaseCommandSQLiteDataGridView
 		{
 			const string stringSql = "SELECT * FROM Participant";
 
-			using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using(SqliteConnection connection = new SqliteConnection(ConnectionString))
 			{
 				connection.Open();
 
-				var command = new SQLiteCommand(stringSql, connection);
+				var command = new SqliteCommand(stringSql, connection);
 
-				SQLiteDataReader sqlReader = command.ExecuteReader();
+				SqliteDataReader sqlReader = command.ExecuteReader();
 				try
 				{
 					while (sqlReader.Read())
@@ -57,18 +57,15 @@ namespace DatabaseCommandSQLiteDataGridView
 			                  " values(@lastName,@firstName,@birthDate);  " +
 			                  "SELECT last_insert_rowid()";
 
-			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using (SqliteConnection connection = new SqliteConnection(ConnectionString))
 			{
 				connection.Open();
 
 				//1. Add the new participant to the database
-				var command = new SQLiteCommand(queryString, connection);
-				var lastNameParameter = new SQLiteParameter("@lastName");
-				lastNameParameter.Value = participant.LastName;
-				var firstNameParameter = new SQLiteParameter("@firstName");
-				firstNameParameter.Value = participant.FirstName;
-				var birthDateParameter = new SQLiteParameter("@birthDate");
-				birthDateParameter.Value = participant.BirthDate;
+				var command = new SqliteCommand(queryString, connection);
+				var lastNameParameter = new SqliteParameter("@lastName", participant.LastName);
+				var firstNameParameter = new SqliteParameter("@firstName", participant.FirstName);
+				var birthDateParameter = new SqliteParameter("@birthDate", participant.BirthDate);
 
 				command.Parameters.Add(lastNameParameter);
 				command.Parameters.Add(firstNameParameter);
@@ -85,15 +82,14 @@ namespace DatabaseCommandSQLiteDataGridView
 	    {
 			const string stringSql = "DELETE FROM Participant WHERE Id=@id";
 
-			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using (SqliteConnection connection = new SqliteConnection(ConnectionString))
 		    {
 			    connection.Open();
 
 				//Remove from the database
-				SQLiteCommand command = new SQLiteCommand(stringSql, connection);
+				SqliteCommand command = new SqliteCommand(stringSql, connection);
 
-				var idParameter = new SQLiteParameter("@id");
-				idParameter.Value = participant.Id;
+				var idParameter = new SqliteParameter("@id", participant.Id);
 				command.Parameters.Add(idParameter);
 
 				command.ExecuteNonQuery();
