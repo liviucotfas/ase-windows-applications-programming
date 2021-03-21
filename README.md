@@ -1,5 +1,9 @@
 # Windows Applications Programming
 
+## Note
+When switching branches, you can run the following command in the "Package Manager Console" to remove any files and folders that are not tracked by git (bin, obj).
+`git clean -xdf`
+
 ## FAQ
 
 **Are there any mistakes in the code samples / labs / course presentation?**
