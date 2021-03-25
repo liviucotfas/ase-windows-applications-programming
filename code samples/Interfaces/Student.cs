@@ -35,7 +35,7 @@ namespace StandardInterfaces
 		public override object Clone()
 		{
 			// First get a shallow copy.
-			var newPerson = (Student)MemberwiseClone();
+			var newPerson = (Student)this.MemberwiseClone();
 
 			// Then fill in the gaps.
 			//newPerson.Marks = new int[Marks.Length];
