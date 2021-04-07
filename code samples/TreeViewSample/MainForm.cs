@@ -9,7 +9,6 @@ namespace TreeViewSample
 		public MainForm()
 		{
 			InitializeComponent();
-			Load += MainForm_Load;
 		}
 
 		#region Methods
