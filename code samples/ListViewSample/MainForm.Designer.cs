@@ -72,7 +72,6 @@
             this.lvParticipants.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
-            this.lvParticipants.HideSelection = false;
             this.lvParticipants.LargeImageList = this.imgListLarge;
             this.lvParticipants.Location = new System.Drawing.Point(12, 181);
             this.lvParticipants.Name = "lvParticipants";
