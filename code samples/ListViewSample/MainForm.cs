@@ -9,8 +9,6 @@ namespace ListViewSample
 	{
 		#region Attributes
 		private readonly List<Participant> _participants;
-		private ListViewGroup _lvgChildren;
-		private ListViewGroup _lvgAdults;
 		#endregion
 
 		public MainForm()
@@ -31,16 +29,15 @@ namespace ListViewSample
 				listViewItem.SubItems.Add(participant.FirstName);
 				listViewItem.SubItems.Add(participant.BirthDate.ToShortDateString());
 
-				//approximate calculation of the age 
-				if ((DateTime.Now - participant.BirthDate).TotalDays/365 >= 18)
+				if (participant.BirthDate < new DateTime(DateTime.Now.Year - 18, DateTime.Now.Month, DateTime.Now.Day) )
 				{
 					listViewItem.ImageKey = "adult.png";
-					listViewItem.Group = _lvgAdults;
+					listViewItem.Group = lvParticipants.Groups["adults"];
 				}
 				else
 				{
 					listViewItem.ImageKey = "child.png";
-					listViewItem.Group = _lvgChildren;
+					listViewItem.Group = lvParticipants.Groups["children"];
 				}
 
 				lvParticipants.Items.Add(listViewItem);
@@ -49,16 +46,6 @@ namespace ListViewSample
 		#endregion
 
 		#region Events
-		private void MainForm_Load(object sender, EventArgs e)
-		{
-			_lvgChildren = new ListViewGroup("Children", HorizontalAlignment.Left);
-			_lvgAdults = new ListViewGroup("Adults", HorizontalAlignment.Left);
-			_lvgChildren.Header = "Children";
-			_lvgChildren.Name = "lvgChildren";
-			_lvgAdults.Header = "Adults";
-			_lvgAdults.Name = "lvgAdult";
-			lvParticipants.Groups.AddRange(new[] { _lvgChildren, _lvgAdults });
-		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
