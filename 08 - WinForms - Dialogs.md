@@ -51,7 +51,7 @@
 	}
 	```
 
-5. Handle the `Click` event for the `btnDeletet` button as follows
+5. Handle the `Click` event for the `btnDelete` button as follows
 
 	```c#
 	if (lvParticipants.SelectedItems.Count == 0)
