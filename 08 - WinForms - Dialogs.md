@@ -129,6 +129,7 @@
 	if (editForm.ShowDialog() == DialogResult.OK)
 		DisplayParticipants();
 	```
+15. For the `EditForm` set the `AcceptButton` property to the name of the "Ok" button, in order to allow the user to trigger the `Click` event of the "Ok" button by pressing the `Enter` key. Also set the `CancelButton` property to the name of the "Cancel" button in order to allow the user to trigger the `Click` event of the "Cancel" button by pressing the `Escape` key.
 
 ##  4. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
 1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the `ListView`.
