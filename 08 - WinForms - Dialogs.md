@@ -129,15 +129,18 @@
 	if (editForm.ShowDialog() == DialogResult.OK)
 		DisplayParticipants();
 	```
+15. For the `EditForm` set the `AcceptButton` property to the name of the "Ok" button, in order to allow the user to trigger the `Click` event of the "Ok" button by pressing the `Enter` key. Also set the `CancelButton` property to the name of the "Cancel" button in order to allow the user to trigger the `Click` event of the "Cancel" button by pressing the `Escape` key.
+16. Make the `EditForm` appear in the center of the parent form when opened, by setting the `StartPosition` property to ` CenterParent`. Also set the property `ShowInTaskbar` to `False` in order not to display the `EditForm` in the Windows taskbar.
 
 ##  4. <a name='Assignmentsforyoutotry'></a>Assignments (for you to try)
 1. Besides the “Edit” button, also allow the user to edit the participants by double clicking on them in the `ListView`.
-2. Display a contextual menu when the user right clicks on a participant in the `ListView`. The contextual menu will include the options to edit or delete the participant.
-3. Remove the `GroupBox` previously used for adding new participants from the `MainForm`. Replace it instead with a button that will use the `EditForm` in order to add new participants.
-4. Allow the user to choose the race in which the user is going to participate as shown below. Try a simple implementation in which the race is stored as a `string` in the `Participant` class. Afterwards, try a more complicated implementation by defining  a `Race` class. The `Participant` class will include in this case a property of the type `Race`.
+	> Hint: when handling the event, you can call the method that is already used for handling the `Click` event for the "Edit" button.
+3. Display a contextual menu when the user right clicks on a participant in the `ListView`. The contextual menu will include the options to edit or delete the participant.
+4. Remove the `GroupBox` previously used for adding new participants from the `MainForm`. Replace it instead with a button that will use the `EditForm` in order to add new participants.
+5. Allow the user to choose the race in which the user is going to participate as shown below. Try a simple implementation in which the race is stored as a `string` in the `Participant` class. Afterwards, try a more complicated implementation by defining  a `Race` class. The `Participant` class will include in this case a property of the type `Race`.
 	![race](docs/10/db-add-entity.png)
 5. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
-	>Hint: Use can use the `Rows` property of the `DataGridView` instead of `Items` property of the `ListView`
+	>Hint: you can use the `Rows` property of the `DataGridView` instead of `Items` property of the `ListView`
 
 ##  5. <a name='Bibliography'></a>Bibliography
 - DataGridView class: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview
