@@ -7,8 +7,8 @@
     <ProjectGuid>{CFB2C697-C2A4-492B-A17B-1C5A95637254}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DialogSample</RootNamespace>
-    <AssemblyName>DialogSample</AssemblyName>
+    <RootNamespace>ListViewDialogSample</RootNamespace>
+    <AssemblyName>ListViewDialogSample</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

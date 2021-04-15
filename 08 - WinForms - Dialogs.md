@@ -20,9 +20,9 @@
 
 **Activity**
 
-> :octocat: Full source code available, check the `DialogSample` sample.
+> :octocat: Full source code available, check the `ListViewDialogSample` sample.
 
-1. Create a copy of the “ListViewBasicSample” project and name it “DialogSample”
+1. Create a copy of the “ListViewBasicSample” project and name it "ListViewDialogSample"
 
 2. Create the following UI
 
