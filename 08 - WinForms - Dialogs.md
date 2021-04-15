@@ -141,6 +141,7 @@
 	![race](docs/10/db-add-entity.png)
 5. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly.
 	>Hint: you can use the `Rows` property of the `DataGridView` instead of `Items` property of the `ListView`.
+	> :octocat: Full source code available, check the `DataGridViewDialogSample` sample.
 
 ##  5. <a name='Bibliography'></a>Bibliography
 - DataGridView class: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview
