@@ -36,6 +36,8 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 **Activity**
 
 > :octocat: Full source code available, check the `DatabaseCommandMSAccess` sample.
+ 
+> In order to use Microsoft Access databases, you might need to install Microsoft Access Database Engine 2010 Redistributable: https://www.microsoft.com/en-in/download/details.aspx?id=13255 
 
 1. Add the database connection string, as an attribute (“ConnectionString” ) of the “MainForm” class as follows:
 
