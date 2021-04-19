@@ -136,7 +136,7 @@ Cases:
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
 			if(PropertyChanged != null)
-				PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 		}
 		#endregion
 	}
@@ -152,8 +152,6 @@ Cases:
 		public MainForm()
 		{
 			InitializeComponent();
-			Load += MainForm_Load;
-
 			_viewModel = new MainFormViewModel();
 		}
 

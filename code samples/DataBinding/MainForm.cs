@@ -12,8 +12,6 @@ namespace DataBindingSample
 		public MainForm()
 		{
 			InitializeComponent();
-			Load += MainForm_Load;
-
 			_viewModel = new MainFormViewModel();
 		}
 
