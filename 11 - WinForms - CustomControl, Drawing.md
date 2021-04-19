@@ -124,7 +124,7 @@ The Graphics class provides methods for drawing objects to the display device.
 	```
 7. Add a new Windows Forms project called "BarChartGraphicsSample"
 8. Add a reference to the ClassLibrary project created earlier
-9. From the ToolBox drag a 'PieChartControl' to the default form in the project
+9. From the ToolBox drag a 'BarChartControl' to the default form in the project
 
 **Assignments (for you to try)** :video_game:
 
