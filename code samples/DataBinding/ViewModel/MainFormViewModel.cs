@@ -44,7 +44,7 @@ namespace DataBindingSample.ViewModel
 		}
 		#endregion
 
-		#region FirstName
+		#region BirthDate
 		private DateTime _birthDate;
 
 		public DateTime BirthDate
