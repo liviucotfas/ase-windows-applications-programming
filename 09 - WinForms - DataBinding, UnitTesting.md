@@ -95,7 +95,7 @@ Cases:
 		}
 		#endregion
 
-		#region FirstName
+		#region BirthDate
 		private DateTime _birthDate;
 
 		public DateTime BirthDate
