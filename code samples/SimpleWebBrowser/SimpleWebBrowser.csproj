@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SimpleWebBrowser</RootNamespace>
     <AssemblyName>SimpleWebBrowser</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ManifestCertificateThumbprint>BA6B39118FCD207FC1C9488EFB7E5AE8CDD5A2A6</ManifestCertificateThumbprint>
     <ManifestKeyFile>Seminar 4 WebBrowser_TemporaryKey.pfx</ManifestKeyFile>
