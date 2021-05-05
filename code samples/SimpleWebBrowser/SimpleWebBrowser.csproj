@@ -107,7 +107,7 @@
     <Content Include="Images\home.png" />
     <Content Include="Images\reload.png" />
     <Content Include="Images\stop.png" />
-    <None Include="Readme.md" />
+    <None Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
