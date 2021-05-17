@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
             this.btnGetUserControlValue = new System.Windows.Forms.Button();
+            this.numericTextBox1 = new NumericTextBoxUserControlSample.NumericTextBoxExtendedControl();
             this.ucNumericTextBox = new NumericTextBoxUserControlSample.NumericTextBoxCompositeControl();
             this.numericTextBoxUserControl1 = new NumericTextBoxUserControlSample.NumericTextBoxCompositeControl();
-            this.numericTextBox1 = new NumericTextBoxUserControlSample.NumericTextBoxExtendedControl();
             this.SuspendLayout();
             // 
             // btnGetUserControlValue
@@ -47,6 +47,13 @@
             this.btnGetUserControlValue.UseVisualStyleBackColor = false;
             this.btnGetUserControlValue.Click += new System.EventHandler(this.btnGetUserControlValue_Click);
             // 
+            // numericTextBox1
+            // 
+            this.numericTextBox1.Location = new System.Drawing.Point(12, 26);
+            this.numericTextBox1.Name = "numericTextBox1";
+            this.numericTextBox1.Size = new System.Drawing.Size(398, 20);
+            this.numericTextBox1.TabIndex = 2;
+            // 
             // ucNumericTextBox
             // 
             this.ucNumericTextBox.Location = new System.Drawing.Point(12, 66);
@@ -60,13 +67,6 @@
             this.numericTextBoxUserControl1.Name = "numericTextBoxUserControl1";
             this.numericTextBoxUserControl1.Size = new System.Drawing.Size(398, 21);
             this.numericTextBoxUserControl1.TabIndex = 0;
-            // 
-            // numericTextBox1
-            // 
-            this.numericTextBox1.Location = new System.Drawing.Point(12, 26);
-            this.numericTextBox1.Name = "numericTextBox1";
-            this.numericTextBox1.Size = new System.Drawing.Size(398, 20);
-            this.numericTextBox1.TabIndex = 2;
             // 
             // MainForm
             // 

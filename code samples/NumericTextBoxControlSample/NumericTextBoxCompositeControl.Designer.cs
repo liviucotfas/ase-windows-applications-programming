@@ -45,6 +45,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.Location = new System.Drawing.Point(289, -2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
@@ -53,13 +54,13 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // NumericTextBoxUserControl
+            // NumericTextBoxCompositeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.tbNumericValue);
-            this.Name = "NumericTextBoxUserControl";
+            this.Name = "NumericTextBoxCompositeControl";
             this.Size = new System.Drawing.Size(364, 21);
             this.ResumeLayout(false);
             this.PerformLayout();
