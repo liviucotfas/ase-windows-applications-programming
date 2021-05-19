@@ -68,10 +68,7 @@ namespace ListViewBasicSample
 
 		private void btnPageSetup_Click(object sender, EventArgs e)
 		{
-			pageSetupDialog.PageSettings = printDocument.DefaultPageSettings;
-
-			if (pageSetupDialog.ShowDialog() == DialogResult.OK)
-				printDocument.DefaultPageSettings = pageSetupDialog.PageSettings;
+			pageSetupDialog.ShowDialog();
 		}
 		
 		private void printDocument_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
@@ -97,9 +94,9 @@ namespace ListViewBasicSample
 			// Initialize local variables to hold margin values that will serve
 			// as the X and Y coordinates for the upper left corner of the printing 
 			// area rectangle.
-			var marginLeft = pageSettings.Margins.Left;
+			var marginLeft = e.MarginBounds.Left;
 			// X coordinate
-			var marginTop = pageSettings.Margins.Top;
+			var marginTop = e.MarginBounds.Top;
 			// Y coordinate
 
 			// If the user selected Landscape mode, swap the printing area height 
@@ -191,7 +188,7 @@ namespace ListViewBasicSample
 				currentY += rowHeight;
 
 				// HasMorePages tells the printing module whether another PrintPage event should be fired.
-				if (currentY + rowHeight > printAreaHeight)
+				if (currentY - marginTop + rowHeight > printAreaHeight)
 				{
 					e.HasMorePages = true;
 					break;
