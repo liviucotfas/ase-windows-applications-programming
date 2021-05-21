@@ -145,7 +145,7 @@ Depressing a mouse button when the cursor is over a control typically raises the
 
 **Assignment**
 
-We want to create a numeric only TextBox that can be used to build a simple calculator application, such as the one bellow.  
+We want to create a numeric only TextBox that can be used to build a simple calculator application, such as the one below.  
 ![Text Box Example](docs/5/text-box.png)
 
 > :octocat: Sample code available – Check the “KeyEvents” Sample
