@@ -350,7 +350,7 @@
 	try
 	{
 		var participant = new Participant(lastName, firstName, birthDate, gender, ssn);
-		//TODO Logic for adding the participant to the list bellow
+		//TODO Logic for adding the participant to the list below
 	}
 	catch (InvalidBirthDateException ex)
 	{
