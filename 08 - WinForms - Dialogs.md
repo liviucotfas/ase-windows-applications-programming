@@ -30,7 +30,7 @@
 
 3. Name the “Edit” button “btnEdit” and the “Delete” button “btnDelete”
 
-4. Modify the “DisplayParticipants” method in the “MainForm” class in order to set the “Tag” property for the ListViewItem instances, as shown bellow.
+4. Modify the “DisplayParticipants” method in the “MainForm” class in order to set the “Tag” property for the ListViewItem instances, as shown below.
 
 	```c#
 	private void DisplayParticipants()
