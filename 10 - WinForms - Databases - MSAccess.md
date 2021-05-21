@@ -235,7 +235,7 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 
 1. Implement the edit functionality in order to allow the user to modify the data, for previously entered participants
 
-2. Allow the user to choose the competition in which the user is going to participate as shown bellow. For the complete sample, check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
+2. Allow the user to choose the competition in which the user is going to participate as shown below. For the complete sample, check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
 	![race](docs/10/db-add-entity.png)
 
 3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
