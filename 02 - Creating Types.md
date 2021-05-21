@@ -43,7 +43,7 @@ A Structure (struct in C\#) type is a value type that is typically used to encap
 
 ##### Assignment
 
-1.  Add the PersonStruct defined bellow
+1.  Add the PersonStruct defined below
 
 	```C#
 	internal struct PersonStruct
@@ -95,7 +95,7 @@ Questions
 
 ##### Assignment
 
-1.  Add the PersonClass class defined bellow.
+1.  Add the PersonClass class defined below.
 
 	```C#
 	internal class PersonClass
