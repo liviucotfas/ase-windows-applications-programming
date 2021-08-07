@@ -1,5 +1,8 @@
 # Windows Applications Programming
 
+## Prerequisites
+Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community ). Make sure that the .NET desktop development workload is installed.
+
 ## FAQ
 
 **Are there any mistakes in the code samples / labs / course presentation?**
@@ -10,10 +13,10 @@
 
 >A: various websites and applications provide this functionality
 
-## Prerequisites
-Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community ). Make sure that the .NET desktop development workload is installed.
+## Recommended Reading
+- Start learning about .NET at https://dotnet.microsoft.com/learn
+- Explore the developer resources at https://developer.microsoft.com/en-us/
 
 ## Further Reading
-- Start learning about .NET at https://dotnet.microsoft.com/learn
 - Discover best practices, sample applications and professional advice for building .NET applications on [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture) website;
 - Read about the [SOLID principles of Object Oriented Design](http://deviq.com/solid/)
