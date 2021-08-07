@@ -15,7 +15,7 @@ Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.micros
 
 ## Recommended Reading
 - Start learning about .NET at https://dotnet.microsoft.com/learn
-- Explore the developer resources at https://developer.microsoft.com/en-us/
+- Explore the developer resources at https://developer.microsoft.com
 
 ## Further Reading
 - Discover best practices, sample applications and professional advice for building .NET applications on [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture) website;
