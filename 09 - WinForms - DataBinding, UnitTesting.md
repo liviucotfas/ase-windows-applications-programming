@@ -142,7 +142,7 @@ Cases:
 	}
 	```
 
-5. Mofify the `MainForm` class as follows.
+5. Modify the `MainForm` class as follows.
 
 	```c#
 	public partial class MainForm : Form
