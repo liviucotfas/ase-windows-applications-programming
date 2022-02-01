@@ -1,7 +1,7 @@
 # Windows Applications Programming
 
 ## Prerequisites
-Microsoft Visual Studio 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community ). Make sure that the .NET desktop development workload is installed.
+Microsoft Visual Studio 2022 / 2019 (can be downloaded from https://visualstudio.microsoft.com/vs/community ). Make sure that the .NET desktop development workload is installed.
 
 ## FAQ
 
