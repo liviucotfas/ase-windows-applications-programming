@@ -89,7 +89,7 @@ A Structure (struct in C\#) type is a value type that is typically used to encap
 
 Questions
 
--   Why is it possible to override the ToString method?
+-   Why is it possible to override the `ToString` method?
 
 ## Classes
 
@@ -190,8 +190,7 @@ Questions
 
 Question
 
--   Can the PersonClass **()** constructor be made private? (can we have private
-    constructors?)
+-   Can the `PersonClass()` constructor be made private? (can we have private constructors?)
 
 ## Standard Interfaces
 
@@ -267,10 +266,10 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 	}
 	```
 
-5. Change the IComparable\<Person\> implementation in order to sort the persons in descending order, based on their age
-6. Change the IComparable\<Person\> implementation in order to sort the persons using 2 criteria at the same time (name and age)
-7. Add a new class to the project that implements the IComparer\<Person\> interface in order to sort the persons in ascending order based on their name
-8. Add a new class to the project that implements the IComparer\<Person\> interface in order to sort the persons in descending order based on their name
+5. Change the `IComparable\<Person\>` implementation in order to sort the persons in descending order, based on their age
+6. Change the `IComparable\<Person\>` implementation in order to sort the persons using 2 criteria at the same time (name and age)
+7. Add a new class to the project that implements the `IComparer\<Person\>` interface in order to sort the persons in ascending order based on their name
+8. Add a new class to the project that implements the `IComparer\<Person\>` interface in order to sort the persons in descending order based on their name
 
 ### ICloneable
 
@@ -347,7 +346,7 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 
 5. Run the application and check the values in the two objects using the Watch window (run the application in Debug mode)
 
-6. Change the implementation of the “Clone()” method in order to perform a **deep copy**
+6. Change the implementation of the `Clone()` method in order to perform a **deep copy**
 
 	```C#
 	public object Clone()
@@ -416,7 +415,7 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 	#endregion
 	```
 
-2.  Use the operators in the Main method
+2.  Use the operators in the `Main` method
 
 	```C#
 	private static void Main(string[] args)
@@ -437,7 +436,7 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 
 ##### Activity
 
-1.  Add the following “Fraction” class
+1.  Add the following `Fraction` class
 	```C#
 	class Fraction
 	{
@@ -469,7 +468,7 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 	}
 	```
 
-2.  Add the following method in the “Program” class and call it from the “Main()” method
+2.  Add the following method in the `Program` class and call it from the `Main()` method.
 	```C#
 	static void Main()
 	{
