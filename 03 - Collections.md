@@ -135,7 +135,7 @@
 
 > :octocat: Sample code available – Check the “CustomCollections” Sample
 
-1.  Add the following “PersonCollection” class
+1.  Add the following `PersonCollection` class
 	```C#
 	internal class PersonCollection :IEnumerable<Person>
 	{
@@ -180,7 +180,7 @@
 		}
 	}
 	```
-2.  Add the following “PersonEnumerator” class
+2.  Add the following `PersonEnumerator` class
 	```C#
 	internal class PersonEnumerator : IEnumerator<Person>
 	{
@@ -220,7 +220,7 @@
 		}
 	}
 	```
-3.  Add the following method in the “Program” class and call it from the Main method
+3.  Add the following method in the `Program` class and call it from the Main method
 
 	```C#
 	private static void PersonCollectionExample()
