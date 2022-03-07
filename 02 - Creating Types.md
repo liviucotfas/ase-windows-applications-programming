@@ -287,10 +287,10 @@ Question
 	}
 	```
 
-5. Change the `IComparable\<Person\>` implementation in order to sort the persons in descending order, based on their age
+5. Change the `IComparable<Person>` implementation in order to sort the persons in descending order, based on their age
 6. Change the `IComparable\<Person\>` implementation in order to sort the persons using 2 criteria at the same time (name and age)
-7. Add a new class to the project that implements the `IComparer\<Person\>` interface in order to sort the persons in ascending order based on their name
-8. Add a new class to the project that implements the `IComparer\<Person\>` interface in order to sort the persons in descending order based on their name
+7. Add a new class to the project that implements the `IComparer<Person>` interface in order to sort the persons in ascending order based on their name
+8. Add a new class to the project that implements the `IComparer<Person>` interface in order to sort the persons in descending order based on their name
 
 ###  6.2. <a name='ICloneable'></a>ICloneable
 
