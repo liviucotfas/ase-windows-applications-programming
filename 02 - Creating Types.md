@@ -233,15 +233,15 @@ Question
 		public int Age { get; set; }
 		#endregion
 
-	public Person(string name, int age)
-	{
-		Name = name;
-		Age = age;
-	}
+		public Person(string name, int age)
+		{
+			Name = name;
+			Age = age;
+		}
 	}
 	```
 
-3.  Add the following method in the “Program” class and call it from the “Main()” method (Note: an exception will be thown when you run the project)
+3.  Add the following method in the `Program` class and call it from the `Main()` method (Note: an exception will be thown when you run the project)
 
 	```C#
 	private static void ReferenceTypeArray()
@@ -263,7 +263,7 @@ Question
 	}
 	```
 
-4.  Implement the IComparable\<Person\> interface for the “Person” class.
+4.  Implement the `IComparable<Person>` interface for the `Person` class.
 
 	```C#
 	internal class Person : IComparable<Person>
