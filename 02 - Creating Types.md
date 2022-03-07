@@ -223,7 +223,7 @@ Question
 
 2.  Add the following `Person` class
 
-Hint: You can generate the constructor by choosing the corresponding option in Visual Studio.
+	Hint: You can generate the constructor by choosing the corresponding option in Visual Studio.
 
 	```C#
 	internal class Person
