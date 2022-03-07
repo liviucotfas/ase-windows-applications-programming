@@ -233,11 +233,11 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 		public int Age { get; set; }
 		#endregion
 
-		public Person(string name, int age)
-		{
-			Name = name;
-			Age = age;
-		}
+	public Person(string name, int age)
+	{
+		Name = name;
+		Age = age;
+	}
 	}
 	```
 
