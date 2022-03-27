@@ -82,7 +82,7 @@
 ![C#](media/image1.png) Sample Code avilable – Check the “ListViewSample” Sample
 
 1. Create a new project with the name “ListViewSample”
-2. Rename “Form1” to “MainForm”
+2. Rename `Form1` to `MainForm`
 3. Create the following UI:    
 ![Browser App Preview](docs/6/listview-ui.png)
 4. Add a new folder to your project and name it “Entities”
@@ -104,7 +104,7 @@
 		}
 	}
 	```
-6. Final form of the “MainForm” class
+6. Final form of the `MainForm` class
 	
 	```c#
 	public partial class MainForm : Form

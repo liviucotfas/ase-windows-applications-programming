@@ -223,7 +223,7 @@ Question
 
 2.  Add the following `Person` class
 
-Hint: You can generate the constructor by choosing the corresponding option in Visual Studio.
+	Hint: You can generate the constructor by choosing the corresponding option in Visual Studio.
 
 	```C#
 	internal class Person
@@ -241,7 +241,7 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 	}
 	```
 
-3.  Add the following method in the “Program” class and call it from the “Main()” method (Note: an exception will be thown when you run the project)
+3.  Add the following method in the `Program` class and call it from the `Main()` method (Note: an exception will be thown when you run the project)
 
 	```C#
 	private static void ReferenceTypeArray()
@@ -263,7 +263,7 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 	}
 	```
 
-4.  Implement the IComparable\<Person\> interface for the “Person” class.
+4.  Implement the `IComparable<Person>` interface for the `Person` class.
 
 	```C#
 	internal class Person : IComparable<Person>
@@ -287,10 +287,10 @@ Hint: You can generate the constructor by choosing the corresponding option in V
 	}
 	```
 
-5. Change the `IComparable\<Person\>` implementation in order to sort the persons in descending order, based on their age
-6. Change the `IComparable\<Person\>` implementation in order to sort the persons using 2 criteria at the same time (name and age)
-7. Add a new class to the project that implements the `IComparer\<Person\>` interface in order to sort the persons in ascending order based on their name
-8. Add a new class to the project that implements the `IComparer\<Person\>` interface in order to sort the persons in descending order based on their name
+5. Change the `IComparable<Person>` implementation in order to sort the persons in descending order, based on their age
+6. Change the `IComparable<Person>` implementation in order to sort the persons using 2 criteria at the same time (name and age)
+7. Add a new class to the project that implements the `IComparer<Person>` interface in order to sort the persons in ascending order based on their name
+8. Add a new class to the project that implements the `IComparer<Person>` interface in order to sort the persons in descending order based on their name
 
 ###  6.2. <a name='ICloneable'></a>ICloneable
 
@@ -533,7 +533,7 @@ Managers.
 
 3.  Add an abstract `Employee` class
 
-> Hint: You can generate the constructor of the `Employee` class by clicking on `Person` and choosing the corresponding option from the contextual menu.
+	> Hint: You can generate the constructor of the `Employee` class by clicking on `Person` and choosing the corresponding option from the contextual menu.
 
 	```C#
 	internal abstract class Employee : Person
@@ -620,7 +620,7 @@ Managers.
 	}
 	```
 
-6.  In the previous method declare an array of Employee[] and call the previously mentioned methods
+6.  In the previous method declare an array of `Employee[]` and call the previously mentioned methods
 
 ###  8.2. <a name='CustomInterfaces'></a>Custom Interfaces
 
