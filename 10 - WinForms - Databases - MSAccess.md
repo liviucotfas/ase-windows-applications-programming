@@ -108,7 +108,7 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 		}
 	}
 	```
-7. Change the “btnAdd_Click” event handler as follows:
+7. Change the `btnAdd_Click` event handler as follows:
 	
 	```c#
 	private void btnAdd_Click(object sender, EventArgs e)
@@ -163,7 +163,7 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 		}
 	}
 	```
-9. Handle the Load events of the “MainForm” class as follows:
+9. Handle the Load events of the `MainForm` class as follows:
 	
 	```c#
 	private void MainForm_Load(object sender, EventArgs e)
