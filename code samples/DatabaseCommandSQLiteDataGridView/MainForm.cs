@@ -26,34 +26,34 @@ namespace DatabaseCommandSQLiteDataGridView
 		#region Methods
 	    private void LoadParticipants()
 		{
-			const string stringSql = "SELECT * FROM Participant";
+			const string query = "SELECT * FROM Participant";
 
 			using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 			{
 				connection.Open();
 
-				var command = new SQLiteCommand(stringSql, connection);
+				var command = new SQLiteCommand(query, connection);
 
-				SQLiteDataReader sqlReader = command.ExecuteReader();
+				SQLiteDataReader reader = command.ExecuteReader();
 				try
 				{
-					while (sqlReader.Read())
+					while (reader.Read())
 					{
-						_participants.Add(new Participant((long) sqlReader["Id"], (string) sqlReader["LastName"],
-							(string) sqlReader["FirstName"], DateTime.Parse((string) sqlReader["BirthDate"])));
+						_participants.Add(new Participant((long) reader["Id"], (string) reader["LastName"],
+							(string) reader["FirstName"], DateTime.Parse((string) reader["BirthDate"])));
 					}
 				}
 				finally
 				{
 					// Always call Close when done reading.
-					sqlReader.Close();
+					reader.Close();
 				}
 			}
 		}
 
 	    private void AddParticipant(Participant participant)
 		{
-			var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
+			var query = "insert into Participant(LastName, FirstName, BirthDate)" +
 			                  " values(@lastName,@firstName,@birthDate);  " +
 			                  "SELECT last_insert_rowid()";
 
@@ -62,7 +62,7 @@ namespace DatabaseCommandSQLiteDataGridView
 				connection.Open();
 
 				//1. Add the new participant to the database
-				var command = new SQLiteCommand(queryString, connection);
+				var command = new SQLiteCommand(query, connection);
 				var lastNameParameter = new SQLiteParameter("@lastName");
 				lastNameParameter.Value = participant.LastName;
 				var firstNameParameter = new SQLiteParameter("@firstName");
@@ -83,14 +83,14 @@ namespace DatabaseCommandSQLiteDataGridView
 
 	    private void DeleteParticipant(Participant participant)
 	    {
-			const string stringSql = "DELETE FROM Participant WHERE Id=@id";
+			const string query = "DELETE FROM Participant WHERE Id=@id";
 
 			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		    {
 			    connection.Open();
 
 				//Remove from the database
-				SQLiteCommand command = new SQLiteCommand(stringSql, connection);
+				SQLiteCommand command = new SQLiteCommand(query, connection);
 
 				var idParameter = new SQLiteParameter("@id");
 				idParameter.Value = participant.Id;

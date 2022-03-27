@@ -98,7 +98,7 @@ SQLite is probably the most used database engine in the world.
 	```c#
 	private void AddParticipant(Participant participant)
 	{
-		var queryString = "insert into Participant(LastName, FirstName, BirthDate)" +
+		var query = "insert into Participant(LastName, FirstName, BirthDate)" +
 							" values(@lastName,@firstName,@birthDate);  " +
 							"SELECT last_insert_rowid()";
 
@@ -107,7 +107,7 @@ SQLite is probably the most used database engine in the world.
 			connection.Open();
 
 			//1. Add the new participant to the database
-			var command = new SQLiteCommand(queryString, connection);
+			var command = new SQLiteCommand(query, connection);
 			command.Parameters.AddWithValue("@lastName", participant.LastName);
 			command.Parameters.AddWithValue("@firstName", participant.FirstName);
 			command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
@@ -144,24 +144,24 @@ SQLite is probably the most used database engine in the world.
 8. Add the method that will be used to get the existing participants from the database
 		
 	```c#
-	private void LoadParticipants()
+    private void LoadParticipants()
 	{
-		const string stringSql = "SELECT * FROM Participant";
+		const string query = "SELECT * FROM Participant";
 
 		using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		{
 			connection.Open();
 
-			var command = new SQLiteCommand(stringSql, connection);
+			var command = new SQLiteCommand(query, connection);
 
-			using (SQLiteDataReader sqlReader = command.ExecuteReader())
+			using (SQLiteDataReader reader = command.ExecuteReader())
 			{
-				while (sqlReader.Read())
+				while (reader.Read())
 				{
-					long id = (long)sqlReader["Id"];
-					string lastName = (string)sqlReader["LastName"];
-					string firstName = (string)sqlReader["FirstName"];
-					DateTime birthDate = DateTime.Parse((string)sqlReader["BirthDate"]);
+					long id = (long)reader["Id"];
+					string lastName = (string)reader["LastName"];
+					string firstName = (string)reader["FirstName"];
+					DateTime birthDate = DateTime.Parse((string)reader["BirthDate"]);
 
 					Participant participant = new Participant(id, lastName, firstName, birthDate);
 					_participants.Add(participant);
@@ -191,14 +191,14 @@ SQLite is probably the most used database engine in the world.
 	```c#
 	private void DeleteParticipant(Participant participant)
 	{
-		const string stringSql = "DELETE FROM Participant WHERE Id=@id";
+		const string query = "DELETE FROM Participant WHERE Id=@id";
 
 		using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		{
 			connection.Open();
 
 			//Remove from the database
-			SQLiteCommand command = new SQLiteCommand(stringSql, connection);
+			SQLiteCommand command = new SQLiteCommand(query, connection);
 			command.Parameters.AddWithValue("@id", participant.Id);
 
 			command.ExecuteNonQuery();

@@ -65,38 +65,38 @@ namespace DataBaseCommand
 
 	    private void LoadParticipants()
 		{
-			const string queryString = "SELECT * FROM Participant";
+			const string query = "SELECT * FROM Participant";
 
 			using (OleDbConnection connection = new OleDbConnection(ConnectionString))
 			{
 				connection.Open();
 				
-				OleDbCommand sqlCommand = new OleDbCommand(queryString , connection);
-				OleDbDataReader sqlReader = sqlCommand.ExecuteReader();
+				OleDbCommand command = new OleDbCommand(query , connection);
+				OleDbDataReader reader = command.ExecuteReader();
 				try
 				{
-					while (sqlReader.Read())
+					while (reader.Read())
 					{
 						var participant = new Participant(
-							(int) sqlReader["Id"], 
-							(string) sqlReader["LastName"],
-							(string) sqlReader["FirstName"], 
-							(DateTime) sqlReader["BirthDate"],
-							(int)sqlReader["raceId"]);
+							(int) reader["Id"], 
+							(string) reader["LastName"],
+							(string) reader["FirstName"], 
+							(DateTime) reader["BirthDate"],
+							(int)reader["raceId"]);
 						_participants.Add(participant);
 					}
 				}
 				finally
 				{
 					// Always call Close when done reading.
-					sqlReader.Close();
+					reader.Close();
 				}
 			}
 		}
 
 	    private void AddParticipant(Participant participant)
 	    {
-		    var queryString = "insert into Participant(LastName, FirstName, BirthDate, RaceId)" +
+		    var query = "insert into Participant(LastName, FirstName, BirthDate, RaceId)" +
 		                      " values(@lastName,@firstName,@birthDate, @raceId);";
 
 			using (OleDbConnection connection = new OleDbConnection(ConnectionString))
@@ -105,18 +105,18 @@ namespace DataBaseCommand
 			    connection.Open();
 
 			    //2. Add the new participant to the database
-				var insertCommand = new OleDbCommand(queryString , connection);
+				var command = new OleDbCommand(query , connection);
 				
 			    var lastNameParameter = new OleDbParameter("@lastName", participant.LastName);
 			    var firstNameParameter = new OleDbParameter("@firstName", participant.FirstName);
 			    var birthDateParameter = new OleDbParameter("@birthDate", participant.BirthDate.Date);
 				var raceIdParameter = new OleDbParameter("@raceId", participant.RaceId);
-				insertCommand.Parameters.Add(lastNameParameter);
-			    insertCommand.Parameters.Add(firstNameParameter);
-			    insertCommand.Parameters.Add(birthDateParameter);
-			    insertCommand.Parameters.Add(raceIdParameter);
+				command.Parameters.Add(lastNameParameter);
+			    command.Parameters.Add(firstNameParameter);
+			    command.Parameters.Add(birthDateParameter);
+			    command.Parameters.Add(raceIdParameter);
 
-				insertCommand.ExecuteNonQuery();
+				command.ExecuteNonQuery();
 
 				//3. Get the Id
 			    var getIdCommand = new OleDbCommand("SELECT @@Identity;", connection);
@@ -129,18 +129,18 @@ namespace DataBaseCommand
 
 	    private void DeleteParticipant(Participant participant)
 	    {
-			const string queryString = "DELETE FROM Participant WHERE Id=@id";
+			const string query = "DELETE FROM Participant WHERE Id=@id";
 
 		    using (OleDbConnection connection = new OleDbConnection(ConnectionString))
 		    {
 				//Remove from the database
 			    connection.Open();
 
-				OleDbCommand sqlCommand = new OleDbCommand(queryString , connection);
+				OleDbCommand command = new OleDbCommand(query , connection);
 				var idParameter = new OleDbParameter("@id",participant.Id);
-				sqlCommand.Parameters.Add(idParameter);
+				command.Parameters.Add(idParameter);
 
-				sqlCommand.ExecuteNonQuery();
+				command.ExecuteNonQuery();
 
 				//Remove from the local copy
 				_participants.Remove(participant);
