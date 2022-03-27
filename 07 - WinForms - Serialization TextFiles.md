@@ -59,10 +59,13 @@
 			formatter.Serialize(stream, _participants);
 	}
 	```
-     	     	
-6. Remove the `readonly` modifier from the declaration of the `_participants` attribute in the `MainForm` class. The project will not compile otherwise.
 
-7. Handle the `Click` event for the `btnDeserializeBinary` button as follows
+6. Check what happens when the `using` statement is compiled.  
+   > `using` statement: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement
+     	     	
+7. Remove the `readonly` modifier from the declaration of the `_participants` attribute in the `MainForm` class. The project will not compile otherwise.
+
+8. Handle the `Click` event for the `btnDeserializeBinary` button as follows
 
 	```C#
 	private void btnDeserialize_Click(object sender, EventArgs e){
@@ -155,7 +158,7 @@
 	```
 **Assignments (for you to try)**
 1. Also allow the user the save the file using the *.csv file format.
-   > SaveFileDialog: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.savefiledialog
+   > `SaveFileDialog`: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.savefiledialog
 2. Add the option to import new participants from a *.csv or *.txt file selected using an OpenFileDialog. The participants imported from the text file should be added to the list of existing participants in the application. Note: The *csv file can be created using either any text editor or using Excel
 
 
