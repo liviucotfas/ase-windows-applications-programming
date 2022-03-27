@@ -102,7 +102,8 @@
 	```
 
 **Assignments (for you to try)**
-1. Also implement `JSON` serialization using the NuGet package available at: https://www.nuget.org/packages/Newtonsoft.Json/ .
+1. Also implement JSON serialization using the NuGet package available at: https://www.nuget.org/packages/Newtonsoft.Json/ .
+2. Add at least 10 entries in the application. Serialize the data in Binary, XML and JSON format. Compare the sizes of the resulting files. Open the files using Notepad (or any other text editor) and compare their content. 
 
 
 ##  3. <a name='TextFiles'></a> TextFiles
@@ -153,7 +154,9 @@
 	}
 	```
 **Assignments (for you to try)**
-1. Add the option to import new participants from a *.csv or *.txt file selected using an OpenFileDialog. The participants imported from the text file should be added to the list of existing participants in the application. Note: The *csv file can be created using either any text editor or using Excel
+1. Also allow the user the save the file using the *.csv file format.
+   > SaveFileDialog: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.savefiledialog
+2. Add the option to import new participants from a *.csv or *.txt file selected using an OpenFileDialog. The participants imported from the text file should be added to the list of existing participants in the application. Note: The *csv file can be created using either any text editor or using Excel
 
 
 **Activity**
