@@ -56,16 +56,16 @@ namespace SerializationBinaryXMLTextFile
 		private void btnSerializeBinary_Click(object sender, EventArgs e)
 		{
 			BinaryFormatter formatter = new BinaryFormatter();
-			using (FileStream s = File.Create("SerializedBinary.bin"))
-				formatter.Serialize(s, _participants);
+			using (FileStream stream = File.Create("SerializedBinary.bin"))
+				formatter.Serialize(stream, _participants);
 		}
 
 		private void btnDeserializeBinary_Click(object sender, EventArgs e)
 		{
 			BinaryFormatter formatter = new BinaryFormatter();
-			using (FileStream s = File.OpenRead("SerializedBinary.bin"))
+			using (FileStream stream = File.OpenRead("SerializedBinary.bin"))
 			{
-				_participants = (List<Participant>)formatter.Deserialize(s);
+				_participants = (List<Participant>)formatter.Deserialize(stream);
 				DisplayParticipants();
 			}
 		}
@@ -75,16 +75,16 @@ namespace SerializationBinaryXMLTextFile
 		private void btnSerializeXML_Click(object sender, EventArgs e)
 		{
 			XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
-			using (FileStream s = File.Create("SerializedXML.xml"))
-				serializer.Serialize(s, _participants);
+			using (FileStream stream = File.Create("SerializedXML.xml"))
+				serializer.Serialize(stream, _participants);
 		}
 
 		private void btnDeserializeXML_Click(object sender, EventArgs e)
 		{
 			XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
-			using (FileStream s = File.OpenRead("SerializedXML.xml"))
+			using (FileStream stream = File.OpenRead("SerializedXML.xml"))
 			{
-				_participants = (List<Participant>)serializer.Deserialize(s);
+				_participants = (List<Participant>)serializer.Deserialize(stream);
 				DisplayParticipants();
 			}
 		}

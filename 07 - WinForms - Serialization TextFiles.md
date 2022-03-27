@@ -39,9 +39,9 @@
 
 ###  2.1. <a name='BinarySerialization'></a>Binary Serialization
 
-3. Add a menu for “Binary Serialization” (“Serialize” - btnSerializeBinary, “Deserialize” - btnDeserializeBinary), “XML Serialization” (“Serialize” - btnSerializeXML, “Deserialize” - btnDeserializeXML) and “TextFile” (“Export” – btnExport). 
+3. Add a menu for “Binary Serialization” (“Serialize” - `btnSerializeBinary`, “Deserialize” - `btnDeserializeBinary`), “XML Serialization” (“Serialize” - `btnSerializeXML`, “Deserialize” - `btnDeserializeXML`) and “TextFile” (“Export” – `btnExport`). 
 
-4. Decorate the “Participant” class with the [Serializable] attribute, as follows. An exception will be thrown otherwise.
+4. Decorate the “Participant” class with the `[Serializable]` attribute, as follows. An exception will be thrown otherwise.
 
 	```c#
 	[Serializable]
@@ -50,25 +50,25 @@
 	…………………
 	```
      	
-5.  Handle the “Click” event for the “btnSerializeBinary” button as follows
+5.  Handle the `Click` event for the `btnSerializeBinary` button as follows
 
 	```c#
 	private void btnSerialize_Click(object sender, EventArgs e){
 		BinaryFormatter formatter = new BinaryFormatter();
-		using (FileStream s = File.Create("serialized.bin"))
-			formatter.Serialize(s, _participants);
+		using (FileStream stream = File.Create("serialized.bin"))
+			formatter.Serialize(stream, _participants);
 	}
 	```
      	     	
-6. Remove the **readonly** modifier from the declaration of the “_participants” attribute in the “MainForm” class. The project will not compile otherwise.
+6. Remove the `readonly` modifier from the declaration of the `_participants` attribute in the `MainForm` class. The project will not compile otherwise.
 
-7. Handle the “Click” event for the “btnDeserializeBinary” button as follows
+7. Handle the `Click` event for the `btnDeserializeBinary` button as follows
 
 	```C#
 	private void btnDeserialize_Click(object sender, EventArgs e){
 		BinaryFormatter formatter = new BinaryFormatter();
-		using (FileStream s = File.OpenRead("serialized.bin"))	{
-			_participants = (List<Participant>)formatter.Deserialize(s);
+		using (FileStream stream = File.OpenRead("serialized.bin"))	{
+			_participants = (List<Participant>)formatter.Deserialize(stream);
 			DisplayParticipants();
 		}
 	}
@@ -78,25 +78,25 @@
 
 ###  2.2. <a name='XMLSerialization'></a>XML Serialization
 
-8. Add a parameterless constructor to the “Participant” class. Change the access modifier for the class from “internal” to “public”. An exception will be thrown otherwise.
+8. Add a parameterless constructor to the `Participant` class. Change the access modifier for the class from `internal` to `public`. An exception will be thrown otherwise.
 
-9. Handle the “Click” event for the “btnSerializeXML” button as follows.
+9. Handle the `Click` event for the `btnSerializeXML` button as follows.
 
 	```C#
 	XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
 
-	using (FileStream s = File.Create("SerializedXML.xml"))
-		serializer.Serialize(s, _participants);
+	using (FileStream stream = File.Create("SerializedXML.xml"))
+		serializer.Serialize(stream, _participants);
 	```
 
-10. Handle the “Click” event for the “btnDeserializeXML” button as follows.
+10. Handle the `Click` event for the `btnDeserializeXML` button as follows.
 
 	```C#
 	XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
 	
-	using (FileStream s = File.OpenRead("SerializedXML.xml"))
+	using (FileStream stream = File.OpenRead("SerializedXML.xml"))
 	{
-		_participants = (List<Participant>)serializer.Deserialize(s);
+		_participants = (List<Participant>)serializer.Deserialize(stream);
 		DisplayParticipants();
 	}
 	```
@@ -107,7 +107,7 @@
 
 ##  3. <a name='TextFiles'></a> TextFiles
 
-11. Handle the “Click” event for the “btnExport” button as follows
+11. Handle the `Click` event for the `btnExport` button as follows
 
 	```c#
 	// Create an instance of the open file dialog box.
