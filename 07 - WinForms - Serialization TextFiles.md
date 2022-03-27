@@ -41,7 +41,7 @@
 
 3. Add a menu for “Binary Serialization” (“Serialize” - `btnSerializeBinary`, “Deserialize” - `btnDeserializeBinary`), “XML Serialization” (“Serialize” - `btnSerializeXML`, “Deserialize” - `btnDeserializeXML`) and “TextFile” (“Export” – `btnExport`). 
 
-4. Decorate the “Participant” class with the `[Serializable]` attribute, as follows. An exception will be thrown otherwise.
+4. Decorate the `Participant` class with the `[Serializable]` attribute, as follows. An exception will be thrown otherwise.
 
 	```c#
 	[Serializable]
