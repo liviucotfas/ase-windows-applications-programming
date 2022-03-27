@@ -620,7 +620,7 @@ Managers.
 	}
 	```
 
-6.  In the previous method declare an array of Employee[] and call the previously mentioned methods
+6.  In the previous method declare an array of `Employee[]` and call the previously mentioned methods
 
 ###  8.2. <a name='CustomInterfaces'></a>Custom Interfaces
 
