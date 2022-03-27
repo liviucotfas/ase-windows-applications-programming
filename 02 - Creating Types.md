@@ -533,7 +533,7 @@ Managers.
 
 3.  Add an abstract `Employee` class
 
-> Hint: You can generate the constructor of the `Employee` class by clicking on `Person` and choosing the corresponding option from the contextual menu.
+	> Hint: You can generate the constructor of the `Employee` class by clicking on `Person` and choosing the corresponding option from the contextual menu.
 
 	```C#
 	internal abstract class Employee : Person
