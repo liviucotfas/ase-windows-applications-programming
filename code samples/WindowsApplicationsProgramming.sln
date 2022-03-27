@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{C375BE4E-DFF2-4277-A93F-3E889F1C7146}"
 EndProject
@@ -147,7 +147,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewDialogSample", "Lis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewDialogSample", "DataGridViewDialogSample\DataGridViewDialogSample.csproj", "{DA60C746-A3E6-4AFE-AD47-3862E6AAB81E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCommandSQL2Entities", "DatabaseCommandSQL2Entities\DatabaseCommandSQL2Entities.csproj", "{9EBBF27C-8492-479B-87E8-07E9882E0694}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCommandSQLServer2Entities", "DatabaseCommandSQLServer2Entities\DatabaseCommandSQLServer2Entities.csproj", "{9EBBF27C-8492-479B-87E8-07E9882E0694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

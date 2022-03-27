@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace DataBaseCommand
+namespace DatabaseCommandSQLServer2Entities
 {
 	internal static class Program
     {

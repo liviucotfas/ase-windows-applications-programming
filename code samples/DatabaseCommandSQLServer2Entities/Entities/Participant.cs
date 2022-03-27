@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataBaseCommand.Entities
+namespace DatabaseCommandSQLServer2Entities.Entities
 {
 	public class Participant
 	{

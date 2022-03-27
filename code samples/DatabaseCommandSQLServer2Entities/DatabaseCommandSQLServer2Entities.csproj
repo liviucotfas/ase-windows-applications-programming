@@ -8,8 +8,8 @@
     <ProjectGuid>{9EBBF27C-8492-479B-87E8-07E9882E0694}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatabaseCommandSQL2Entities</RootNamespace>
-    <AssemblyName>DatabaseCommandSQL2Entities</AssemblyName>
+    <RootNamespace>DatabaseCommandSQLServer2Entities</RootNamespace>
+    <AssemblyName>DatabaseCommandSQLServer2Entities</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>

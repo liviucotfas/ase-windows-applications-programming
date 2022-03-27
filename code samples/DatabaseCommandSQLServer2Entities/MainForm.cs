@@ -4,9 +4,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 using DatabaseCommand.Entities;
-using DataBaseCommand.Entities;
+using DatabaseCommandSQLServer2Entities.Entities;
 
-namespace DataBaseCommand
+namespace DatabaseCommandSQLServer2Entities
 {
     public partial class MainForm : Form
     {

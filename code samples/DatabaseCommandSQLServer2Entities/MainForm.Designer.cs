@@ -1,4 +1,4 @@
-namespace DataBaseCommand
+namespace DatabaseCommandSQLServer2Entities
 {
     partial class MainForm
     {
