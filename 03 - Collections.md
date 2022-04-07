@@ -21,6 +21,7 @@
 - know how to implement a custom collection with the help of `IEnumerator<T>` and `IEnumerable<T>`
 
 ##  2. <a name='ArrayList'></a>ArrayList
+Similar data can often be handled more efficiently when stored and manipulated as a collection [MSDocs](https://docs.microsoft.com/en-us/dotnet/standard/collections/). You can find a guide for choosing the right type of collection at: https://docs.microsoft.com/en-us/dotnet/standard/collections/ . The document also discusses the algorithmic complexity of various operations.
 
 **Assignment**
 > :octocat: Sample code available – Check the “StandardCollections” Sample
@@ -233,5 +234,6 @@
 	```
 
 ##  6. <a name='Bibliography'></a>Bibliography
+- https://docs.microsoft.com/en-us/dotnet/standard/collections/
 - https://docs.microsoft.com/en-us/dotnet/api/system.collections
 - https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic
