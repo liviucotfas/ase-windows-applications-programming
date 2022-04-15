@@ -28,9 +28,9 @@
 
 ![UI Dialog](docs/7/ui-dialog-sample.PNG)
 
-3. Name the “Edit” button “btnEdit” and the “Delete” button “btnDelete”
+3. Name the “Edit” button `btnEdit` and the “Delete” button `btnDelete`
 
-4. Modify the “DisplayParticipants” method in the “MainForm” class in order to set the “Tag” property for the ListViewItem instances, as shown below.
+4. Modify the `DisplayParticipants` method in the `MainForm` class in order to set the `Tag` property for the `ListViewItem` instances, as shown below.
 
 	```c#
 	private void DisplayParticipants()
@@ -75,7 +75,7 @@
 
 	![UI Dialog Edit](docs/7/ui-dialog-edit.png)
 
-8. Rename the controls as “tbLastName”, “tbFirstName” and “dtpBirthDate”
+8. Rename the controls as `tbLastName`, `tbFirstName` and `dtpBirthDate`
 
 9. Change the EditForm class, so that it is defined as follow
 
@@ -98,17 +98,17 @@
 	}
 	```
 
-10. Set the DialogResult for the “Cancel” button as “Cancel”
+10. Set the `DialogResult` for the “Cancel” button as “Cancel”
 
 	![Dialog Cancel](docs/7/ui-dialog-cancel.png)
 
-11. Rename the “Ok” button as “btnOk”
+11. Rename the “Ok” button as `btnOk`
 
-12. Set the DialogResult for the “Ok” button as “OK”
+12. Set the `DialogResult` for the “Ok” button as “OK”
 
 	![Dialog OK](docs/7/ui-dialog-ok.png)
 
-13. Handle the “Click” event for the “btnOk” button as follows
+13. Handle the `Click` event for the `btnOk` button as follows
 
 	```c#
 	_participant.LastName = tbLastName.Text;
@@ -116,7 +116,7 @@
 	_participant.BirthDate = dtpBirthDate.Value;
 	```
 
-14. Handle the “Click” event for the “Edit” button in the “MainForm” as follows:
+14. Handle the `Click` event for the “Edit” button in the `MainForm` as follows:
 
 	```c#
 	if (lvParticipants.SelectedItems.Count == 0)
