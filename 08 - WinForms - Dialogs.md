@@ -77,7 +77,7 @@
 
 8. Rename the controls as `tbLastName`, `tbFirstName` and `dtpBirthDate`
 
-9. Change the EditForm class, so that it is defined as follow
+9. Change the `EditForm` class, so that it is defined as follow
 
 	```c#
 	#region Attributes
