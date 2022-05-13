@@ -251,14 +251,14 @@ SQLite is probably the most used database engine in the world.
 
 	>Note: For the complete sample (using MSAccess instead), check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. For the complete sample (using SQL Server instead), check the "DatabaseCommandSQLServer2Entities" project in the "code samples" folder.
 	
-	>Further study: Check how Dapper (a popular, but relatively simple ORM) handles table joins: https://stackoverflow.com/a/7478958 and https://www.learndapper.com/relationships
+	>(Optional) Further study: Check how Dapper (a popular, but relatively simple ORM) handles table joins: https://stackoverflow.com/a/7478958 and https://www.learndapper.com/relationships
 4. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly. 
 	
 	>Hint: you can either use databinding (easier, better - recommended) or you can work directly with the `Rows` property of the `DataGridView`.
 
 	>Note: The "DatabaseCommandSQLiteDataGridView" project in the "code samples" folder uses the `DataGridView` control (databinding) and implements the delete functionality.
 
-5. Rewrite the example using Dapper (https://github.com/DapperLib/Dapper) as an ORM.	
+5. (Optional) Rewrite the example using Dapper (https://github.com/DapperLib/Dapper) as an ORM.	
 
 ##  3. <a name='DisconnectedDataAccessArchitecture'></a> (Optional) Disconnected Data Access Architecture
 
