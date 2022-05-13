@@ -250,6 +250,7 @@ SQLite is probably the most used database engine in the world.
 	![race](docs/10/db-add-entity.png)
 
 	>Note: For the complete sample (using MSAccess instead), check the "DatabaseCommandMSAccess2Entities" project in the "code samples" folder. For the complete sample (using SQL Server instead), check the "DatabaseCommandSQLServer2Entities" project in the "code samples" folder.
+	
 	>Further study: Check how Dapper (a popular, but relatively simple ORM) handles table joins: https://stackoverflow.com/a/7478958 and https://www.learndapper.com/relationships
 4. Replace the `ListView` control used in the `MainForm` with a `DataGridView` control. Make sure that the edit and delete functionalities work correctly. 
 	
