@@ -30,7 +30,7 @@
 
 > EF Core Database providers: https://docs.microsoft.com/en-us/ef/core/providers
 
-> Other popular ORMs are Dapper (https://github.com/DapperLib/Dapper) and NHibernate (https://nhibernate.info/)
+> Other popular ORMs are Dapper (https://github.com/DapperLib/Dapper) and NHibernate (https://nhibernate.info)
 
 ##  3. <a name='Assigmentssolved'></a>Assigments (solved)
 ###  3.1. <a name='CodeFirst'></a>Code First
