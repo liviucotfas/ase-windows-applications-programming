@@ -256,7 +256,9 @@ SQLite is probably the most used database engine in the world.
 	
 	>Hint: you can either use databinding (easier, better - recommended) or you can work directly with the `Rows` property of the `DataGridView`.
 
-	>Note: The "DatabaseCommandSQLiteDataGridView" project in the "code samples" folder uses the `DataGridView` control (databinding) and implements the delete functionality. 	
+	>Note: The "DatabaseCommandSQLiteDataGridView" project in the "code samples" folder uses the `DataGridView` control (databinding) and implements the delete functionality.
+
+5. Rewrite the example using Dapper (https://github.com/DapperLib/Dapper) as an ORM.	
 
 ##  3. <a name='DisconnectedDataAccessArchitecture'></a> (Optional) Disconnected Data Access Architecture
 
