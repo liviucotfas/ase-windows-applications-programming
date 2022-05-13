@@ -30,7 +30,7 @@
 
 > EF Core Database providers: https://docs.microsoft.com/en-us/ef/core/providers
 
-> Other popular ORMs are Dapper (https://github.com/DapperLib/Dapper) and NHibernate (https://nhibernate.info)
+> Other ORMs exist for .NET, such as Dapper and NHibernate. By studying Dapper (https://github.com/DapperLib/Dapper), a relatively simple ORM, you can get a better understanding of how more complex ORMs, such as EF and NHibernate work. NHibernate (https://nhibernate.info) is a complex ORM, inspired by the Hibernate ORM in Java.
 
 ##  3. <a name='Assigmentssolved'></a>Assigments (solved)
 ###  3.1. <a name='CodeFirst'></a>Code First
