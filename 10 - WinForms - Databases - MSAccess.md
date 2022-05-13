@@ -237,10 +237,12 @@ ADO.NET provides consistent access to data sources such as SQL Server and XML, a
 
 2. Allow the user to choose the competition in which the user is going to participate as shown below. For the complete sample, check the `DatabaseCommandMSAccess2Entities` project in the "code samples" folder. 
 	![race](docs/10/db-add-entity.png)
+	
+	>Further study: Check how Dapper (a popular, but relatively simple ORM) handles table joins: https://stackoverflow.com/a/7478958 and https://www.learndapper.com/relationships
 
 3. Try to implement an SQL Injection attack by modifing the insert query in order to use string contcatenation, instead of command parameters.
 
-##  5. <a name='DisconnectedDataAccessArchitecture'></a> Disconnected Data Access Architecture
+##  5. <a name='DisconnectedDataAccessArchitecture'></a> (Optional) Disconnected Data Access Architecture
 
 **Activity**
 > :octocat: Full source code available, check the `DatabaseDataAdapterMSAccess` sample.
