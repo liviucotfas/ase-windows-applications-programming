@@ -21,7 +21,7 @@ namespace ListViewBasicSample
 		}
 
 		#region Methods
-		public void DisplayParticipants()
+		private void DisplayParticipants()
 		{
 			lvParticipants.Items.Clear();
 
