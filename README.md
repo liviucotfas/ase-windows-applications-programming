@@ -19,5 +19,6 @@
 - Explore the developer resources at https://developer.microsoft.com
 
 ## Further Reading
+- Windows Forms and .NET 7: https://devblogs.microsoft.com/dotnet/winforms-enhancements-in-dotnet-7/
 - Discover best practices, sample applications and professional advice for building .NET applications on [Microsoft .NET Application Architecture Guidance](https://www.microsoft.com/net/learn/architecture) website;
 - Read about the [SOLID principles of Object Oriented Design](http://deviq.com/solid/)
