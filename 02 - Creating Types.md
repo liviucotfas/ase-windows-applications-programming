@@ -1,34 +1,26 @@
 # Creating Types
 
 <!-- vscode-markdown-toc -->
-* 1. [Table of Contents](#TableofContents)
-* 2. [Objectives](#Objectives)
-* 3. [Enums](#Enums)
-* 4. [Structures](#Structures)
-* 5. [Classes](#Classes)
-* 6. [Standard Interfaces](#StandardInterfaces)
-	* 6.1. [IComparable\<T\> / IComparer\<T\>](#IComparableTIComparerT)
-	* 6.2. [ICloneable](#ICloneable)
-* 7. [Operators](#Operators)
-* 8. [Class Inheritance](#ClassInheritance)
-	* 8.1. [Abstract classes](#Abstractclasses)
-	* 8.2. [Custom Interfaces](#CustomInterfaces)
-* 9. [Bibliography](#Bibliography)
+* 1. [Objectives](#Objectives)
+* 2. [Enums](#Enums)
+* 3. [Structures](#Structures)
+* 4. [Classes](#Classes)
+* 5. [Standard Interfaces](#StandardInterfaces)
+	* 5.1. [IComparable\<T\> / IComparer\<T\>](#IComparableTIComparerT)
+	* 5.2. [ICloneable](#ICloneable)
+* 6. [Operators](#Operators)
+* 7. [Class Inheritance](#ClassInheritance)
+	* 7.1. [Abstract classes](#Abstractclasses)
+	* 7.2. [Custom Interfaces](#CustomInterfaces)
+* 8. [Bibliography](#Bibliography)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
-##  1. <a name='TableofContents'></a>Table of Contents
-- [Enums](#enums)
-- [Structures](#structures)
-- [Classes](#classes)
-- [Standard Interfaces](#standard-interfaces)
-- [Operators](#operators)
-- [Class Inheritance](#class-inheritance)
 
-##  2. <a name='Objectives'></a>Objectives
+##  1. <a name='Objectives'></a>Objectives
 - Declaring enums
 - Declaring structures
 - Declaring classes
@@ -36,7 +28,7 @@
 - Classes with multiple constructors
 
 
-##  3. <a name='Enums'></a>Enums
+##  2. <a name='Enums'></a>Enums
 The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. By default, the
 first enumerator has the value 0, and the value of each successive enumerator is increased by 1.
 
@@ -58,7 +50,7 @@ first enumerator has the value 0, and the value of each successive enumerator is
 
     -   System.Int32 to UserAccountTypeEnum
 
-##  4. <a name='Structures'></a>Structures
+##  3. <a name='Structures'></a>Structures
 
 A Structure (struct in C\#) type is a value type that is typically used to encapsulate small groups of related variables.
 
@@ -112,7 +104,7 @@ Questions
 
 -   Why is it possible to override the `ToString` method?
 
-##  5. <a name='Classes'></a>Classes
+##  4. <a name='Classes'></a>Classes
 
 ##### Assignment
 
@@ -213,9 +205,9 @@ Question
 
 -   Can the `PersonClass()` constructor be made private? (can we have private constructors?)
 
-##  6. <a name='StandardInterfaces'></a>Standard Interfaces
+##  5. <a name='StandardInterfaces'></a>Standard Interfaces
 
-###  6.1. <a name='IComparableTIComparerT'></a>IComparable\<T\> / IComparer\<T\>
+###  5.1. <a name='IComparableTIComparerT'></a>IComparable\<T\> / IComparer\<T\>
 
 ##### Assignment
 
@@ -292,7 +284,7 @@ Question
 7. Add a new class to the project that implements the `IComparer<Person>` interface in order to sort the persons in ascending order based on their name
 8. Add a new class to the project that implements the `IComparer<Person>` interface in order to sort the persons in descending order based on their name
 
-###  6.2. <a name='ICloneable'></a>ICloneable
+###  5.2. <a name='ICloneable'></a>ICloneable
 
 1.  Based on the `Person` class, derive the `Student` class.
 
@@ -394,7 +386,7 @@ Question
 	```
 8. Run the application and check the values in the two objects. What happened? How would you fix the code? (hint: `virtual`).
 
-##  7. <a name='Operators'></a>Operators
+##  6. <a name='Operators'></a>Operators
 -   can be overload by defining static member functions using the operator keyword.
 -   not all operators can be overloaded and others have restrictions
 -   further reading: [link](https://msdn.microsoft.com/en-us/library/8edha89s(v=vs.140).aspx)
@@ -500,9 +492,9 @@ Question
 	}
 	```
 
-##  8. <a name='ClassInheritance'></a>Class Inheritance
+##  7. <a name='ClassInheritance'></a>Class Inheritance
 
-###  8.1. <a name='Abstractclasses'></a>Abstract classes
+###  7.1. <a name='Abstractclasses'></a>Abstract classes
 
 ![Figure 1 Class hierarchy](docs/2/inheritance.png)
 
@@ -622,7 +614,7 @@ Managers.
 
 6.  In the previous method declare an array of `Employee[]` and call the previously mentioned methods
 
-###  8.2. <a name='CustomInterfaces'></a>Custom Interfaces
+###  7.2. <a name='CustomInterfaces'></a>Custom Interfaces
 
 ##### Activity
 
@@ -655,4 +647,4 @@ Let’s imagine that the company starts to work with external contractors. You a
 
 6.  Search for all the persons that know “C\#”.
 
-##  9. <a name='Bibliography'></a>Bibliography
+##  8. <a name='Bibliography'></a>Bibliography
