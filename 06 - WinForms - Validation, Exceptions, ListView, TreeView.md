@@ -110,21 +110,21 @@
 	public partial class MainForm : Form
 	{
 		#region Properties
-		private List<Participant> Participants { get; set; }
+		private List<Participant> _participants;
 		#endregion
 
 		public MainForm()
 		{
 			InitializeComponent();
 
-			Participants = new List<Participant>();
+			_participants = new List<Participant>();
 		}
 
 		public void DisplayParticipants()
 		{
 			lvParticipants.Items.Clear();
 
-			foreach (Participant participant in Participants)
+			foreach (Participant participant in _participants)
 			{
 				var listViewItem = new ListViewItem(participant.LastName);
 				listViewItem.SubItems.Add(participant.FirstName);
@@ -148,7 +148,7 @@
 			DateTime birthDate = dtpBirthDate.Value;
 
 			var participant = new Participant(lastName, firstName, birthDate);
-			Participants.Add(participant);
+			_participants.Add(participant);
 
 			DisplayParticipants();
 		}
