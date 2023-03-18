@@ -113,6 +113,8 @@
 
 11. Handle the `Click` event for the `btnExport` button as follows
 
+	> Further details about the CSV file format: https://en.wikipedia.org/wiki/Comma-separated_values
+
 	```c#
 	// Create an instance of the open file dialog box.
 	SaveFileDialog saveFileDialog = new SaveFileDialog();
