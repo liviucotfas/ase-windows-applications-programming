@@ -126,7 +126,7 @@ Cases:
 			Participants.Add(new Participant(LastName, FirstName, BirthDate));
 			LastName = FirstName = string.Empty;
 			BirthDate = DateTime.Today;
-	}
+		}
 		#endregion
 
 		#region INotifyPropertyChanged
