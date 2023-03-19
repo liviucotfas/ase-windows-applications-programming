@@ -32,14 +32,14 @@
 1. Create a new project with the name “DragDropSample”
 2. Create the UI shown below  
 ![Drag and Drop](docs/9/drag-and-drop.jpg)
-3. Set the “AllowDrop” property of the ListView to true  
+3. Set the `AllowDrop` property of the `ListView` to `True`  
 ![AllowDrop Property True](docs/9/allowdrop-property.jpg)
-4. Handle the “MouseDown” event for the TextBox as follows:
+4. Handle the `MouseDown` event for the `TextBox` as follows:
 	
 	```c#
 	textBox1.DoDragDrop(textBox1.Text, DragDropEffects.Copy);
 	```
-5. Handle the “DragEnter” event for the ListView as follows:
+5. Handle the `DragEnter` event for the `ListView` as follows:
 
 	```c#
 	// Display some information about the DragDrop information in the
@@ -76,7 +76,7 @@
 		}
 	}
 	```
-6. Handle the “DragDrop” event for the ListView as follows:
+6. Handle the `DragDrop` event for the `ListView` as follows:
 	
 	```c#
 	/// <summary>

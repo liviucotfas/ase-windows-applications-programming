@@ -137,7 +137,7 @@ The Graphics class provides methods for drawing objects to the display device.
 ![Piechart](docs/9/piechart.jpg)
 
 1. Create a new project with the name “PieChartGraphicsSample”
-2. Add a new class “PieChartCategory”, defined as follows:
+2. Add a new class `PieChartCategory`, defined as follows:
 
 	```c#
 	internal class PieChartCategory
