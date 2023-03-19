@@ -52,11 +52,11 @@ Cases:
 
 1. Create a copy of the "ListViewBasicSample" project and name it "DataBindingSample"
 
-2. Replace the “ListView” control with a “DataGridView” control (Name: dgvParticipants)
+2. Replace the “ListView” control with a `DataGridView` control (Name: `dgvParticipants`)
 
 3. Add a “ViewModel” folder to your project
 
-4. Add the following “MainFormViewModel” class in the “ViewModel” folder
+4. Add the following `MainFormViewModel` class in the “ViewModel” folder
 
 	```c#
 	internal class MainFormViewModel : INotifyPropertyChanged
