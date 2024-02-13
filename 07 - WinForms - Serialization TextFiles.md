@@ -198,5 +198,8 @@
 		}
 	}
 	```
+**Activity**
+1. Try to implement an application similar to the `Windows Folder Organizer` available in the `Microsoft Store`.
+ 
 ##  4. <a name='Bibliography'></a>Bibliography
 - https://docs.microsoft.com/en-us/dotnet/standard/serialization/
