@@ -58,7 +58,7 @@ SQLite is probably the most used database engine in the world.
 	![SQLite Package Installation](docs/8/sqlite-package-installation.jpg)
 	3. The package will be downloaded and Installed. A new reference to “System.Data.SQLite” will be automatically added to the “References” node, as shown below  
 	![References Node](docs/8/references-node.jpg)
-3. Add the database connection string, as an attribute (“ConnectionString” ) of the “MainForm” class as follows:
+3. Add the database connection string, as an attribute (`ConnectionString`) of the `MainForm` class as follows:
 
 	```c#
 	public partial class MainForm : Form
@@ -74,7 +74,7 @@ SQLite is probably the most used database engine in the world.
 		. . .
 	}
 	```
-4. Set the tag property for the ListViewItems as follows:
+4. Set the `Tag` property for the ListViewItems as follows:
 
 	```c#
 	private void DisplayParticipants()
@@ -119,7 +119,7 @@ SQLite is probably the most used database engine in the world.
 		}
 	}
 	```
-7. Change the “btnAdd_Click” event handler as follows:
+7. Change the `btnAdd_Click` event handler as follows:
 	
 	```c#
 	private void btnAdd_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ SQLite is probably the most used database engine in the world.
 		}
 	}
 	```
-9. Handle the Load events of the “MainForm” class as follows:
+9. Handle the Load events of the `MainForm` class as follows:
 	
 	```c#
 	private void MainForm_Load(object sender, EventArgs e)

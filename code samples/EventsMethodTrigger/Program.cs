@@ -13,7 +13,7 @@ namespace EventsMethodTrigger
 	    private readonly Random _random;
 		#endregion
 
-		public event TemperatureReading TempartureReadingChanged;
+		public event TemperatureReading TemperatureReadingChanged;
 
 	    public TemperatureSensor(TimeSpan interval)
 	    {
@@ -23,8 +23,8 @@ namespace EventsMethodTrigger
 
 	    private void BroadcastTemperature(object o)
 	    {
-			if (TempartureReadingChanged != null)
-				TempartureReadingChanged(_random.NextDouble() * 100);
+			if (TemperatureReadingChanged != null)
+				TemperatureReadingChanged(_random.NextDouble() * 100);
 		}
 
 	    public void Dispose()
@@ -37,7 +37,7 @@ namespace EventsMethodTrigger
 	//Subscriber or Observer
     class MonitoringService
     {
-	    public void TempartureReadingChanged(double temperature)
+	    public void TemperatureReadingChanged(double temperature)
 	    {
 			if(temperature < 25)
 				Console.WriteLine("To coooooooold! :(");
@@ -55,12 +55,12 @@ namespace EventsMethodTrigger
 			var ts1 = new TemperatureSensor(TimeSpan.FromSeconds(2));
 			var ts2 = new TemperatureSensor(TimeSpan.FromSeconds(16));
 
-			ts1.TempartureReadingChanged += Ts1_TempartureReadingChanged;
-			ts2.TempartureReadingChanged += Ts2_TempartureReadingChanged;
+			ts1.TemperatureReadingChanged += Ts1_TempartureReadingChanged;
+			ts2.TemperatureReadingChanged += Ts2_TempartureReadingChanged;
 
 			var monitoringService = new MonitoringService();
-			ts1.TempartureReadingChanged += monitoringService.TempartureReadingChanged;
-			ts2.TempartureReadingChanged += monitoringService.TempartureReadingChanged;
+			ts1.TemperatureReadingChanged += monitoringService.TemperatureReadingChanged;
+			ts2.TemperatureReadingChanged += monitoringService.TemperatureReadingChanged;
 
 			Console.ReadLine();
         }

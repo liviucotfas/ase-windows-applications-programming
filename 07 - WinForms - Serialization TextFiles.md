@@ -143,8 +143,10 @@
 		//}
 
 		//2. Approach 2 - recommended
-		// generates the try{} finally{} in Version 1
-		using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+		// When compiled, this code in this approach is converted to: try{} finally{}
+		using (StreamWriter sw = File.CreateText(saveFileDialog.FileName))
+		// Equivalent to:
+		// using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
 		{
 			sw.WriteLine("LastName,FirstName,BirthDate");
 
@@ -196,5 +198,8 @@
 		}
 	}
 	```
+**Activity**
+1. Try to implement an application similar to the `Windows Folder Organizer` available in the `Microsoft Store`.
+ 
 ##  4. <a name='Bibliography'></a>Bibliography
 - https://docs.microsoft.com/en-us/dotnet/standard/serialization/
