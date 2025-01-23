@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace NumericTextBoxUserControlSample
 {
@@ -10,6 +11,7 @@ namespace NumericTextBoxUserControlSample
         /// Override the virtual Text property defined in the Control class to return the value in the TextBox
         /// </summary>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [AllowNull]
         public override string Text
 		{ 
 			get
@@ -22,10 +24,10 @@ namespace NumericTextBoxUserControlSample
 			}
 		}
 
-		//TODO Add a Int32 property for accessing the numeric value in the TextBox
+        //TODO Add a Int32 property for accessing the numeric value in the TextBox
 
-		#endregion
-		public NumericTextBoxCompositeControl()
+        #endregion
+        public NumericTextBoxCompositeControl()
 		{
 			InitializeComponent();
 		}

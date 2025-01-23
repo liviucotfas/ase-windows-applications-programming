@@ -78,7 +78,7 @@ namespace DialogSample
 			    DialogResult.Yes)
 			{
 				DataGridViewRow row = dgvParticipants.SelectedRows[0];
-				Participant participant = (Participant)row.Tag;
+				Participant participant = (Participant)row.Tag!;
 				_participants.Remove(participant);
 				DisplayParticipants();
 			}
