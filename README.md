@@ -2,7 +2,7 @@
 
 ## Prerequisites
 - Microsoft Windows: the `Console` applications developed during the first few labs also work on Linux and macOS, but the `Windows Forms` ones in the following labs can only be develope on Windows. If you use Linux / macOS as the primary operating system, you can choose to install Windows in a Virtual Machine. If you don't have a Windows license, you should be able to obtain a Windows 11/10 Education license from https://azure.microsoft.com/en-us/free/students by validating your student status.
-- Microsoft Visual Studio 2022 / 2019: can be downloaded from https://visualstudio.microsoft.com/vs/community or https://azure.microsoft.com/en-us/free/students. Make sure that the .NET desktop development workload is installed.
+- Microsoft Visual Studio 2022: can be downloaded from https://visualstudio.microsoft.com/vs/community or https://azure.microsoft.com/en-us/free/students. Make sure that the .NET desktop development workload is installed.
 
 ## FAQ
 
