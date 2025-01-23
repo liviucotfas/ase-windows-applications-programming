@@ -76,13 +76,13 @@ namespace DataBaseDataAdapter
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			DataRow newParticipantRow = 
-				_dsParticipants.Tables["Participant"].NewRow();
+				_dsParticipants.Tables["Participant"]!.NewRow();
 
 			newParticipantRow["LastName"] = tbLastName.Text;
 			newParticipantRow["FirstName"] = tbFirstName.Text;
 			newParticipantRow["BirthDate"] = dtpBirthDate.Value;
 
-			_dsParticipants.Tables["Participant"].Rows.Add(newParticipantRow);
+			_dsParticipants.Tables["Participant"]!.Rows.Add(newParticipantRow);
 		}
 
 		private void btnPersistChanges_Click(object sender, EventArgs e)

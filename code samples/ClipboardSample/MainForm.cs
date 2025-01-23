@@ -80,7 +80,7 @@ namespace ClipboardSample
 		private void CopyRTFButton_Click(object sender, EventArgs e)
 		{
 			//Copy text from rich text box onto the clipboard
-			Clipboard.SetText(rtbCopy.Rtf, TextDataFormat.Rtf);
+			Clipboard.SetText(rtbCopy.Rtf??string.Empty, TextDataFormat.Rtf);
 		}
 
 		private void PasteRTFButton_Click(object sender, EventArgs e)
@@ -127,8 +127,8 @@ namespace ClipboardSample
 			//the values of the properties of this object into a text box
 			if (Clipboard.ContainsData("ClipboardSample.Participant"))
 			{
-				var tempPixel = (Participant) Clipboard.GetData("ClipboardSample.Participant");
-				tbPasteObject.Text = tempPixel.ToString();
+				var tempPixel = (Participant?) Clipboard.GetData("ClipboardSample.Participant");
+				tbPasteObject.Text = tempPixel?.ToString();
 			}
 			else
 			{

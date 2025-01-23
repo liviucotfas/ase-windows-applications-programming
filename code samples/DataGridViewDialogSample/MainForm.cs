@@ -59,7 +59,7 @@ namespace DialogSample
 			}
 
 			DataGridViewRow row = dgvParticipants.SelectedRows[0];
-			Participant participant = (Participant)row.Tag;
+			Participant participant = (Participant)row.Tag!;
 
 			EditForm editForm = new EditForm(participant);
 			if (editForm.ShowDialog() == DialogResult.OK)

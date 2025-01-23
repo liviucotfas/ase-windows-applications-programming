@@ -168,7 +168,7 @@ namespace DataBaseCommand
 			{
 				try
 				{
-					DeleteParticipant((Participant) lvParticipants.SelectedItems[0].Tag);
+					DeleteParticipant((Participant) lvParticipants.SelectedItems[0].Tag!);
 					DisplayParticipants();
 				}
 				catch (Exception ex)

@@ -33,7 +33,7 @@ namespace StringBuilderString
 			//firstName = Console.ReadLine();
 
 			//written more concisely
-			string firstName = Console.ReadLine();
+			string? firstName = Console.ReadLine();
 
 			Console.WriteLine("");
 

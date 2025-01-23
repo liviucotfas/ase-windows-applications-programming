@@ -98,8 +98,11 @@ namespace SerializationBinaryXMLTextFile
 			XmlSerializer serializer = new XmlSerializer(typeof(List<Participant>));
 			using (FileStream stream = File.OpenRead("SerializedXML.xml"))
 			{
-				_participants = (List<Participant>)serializer.Deserialize(stream);
-				DisplayParticipants();
+				var deserializedParticipants = (List<Participant>?)serializer.Deserialize(stream);
+				if (deserializedParticipants != null)
+					_participants = deserializedParticipants;
+
+                DisplayParticipants();
 			}
 		}
 		#endregion
@@ -119,7 +122,10 @@ namespace SerializationBinaryXMLTextFile
 			JsonSerializer serializer = new JsonSerializer();
 			using (StreamReader reader = new StreamReader("SerializedJSON.json"))
 			{
-				_participants = (List<Participant>)serializer.Deserialize(reader, typeof(List<Participant>));
+				var deserializedParticipants = (List<Participant>?)serializer.Deserialize(reader, typeof(List<Participant>));
+				if(deserializedParticipants != null	)
+					_participants = deserializedParticipants;
+
 				DisplayParticipants();
 			}
 		}
