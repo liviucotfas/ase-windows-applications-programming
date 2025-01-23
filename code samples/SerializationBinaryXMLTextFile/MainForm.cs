@@ -55,18 +55,32 @@ namespace SerializationBinaryXMLTextFile
 		#region Binary
 		private void btnSerializeBinary_Click(object sender, EventArgs e)
 		{
-			BinaryFormatter formatter = new BinaryFormatter();
 			using (FileStream stream = File.Create("SerializedBinary.bin"))
-				formatter.Serialize(stream, _participants);
+			{
+                var binaryWriter = new BinaryWriter(stream);
+                foreach (var participant in _participants)
+                {
+                    binaryWriter.Write(participant.LastName);
+                    binaryWriter.Write(participant.FirstName);
+                    binaryWriter.Write(participant.BirthDate.ToBinary());
+                }
+            }	
 		}
 
 		private void btnDeserializeBinary_Click(object sender, EventArgs e)
 		{
-			BinaryFormatter formatter = new BinaryFormatter();
 			using (FileStream stream = File.OpenRead("SerializedBinary.bin"))
 			{
-				_participants = (List<Participant>)formatter.Deserialize(stream);
-				DisplayParticipants();
+                var binaryReader = new BinaryReader(stream);
+                _participants = new List<Participant>();
+                while (stream.Position < stream.Length)
+                {
+                    var lastName = binaryReader.ReadString();
+                    var firstName = binaryReader.ReadString();
+                    var birthDate = DateTime.FromBinary(binaryReader.ReadInt64());
+                    _participants.Add(new Participant(lastName, firstName, birthDate));
+                }
+                DisplayParticipants();
 			}
 		}
 		#endregion
@@ -96,7 +110,7 @@ namespace SerializationBinaryXMLTextFile
 			JsonSerializer serializer = new JsonSerializer();
 			using (StreamWriter writer = File.CreateText("SerializedJSON.json"))
 			{
-				serializer.Serialize(writer, _participants);
+                serializer.Serialize(writer, _participants);
 			}
 		}
 
@@ -113,8 +127,8 @@ namespace SerializationBinaryXMLTextFile
 
 		private void btnTextFile_Click(object sender, EventArgs e)
 		{
-			// Create an instance of the open file dialog box.
-			SaveFileDialog saveFileDialog = new SaveFileDialog();
+            // Create an instance of the open file dialog box.
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
 			saveFileDialog.Filter = "Text File | *.txt";
 			saveFileDialog.Title = "Save as text file";
 

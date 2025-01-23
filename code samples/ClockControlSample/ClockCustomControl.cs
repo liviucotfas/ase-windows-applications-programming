@@ -22,6 +22,7 @@ namespace ClockUserControlSample
 
         #region Proprietati
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Category("Custom")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Ora
         {
             get { return _ora; }
@@ -33,6 +34,7 @@ namespace ClockUserControlSample
         }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Category("Custom")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Min
         {
             get { return _min; }
@@ -44,6 +46,7 @@ namespace ClockUserControlSample
         }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Category("Custom")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Sec
         {
             get { return _sec; }
@@ -54,8 +57,10 @@ namespace ClockUserControlSample
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int OraAlarm { get; set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int MinAlarm { get; set; }
 
         #endregion

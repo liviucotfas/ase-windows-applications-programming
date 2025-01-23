@@ -151,7 +151,7 @@ namespace DatabaseCommandSQLiteDataGridView
 			{
 				try
 				{
-					DeleteParticipant((Participant)dgvParticipants.SelectedRows[0].DataBoundItem);
+					DeleteParticipant((Participant)dgvParticipants.SelectedRows[0].DataBoundItem!);
 				}
 				catch (Exception ex)
 				{

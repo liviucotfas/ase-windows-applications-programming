@@ -15,7 +15,8 @@ namespace BarChartGraphicsSample
 	{
 		#region Properties
 		private BarChartValue[] _data;
-		public BarChartValue[] Data
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public BarChartValue[] Data
 		{
 			get { return _data; }
 			set

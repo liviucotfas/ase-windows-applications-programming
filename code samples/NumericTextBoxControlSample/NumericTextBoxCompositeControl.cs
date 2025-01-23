@@ -1,14 +1,16 @@
 ﻿using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace NumericTextBoxUserControlSample
 {
 	public partial class NumericTextBoxCompositeControl : UserControl
 	{
-		#region Properties
-		/// <summary>
-		/// Override the virtual Text property defined in the Control class to return the value in the TextBox
-		/// </summary>
-		public override string Text
+        #region Properties
+        /// <summary>
+        /// Override the virtual Text property defined in the Control class to return the value in the TextBox
+        /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public override string Text
 		{ 
 			get
 			{

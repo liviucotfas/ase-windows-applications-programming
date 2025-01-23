@@ -15,7 +15,8 @@ namespace PieChartGraphicsSample
     {
 		#region Properties
 		private PieChartCategory[] _data;
-		public PieChartCategory[] Data
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public PieChartCategory[] Data
 		{
 			get { return _data; }
 			set

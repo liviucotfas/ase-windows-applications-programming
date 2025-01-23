@@ -16,7 +16,7 @@ namespace CustomCollections
 		}
 
 		//Indexer [string]
-		public Person this[string name]
+		public Person? this[string name]
 		{
 			get { return _personArray.FirstOrDefault(x=>x.Name == name); }
 		}

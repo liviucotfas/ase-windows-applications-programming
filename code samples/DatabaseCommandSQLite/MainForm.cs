@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
-using System.Windows.Forms;
 using DataBaseCommand.Entities;
+using System.Data.SQLite;
 
 namespace DataBaseCommand
 {
@@ -156,7 +153,7 @@ namespace DataBaseCommand
 				try
 				{
 					ListViewItem selectedItem = lvParticipants.SelectedItems[0];
-					Participant participant = (Participant)selectedItem.Tag;
+					Participant participant = (Participant)selectedItem.Tag!;
 
 					DeleteParticipant(participant);
 
