@@ -6,10 +6,10 @@ namespace Arrays
 	{
 		static void Main(string[] args)
 		{
-			
+			Array();
 		}
 
-		private void Array()
+		private static void Array()
 		{
 			//1. Declaration and assignment
 			//declaration
@@ -42,7 +42,7 @@ namespace Arrays
 				Console.WriteLine("doubleArray[{0}]={1}", i, doubleArray[i]);
 		}
 
-		private void RectangularArray()
+		private static void RectangularArray()
 		{
 			// declaration and allocation
 			var cub = new int[5, 2, 7];

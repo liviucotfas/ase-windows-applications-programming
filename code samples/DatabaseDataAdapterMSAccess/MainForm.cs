@@ -104,7 +104,7 @@ namespace DataBaseDataAdapter
 			if (e.StatementType == StatementType.Insert)
 			{
 				var getIdCommand = new OleDbCommand("SELECT @@Identity", _dbConnection);
-				e.Row["Id"] = (int)getIdCommand.ExecuteScalar();
+				e.Row["Id"] = (int)getIdCommand.ExecuteScalar()!;
 			}
 		}
 		#endregion

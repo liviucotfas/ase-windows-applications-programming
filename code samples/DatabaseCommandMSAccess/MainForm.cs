@@ -94,7 +94,7 @@ namespace DataBaseCommand
 
 				//3. Get the Id
 			    var getIdCommand = new OleDbCommand("SELECT @@Identity;", connection);
-			    participant.Id = (int) getIdCommand.ExecuteScalar();
+			    participant.Id = (int) getIdCommand.ExecuteScalar()!;
 				
 			    //4. Add the new participant to the local collection
 			    _participants.Add(participant);

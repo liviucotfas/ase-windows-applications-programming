@@ -43,7 +43,7 @@ namespace DataBindingSample
 			if (MessageBox.Show("Are you sure?", "Delete participant", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
 				DialogResult.Yes)
 			{
-				Participant selectedParticipant = (Participant) dgvParticipants.SelectedRows[0].DataBoundItem;
+				Participant selectedParticipant = (Participant) dgvParticipants.SelectedRows[0].DataBoundItem!;
 				_viewModel.DeleteParticipant(selectedParticipant);
 			}
 		}

@@ -7,10 +7,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Images\closedFolder.png" />
     <Content Include="Images\file.png" />
     <Content Include="Images\jpgFile.png" />
