@@ -52,8 +52,8 @@
 	errorProvider.SetError((Control)sender, string.Empty);
 	```
 6. (optional) Set `AutoValidate` form property to `EnableAllowFocusChange` in order to allow the user to change the focus to a different control or to close the form.
-6. Handle the **Validating** and **Validated** events for the **tbFirstName** in a similar manner
-7. Handle the **Click** event on the “Add Participant” button as follows
+6. Handle the `Validating` and `Validated` events for the `tbFirstName` in a similar manner
+7. Handle the `Click` event on the “Add Participant” button as follows
 
 	```c#
 	private void btnAdd_Click(object sender, EventArgs e)
