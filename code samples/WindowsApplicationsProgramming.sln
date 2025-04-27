@@ -143,6 +143,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewDialogSample", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCommandSQLServer2Entities", "DatabaseCommandSQLServer2Entities\DatabaseCommandSQLServer2Entities.csproj", "{9EBBF27C-8492-479B-87E8-07E9882E0694}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationJSONXMLTextFile", "SerializationJSONXMLTextFile\SerializationJSONXMLTextFile.csproj", "{0BC1AE95-BEF9-4899-A969-8E9556C5E871}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -353,6 +355,10 @@ Global
 		{9EBBF27C-8492-479B-87E8-07E9882E0694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EBBF27C-8492-479B-87E8-07E9882E0694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EBBF27C-8492-479B-87E8-07E9882E0694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BC1AE95-BEF9-4899-A969-8E9556C5E871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC1AE95-BEF9-4899-A969-8E9556C5E871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC1AE95-BEF9-4899-A969-8E9556C5E871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC1AE95-BEF9-4899-A969-8E9556C5E871}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

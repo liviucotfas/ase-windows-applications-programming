@@ -123,5 +123,15 @@ namespace DragDropSample
 				listBox.Items.Add(e.Data.GetData(DataFormats.Text));
 			}
 		}
-	}
+
+        private void richTextBox_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+
+        }
+    }
 }

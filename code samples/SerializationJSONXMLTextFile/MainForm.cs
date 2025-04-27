@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using Newtonsoft.Json;
+using System.Text.Json;
 using SerializationJSONXMLTextFile.Entities;
 
 namespace SerializationJSONXMLTextFile
@@ -53,36 +52,25 @@ namespace SerializationJSONXMLTextFile
 
 
 		#region Binary
-		private void btnSerializeBinary_Click(object sender, EventArgs e)
+		private void btnSerializeJSON_Click(object sender, EventArgs e)
 		{
-			using (FileStream stream = File.Create("SerializedBinary.bin"))
-			{
-                var binaryWriter = new BinaryWriter(stream);
-                foreach (var participant in _participants)
-                {
-                    binaryWriter.Write(participant.LastName);
-                    binaryWriter.Write(participant.FirstName);
-                    binaryWriter.Write(participant.BirthDate.ToBinary());
-                }
-            }	
-		}
+            var json = JsonSerializer.Serialize(_participants);
 
-		private void btnDeserializeBinary_Click(object sender, EventArgs e)
+            using (StreamWriter sw = new StreamWriter(File.Create("serialized.json")))
+            {
+                sw.WriteLine(json);
+            }
+        }
+
+		private void btnDeserializeJSON_Click(object sender, EventArgs e)
 		{
-			using (FileStream stream = File.OpenRead("SerializedBinary.bin"))
-			{
-                var binaryReader = new BinaryReader(stream);
-                _participants = new List<Participant>();
-                while (stream.Position < stream.Length)
-                {
-                    var lastName = binaryReader.ReadString();
-                    var firstName = binaryReader.ReadString();
-                    var birthDate = DateTime.FromBinary(binaryReader.ReadInt64());
-                    _participants.Add(new Participant(lastName, firstName, birthDate));
-                }
+            using (StreamReader sr = new StreamReader(File.OpenRead("serialized.json")))
+            {
+                var json = sr.ReadToEnd();
+                _participants = JsonSerializer.Deserialize<List<Participant>>(json);
                 DisplayParticipants();
-			}
-		}
+            }
+        }
 		#endregion
 
 		#region XML
@@ -107,19 +95,22 @@ namespace SerializationJSONXMLTextFile
 		}
 		#endregion
 
-		#region JSON
-		private void btnSerializeJSON_Click(object sender, EventArgs e)
+		#region NewtonsoftJSON
+		private void btnSerializeJSONLegacy_Click(object sender, EventArgs e)
 		{
-			JsonSerializer serializer = new JsonSerializer();
+			// Notice that we have a naming conflict between Newtonsoft.Json.JsonSerializer and the
+			// System.Text.Json.JsonSerializer classes. As such we must qualify the Newtonsoft one
+			// with the full namespace.
+			Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
 			using (StreamWriter writer = File.CreateText("SerializedJSON.json"))
 			{
-                serializer.Serialize(writer, _participants);
+				serializer.Serialize(writer, _participants);
 			}
 		}
 
-		private void btnDeserializeJSON_Click(object sender, EventArgs e)
+		private void btnDeserializeJSONLegacy_Click(object sender, EventArgs e)
 		{
-			JsonSerializer serializer = new JsonSerializer();
+			Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
 			using (StreamReader reader = new StreamReader("SerializedJSON.json"))
 			{
 				var deserializedParticipants = (List<Participant>?)serializer.Deserialize(reader, typeof(List<Participant>));

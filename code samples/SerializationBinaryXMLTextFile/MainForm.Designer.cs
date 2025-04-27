@@ -1,4 +1,4 @@
-﻿namespace SerializationBinaryXMLTextFile
+﻿namespace SerializationJSONXMLTextFile
 {
 	partial class MainForm
 	{
