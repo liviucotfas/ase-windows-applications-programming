@@ -36,7 +36,7 @@
 		return string.IsNullOrWhiteSpace(tbLastName.Text.Trim());
 	}
 	```
-4. Handle the **Validating** event on **tbLastName** as follows:
+4. Handle the `Validating` event on `tbLastName` as follows:
 
 	```c#
 	if (!IsLastNameValid())
