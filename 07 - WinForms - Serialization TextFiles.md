@@ -3,7 +3,7 @@
 <!-- vscode-markdown-toc -->
 * 1. [Objectives](#Objectives)
 * 2. [Serialization/Deserialization](#SerializationDeserialization)
-	* 2.1. [Binary Serialization](#BinarySerialization)
+	* 2.1. [JSON Serialization](#JSONSerialization)
 	* 2.2. [XML Serialization](#XMLSerialization)
 * 3. [ TextFiles](#TextFiles)
 * 4. [Bibliography](#Bibliography)
@@ -15,12 +15,13 @@
 <!-- /vscode-markdown-toc -->
 
 ##  1. <a name='Objectives'></a>Objectives
-- implement `binary` serialization / deserialization;
-- implement `XML` serialization / deserialization;
 - implement `JSON` serialization / deserialization;
-- understand the differences between the `binary`, `XML` and `JSON` serializations;
-- writing text files;
+- implement `XML` serialization / deserialization;
+- understand the differences between the `XML` and `JSON` serializations;
+- writing to text files;
 - uising the `OpenFileDialog` and the `SaveFileDialog`.
+
+	> In the past, binary serialization was also used. This was however deprecated as of .NET 8
 
 ##  2. <a name='SerializationDeserialization'></a>Serialization/Deserialization
 
@@ -28,54 +29,51 @@
 - Serialization in .NET: <https://docs.microsoft.com/en-us/dotnet/standard/serialization/>
 
 **Activity**
+> :octocat: The complete sample is available in the "code samples" folder:  “SerializationJSONXMLTextFile”
 
-> :octocat: The complete sample is available in the "code samples" folder:  “SerializationBinaryXMLTextFile”
-
-1.  Create a copy of the “ListViewBasicSample” project and name it “SerializationBinaryXMLTextFile”
+1.  Create a copy of the “ListViewBasicSample” project and name it “SerializationJSONXMLTextFile”
 
 2.  Create the following UI
 
-	![UI Binary Serialization](docs/7/ui-binary.png)
+	![UI JSON Serialization](docs/7/ui-binary.png)
 
-###  2.1. <a name='BinarySerialization'></a>Binary Serialization
+###  2.1. <a name='JSONSerialization'></a>JSON Serialization
+	> JSON is a data interchange format used as an industry standard. JSON stands for "JavaScript Object Notation" and the name comes from the syntax it uses, which is inspired by the way objects are declared in JavaScript. It stores data in a structured way using key-value pairs. Keys (also called properties) are always strings, whereas values can be numbers, strings, booleans, arrays or objects. 
 
-3. Add a menu for “Binary Serialization” (“Serialize” - `btnSerializeBinary`, “Deserialize” - `btnDeserializeBinary`), “XML Serialization” (“Serialize” - `btnSerializeXML`, “Deserialize” - `btnDeserializeXML`) and “TextFile” (“Export” – `btnExport`). 
+3. Add a menu for JSON Serialization” (“Serialize” - `btnSerializeJSON`, “Deserialize” - `btnDeserializeJSON`), “XML Serialization” (“Serialize” - `btnSerializeXML`, “Deserialize” - `btnDeserializeXML`) and “TextFile” (“Export” – `btnExport`). 
 
-4. Decorate the `Participant` class with the `[Serializable]` attribute, as follows. An exception will be thrown otherwise.
+4. Install the `System.Text.Json` package from the NuGet package manager.
+	> Note that you need to include the reference to the package in the files where you aim to use the `JsonSerializer` class.
 
-	```c#
-	[Serializable]
-	internal class Participant
-	{
-	…………………
-	```
-     	
-5.  Handle the `Click` event for the `btnSerializeBinary` button as follows
+5.  Handle the `Click` event for the `btnSerializeJSON` button as follows
 
 	```c#
 	private void btnSerialize_Click(object sender, EventArgs e){
-		BinaryFormatter formatter = new BinaryFormatter();
-		using (FileStream stream = File.Create("serialized.bin"))
-			formatter.Serialize(stream, _participants);
+		var json = JsonSerializer.Serialize(_participants);
+
+		using (StreamWriter sw = new StreamWriter(File.Create("serialized.json")))
+		{
+			sw.WriteLine(json);
+		}
 	}
 	```
 
 6. Check what happens when the `using` statement is compiled.  
    > `using` statement: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement
      	     	
-7. Remove the `readonly` modifier from the declaration of the `_participants` attribute in the `MainForm` class. The project will not compile otherwise.
-
-8. Handle the `Click` event for the `btnDeserializeBinary` button as follows
+7. Handle the `Click` event for the `btnDeserializeJSON` button as follows
 
 	```C#
 	private void btnDeserialize_Click(object sender, EventArgs e){
-		BinaryFormatter formatter = new BinaryFormatter();
-		using (FileStream stream = File.OpenRead("serialized.bin"))	{
-			_participants = (List<Participant>)formatter.Deserialize(stream);
+		using (StreamReader sr = new StreamReader(File.OpenRead("serialized.json")))
+		{
+			var json = sr.ReadToEnd();
+			_participants = JsonSerializer.Deserialize<List<Participant>>(json);
 			DisplayParticipants();
 		}
 	}
 	```
+
 **Assignments (for you to try)**
 1. Modify the project in order to automatically serialize the current list of participants when the application is closed. The list should be automatically deserialized and displayed when the application starts. The application should not throw an exception if the serialization file has been deleted in the mean time.
 
@@ -105,7 +103,7 @@
 	```
 
 **Assignments (for you to try)**
-1. Also implement JSON serialization using the NuGet package available at: https://www.nuget.org/packages/Newtonsoft.Json/ .
+1. Also implement JSON serialization using the alternative NuGet package available at: https://www.nuget.org/packages/Newtonsoft.Json/ . This package is often used for legacy projects. For new projects try to use the `System.Text.Json` package.
 2. Add at least 10 entries in the application. Serialize the data in Binary, XML and JSON format. Compare the sizes of the resulting files. Open the files using Notepad (or any other text editor) and compare their content. 
 
 
