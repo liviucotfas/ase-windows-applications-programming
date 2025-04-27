@@ -35,7 +35,7 @@
 
 2.  Create the following UI
 
-	![UI JSON Serialization](docs/7/ui-binary.png)
+	![UI JSON Serialization](docs/7/ui-json.png)
 
 ###  2.1. <a name='JSONSerialization'></a>JSON Serialization
 	> JSON is a data interchange format used as an industry standard. JSON stands for "JavaScript Object Notation" and the name comes from the syntax it uses, which is inspired by the way objects are declared in JavaScript. It stores data in a structured way using key-value pairs. Keys (also called properties) are always strings, whereas values can be numbers, strings, booleans, arrays or objects. 
