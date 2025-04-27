@@ -45,7 +45,7 @@
 		errorProvider.SetError((Control)sender, "Last Name is empty!");
 	}
 	```
-5. Handle the **Validated** event on **tbLastName** as follows:
+5. Handle the `Validated` event on `tbLastName` as follows:
 
 	```c#
 	//https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.errorprovider.clear
