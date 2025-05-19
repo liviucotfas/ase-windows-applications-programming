@@ -13,7 +13,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.4" />
-    <PackageReference Include="System.Data.OleDb" Version="9.0.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.5" />
+    <PackageReference Include="System.Data.OleDb" Version="9.0.5" />
   </ItemGroup>
 </Project>
