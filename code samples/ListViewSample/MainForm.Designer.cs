@@ -20,250 +20,260 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.components = new System.ComponentModel.Container();
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Children", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Adults", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.lvParticipants = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imgListLarge = new System.Windows.Forms.ImageList(this.components);
-            this.imgListSmall = new System.Windows.Forms.ImageList(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbLastName = new System.Windows.Forms.TextBox();
-            this.tbFirstName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.btnDetails = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
-            this.btnLargeIcon = new System.Windows.Forms.Button();
-            this.btnSmallIcon = new System.Windows.Forms.Button();
-            this.btnTiles = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            lvParticipants = new System.Windows.Forms.ListView();
+            columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            imgListLarge = new System.Windows.Forms.ImageList(components);
+            imgListSmall = new System.Windows.Forms.ImageList(components);
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            btnAdd = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            tbLastName = new System.Windows.Forms.TextBox();
+            tbFirstName = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            btnDetails = new System.Windows.Forms.Button();
+            btnList = new System.Windows.Forms.Button();
+            btnLargeIcon = new System.Windows.Forms.Button();
+            btnSmallIcon = new System.Windows.Forms.Button();
+            btnTiles = new System.Windows.Forms.Button();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // lvParticipants
             // 
-            this.lvParticipants.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvParticipants.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.lvParticipants.FullRowSelect = true;
-            this.lvParticipants.GridLines = true;
+            lvParticipants.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lvParticipants.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            lvParticipants.FullRowSelect = true;
+            lvParticipants.GridLines = true;
             listViewGroup1.Header = "Children";
             listViewGroup1.Name = "children";
             listViewGroup2.Header = "Adults";
             listViewGroup2.Name = "adults";
-            this.lvParticipants.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
-            this.lvParticipants.LargeImageList = this.imgListLarge;
-            this.lvParticipants.Location = new System.Drawing.Point(12, 181);
-            this.lvParticipants.Name = "lvParticipants";
-            this.lvParticipants.Size = new System.Drawing.Size(687, 234);
-            this.lvParticipants.SmallImageList = this.imgListSmall;
-            this.lvParticipants.TabIndex = 53;
-            this.lvParticipants.UseCompatibleStateImageBehavior = false;
-            this.lvParticipants.View = System.Windows.Forms.View.Details;
+            lvParticipants.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] { listViewGroup1, listViewGroup2 });
+            lvParticipants.LargeImageList = imgListLarge;
+            lvParticipants.Location = new System.Drawing.Point(14, 209);
+            lvParticipants.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            lvParticipants.Name = "lvParticipants";
+            lvParticipants.Size = new System.Drawing.Size(801, 269);
+            lvParticipants.SmallImageList = imgListSmall;
+            lvParticipants.TabIndex = 53;
+            lvParticipants.UseCompatibleStateImageBehavior = false;
+            lvParticipants.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Last Name";
-            this.columnHeader1.Width = 150;
+            columnHeader1.Text = "Last Name";
+            columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "First Name";
-            this.columnHeader2.Width = 150;
+            columnHeader2.Text = "First Name";
+            columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Birth Date";
-            this.columnHeader3.Width = 120;
+            columnHeader3.Text = "Birth Date";
+            columnHeader3.Width = 120;
             // 
             // imgListLarge
             // 
-            this.imgListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListLarge.ImageStream")));
-            this.imgListLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgListLarge.Images.SetKeyName(0, "child.png");
-            this.imgListLarge.Images.SetKeyName(1, "adult.png");
+            imgListLarge.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            imgListLarge.ImageStream = (System.Windows.Forms.ImageListStreamer)resources.GetObject("imgListLarge.ImageStream");
+            imgListLarge.TransparentColor = System.Drawing.Color.Transparent;
+            imgListLarge.Images.SetKeyName(0, "adult.png");
+            imgListLarge.Images.SetKeyName(1, "child.png");
             // 
             // imgListSmall
             // 
-            this.imgListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListSmall.ImageStream")));
-            this.imgListSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgListSmall.Images.SetKeyName(0, "child.png");
-            this.imgListSmall.Images.SetKeyName(1, "adult.png");
+            imgListSmall.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            imgListSmall.ImageStream = (System.Windows.Forms.ImageListStreamer)resources.GetObject("imgListSmall.ImageStream");
+            imgListSmall.TransparentColor = System.Drawing.Color.Transparent;
+            imgListSmall.Images.SetKeyName(0, "adult.png");
+            imgListSmall.Images.SetKeyName(1, "child.png");
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tbLastName);
-            this.groupBox1.Controls.Add(this.tbFirstName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dtpBirthDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(687, 119);
-            this.groupBox1.TabIndex = 52;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "New Participant";
+            groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            groupBox1.Controls.Add(btnAdd);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(tbLastName);
+            groupBox1.Controls.Add(tbFirstName);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(dtpBirthDate);
+            groupBox1.Location = new System.Drawing.Point(14, 14);
+            groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Size = new System.Drawing.Size(802, 137);
+            groupBox1.TabIndex = 52;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "New Participant";
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(501, 76);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(167, 23);
-            this.btnAdd.TabIndex = 52;
-            this.btnAdd.Text = "Add Participant";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            btnAdd.BackColor = System.Drawing.Color.FromArgb(255, 128, 0);
+            btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnAdd.ForeColor = System.Drawing.Color.White;
+            btnAdd.Location = new System.Drawing.Point(584, 88);
+            btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new System.Drawing.Size(195, 27);
+            btnAdd.TabIndex = 52;
+            btnAdd.Text = "Add Participant";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Last Name";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(44, 39);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(63, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Last Name";
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(102, 31);
-            this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(200, 20);
-            this.tbLastName.TabIndex = 0;
+            tbLastName.Location = new System.Drawing.Point(119, 36);
+            tbLastName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tbLastName.Name = "tbLastName";
+            tbLastName.Size = new System.Drawing.Size(233, 23);
+            tbLastName.TabIndex = 0;
             // 
             // tbFirstName
             // 
-            this.tbFirstName.Location = new System.Drawing.Point(102, 72);
-            this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(200, 20);
-            this.tbFirstName.TabIndex = 2;
+            tbFirstName.Location = new System.Drawing.Point(119, 83);
+            tbFirstName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tbFirstName.Name = "tbFirstName";
+            tbFirstName.Size = new System.Drawing.Size(233, 23);
+            tbFirstName.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "First Name";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(44, 88);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(64, 15);
+            label2.TabIndex = 3;
+            label2.Text = "First Name";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(403, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Birth Date";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(470, 39);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(59, 15);
+            label3.TabIndex = 4;
+            label3.Text = "Birth Date";
             // 
             // dtpBirthDate
             // 
-            this.dtpBirthDate.CustomFormat = "yyyy.MM.dd HH:mm";
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDate.Location = new System.Drawing.Point(467, 29);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthDate.TabIndex = 5;
+            dtpBirthDate.CustomFormat = "yyyy.MM.dd HH:mm";
+            dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtpBirthDate.Location = new System.Drawing.Point(545, 33);
+            dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new System.Drawing.Size(233, 23);
+            dtpBirthDate.TabIndex = 5;
             // 
             // btnDetails
             // 
-            this.btnDetails.Location = new System.Drawing.Point(12, 152);
-            this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(75, 23);
-            this.btnDetails.TabIndex = 54;
-            this.btnDetails.Text = "Details";
-            this.btnDetails.UseVisualStyleBackColor = true;
-            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
+            btnDetails.Location = new System.Drawing.Point(14, 175);
+            btnDetails.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDetails.Name = "btnDetails";
+            btnDetails.Size = new System.Drawing.Size(88, 27);
+            btnDetails.TabIndex = 54;
+            btnDetails.Text = "Details";
+            btnDetails.UseVisualStyleBackColor = true;
+            btnDetails.Click += btnDetails_Click;
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(93, 152);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(75, 23);
-            this.btnList.TabIndex = 55;
-            this.btnList.Text = "List";
-            this.btnList.UseVisualStyleBackColor = true;
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            btnList.Location = new System.Drawing.Point(108, 175);
+            btnList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnList.Name = "btnList";
+            btnList.Size = new System.Drawing.Size(88, 27);
+            btnList.TabIndex = 55;
+            btnList.Text = "List";
+            btnList.UseVisualStyleBackColor = true;
+            btnList.Click += btnList_Click;
             // 
             // btnLargeIcon
             // 
-            this.btnLargeIcon.Location = new System.Drawing.Point(174, 152);
-            this.btnLargeIcon.Name = "btnLargeIcon";
-            this.btnLargeIcon.Size = new System.Drawing.Size(75, 23);
-            this.btnLargeIcon.TabIndex = 56;
-            this.btnLargeIcon.Text = "LargeIcon";
-            this.btnLargeIcon.UseVisualStyleBackColor = true;
-            this.btnLargeIcon.Click += new System.EventHandler(this.btnLargeIcon_Click);
+            btnLargeIcon.Location = new System.Drawing.Point(203, 175);
+            btnLargeIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnLargeIcon.Name = "btnLargeIcon";
+            btnLargeIcon.Size = new System.Drawing.Size(88, 27);
+            btnLargeIcon.TabIndex = 56;
+            btnLargeIcon.Text = "LargeIcon";
+            btnLargeIcon.UseVisualStyleBackColor = true;
+            btnLargeIcon.Click += btnLargeIcon_Click;
             // 
             // btnSmallIcon
             // 
-            this.btnSmallIcon.Location = new System.Drawing.Point(255, 152);
-            this.btnSmallIcon.Name = "btnSmallIcon";
-            this.btnSmallIcon.Size = new System.Drawing.Size(75, 23);
-            this.btnSmallIcon.TabIndex = 57;
-            this.btnSmallIcon.Text = "SmallIcon";
-            this.btnSmallIcon.UseVisualStyleBackColor = true;
-            this.btnSmallIcon.Click += new System.EventHandler(this.btnSmallIcon_Click);
+            btnSmallIcon.Location = new System.Drawing.Point(298, 175);
+            btnSmallIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSmallIcon.Name = "btnSmallIcon";
+            btnSmallIcon.Size = new System.Drawing.Size(88, 27);
+            btnSmallIcon.TabIndex = 57;
+            btnSmallIcon.Text = "SmallIcon";
+            btnSmallIcon.UseVisualStyleBackColor = true;
+            btnSmallIcon.Click += btnSmallIcon_Click;
             // 
             // btnTiles
             // 
-            this.btnTiles.Location = new System.Drawing.Point(336, 152);
-            this.btnTiles.Name = "btnTiles";
-            this.btnTiles.Size = new System.Drawing.Size(75, 23);
-            this.btnTiles.TabIndex = 58;
-            this.btnTiles.Text = "Tile";
-            this.btnTiles.UseVisualStyleBackColor = true;
-            this.btnTiles.Click += new System.EventHandler(this.btnTiles_Click);
+            btnTiles.Location = new System.Drawing.Point(392, 175);
+            btnTiles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnTiles.Name = "btnTiles";
+            btnTiles.Size = new System.Drawing.Size(88, 27);
+            btnTiles.TabIndex = 58;
+            btnTiles.Text = "Tile";
+            btnTiles.UseVisualStyleBackColor = true;
+            btnTiles.Click += btnTiles_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 427);
-            this.Controls.Add(this.btnTiles);
-            this.Controls.Add(this.btnSmallIcon);
-            this.Controls.Add(this.btnLargeIcon);
-            this.Controls.Add(this.btnList);
-            this.Controls.Add(this.btnDetails);
-            this.Controls.Add(this.lvParticipants);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "MainForm";
-            this.Text = "WinAppProgramming Run";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(827, 493);
+            Controls.Add(btnTiles);
+            Controls.Add(btnSmallIcon);
+            Controls.Add(btnLargeIcon);
+            Controls.Add(btnList);
+            Controls.Add(btnDetails);
+            Controls.Add(lvParticipants);
+            Controls.Add(groupBox1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "MainForm";
+            Text = "WinAppProgramming Run";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.ListView lvParticipants;
+        private System.Windows.Forms.ListView lvParticipants;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Label label1;
