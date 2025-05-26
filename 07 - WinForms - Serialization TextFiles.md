@@ -48,7 +48,7 @@
 5.  Handle the `Click` event for the `btnSerializeJSON` button as follows
 
 	```c#
-	private void btnSerialize_Click(object sender, EventArgs e){
+	private void btnSerializeJSON_Click(object sender, EventArgs e){
 		using (FileStream stream = File.Create("SerializedJSON.json"))
 		{
 			JsonSerializer.Serialize(stream, _participants);
