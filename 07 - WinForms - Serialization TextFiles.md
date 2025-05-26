@@ -49,11 +49,9 @@
 
 	```c#
 	private void btnSerialize_Click(object sender, EventArgs e){
-		var json = JsonSerializer.Serialize(_participants);
-
-		using (StreamWriter sw = new StreamWriter(File.Create("serialized.json")))
+		using (FileStream stream = File.Create("SerializedJSON.json"))
 		{
-			sw.WriteLine(json);
+			JsonSerializer.Serialize(stream, _participants);
 		}
 	}
 	```
@@ -64,11 +62,14 @@
 7. Handle the `Click` event for the `btnDeserializeJSON` button as follows
 
 	```C#
-	private void btnDeserialize_Click(object sender, EventArgs e){
-		using (StreamReader sr = new StreamReader(File.OpenRead("serialized.json")))
+	private void btnDeserializeJSON_Click(object sender, EventArgs e)
+	{
+		using (FileStream stream = File.OpenRead("SerializedJSON.json"))
 		{
-			var json = sr.ReadToEnd();
-			_participants = JsonSerializer.Deserialize<List<Participant>>(json);
+			var deserializedParticipants = JsonSerializer.Deserialize<List<Participant>>(stream);
+			if (deserializedParticipants != null)
+				_participants = deserializedParticipants;
+
 			DisplayParticipants();
 		}
 	}
