@@ -16,6 +16,7 @@
 
 ## Recommended Reading
 - Start learning about .NET at https://dotnet.microsoft.com/learn
+- Changes for WinForms in .NET 10 at https://learn.microsoft.com/en-us/dotnet/desktop/winforms/whats-new/net100
 - Explore the developer resources at https://developer.microsoft.com
 
 ## Further Reading
