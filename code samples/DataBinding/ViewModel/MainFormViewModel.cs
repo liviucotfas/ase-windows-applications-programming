@@ -66,7 +66,8 @@ namespace DataBindingSample.ViewModel
         public MainFormViewModel()
 		{
 			Participants = new BindingList<Participant>();
-			BirthDate = DateTime.Now;
+			_lastName = _firstName = string.Empty;
+			_birthDate = DateTime.Now;
 		}
 
 		#region Methods
@@ -90,7 +91,7 @@ namespace DataBindingSample.ViewModel
 		// [CallerMemberName] - Allows you to obtain the method or property name of the caller to the method. https://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.callermembernameattribute%28v=vs.110%29.aspx
 		protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
 		{
-			PropertyChangedEventHandler handler = PropertyChanged;
+			PropertyChangedEventHandler? handler = PropertyChanged;
 			if (handler != null)
 				handler(this, new PropertyChangedEventArgs(propertyName));
 		}
