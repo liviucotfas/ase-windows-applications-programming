@@ -186,6 +186,7 @@ Cases:
 	
 	For the complete sample, check the `DataBindingSample` project in the "code samples" folder. 
 2. Add a button to the `MainForm` that will allow the user to edit the currently selected participant using a secondary form (ex: `EditForm`).
+3. Improve the MVVM implementation as described in this blog post: https://devblogs.microsoft.com/dotnet/winforms-cross-platform-dotnet-maui-command-binding/
 
 ##  3. <a name='UnitTesting'></a>Unit Testing
 
