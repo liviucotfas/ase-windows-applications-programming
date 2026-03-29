@@ -41,10 +41,7 @@
 
 3. Add a menu for JSON Serialization” (“Serialize” - `btnSerializeJSON`, “Deserialize” - `btnDeserializeJSON`), “XML Serialization” (“Serialize” - `btnSerializeXML`, “Deserialize” - `btnDeserializeXML`) and “TextFile” (“Export” – `btnExport`). 
 
-4. Install the `System.Text.Json` package from the NuGet package manager.
-	> Note that you need to include the reference to the package in the files where you aim to use the `JsonSerializer` class.
-
-5.  Handle the `Click` event for the `btnSerializeJSON` button as follows
+4.  Handle the `Click` event for the `btnSerializeJSON` button as follows
 
 	```c#
 	private void btnSerializeJSON_Click(object sender, EventArgs e){
@@ -55,10 +52,10 @@
 	}
 	```
 
-6. Check what happens when the `using` statement is compiled.  
+5. Check what happens when the `using` statement is compiled.  
    > `using` statement: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement
      	     	
-7. Handle the `Click` event for the `btnDeserializeJSON` button as follows
+6. Handle the `Click` event for the `btnDeserializeJSON` button as follows
 
 	```C#
 	private void btnDeserializeJSON_Click(object sender, EventArgs e)
