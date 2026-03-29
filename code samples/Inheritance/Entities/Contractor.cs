@@ -12,8 +12,9 @@ namespace ConstructorDestructor.Entities
 		}
 		#endregion
 
-		public Contractor(string name) : base(name)
+		public Contractor(string name, string[] languages) : base(name)
 		{
+			Languages = languages;
 		}
 	}
 }
