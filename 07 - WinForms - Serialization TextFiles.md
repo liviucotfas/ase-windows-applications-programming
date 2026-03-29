@@ -101,7 +101,7 @@
 
 **Assignments (for you to try)**
 1. Also implement JSON serialization using the alternative NuGet package available at: https://www.nuget.org/packages/Newtonsoft.Json/ . This package is often used for legacy projects. For new projects try to use the `System.Text.Json` package.
-2. Add at least 10 entries in the application. Serialize the data in Binary, XML and JSON format. Compare the sizes of the resulting files. Open the files using Notepad (or any other text editor) and compare their content. 
+2. Add at least 10 entries in the application. Serialize the data in XML and JSON format. Compare the sizes of the resulting files. Open the files using Notepad (or any other text editor) and compare their content. 
 
 
 ##  3. <a name='TextFiles'></a> TextFiles
