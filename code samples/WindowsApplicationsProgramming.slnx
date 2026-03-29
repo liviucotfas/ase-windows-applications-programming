@@ -1,0 +1,91 @@
+<Solution>
+  <Folder Name="/01. NET Framework Basics/">
+    <Project Path="BoxingUnboxing/BoxingUnboxing.csproj" />
+    <Project Path="MethodParameters/MethodParameters.csproj" />
+    <Project Path="Operators/Operators.csproj" />
+    <Project Path="Strings/Strings.csproj" />
+  </Folder>
+  <Folder Name="/02. Creating Types/">
+    <Project Path="Interfaces/StandardInterfaces.csproj" />
+    <Project Path="ValueTypesReferenceTypes/EnumStructClass.csproj" />
+  </Folder>
+  <Folder Name="/03. Collections/">
+    <Project Path="Array/Arrays.csproj" />
+    <Project Path="CustomCollections/CustomCollections.csproj" />
+    <Project Path="Inheritance/Inheritance.csproj" />
+    <Project Path="StandardCollections/StandardCollections.csproj" />
+  </Folder>
+  <Folder Name="/04. Delegates and Events/">
+    <Project Path="Delegates/Delegates.csproj" />
+    <Project Path="EventsMethodTrigger/EventsMethodTrigger.csproj" />
+    <Project Path="EventsPropertyTrigger/EventsPropertyTrigger.csproj" />
+    <Project Path="EventsPropertyTriggerEventArgs/EventsPropertyTriggerEventArgs.csproj" />
+  </Folder>
+  <Folder Name="/05. Exceptions and Garbage Collection/">
+    <Project Path="ExceptionHandling/ExceptionHandling.csproj" />
+    <Project Path="GarbageCollection/GarbageCollection.csproj" />
+  </Folder>
+  <Folder Name="/06. Windows Forms/">
+    <Project Path="SimpleCalculator/SimpleCalculator.csproj" />
+  </Folder>
+  <Folder Name="/07. Windows Forms - Menus/">
+    <Project Path="SimpleWebBrowser/SimpleWebBrowser.csproj" />
+    <Project Path="ToolStripContainerWebBrowser/ToolStripContainerWebBrowser.csproj" />
+  </Folder>
+  <Folder Name="/08. Windows Forms - Keyboard, Mouse Events/">
+    <Project Path="KeyEvents/KeyEvents.csproj" />
+    <Project Path="KeyEventsNumericTextBox/KeyEventsNumericTextBox.csproj" />
+    <Project Path="MouseEvents/MouseEvents.csproj" />
+  </Folder>
+  <Folder Name="/09. Windows Forms - Validation, Exceptions/">
+    <Project Path="StandardExceptions/StandardExceptions.csproj" />
+    <Project Path="ValidationExceptionHandling/ValidationCustomExceptions.csproj" />
+  </Folder>
+  <Folder Name="/10. Windows Forms - ListView, TreeView/">
+    <Project Path="ListViewBasicSample/ListViewBasicSample.csproj" />
+    <Project Path="ListViewSample/ListViewSample.csproj" />
+    <Project Path="TreeViewSample/TreeViewSample.csproj" />
+  </Folder>
+  <Folder Name="/11. Windows Forms - Serialization, TextFiles, XML/">
+    <Project Path="SerializationJSONXMLTextFile/SerializationJSONXMLTextFile.csproj" />
+    <Project Path="TextFileSample/TextFileSample.csproj" />
+  </Folder>
+  <Folder Name="/12. Windows Forms - Dialogs/">
+    <Project Path="DataGridViewDialog/DataGridViewDialog.csproj" />
+    <Project Path="ListViewDialog/ListViewDialog.csproj" />
+  </Folder>
+  <Folder Name="/13. Windows Forms - DataBinding/">
+    <Project Path="DataBindingViewModel.Tests/DataBindingViewModel.Tests.csproj" />
+    <Project Path="DataBindingViewModel/DataBindingViewModel.csproj" />
+  </Folder>
+  <Folder Name="/14. Windows Forms - Database/">
+    <Project Path="DatabaseCommandMSAccess/DatabaseCommandMSAccess.csproj" />
+    <Project Path="DatabaseCommandMSAccess2Entities/DatabaseCommandMSAccess2Entities.csproj" />
+    <Project Path="DatabaseCommandSQLite/DatabaseCommandSQLite.csproj" />
+    <Project Path="DatabaseCommandSQLiteDataGridView/DatabaseCommandSQLiteDataGridView.csproj" />
+    <Project Path="DatabaseCommandSQLServer2Entities/DatabaseCommandSQLServer2Entities.csproj" />
+    <Project Path="DatabaseDataAdapterMSAccess/DatabaseDataAdapterMSAccess.csproj" />
+    <Project Path="DatabaseDataAdapterSQLite/DatabaseDataAdapterSQLite.csproj" />
+  </Folder>
+  <Folder Name="/15. Windows Forms - Printing/">
+    <Project Path="PrintingLongTextSample/PrintingLongTextSample.csproj" />
+    <Project Path="PrintingRecordsSample/PrintingRecordsSample.csproj" />
+  </Folder>
+  <Folder Name="/16. Windows Forms - Custom Controls/">
+    <Project Path="NumericTextBoxControlSample/NumericTextBoxControlSample.csproj" />
+  </Folder>
+  <Folder Name="/17. Windows Forms - Custom Controls + Drawing/">
+    <Project Path="BarChartGraphicsSample/BarChartGraphicsSample.csproj" />
+    <Project Path="ClockControlAppSample/ClockControlAppSample.csproj" />
+    <Project Path="ClockControlSample/ClockControlSample.csproj" />
+    <Project Path="PieChartGraphicsSample/PieChartGraphicsSample.csproj" />
+  </Folder>
+  <Folder Name="/18. Windows Forms - Clipboard, DragDrop/">
+    <Project Path="ClipboardSample/ClipboardSample.csproj" />
+    <Project Path="DragDropSample/DragDropSample.csproj" />
+  </Folder>
+  <Folder Name="/Extra/">
+    <Project Path="Globalization/Globalization.csproj" />
+    <Project Path="Google Email/EmailSample.csproj" />
+  </Folder>
+</Solution>
