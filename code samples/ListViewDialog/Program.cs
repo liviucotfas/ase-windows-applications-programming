@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace DialogSample
+namespace DataBindingDataGridViewDialog
 {
 	internal static class Program
 	{

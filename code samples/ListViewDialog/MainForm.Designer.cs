@@ -1,4 +1,4 @@
-﻿namespace DialogSample
+﻿namespace DataBindingDataGridViewDialog
 {
 	partial class MainForm
 	{

@@ -6,10 +6,10 @@ namespace DataBindingDataGridViewDialog
 	public partial class EditForm : Form
 	{
 		#region Attributes
-		private readonly Participant _participant;
+		private readonly ParticipantViewModel _participant;
 		#endregion
 		
-		public EditForm(Participant participant)
+		public EditForm(ParticipantViewModel participant)
 		{
 			_participant = participant;
 

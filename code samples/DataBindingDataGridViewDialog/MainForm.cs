@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 using DataBindingDataGridViewDialog.ViewModels;
 
@@ -8,46 +9,30 @@ namespace DataBindingDataGridViewDialog
 	public partial class MainForm : Form
 	{
 		#region Attributes
-		private readonly List<Participant> _participants;
+		private readonly BindingList<ParticipantViewModel> _participants;
 		#endregion
 
 		public MainForm()
 		{
 			InitializeComponent();
 
-			_participants = new List<Participant>();
+			_participants = new BindingList<ParticipantViewModel>();
 		}
-
-		#region Methods
-		private void DisplayParticipants()
-		{
-			dgvParticipants.Rows.Clear();
-
-			foreach (Participant participant in _participants)
-			{
-				int rowId = dgvParticipants.Rows.Add(new object[]
-				{
-					participant.LastName,
-					participant.FirstName,
-					participant.BirthDate
-				});
-
-				dgvParticipants.Rows[rowId].Tag = participant;
-			}
-		}
-		#endregion
 
 		#region Events
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			dgvParticipants.DataSource = _participants;
+		}
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			string firstName = tbFirstName.Text;
 			string lastName = tbLastName.Text;
 			DateTime birthDate = dtpBirthDate.Value;
 
-			var participant = new Participant(lastName, firstName, birthDate);
+			var participant = new ParticipantViewModel(lastName, firstName, birthDate);
 			_participants.Add(participant);
-
-			DisplayParticipants();
 		}
 
 		private void btnEdit_Click(object sender, EventArgs e)
@@ -59,11 +44,10 @@ namespace DataBindingDataGridViewDialog
 			}
 
 			DataGridViewRow row = dgvParticipants.SelectedRows[0];
-			Participant participant = (Participant)row.Tag!;
+			ParticipantViewModel participant = (ParticipantViewModel)row.DataBoundItem!;
 
 			EditForm editForm = new EditForm(participant);
-			if (editForm.ShowDialog() == DialogResult.OK)
-				DisplayParticipants();
+			editForm.ShowDialog();
 		}
 
 		private void btnDelete_Click(object sender, EventArgs e)
@@ -75,14 +59,15 @@ namespace DataBindingDataGridViewDialog
 			}
 
 			if (MessageBox.Show("Are you sure?", "Delete participant", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
-			    DialogResult.Yes)
+				DialogResult.Yes)
 			{
 				DataGridViewRow row = dgvParticipants.SelectedRows[0];
-				Participant participant = (Participant)row.Tag!;
+				ParticipantViewModel participant = (ParticipantViewModel)row.DataBoundItem!;
 				_participants.Remove(participant);
-				DisplayParticipants();
 			}
 		}
 		#endregion
+
+
 	}
 }

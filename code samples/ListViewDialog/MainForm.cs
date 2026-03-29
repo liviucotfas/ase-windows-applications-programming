@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using DialogSample.Entities;
+using DataBindingDataGridViewDialog.ViewModels;
 
-namespace DialogSample
+namespace DataBindingDataGridViewDialog
 {
 	public partial class MainForm : Form
 	{

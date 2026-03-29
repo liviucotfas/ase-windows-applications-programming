@@ -55,6 +55,7 @@
     <Project Path="ListViewDialog/ListViewDialog.csproj" />
   </Folder>
   <Folder Name="/13. Windows Forms - DataBinding/">
+    <Project Path="DataBindingDataGridViewDialog/DataBindingDataGridViewDialog.csproj" />
     <Project Path="DataBindingViewModel.Tests/DataBindingViewModel.Tests.csproj" />
     <Project Path="DataBindingViewModel/DataBindingViewModel.csproj" />
   </Folder>

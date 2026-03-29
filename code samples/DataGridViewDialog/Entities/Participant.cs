@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DialogSample.Entities
+namespace DataBindingDataGridViewDialog.ViewModels
 {
 	public class Participant
 	{
