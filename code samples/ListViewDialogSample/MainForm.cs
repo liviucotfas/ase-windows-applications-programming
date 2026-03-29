@@ -7,9 +7,7 @@ namespace DialogSample
 {
 	public partial class MainForm : Form
 	{
-		#region Attributes
 		private readonly List<Participant> _participants;
-		#endregion
 
 		public MainForm()
 		{
@@ -55,9 +53,11 @@ namespace DialogSample
 				return;
 			}
 
-			EditForm editForm = new EditForm((Participant)lvParticipants.SelectedItems[0].Tag);
-			if (editForm.ShowDialog() == DialogResult.OK)
-				DisplayParticipants();
+			ListViewItem selectedItem = lvParticipants.SelectedItems[0];
+			Participant participant = (Participant)selectedItem.Tag!;
+			EditForm editForm = new EditForm(participant);
+				if (editForm.ShowDialog() == DialogResult.OK)
+					DisplayParticipants();
 		}
 
 		private void btnDelete_Click(object sender, EventArgs e)
@@ -71,7 +71,9 @@ namespace DialogSample
 			if (MessageBox.Show("Are you sure?", "Delete participant", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
 			    DialogResult.Yes)
 			{
-				_participants.Remove((Participant) lvParticipants.SelectedItems[0].Tag);
+				ListViewItem selectedItem = lvParticipants.SelectedItems[0];
+				Participant participant = (Participant)selectedItem.Tag!;
+				_participants.Remove(participant);
 				DisplayParticipants();
 			}
 		}
