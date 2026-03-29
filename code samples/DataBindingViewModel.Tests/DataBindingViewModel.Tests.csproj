@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataBinding\DataBindingSample.csproj" />
+    <ProjectReference Include="..\DataBindingViewModel\DataBindingViewModel.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MSTest.TestAdapter">

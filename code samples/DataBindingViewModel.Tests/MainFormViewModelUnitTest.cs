@@ -18,7 +18,7 @@ namespace DataBindingSample.Tests
 			viewModel.AddParticipant();
 
 			// assert  
-			Assert.AreEqual(viewModel.Participants.Count, 1);
+			Assert.AreEqual(1, viewModel.Participants.Count);
 		}
 	}
 }
