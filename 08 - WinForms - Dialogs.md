@@ -44,7 +44,7 @@
 			listViewItem.SubItems.Add(participant.BirthDate.ToShortDateString());
 			
 			//add this line
-			listViewItem.Tag = participant;
+			listViewItem.Tag = participant; // Store the participant object in the Tag property for easy retrieval later
 			
 			lvParticipants.Items.Add(listViewItem);
 		}
@@ -62,7 +62,9 @@
 
 	if (MessageBox.Show("Are you sure?", "Delete participant", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
 	{
-		_participants.Remove((Participant) lvParticipants.SelectedItems[0].Tag);
+		ListViewItem selectedItem = lvParticipants.SelectedItems[0];
+		Participant participant = (Participant)selectedItem.Tag!;
+		participants.Remove(participant);
 		DisplayParticipants();
 	}
 	```
