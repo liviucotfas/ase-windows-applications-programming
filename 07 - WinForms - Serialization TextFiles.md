@@ -21,8 +21,6 @@
 - writing to text files;
 - uising the `OpenFileDialog` and the `SaveFileDialog`.
 
-	> In the past, binary serialization was also used. This was however deprecated as of .NET 8
-
 ##  2. <a name='SerializationDeserialization'></a>Serialization/Deserialization
 
 **Documentation**
