@@ -127,7 +127,9 @@
 		return;
 	}
 
-	EditForm editForm = new EditForm((Participant)lvParticipants.SelectedItems[0].Tag);
+	ListViewItem selectedItem = lvParticipants.SelectedItems[0];
+	Participant participant = (Participant)selectedItem.Tag!;
+	EditForm editForm = new EditForm(participant);
 	if (editForm.ShowDialog() == DialogResult.OK)
 		DisplayParticipants();
 	```
