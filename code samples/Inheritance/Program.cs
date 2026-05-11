@@ -58,8 +58,7 @@ namespace ConstructorDestructor
 
 			var manager = new Manager("Manager1");
 
-			var contractor = new Contractor("Contractor1");
-			contractor.Languages = new[] {"C#"};
+			var contractor = new Contractor("Contractor1", new[] { "C#" });
 
 			Person[] persons = new Person[] {softwareDeveloper, manager, contractor};
 
