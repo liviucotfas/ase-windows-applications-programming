@@ -18,10 +18,11 @@
 - implement `JSON` serialization / deserialization;
 - implement `XML` serialization / deserialization;
 - understand the differences between the `XML` and `JSON` serializations;
-- writing to text files;
+- reading / writing text files;
 - uising the `OpenFileDialog` and the `SaveFileDialog`.
 
 ##  2. <a name='SerializationDeserialization'></a>Serialization/Deserialization
+Accoring to the [Microsoft Documentation](https://docs.microsoft.com/en-us/dotnet/standard/serialization) **serialization** is the process of converting the state of an object into a form that can be persisted or transported. The complement of serialization is **deserialization**, which converts a stream into an object. Together, these processes allow data to be stored and transferred.
 
 **Documentation**
 - Serialization in .NET: <https://docs.microsoft.com/en-us/dotnet/standard/serialization/>
