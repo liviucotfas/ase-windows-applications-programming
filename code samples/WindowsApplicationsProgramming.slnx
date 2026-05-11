@@ -60,8 +60,6 @@
     <Project Path="DataBindingViewModel/DataBindingViewModel.csproj" />
   </Folder>
   <Folder Name="/14. Windows Forms - Database/">
-    <Project Path="DatabaseCommandMSAccess/DatabaseCommandMSAccess.csproj" />
-    <Project Path="DatabaseCommandMSAccess2Entities/DatabaseCommandMSAccess2Entities.csproj" />
     <Project Path="DatabaseCommandSQLite/DatabaseCommandSQLite.csproj" />
     <Project Path="DatabaseCommandSQLiteDataGridView/DatabaseCommandSQLiteDataGridView.csproj" />
     <Project Path="DatabaseCommandSQLServer2Entities/DatabaseCommandSQLServer2Entities.csproj" />
