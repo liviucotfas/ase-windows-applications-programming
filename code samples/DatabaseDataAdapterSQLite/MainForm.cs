@@ -103,8 +103,10 @@ namespace DataBaseDataAdapter
 			//https://msdn.microsoft.com/en-us/library/ks9f57t0%28v=vs.110%29.aspx
 			if (e.StatementType == StatementType.Insert)
 			{
-				var getIdCommand = new SQLiteCommand("SELECT last_insert_rowid()", _dbConnection);
-				e.Row["Id"] = (long)getIdCommand.ExecuteScalar();
+				using (var getIdCommand = new SQLiteCommand("SELECT last_insert_rowid()", _dbConnection))
+				{
+					e.Row["Id"] = (long)getIdCommand.ExecuteScalar();
+				}
 			}
 		}
 		#endregion

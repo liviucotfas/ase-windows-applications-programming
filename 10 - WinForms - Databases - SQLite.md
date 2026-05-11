@@ -107,15 +107,17 @@ SQLite is probably the most used database engine in the world.
 			connection.Open();
 
 			//1. Add the new participant to the database
-			var command = new SQLiteCommand(query, connection);
-			command.Parameters.AddWithValue("@lastName", participant.LastName);
-			command.Parameters.AddWithValue("@firstName", participant.FirstName);
-			command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
+			using (var command = new SQLiteCommand(query, connection))
+			{
+				command.Parameters.AddWithValue("@lastName", participant.LastName);
+				command.Parameters.AddWithValue("@firstName", participant.FirstName);
+				command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
 
-			participant.Id = (long)command.ExecuteScalar();
+				participant.Id = (long)command.ExecuteScalar();
 
-			//2. Add the new participants to the local collection
-			_participants.Add(participant);
+				//2. Add the new participants to the local collection
+				_participants.Add(participant);
+			}
 		}
 	}
 	```
@@ -148,12 +150,11 @@ SQLite is probably the most used database engine in the world.
 	{
 		const string query = "SELECT * FROM Participant";
 
-		using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+		using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 		{
 			connection.Open();
 
-			var command = new SQLiteCommand(query, connection);
-
+			using (var command = new SQLiteCommand(query, connection))
 			using (SQLiteDataReader reader = command.ExecuteReader())
 			{
 				while (reader.Read())
@@ -198,10 +199,11 @@ SQLite is probably the most used database engine in the world.
 			connection.Open();
 
 			//Remove from the database
-			SQLiteCommand command = new SQLiteCommand(query, connection);
-			command.Parameters.AddWithValue("@id", participant.Id);
-
-			command.ExecuteNonQuery();
+			using (var command = new SQLiteCommand(query, connection))
+			{
+				command.Parameters.AddWithValue("@id", participant.Id);
+				command.ExecuteNonQuery();
+			}
 
 			//Remove from the local copy
 			_participants.Remove(participant);
@@ -368,8 +370,10 @@ SQLite is probably the most used database engine in the world.
 			//https://msdn.microsoft.com/en-us/library/ks9f57t0%28v=vs.110%29.aspx
 			if (e.StatementType == StatementType.Insert)
 			{
-				var getIdCommand = new SQLiteCommand("SELECT last_insert_rowid()", _dbConnection);
-				e.Row["Id"] = (long)getIdCommand.ExecuteScalar();
+				using(SQLiteCommand getIdCommand = new SQLiteCommand("SELECT last_insert_rowid()", _dbConnection))
+				{
+					e.Row["Id"] = (long)getIdCommand.ExecuteScalar();
+				}
 			}
 		}
 		#endregion

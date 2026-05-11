@@ -71,9 +71,8 @@ namespace DatabaseCommandSQLServer2Entities
 			{
 				connection.Open();
 				
-				SqlCommand command = new SqlCommand(query , connection);
-				SqlDataReader reader = command.ExecuteReader();
-				try
+				using (SqlCommand command = new SqlCommand(query , connection))
+				using (SqlDataReader reader = command.ExecuteReader())
 				{
 					while (reader.Read())
 					{
@@ -85,11 +84,6 @@ namespace DatabaseCommandSQLServer2Entities
 							(int)reader["raceId"]);
 						_participants.Add(participant);
 					}
-				}
-				finally
-				{
-					// Always call Close when done reading.
-					reader.Close();
 				}
 			}
 		}
@@ -105,13 +99,15 @@ namespace DatabaseCommandSQLServer2Entities
 			    connection.Open();
 
 			    //2. Add the new participant to the database
-				var command = new SqlCommand(query , connection);
-				command.Parameters.AddWithValue("@lastName", participant.LastName);
-				command.Parameters.AddWithValue("@firstName", participant.FirstName);
-				command.Parameters.AddWithValue("@birthDate", participant.BirthDate.Date);
-				command.Parameters.AddWithValue("@raceId", participant.RaceId);
+				using (var command = new SqlCommand(query , connection))
+				{
+					command.Parameters.AddWithValue("@lastName", participant.LastName);
+					command.Parameters.AddWithValue("@firstName", participant.FirstName);
+					command.Parameters.AddWithValue("@birthDate", participant.BirthDate.Date);
+					command.Parameters.AddWithValue("@raceId", participant.RaceId);
 
-				participant.Id = (int)(decimal)command.ExecuteScalar();
+					participant.Id = (int)(decimal)command.ExecuteScalar();
+				}
 
 				//3. Add the new participant to the local collection
 				_participants.Add(participant);
@@ -127,10 +123,12 @@ namespace DatabaseCommandSQLServer2Entities
 				//Remove from the database
 			    connection.Open();
 
-				SqlCommand command = new SqlCommand(query , connection);
-				command.Parameters.AddWithValue("@id",participant.Id);
+				using (SqlCommand command = new SqlCommand(query , connection))
+				{
+					command.Parameters.AddWithValue("@id",participant.Id);
 
-				command.ExecuteNonQuery();
+					command.ExecuteNonQuery();
+				}
 
 				//Remove from the local copy
 				_participants.Remove(participant);

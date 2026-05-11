@@ -37,16 +37,15 @@ namespace DataBaseCommand
 			}
 		}
 
-	    private void LoadParticipants()
+		private void LoadParticipants()
 		{
 			const string query = "SELECT * FROM Participant";
 
-			using(SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+			using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
 			{
 				connection.Open();
 
-				var command = new SQLiteCommand(query, connection);
-
+				using (var command = new SQLiteCommand(query, connection))
 				using (SQLiteDataReader reader = command.ExecuteReader())
 				{
 					while (reader.Read())
@@ -74,15 +73,17 @@ namespace DataBaseCommand
 				connection.Open();
 
 				//1. Add the new participant to the database
-				var command = new SQLiteCommand(query, connection);
-				command.Parameters.AddWithValue("@lastName", participant.LastName);
-				command.Parameters.AddWithValue("@firstName", participant.FirstName);
-				command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
+				using (var command = new SQLiteCommand(query, connection))
+				{
+					command.Parameters.AddWithValue("@lastName", participant.LastName);
+					command.Parameters.AddWithValue("@firstName", participant.FirstName);
+					command.Parameters.AddWithValue("@birthDate", participant.BirthDate);
 
-				participant.Id = (long)command.ExecuteScalar();
+					participant.Id = (long)command.ExecuteScalar();
 
-				//2. Add the new participants to the local collection
-				_participants.Add(participant);
+					//2. Add the new participants to the local collection
+					_participants.Add(participant);
+				}
 			}
 		}
 
@@ -95,13 +96,15 @@ namespace DataBaseCommand
 			    connection.Open();
 
 				//Remove from the database
-				SQLiteCommand command = new SQLiteCommand(query, connection);
-				command.Parameters.AddWithValue("@id", participant.Id);
+				using (var command = new SQLiteCommand(query, connection))
+				{
+					command.Parameters.AddWithValue("@id", participant.Id);
 
-				command.ExecuteNonQuery();
+					command.ExecuteNonQuery();
 
-				//Remove from the local copy
-				_participants.Remove(participant);
+					//Remove from the local copy
+					_participants.Remove(participant);
+				}
 			}
 		}
 		#endregion

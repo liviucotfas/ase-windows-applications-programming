@@ -32,21 +32,14 @@ namespace DatabaseCommandSQLiteDataGridView
 			{
 				connection.Open();
 
-				var command = new SQLiteCommand(query, connection);
-
-				SQLiteDataReader reader = command.ExecuteReader();
-				try
+				using (var command = new SQLiteCommand(query, connection))
+				using (SQLiteDataReader reader = command.ExecuteReader())
 				{
 					while (reader.Read())
 					{
 						_participants.Add(new Participant((long) reader["Id"], (string) reader["LastName"],
 							(string) reader["FirstName"], DateTime.Parse((string) reader["BirthDate"])));
 					}
-				}
-				finally
-				{
-					// Always call Close when done reading.
-					reader.Close();
 				}
 			}
 		}
@@ -62,19 +55,21 @@ namespace DatabaseCommandSQLiteDataGridView
 				connection.Open();
 
 				//1. Add the new participant to the database
-				var command = new SQLiteCommand(query, connection);
-				var lastNameParameter = new SQLiteParameter("@lastName");
-				lastNameParameter.Value = participant.LastName;
-				var firstNameParameter = new SQLiteParameter("@firstName");
-				firstNameParameter.Value = participant.FirstName;
-				var birthDateParameter = new SQLiteParameter("@birthDate");
-				birthDateParameter.Value = participant.BirthDate;
+				using (var command = new SQLiteCommand(query, connection))
+				{
+					var lastNameParameter = new SQLiteParameter("@lastName");
+					lastNameParameter.Value = participant.LastName;
+					var firstNameParameter = new SQLiteParameter("@firstName");
+					firstNameParameter.Value = participant.FirstName;
+					var birthDateParameter = new SQLiteParameter("@birthDate");
+					birthDateParameter.Value = participant.BirthDate;
 
-				command.Parameters.Add(lastNameParameter);
-				command.Parameters.Add(firstNameParameter);
-				command.Parameters.Add(birthDateParameter);
+					command.Parameters.Add(lastNameParameter);
+					command.Parameters.Add(firstNameParameter);
+					command.Parameters.Add(birthDateParameter);
 
-				participant.Id = (long)command.ExecuteScalar();
+					participant.Id = (long)command.ExecuteScalar();
+				}
 
 				//2. Add the new participants to the local collection
 				_participants.Add(participant);
@@ -90,13 +85,14 @@ namespace DatabaseCommandSQLiteDataGridView
 			    connection.Open();
 
 				//Remove from the database
-				SQLiteCommand command = new SQLiteCommand(query, connection);
+				using (SQLiteCommand command = new SQLiteCommand(query, connection))
+				{
+					var idParameter = new SQLiteParameter("@id");
+					idParameter.Value = participant.Id;
+					command.Parameters.Add(idParameter);
 
-				var idParameter = new SQLiteParameter("@id");
-				idParameter.Value = participant.Id;
-				command.Parameters.Add(idParameter);
-
-				command.ExecuteNonQuery();
+					command.ExecuteNonQuery();
+				}
 
 				//Remove from the local copy
 				_participants.Remove(participant);
