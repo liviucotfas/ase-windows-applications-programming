@@ -9,10 +9,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MSTest.TestAdapter">
-      <Version>4.1.0</Version>
+      <Version>4.2.3</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestFramework">
-      <Version>4.1.0</Version>
+      <Version>4.2.3</Version>
     </PackageReference>
   </ItemGroup>
 </Project>
